@@ -3,12 +3,14 @@ __S1 0 0 ABS 0
 __S2 0 0 ABS 0
 __S4 0 0 ABS 0
 __S5 0 0 ABS 0
-_main 1FFF2 0 CODE 0
+_LATF 4C3 0 ABS 0
+_main 1FFEE 0 CODE 0
 ___sp 0 0 STACK 2
 start 1FFFC 0 CODE 0
 __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
+_TRISF 4CB 0 ABS 0
 __LRAM 1 0 ABS 0
 __Hconfig 30000A 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
@@ -35,6 +37,7 @@ __Hbigbss 0 0 BIGRAM 1
 __Lbigbss 0 0 BIGRAM 1
 __Hramtop 2500 0 RAM 0
 __Lramtop 2500 0 RAM 0
+_ANSELF 428 0 ABS 0
 __Hstruct 0 0 COMRAM 1
 __Lstruct 0 0 COMRAM 1
 __Hbigdata 0 0 BIGRAM 1
@@ -62,11 +65,12 @@ __Lrbit 0 0 COMRAM 1
 __Hinit 20000 0 CODE 0
 __Linit 1FFFC 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main 1FFF6 0 CODE 0
+__end_of_main 1FFFC 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
-end_of_initialization 1FFF6 0 CODE 0
+end_of_initialization 1FFE0 0 CODE 0
+_GPIO_Init 1FFE6 0 CODE 0
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
 __Hifardata 0 0 CODE 0
@@ -85,10 +89,13 @@ __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
 __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
-__ptext0 1FFF2 0 CODE 0
+__Htext1 0 0 ABS 0
+__Ltext1 0 0 ABS 0
+__ptext0 1FFEE 0 CODE 0
+__ptext1 1FFE6 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization 1FFF6 0 CODE 0
+__end_of__initialization 1FFE0 0 CODE 0
 ___rparam_used 1 0 ABS 0
 __Hidata 0 0 CODE 0
 __Lidata 0 0 CODE 0
@@ -115,7 +122,7 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit 1FFF6 0 CODE 0
+__pcinit 1FFE0 0 CODE 0
 __ramtop 2500 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __size_of_main 0 0 ABS 0
@@ -123,6 +130,7 @@ __Hconst 0 0 CONST 0
 __Lconst 0 0 CONST 0
 __Hspace_4 60000A 0 ABS 0
 __Lspace_4 0 0 ABS 0
+__end_of_GPIO_Init 1FFEE 0 CODE 0
 __Hbank10 0 0 ABS 0
 __Lbank10 0 0 ABS 0
 __Hbank20 0 0 ABS 0
@@ -187,24 +195,32 @@ intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
-start_initialization 1FFF6 0 CODE 0
-__initialization 1FFF6 0 CODE 0
+__size_of_GPIO_Init 0 0 ABS 0
+start_initialization 1FFE0 0 CODE 0
+__initialization 1FFE0 0 CODE 0
 __activetblptr 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
 init 1FFFC 1FFFF CODE 1FFFC 0
-cinit 1FFF6 1FFFB CODE 1FFF6 0
-text0 1FFF2 1FFF5 CODE 1FFF2 0
+text0 1FFEE 1FFFB CODE 1FFEE 0
+text1 1FFE6 1FFED CODE 1FFE6 0
+cinit 1FFE0 1FFE5 CODE 1FFE0 0
 %locals
 dist/default/production\blink.X.production.o
-C:\Users\jmott\AppData\Local\Temp\xcAs6i4.s
-120 1FFF6 0 CODE 0
-122 1FFF6 0 CODE 0
-125 1FFF6 0 CODE 0
-131 1FFF6 0 CODE 0
-133 1FFF6 0 CODE 0
-134 1FFF8 0 CODE 0
+D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+C:\Users\jmott\AppData\Local\Temp\xcAse40.s
+1829 1FFE0 0 CODE 0
+1831 1FFE0 0 CODE 0
+1834 1FFE0 0 CODE 0
+1840 1FFE0 0 CODE 0
+1842 1FFE0 0 CODE 0
+1843 1FFE2 0 CODE 0
 main.c
-14 1FFF2 0 CODE 0
-16 1FFF2 0 CODE 0
-17 1FFF2 0 CODE 0
+31 1FFEE 0 CODE 0
+33 1FFEE 0 CODE 0
+37 1FFF2 0 CODE 0
+main.c
+47 1FFE6 0 CODE 0
+49 1FFE6 0 CODE 0
+50 1FFEA 0 CODE 0
+51 1FFEC 0 CODE 0
