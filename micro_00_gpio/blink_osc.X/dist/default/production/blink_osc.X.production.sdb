@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"70 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
+"81 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
 [e E17010 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -75,17 +75,17 @@ freq_clk_64MHZ 8
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"43 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
+"45 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"68
+"79
 [v _Clock_Local_Init Clock_Local_Init `(v  1 e 1 0 ]
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S99 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S100 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S102 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S103 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -93,37 +93,39 @@ freq_clk_64MHZ 8
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S110 . 1 `S99 1 . 1 0 `S102 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES110  1 e 1 @173 ]
-[s S125 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S111 . 1 `S100 1 . 1 0 `S103 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES111  1 e 1 @173 ]
+[s S126 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S127 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S128 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S132 . 1 `S125 1 . 1 0 `S127 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES132  1 e 1 @177 ]
+[u S133 . 1 `S126 1 . 1 0 `S128 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES133  1 e 1 @177 ]
 "47792
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
 "48134
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-"43 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
+"45 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"50
+"53
+[v main@fake_pwm_max fake_pwm_max `uc  1 a 1 7 ]
+"52
 [v main@counter counter `uc  1 a 1 6 ]
-"62
+"73
 } 0
-"68
+"79
 [v _Clock_Local_Init Clock_Local_Init `(v  1 e 1 0 ]
 {
 [s S57 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-"70
+"81
 [v Clock_Local_Init@my_clock_param my_clock_param `S57  1 a 2 3 ]
-"74
+"85
 } 0
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\blink_osc.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]

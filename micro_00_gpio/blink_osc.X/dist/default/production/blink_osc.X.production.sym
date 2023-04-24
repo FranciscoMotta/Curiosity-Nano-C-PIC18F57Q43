@@ -1,9 +1,9 @@
 __S0 20000 0 ABS 0
-__S1 508 0 ABS 0
+__S1 509 0 ABS 0
 __S4 0 0 ABS 0
 __S5 0 0 ABS 0
 _LATF 4C3 0 ABS 0
-_main 1FFAE 0 CODE 0
+_main 1FF8A 0 CODE 0
 ___sp 0 0 STACK 2
 start 1FFFC 0 CODE 0
 __Hirdata 0 0 CODE 0
@@ -54,7 +54,7 @@ isa$xinst 0 0 ABS 0
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 ___heap_hi 0 0 ABS 0
-__end_of_FM_Hfintosc_Init 1FFAE 0 CODE 0
+__end_of_FM_Hfintosc_Init 1FF8A 0 CODE 0
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
 isa$std 1 0 ABS 0
@@ -74,7 +74,7 @@ __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 ___heap_lo 0 0 ABS 0
-end_of_initialization 1FF56 0 CODE 0
+end_of_initialization 1FF32 0 CODE 0
 Clock_Local_Init@my_clock_param 504 0 COMRAM 1
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
@@ -97,14 +97,14 @@ __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
-__ptext0 1FFAE 0 CODE 0
+__ptext0 1FF8A 0 CODE 0
 __Htext2 0 0 ABS 0
 __Ltext2 0 0 ABS 0
-__ptext1 1FF5C 0 CODE 0
-__ptext2 1FF72 0 CODE 0
+__ptext1 1FF38 0 CODE 0
+__ptext2 1FF4E 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of__initialization 1FF56 0 CODE 0
+__end_of__initialization 1FF32 0 CODE 0
 main@counter 507 0 COMRAM 1
 ___rparam_used 1 0 ABS 0
 __H__absolute__ 0 0 ABS 0
@@ -124,7 +124,8 @@ __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
 __pcstackCOMRAM 501 0 COMRAM 1
-__Hspace_1 508 0 ABS 0
+__Hspace_1 509 0 ABS 0
+main@fake_pwm_max 508 0 COMRAM 1
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
@@ -134,14 +135,14 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-__pcinit 1FF56 0 CODE 0
+__pcinit 1FF32 0 CODE 0
 __ramtop 2600 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __Hconst 0 0 CONST 0
 __Lconst 0 0 CONST 0
 __Hspace_4 60000A 0 ABS 0
 __Lspace_4 0 0 ABS 0
-_Clock_Local_Init 1FF5C 0 CODE 0
+_Clock_Local_Init 1FF38 0 CODE 0
 __Hbank10 0 0 ABS 0
 __Lbank10 0 0 ABS 0
 __Hbank20 0 0 ABS 0
@@ -208,48 +209,53 @@ intlevel0 0 0 CODE 0
 intlevel1 0 0 CODE 0
 intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
-start_initialization 1FF56 0 CODE 0
-_FM_Hfintosc_Init 1FF72 0 CODE 0
-__end_of_Clock_Local_Init 1FF72 0 CODE 0
-__initialization 1FF56 0 CODE 0
+start_initialization 1FF32 0 CODE 0
+_FM_Hfintosc_Init 1FF4E 0 CODE 0
+__end_of_Clock_Local_Init 1FF4E 0 CODE 0
+__initialization 1FF32 0 CODE 0
 __activetblptr 0 0 ABS 0
 %segments
 reset_vec 0 3 CODE 0 0
 init 1FFFC 1FFFF CODE 1FFFC 0
-cstackCOMRAM 501 507 COMRAM 501 1
-text0 1FFAE 1FFFB CODE 1FFAE 0
-text2 1FF72 1FFAD CODE 1FF72 0
-text1 1FF5C 1FF71 CODE 1FF5C 0
-cinit 1FF56 1FF5B CODE 1FF56 0
+cstackCOMRAM 501 508 COMRAM 501 1
+text0 1FF8A 1FFFB CODE 1FF8A 0
+text2 1FF4E 1FF89 CODE 1FF4E 0
+text1 1FF38 1FF4D CODE 1FF38 0
+cinit 1FF32 1FF37 CODE 1FF32 0
 %locals
 dist/default/production\blink_osc.X.production.o
-C:\Users\ADMINI~1\AppData\Local\Temp\xcAsbh8.\driver_tmp_1.s
-3566 1FF56 0 CODE 0
-3568 1FF56 0 CODE 0
-3571 1FF56 0 CODE 0
-3577 1FF56 0 CODE 0
-3579 1FF56 0 CODE 0
-3580 1FF58 0 CODE 0
+C:\Users\ADMINI~1\AppData\Local\Temp\xcAs3r4.\driver_tmp_1.s
+3566 1FF32 0 CODE 0
+3568 1FF32 0 CODE 0
+3571 1FF32 0 CODE 0
+3577 1FF32 0 CODE 0
+3579 1FF32 0 CODE 0
+3580 1FF34 0 CODE 0
 main.c
-43 1FFAE 0 CODE 0
-45 1FFAE 0 CODE 0
-47 1FFB2 0 CODE 0
-49 1FFB4 0 CODE 0
-50 1FFB6 0 CODE 0
-53 1FFBA 0 CODE 0
-55 1FFCE 0 CODE 0
-56 1FFDE 0 CODE 0
-58 1FFE2 0 CODE 0
-59 1FFE4 0 CODE 0
+45 1FF8A 0 CODE 0
+47 1FF8A 0 CODE 0
+49 1FF8E 0 CODE 0
+51 1FF90 0 CODE 0
+52 1FF92 0 CODE 0
+53 1FF96 0 CODE 0
+56 1FF9A 0 CODE 0
+58 1FFAC 0 CODE 0
+59 1FFAE 0 CODE 0
+62 1FFB2 0 CODE 0
+64 1FFB4 0 CODE 0
+66 1FFC8 0 CODE 0
+67 1FFCC 0 CODE 0
+68 1FFCE 0 CODE 0
+70 1FFE4 0 CODE 0
 main.c
-68 1FF5C 0 CODE 0
-71 1FF5C 0 CODE 0
-72 1FF60 0 CODE 0
-73 1FF64 0 CODE 0
-74 1FF70 0 CODE 0
+79 1FF38 0 CODE 0
+82 1FF38 0 CODE 0
+83 1FF3C 0 CODE 0
+84 1FF40 0 CODE 0
+85 1FF4C 0 CODE 0
 system_config.c
-8 1FF72 0 CODE 0
-10 1FF72 0 CODE 0
-11 1FF7C 0 CODE 0
-12 1FF92 0 CODE 0
-13 1FFAC 0 CODE 0
+8 1FF4E 0 CODE 0
+10 1FF4E 0 CODE 0
+11 1FF58 0 CODE 0
+12 1FF6E 0 CODE 0
+13 1FF88 0 CODE 0

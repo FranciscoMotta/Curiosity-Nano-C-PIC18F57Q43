@@ -28926,7 +28926,7 @@ typedef struct
 # 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 17 "main.c" 2
-# 38 "main.c"
+# 40 "main.c"
 void Clock_Local_Init (void);
 
 
@@ -28940,14 +28940,23 @@ int main(void)
 
     LATF &= ~(1 << 3);
     uint8_t counter = 0;
+    uint8_t fake_pwm_max = 0;
     while(1)
     {
+        if(counter <= fake_pwm_max)
+        {
+            LATF |= (1 << 3);;
+        }
+        else
+        {
+            LATF &= ~(1 << 3);;
+        }
         if(counter++ == 100)
         {
-            LATF &= ~(1 << 3); _delay((unsigned long)((500)*(16000000UL/4000000.0)));;
             counter = 0;
+            fake_pwm_max++;
+            if(fake_pwm_max == 25) fake_pwm_max = 0;
         }
-        LATF |= (1 << 3);
         _delay((unsigned long)((1)*(16000000UL/4000.0)));
     }
     return (0);

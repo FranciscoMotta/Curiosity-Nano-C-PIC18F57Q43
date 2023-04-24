@@ -24,12 +24,14 @@
 #define Led_Sys_Tris        TRISF
 #define Led_Sys_Lat         LATF
 
-#define Rut_Led_On()        Led_Sys_Lat &= ~(1 << Led_Sys_Gpio); __delay_us(500);
+#define Rut_Led_On()        Led_Sys_Lat &= ~(1 << Led_Sys_Gpio);
+#define Rut_Led_Off()        Led_Sys_Lat |= (1 << Led_Sys_Gpio);
 
 #ifndef _XTAL_FREQ
 #define _XTAL_FREQ 16000000UL
 #endif
 
+#define Percent_Limit_Fake_Pwm      25
 
 /*
  * Declaracion de funciones
@@ -48,14 +50,23 @@ int main(void)
     /* Prendemos el LED */
     Led_Sys_Lat &= ~(1 << Led_Sys_Gpio);
     uint8_t counter = 0;
+    uint8_t fake_pwm_max = 0;
     while(1)
     {
-        if(counter++ == 100)
+        if(counter <= fake_pwm_max)
+        {
+            Rut_Led_Off();
+        }
+        else 
         {
             Rut_Led_On();
-            counter = 0;
         }
-        Led_Sys_Lat |= (1 << Led_Sys_Gpio);
+        if(counter++ == 100)
+        {
+            counter = 0;
+            fake_pwm_max++;
+            if(fake_pwm_max == Percent_Limit_Fake_Pwm) fake_pwm_max = 0;
+        }
         __delay_ms(1);
     }
     return (EXIT_SUCCESS);

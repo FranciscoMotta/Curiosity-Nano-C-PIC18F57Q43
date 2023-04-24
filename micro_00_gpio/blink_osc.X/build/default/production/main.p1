@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"38 main.c
-[; ;main.c: 38: void Clock_Local_Init (void);
+"40 main.c
+[; ;main.c: 40: void Clock_Local_Init (void);
 [v _Clock_Local_Init `(v ~T0 @X0 0 ef ]
 "48134 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
@@ -13,8 +13,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"70 main.c
-[; ;main.c: 70:     _clock_hfintosc_params_t my_clock_param;
+"81 main.c
+[; ;main.c: 81:     _clock_hfintosc_params_t my_clock_param;
 [c E17010 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E17010 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E17022 0 1 2 3 4 5 6 7 8 .. ]
@@ -2644,91 +2644,122 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [p x CP  =  OFF          ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"43 main.c
-[; ;main.c: 43: int main(void)
+"45 main.c
+[; ;main.c: 45: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"44
-[; ;main.c: 44: {
+"46
+[; ;main.c: 46: {
 {
 [e :U _main ]
 [f ]
-"45
-[; ;main.c: 45:     Clock_Local_Init();
-[e ( _Clock_Local_Init ..  ]
 "47
-[; ;main.c: 47:     TRISF &= ~(1 << 3);
-[e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
+[; ;main.c: 47:     Clock_Local_Init();
+[e ( _Clock_Local_Init ..  ]
 "49
-[; ;main.c: 49:     LATF &= ~(1 << 3);
+[; ;main.c: 49:     TRISF &= ~(1 << 3);
+[e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
+"51
+[; ;main.c: 51:     LATF &= ~(1 << 3);
 [e =& _LATF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"50
-[; ;main.c: 50:     uint8_t counter = 0;
+"52
+[; ;main.c: 52:     uint8_t counter = 0;
 [v _counter `uc ~T0 @X0 1 a ]
 [e = _counter -> -> 0 `i `uc ]
-"51
-[; ;main.c: 51:     while(1)
-[e :U 2360 ]
-"52
-[; ;main.c: 52:     {
-{
 "53
-[; ;main.c: 53:         if(counter++ == 100)
-[e $ ! == -> ++ _counter -> -> 1 `i `uc `i -> 100 `i 2362  ]
+[; ;main.c: 53:     uint8_t fake_pwm_max = 0;
+[v _fake_pwm_max `uc ~T0 @X0 1 a ]
+[e = _fake_pwm_max -> -> 0 `i `uc ]
 "54
-[; ;main.c: 54:         {
-{
+[; ;main.c: 54:     while(1)
+[e :U 2360 ]
 "55
-[; ;main.c: 55:             LATF &= ~(1 << 3); _delay((unsigned long)((500)*(16000000UL/4000000.0)));;
-[e =& _LATF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `ul `d .4000000.0 `ul ]
+[; ;main.c: 55:     {
+{
 "56
-[; ;main.c: 56:             counter = 0;
-[e = _counter -> -> 0 `i `uc ]
+[; ;main.c: 56:         if(counter <= fake_pwm_max)
+[e $ ! <= -> _counter `i -> _fake_pwm_max `i 2362  ]
 "57
-[; ;main.c: 57:         }
-}
-[e :U 2362 ]
+[; ;main.c: 57:         {
+{
 "58
-[; ;main.c: 58:         LATF |= (1 << 3);
+[; ;main.c: 58:             LATF |= (1 << 3);;
 [e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
 "59
-[; ;main.c: 59:         _delay((unsigned long)((1)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 59:         }
+}
+[e $U 2363  ]
 "60
-[; ;main.c: 60:     }
+[; ;main.c: 60:         else
+[e :U 2362 ]
+"61
+[; ;main.c: 61:         {
+{
+"62
+[; ;main.c: 62:             LATF &= ~(1 << 3);;
+[e =& _LATF -> ~ << -> 1 `i -> 3 `i `Vuc ]
+"63
+[; ;main.c: 63:         }
+}
+[e :U 2363 ]
+"64
+[; ;main.c: 64:         if(counter++ == 100)
+[e $ ! == -> ++ _counter -> -> 1 `i `uc `i -> 100 `i 2364  ]
+"65
+[; ;main.c: 65:         {
+{
+"66
+[; ;main.c: 66:             counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"67
+[; ;main.c: 67:             fake_pwm_max++;
+[e ++ _fake_pwm_max -> -> 1 `i `uc ]
+"68
+[; ;main.c: 68:             if(fake_pwm_max == 25) fake_pwm_max = 0;
+[e $ ! == -> _fake_pwm_max `i -> 25 `i 2365  ]
+[e = _fake_pwm_max -> -> 0 `i `uc ]
+[e :U 2365 ]
+"69
+[; ;main.c: 69:         }
+}
+[e :U 2364 ]
+"70
+[; ;main.c: 70:         _delay((unsigned long)((1)*(16000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+"71
+[; ;main.c: 71:     }
 }
 [e :U 2359 ]
 [e $U 2360  ]
 [e :U 2361 ]
-"61
-[; ;main.c: 61:     return (0);
+"72
+[; ;main.c: 72:     return (0);
 [e ) -> 0 `i ]
 [e $UE 2358  ]
-"62
-[; ;main.c: 62: }
+"73
+[; ;main.c: 73: }
 [e :UE 2358 ]
 }
-"68
-[; ;main.c: 68: void Clock_Local_Init (void)
+"79
+[; ;main.c: 79: void Clock_Local_Init (void)
 [v _Clock_Local_Init `(v ~T0 @X0 1 ef ]
-"69
-[; ;main.c: 69: {
+"80
+[; ;main.c: 80: {
 {
 [e :U _Clock_Local_Init ]
 [f ]
-"70
-[; ;main.c: 70:     _clock_hfintosc_params_t my_clock_param;
+"81
+[; ;main.c: 81:     _clock_hfintosc_params_t my_clock_param;
 [v _my_clock_param `S2357 ~T0 @X0 1 a ]
-"71
-[; ;main.c: 71:     my_clock_param.divisor_clock = clock_div_1;
+"82
+[; ;main.c: 82:     my_clock_param.divisor_clock = clock_div_1;
 [e = . _my_clock_param 0 . `E17010 0 ]
-"72
-[; ;main.c: 72:     my_clock_param.frecuencia_clock = freq_clk_16MHZ;
+"83
+[; ;main.c: 83:     my_clock_param.frecuencia_clock = freq_clk_16MHZ;
 [e = . _my_clock_param 1 . `E17022 5 ]
-"73
-[; ;main.c: 73:     FM_Hfintosc_Init(&my_clock_param);
+"84
+[; ;main.c: 84:     FM_Hfintosc_Init(&my_clock_param);
 [e ( _FM_Hfintosc_Init (1 &U _my_clock_param ]
-"74
-[; ;main.c: 74: }
-[e :UE 2363 ]
+"85
+[; ;main.c: 85: }
+[e :UE 2366 ]
 }
