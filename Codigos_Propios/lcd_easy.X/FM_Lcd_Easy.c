@@ -17,6 +17,7 @@ void FM_Lcd_Easy_Gpio_Init (void)
     bits_data = 0x0F;
 #endif
     Lcd_Data_Ctrl_Tris &= ~(bits_data | Bits_Control_Mask);
+    Lcd_Data_Ctrl_Lat &= ~(1 << Lcd_Rw_Pin);
 }
 
 void FM_Lcd_Send_Nibble (char byte_to_send)
@@ -33,7 +34,7 @@ void FM_Lcd_Send_Nibble (char byte_to_send)
     Lcd_Data_Ctrl_Lat |= upper_bits;
     Lcd_Enable_Pulse();
     Lcd_Data_Ctrl_Lat &= ~upper_bits;
-    Lcd_Data_Ctrl_Lat = lower_bits;
+    Lcd_Data_Ctrl_Lat |= lower_bits;
     Lcd_Enable_Pulse();
     Lcd_Data_Ctrl_Lat &= ~lower_bits;
 }
@@ -54,7 +55,7 @@ void FM_Lcd_Send_Character (char character_to_send)
 void FM_Lcd_Easy_Init (void)
 {
     FM_Lcd_Easy_Gpio_Init(); // Iniciamos los GPIO para la LCD
-    /* Acá procedemos a mandar los comandos de control */
+    /* AcÃ¡ procedemos a mandar los comandos de control */
     FM_Lcd_Send_Command(0x01); // Clear Display
     FM_Lcd_Send_Command(0x02); // Return Home
     FM_Lcd_Send_Command(0x04); // Cursor to right
