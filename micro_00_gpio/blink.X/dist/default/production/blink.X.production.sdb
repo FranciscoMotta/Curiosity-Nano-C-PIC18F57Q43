@@ -27,24 +27,63 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
-"31 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\main.c
+"43 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"47
+"68
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
-"41149 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+"3 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\system_config.c
+[v _Clock_Init Clock_Init `(v  1 e 1 0 ]
+[s S51 . 1 `uc 1 NDIV 1 0 :4:0 
+`uc 1 NOSC 1 0 :3:4 
+]
+"5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[s S54 . 1 `uc 1 NDIV0 1 0 :1:0 
+`uc 1 NDIV1 1 0 :1:1 
+`uc 1 NDIV2 1 0 :1:2 
+`uc 1 NDIV3 1 0 :1:3 
+`uc 1 NOSC0 1 0 :1:4 
+`uc 1 NOSC1 1 0 :1:5 
+`uc 1 NOSC2 1 0 :1:6 
+]
+[u S62 . 1 `S51 1 . 1 0 `S54 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES62  1 e 1 @173 ]
+[s S77 . 1 `uc 1 HFFRQ 1 0 :4:0 
+]
+"5469
+[s S79 . 1 `uc 1 FRQ0 1 0 :1:0 
+`uc 1 FRQ1 1 0 :1:1 
+`uc 1 FRQ2 1 0 :1:2 
+`uc 1 FRQ3 1 0 :1:3 
+]
+[u S84 . 1 `S77 1 . 1 0 `S79 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES84  1 e 1 @177 ]
+"39612
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"39674
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
 "41149
 [v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
+"47916
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "48134
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-"31 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\main.c
+"48258
+[v _PORTB PORTB `VEuc  1 e 1 @1231 ]
+"43 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"40
+"61
 } 0
-"47
+"68
 [v _GPIO_Init GPIO_Init `(v  1 e 1 0 ]
 {
-"51
+"79
+} 0
+"3 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_00_gpio\blink.X\system_config.c
+[v _Clock_Init Clock_Init `(v  1 e 1 0 ]
+{
+"8
 } 0
