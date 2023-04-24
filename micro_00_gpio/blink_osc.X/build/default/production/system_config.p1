@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7 system_config.c
-[; ;system_config.c: 7: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
+"8 system_config.c
+[; ;system_config.c: 8: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
 [c E16689 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E16689 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E16701 0 1 2 3 4 5 6 7 8 .. ]
@@ -9,73 +9,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./system_config.h: 102: {
 [s S2355 `E16689 1 `E16701 1 ]
 [n S2355 . divisor_clock frecuencia_clock ]
-"5210 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5210: extern volatile unsigned char OSCCON1 __attribute__((address(0x0AD)));
-[v _OSCCON1 `Vuc ~T0 @X0 0 e@173 ]
-"16 ./system_config.h
-[p x FEXTOSC  =  OFF     ]
-"17
-[p x RSTOSC  =  HFINTOSC_64MHZ ]
-"20
-[p x CLKOUTEN  =  OFF    ]
-"21
-[p x PR1WAY  =  OFF      ]
-"22
-[p x CSWEN  =  OFF       ]
-"23
-[p x FCMEN  =  OFF       ]
-"26
-[p x MCLRE  =  EXTMCLR   ]
-"27
-[p x PWRTS  =  PWRT_OFF  ]
-"28
-[p x MVECEN  =  OFF      ]
-"29
-[p x IVT1WAY  =  OFF     ]
-"30
-[p x LPBOREN  =  OFF     ]
-"31
-[p x BOREN  =  SBORDIS   ]
-"34
-[p x BORV  =  VBOR_1P9   ]
-"35
-[p x ZCD  =  OFF         ]
-"36
-[p x PPS1WAY  =  OFF     ]
-"37
-[p x STVREN  =  OFF      ]
-"38
-[p x LVP  =  OFF         ]
-"39
-[p x XINST  =  OFF       ]
-"42
-[p x WDTCPS  =  WDTCPS_31 ]
-"43
-[p x WDTE  =  OFF        ]
-"46
-[p x WDTCWS  =  WDTCWS_7 ]
-"47
-[p x WDTCCS  =  SC       ]
-"50
-[p x BBSIZE  =  BBSIZE_512 ]
-"51
-[p x BBEN  =  OFF        ]
-"52
-[p x SAFEN  =  OFF       ]
-"53
-[p x DEBUG  =  OFF       ]
-"56
-[p x WRTB  =  OFF        ]
-"57
-[p x WRTC  =  OFF        ]
-"58
-[p x WRTD  =  OFF        ]
-"59
-[p x WRTSAF  =  OFF      ]
-"60
-[p x WRTAPP  =  OFF      ]
-"63
-[p x CP  =  OFF          ]
+"5216 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5216:     struct {
+[s S233 :4 `uc 1 :3 `uc 1 ]
+[n S233 . NDIV NOSC ]
+"5220
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5220:     struct {
+[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S234 . NDIV0 NDIV1 NDIV2 NDIV3 NOSC0 NOSC1 NOSC2 ]
+"5215
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5215: typedef union {
+[u S232 `S233 1 `S234 1 ]
+[n S232 . . . ]
+"5230
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5230: extern volatile OSCCON1bits_t OSCCON1bits __attribute__((address(0x0AD)));
+[v _OSCCON1bits `VS232 ~T0 @X0 0 e@173 ]
+"5459
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5459:     struct {
+[s S244 :4 `uc 1 ]
+[n S244 . HFFRQ ]
+"5462
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5462:     struct {
+[s S245 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S245 . FRQ0 FRQ1 FRQ2 FRQ3 ]
+"5458
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5458: typedef union {
+[u S243 `S244 1 `S245 1 ]
+[n S243 . . . ]
+"5469
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 5469: extern volatile OSCFRQbits_t OSCFRQbits __attribute__((address(0x0B1)));
+[v _OSCFRQbits `VS243 ~T0 @X0 0 e@177 ]
 "328 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2629,23 +2592,93 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49822
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 49822: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"7 system_config.c
-[; ;system_config.c: 7: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
+"16 ./system_config.h
+[p x FEXTOSC  =  OFF     ]
+"17
+[p x RSTOSC  =  HFINTOSC_64MHZ ]
+"20
+[p x CLKOUTEN  =  OFF    ]
+"21
+[p x PR1WAY  =  OFF      ]
+"22
+[p x CSWEN  =  OFF       ]
+"23
+[p x FCMEN  =  OFF       ]
+"26
+[p x MCLRE  =  EXTMCLR   ]
+"27
+[p x PWRTS  =  PWRT_OFF  ]
+"28
+[p x MVECEN  =  OFF      ]
+"29
+[p x IVT1WAY  =  OFF     ]
+"30
+[p x LPBOREN  =  OFF     ]
+"31
+[p x BOREN  =  SBORDIS   ]
+"34
+[p x BORV  =  VBOR_1P9   ]
+"35
+[p x ZCD  =  OFF         ]
+"36
+[p x PPS1WAY  =  OFF     ]
+"37
+[p x STVREN  =  OFF      ]
+"38
+[p x LVP  =  OFF         ]
+"39
+[p x XINST  =  OFF       ]
+"42
+[p x WDTCPS  =  WDTCPS_31 ]
+"43
+[p x WDTE  =  OFF        ]
+"46
+[p x WDTCWS  =  WDTCWS_7 ]
+"47
+[p x WDTCCS  =  SC       ]
+"50
+[p x BBSIZE  =  BBSIZE_512 ]
+"51
+[p x BBEN  =  OFF        ]
+"52
+[p x SAFEN  =  OFF       ]
+"53
+[p x DEBUG  =  OFF       ]
+"56
+[p x WRTB  =  OFF        ]
+"57
+[p x WRTC  =  OFF        ]
+"58
+[p x WRTD  =  OFF        ]
+"59
+[p x WRTSAF  =  OFF      ]
+"60
+[p x WRTAPP  =  OFF      ]
+"63
+[p x CP  =  OFF          ]
+"8 system_config.c
+[; ;system_config.c: 8: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
 [v _FM_Hfintosc_Init `(v ~T0 @X0 1 ef1`*S2355 ]
-"8
-[; ;system_config.c: 8: {
+"9
+[; ;system_config.c: 9: {
 {
 [e :U _FM_Hfintosc_Init ]
-"7
-[; ;system_config.c: 7: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
-[v _clock_params `*S2355 ~T0 @X0 1 r1 ]
 "8
-[; ;system_config.c: 8: {
-[f ]
+[; ;system_config.c: 8: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
+[v _clock_params `*S2355 ~T0 @X0 1 r1 ]
 "9
-[; ;system_config.c: 9:     OSCCON1 = 0x00;
-[e = _OSCCON1 -> -> 0 `i `uc ]
+[; ;system_config.c: 9: {
+[f ]
 "10
-[; ;system_config.c: 10: }
+[; ;system_config.c: 10:     OSCCON1bits.NOSC = 0b110;
+[e = . . _OSCCON1bits 0 1 -> -> 6 `i `uc ]
+"11
+[; ;system_config.c: 11:     OSCCON1bits.NDIV = clock_params->divisor_clock;
+[e = . . _OSCCON1bits 0 0 -> . *U _clock_params 0 `uc ]
+"12
+[; ;system_config.c: 12:     OSCFRQbits.HFFRQ = clock_params->frecuencia_clock;
+[e = . . _OSCFRQbits 0 0 -> . *U _clock_params 1 `uc ]
+"13
+[; ;system_config.c: 13: }
 [e :UE 2356 ]
 }

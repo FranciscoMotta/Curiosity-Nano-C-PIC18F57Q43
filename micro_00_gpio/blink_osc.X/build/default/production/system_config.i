@@ -7,61 +7,6 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "system_config.c" 2
-# 1 "./system_config.h" 1
-# 16 "./system_config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = OFF
-#pragma config IVT1WAY = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-
-
-
-
-
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28741,13 +28686,59 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 68 "./system_config.h" 2
+# 1 "system_config.c" 2
+
+# 1 "./system_config.h" 1
+# 16 "./system_config.h"
+#pragma config FEXTOSC = OFF
+#pragma config RSTOSC = HFINTOSC_64MHZ
 
 
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = OFF
+#pragma config CSWEN = OFF
+#pragma config FCMEN = OFF
 
 
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = OFF
+#pragma config IVT1WAY = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
 
 
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = OFF
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+# 74 "./system_config.h"
 typedef enum
 {
     clock_div_1 = 0b0000,
@@ -28780,13 +28771,9 @@ typedef struct
     _div_clock_hfintosc_t divisor_clock;
     _freq_clock_hfintosc_t frecuencia_clock;
 }_clock_hfintosc_params_t;
-
-
-
-
-
+# 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 1 "system_config.c" 2
+# 2 "system_config.c" 2
 
 
 
@@ -28795,5 +28782,7 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
 {
-    OSCCON1 = 0x00;
+    OSCCON1bits.NOSC = 0b110;
+    OSCCON1bits.NDIV = clock_params->divisor_clock;
+    OSCFRQbits.HFFRQ = clock_params->frecuencia_clock;
 }

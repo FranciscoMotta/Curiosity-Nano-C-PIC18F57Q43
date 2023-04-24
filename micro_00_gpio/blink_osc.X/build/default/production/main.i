@@ -28923,20 +28923,44 @@ typedef struct
     _div_clock_hfintosc_t divisor_clock;
     _freq_clock_hfintosc_t frecuencia_clock;
 }_clock_hfintosc_params_t;
-
-
-
-
-
+# 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 17 "main.c" 2
-# 34 "main.c"
+# 38 "main.c"
+void Clock_Local_Init (void);
+
+
+
+
 int main(void)
 {
+    Clock_Local_Init();
 
     TRISF &= ~(1 << 3);
 
     LATF &= ~(1 << 3);
-    while(1);
+    uint8_t counter = 0;
+    while(1)
+    {
+        if(counter++ == 100)
+        {
+            LATF &= ~(1 << 3); _delay((unsigned long)((500)*(16000000UL/4000000.0)));;
+            counter = 0;
+        }
+        LATF |= (1 << 3);
+        _delay((unsigned long)((1)*(16000000UL/4000.0)));
+    }
     return (0);
+}
+
+
+
+
+
+void Clock_Local_Init (void)
+{
+    _clock_hfintosc_params_t my_clock_param;
+    my_clock_param.divisor_clock = clock_div_1;
+    my_clock_param.frecuencia_clock = freq_clk_16MHZ;
+    FM_Hfintosc_Init(&my_clock_param);
 }
