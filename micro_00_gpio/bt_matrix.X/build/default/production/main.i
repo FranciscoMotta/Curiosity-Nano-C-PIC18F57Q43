@@ -28966,11 +28966,28 @@ void FM_Lcd_Send_Command (char command_to_send);
 void FM_Lcd_Send_Character (char character_to_send);
 void FM_Lcd_Set_Cursor (_row_lcd_t filas, _column_lcd_t columna);
 void FM_Lcd_Send_String (char *cadena);
+void FM_Lcd_Send_Uint8 (uint8_t numero);
 void FM_Lcd_Easy_Init (void);
 # 19 "main.c" 2
-# 29 "main.c"
+# 52 "main.c"
 void Internal_Clock_Init (void);
 void User_Led_Init (void);
+
+
+
+
+
+char character_matrix_buttons[16] = {'1', '2', '3', 'A',
+                                     '4', '5', '6', 'B',
+                                     '7', '8', '9', 'C',
+                                     '*', '0', '#', 'D'};
+
+char User_Matrix_Decode_Raw_Readed (uint8_t raw_value);
+void User_Matrix_Buttons_Init (void);
+uint8_t User_Matrix_Buttons_Read (void);
+
+
+
 
 
 
@@ -28978,12 +28995,21 @@ int main(void)
 {
     Internal_Clock_Init();
     FM_Lcd_Easy_Init();
+    User_Matrix_Buttons_Init();
     FM_Lcd_Set_Cursor(ROW_1, COL_1);
     FM_Lcd_Send_String("Lect. Matrix 4x4");
+    FM_Lcd_Set_Cursor(ROW_2, COL_1);
+    FM_Lcd_Send_Uint8(123);
     while(1)
     {
+        FM_Lcd_Set_Cursor(ROW_2, COL_1);
+        FM_Lcd_Send_String("RAW: ");
+        uint8_t raw_data = User_Matrix_Buttons_Read();
+        FM_Lcd_Send_Uint8(raw_data);
+        FM_Lcd_Send_String(" CHAR: ");
+        FM_Lcd_Send_Character(User_Matrix_Decode_Raw_Readed(raw_data));
         LATF ^= (1 << 3);;
-        _delay((unsigned long)((150)*(16000000UL/4000.0)));
+        _delay((unsigned long)((100)*(16000000UL/4000.0)));
     }
     return (0);
 }
@@ -28991,6 +29017,112 @@ int main(void)
 
 
 
+
+char User_Matrix_Decode_Raw_Readed (uint8_t raw_value)
+{
+    char hexa_value = 0x00;
+    switch(raw_value)
+    {
+        case 238:
+            hexa_value = '1';
+            break;
+        case 222:
+            hexa_value = '2';
+            break;
+        case 190:
+            hexa_value = '3';
+            break;
+        case 126:
+            hexa_value = 'A';
+            break;
+        case 237:
+            hexa_value = '4';
+            break;
+        case 221:
+            hexa_value = '5';
+            break;
+        case 189:
+            hexa_value = '6';
+            break;
+        case 125:
+            hexa_value = 'B';
+            break;
+        case 235:
+            hexa_value = '7';
+            break;
+        case 219:
+            hexa_value = '8';
+            break;
+        case 187:
+            hexa_value = '9';
+            break;
+        case 123:
+            hexa_value = 'C';
+            break;
+        case 231:
+            hexa_value = '*';
+            break;
+        case 215:
+            hexa_value = '0';
+            break;
+        case 183:
+            hexa_value = '#';
+            break;
+        case 119:
+            hexa_value = 'D';
+            break;
+        default:
+            __nop();
+            break;
+    }
+    return hexa_value;
+}
+
+uint8_t User_Matrix_Buttons_Read (void)
+{
+
+    WPUD = 0xFF;
+
+
+    TRISD = 0x0F;;
+
+
+    LATD = 0x0F;
+    TRISD = 0x0F;;
+
+
+    while(PORTD == 0x0F);
+
+
+    uint8_t read_rows = PORTD & 0x0F;
+
+
+    TRISD = 0xF0;;
+
+
+    LATD = 0xF0;
+    TRISD = 0xF0;;
+
+
+    while (PORTD == 0xF0);
+
+
+    uint8_t read_cols = PORTD & 0xF0;
+    TRISD = 0x0F;;
+
+
+    uint8_t push_button = 0;
+    push_button = read_cols | read_rows;
+    return push_button;
+}
+
+void User_Matrix_Buttons_Init (void)
+{
+
+    ANSELD = 0x00;
+
+    WPUD = 0xFF;
+}
 
 void User_Led_Init (void)
 {

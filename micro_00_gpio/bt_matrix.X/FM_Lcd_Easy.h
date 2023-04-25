@@ -110,6 +110,7 @@ void FM_Lcd_Send_Command (char command_to_send);
 void FM_Lcd_Send_Character (char character_to_send);
 void FM_Lcd_Set_Cursor (_row_lcd_t filas, _column_lcd_t columna);
 void FM_Lcd_Send_String (char *cadena);
+void FM_Lcd_Send_Uint8  (uint8_t numero);
 void FM_Lcd_Easy_Init (void);
 #endif	/* FM_LCD_EASY_H */
 

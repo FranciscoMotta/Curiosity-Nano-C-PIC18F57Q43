@@ -84,6 +84,17 @@ void FM_Lcd_Send_String (char *cadena)
     }
 }
 
+void FM_Lcd_Send_Uint8 (uint8_t numero)
+{
+    uint8_t centenas, decenas, unidades = 0;
+    centenas = numero / 100;
+    decenas = (numero % 100) / 10; 
+    unidades = (numero % 100) % 10;
+    FM_Lcd_Send_Character(centenas + 0x30);
+    FM_Lcd_Send_Character(decenas + 0x30);
+    FM_Lcd_Send_Character(unidades + 0x30);
+}
+
 void FM_Lcd_Easy_Init (void)
 {
     FM_Lcd_Easy_Gpio_Init(); // Iniciamos los GPIO para la LCD

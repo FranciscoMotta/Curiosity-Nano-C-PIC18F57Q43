@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"38 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
+"78 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
 [e E17039 . `uc
 ROW_1 0
 ROW_2 1
@@ -25,7 +25,7 @@ COL_13 12
 COL_14 13
 COL_15 14
 ]
-"60
+"214
 [e E17010 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -95,6 +95,10 @@ COL_13 12
 COL_14 13
 COL_15 14
 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
@@ -132,18 +136,26 @@ COL_15 14
 "77
 [v _FM_Lcd_Send_String FM_Lcd_Send_String `(v  1 e 1 0 ]
 "87
+[v _FM_Lcd_Send_Uint8 FM_Lcd_Send_Uint8 `(v  1 e 1 0 ]
+"98
 [v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
-"34 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
+"73 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"58
+"100
+[v _User_Matrix_Decode_Raw_Readed User_Matrix_Decode_Raw_Readed `(uc  1 e 1 0 ]
+"160
+[v _User_Matrix_Buttons_Read User_Matrix_Buttons_Read `(uc  1 e 1 0 ]
+"198
+[v _User_Matrix_Buttons_Init User_Matrix_Buttons_Init `(v  1 e 1 0 ]
+"212
 [v _Internal_Clock_Init Internal_Clock_Init `(v  1 e 1 0 ]
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S134 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S178 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S137 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S181 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -151,41 +163,80 @@ COL_15 14
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S145 . 1 `S134 1 . 1 0 `S137 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES145  1 e 1 @173 ]
-[s S160 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S189 . 1 `S178 1 . 1 0 `S181 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES189  1 e 1 @173 ]
+[s S204 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S162 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S206 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S167 . 1 `S160 1 . 1 0 `S162 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES167  1 e 1 @177 ]
-"47792
+[u S211 . 1 `S204 1 . 1 0 `S206 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES211  1 e 1 @177 ]
+"40604
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40666
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"47698
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
+"48040
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
 "48134
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-"34 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
+"48382
+[v _PORTD PORTD `VEuc  1 e 1 @1233 ]
+"73 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"46
+"86
+[v main@raw_data raw_data `uc  1 a 1 22 ]
+"94
 } 0
-"58
+"100
+[v _User_Matrix_Decode_Raw_Readed User_Matrix_Decode_Raw_Readed `(uc  1 e 1 0 ]
+{
+[v User_Matrix_Decode_Raw_Readed@raw_value raw_value `uc  1 a 1 wreg ]
+"102
+[v User_Matrix_Decode_Raw_Readed@hexa_value hexa_value `uc  1 a 1 3 ]
+"100
+[v User_Matrix_Decode_Raw_Readed@raw_value raw_value `uc  1 a 1 wreg ]
+"102
+[v User_Matrix_Decode_Raw_Readed@raw_value raw_value `uc  1 a 1 2 ]
+"158
+} 0
+"160
+[v _User_Matrix_Buttons_Read User_Matrix_Buttons_Read `(uc  1 e 1 0 ]
+{
+"193
+[v User_Matrix_Buttons_Read@push_button push_button `uc  1 a 1 2 ]
+"189
+[v User_Matrix_Buttons_Read@read_cols read_cols `uc  1 a 1 1 ]
+"176
+[v User_Matrix_Buttons_Read@read_rows read_rows `uc  1 a 1 0 ]
+"196
+} 0
+"198
+[v _User_Matrix_Buttons_Init User_Matrix_Buttons_Init `(v  1 e 1 0 ]
+{
+"204
+} 0
+"212
 [v _Internal_Clock_Init Internal_Clock_Init `(v  1 e 1 0 ]
 {
-[s S91 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-"60
-[v Internal_Clock_Init@my_clock_params my_clock_params `S91  1 a 2 3 ]
-"64
+[s S123 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+"214
+[v Internal_Clock_Init@my_clock_params my_clock_params `S123  1 a 2 3 ]
+"218
 } 0
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S91 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S91  1 p 2 0 ]
+[s S123 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S123  1 p 2 0 ]
 "13
 } 0
 "55 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\FM_Lcd_Easy.c
@@ -201,7 +252,44 @@ COL_15 14
 [v FM_Lcd_Set_Cursor@filas filas `E16718  1 a 1 6 ]
 "75
 } 0
-"77
+"87
+[v _FM_Lcd_Send_Uint8 FM_Lcd_Send_Uint8 `(v  1 e 1 0 ]
+{
+[v FM_Lcd_Send_Uint8@numero numero `uc  1 a 1 wreg ]
+"89
+[v FM_Lcd_Send_Uint8@unidades unidades `uc  1 a 1 18 ]
+[v FM_Lcd_Send_Uint8@decenas decenas `uc  1 a 1 17 ]
+[v FM_Lcd_Send_Uint8@centenas centenas `uc  1 a 1 16 ]
+"87
+[v FM_Lcd_Send_Uint8@numero numero `uc  1 a 1 wreg ]
+[v FM_Lcd_Send_Uint8@numero numero `uc  1 a 1 19 ]
+"96
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 12 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 11 ]
+[v ___awdiv@counter counter `uc  1 a 1 10 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
+"41
+} 0
+"77 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\bt_matrix.X\FM_Lcd_Easy.c
 [v _FM_Lcd_Send_String FM_Lcd_Send_String `(v  1 e 1 0 ]
 {
 "79
@@ -219,10 +307,10 @@ COL_15 14
 [v FM_Lcd_Send_Character@character_to_send character_to_send `uc  1 a 1 4 ]
 "53
 } 0
-"87
+"98
 [v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
 {
-"97
+"108
 } 0
 "43
 [v _FM_Lcd_Send_Command FM_Lcd_Send_Command `(v  1 e 1 0 ]
