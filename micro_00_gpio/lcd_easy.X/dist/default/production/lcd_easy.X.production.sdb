@@ -1,0 +1,305 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"29 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\main.c
+[e E17103 . `uc
+ROW_1 0
+ROW_2 1
+]
+[e E17107 . `uc
+COL_1 0
+COL_2 1
+COL_3 2
+COL_4 3
+COL_5 4
+COL_6 5
+COL_7 6
+COL_8 7
+COL_9 8
+COL_10 9
+COL_11 10
+COL_12 11
+COL_13 12
+COL_14 13
+COL_15 14
+]
+"55 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\FM_Lcd_Easy.c
+[e E16779 . `uc
+ROW_1 0
+ROW_2 1
+]
+[e E16783 . `uc
+COL_1 0
+COL_2 1
+COL_3 2
+COL_4 3
+COL_5 4
+COL_6 5
+COL_7 6
+COL_8 7
+COL_9 8
+COL_10 9
+COL_11 10
+COL_12 11
+COL_13 12
+COL_14 13
+COL_15 14
+]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"11 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\FM_Lcd_Easy.c
+[v _FM_Lcd_Easy_Gpio_Init FM_Lcd_Easy_Gpio_Init `(v  1 e 1 0 ]
+"23
+[v _FM_Lcd_Send_Nibble FM_Lcd_Send_Nibble `(v  1 e 1 0 ]
+"43
+[v _FM_Lcd_Send_Command FM_Lcd_Send_Command `(v  1 e 1 0 ]
+"49
+[v _FM_Lcd_Send_Character FM_Lcd_Send_Character `(v  1 e 1 0 ]
+"55
+[v _FM_Lcd_Set_Cursor FM_Lcd_Set_Cursor `(v  1 e 1 0 ]
+"77
+[v _FM_Lcd_Send_String FM_Lcd_Send_String `(v  1 e 1 0 ]
+"87
+[v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
+"23 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"44
+[v _FM_Init_Gpio FM_Init_Gpio `(v  1 e 1 0 ]
+"50 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"57
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"73
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"1280 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f57q43.h
+[v _PMD0 PMD0 `VEuc  1 e 1 @96 ]
+"1337
+[v _PMD1 PMD1 `VEuc  1 e 1 @97 ]
+"1399
+[v _PMD3 PMD3 `VEuc  1 e 1 @99 ]
+"1450
+[v _PMD4 PMD4 `VEuc  1 e 1 @100 ]
+"1506
+[v _PMD5 PMD5 `VEuc  1 e 1 @101 ]
+"1557
+[v _PMD6 PMD6 `VEuc  1 e 1 @102 ]
+"1619
+[v _PMD7 PMD7 `VEuc  1 e 1 @103 ]
+"1681
+[v _PMD8 PMD8 `VEuc  1 e 1 @104 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"39116
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39178
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"39240
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"39302
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"39364
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"39674
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"39736
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"39798
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"39860
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40108
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"40170
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"40232
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"40294
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"40356
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"40604
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40666
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"40728
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"40790
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"40852
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"40914
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"40946
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"40984
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41016
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41048
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41149
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"41211
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"41273
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"41335
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"41397
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"47962
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48024
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"48086
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"48148
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"48210
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"48242
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"48304
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"48366
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"48428
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"48490
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"48552
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"48584
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"23 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"38
+} 0
+"50 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"73
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"57
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"55 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\FM_Lcd_Easy.c
+[v _FM_Lcd_Set_Cursor FM_Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v FM_Lcd_Set_Cursor@filas filas `E16779  1 a 1 wreg ]
+"57
+[v FM_Lcd_Set_Cursor@base_pos base_pos `uc  1 a 1 7 ]
+"55
+[v FM_Lcd_Set_Cursor@filas filas `E16779  1 a 1 wreg ]
+[v FM_Lcd_Set_Cursor@columna columna `E16783  1 p 1 5 ]
+"57
+[v FM_Lcd_Set_Cursor@filas filas `E16779  1 a 1 6 ]
+"75
+} 0
+"77
+[v _FM_Lcd_Send_String FM_Lcd_Send_String `(v  1 e 1 0 ]
+{
+"79
+[v FM_Lcd_Send_String@index index `uc  1 a 1 9 ]
+"77
+[v FM_Lcd_Send_String@cadena cadena `*.32uc  1 p 2 5 ]
+"85
+} 0
+"49
+[v _FM_Lcd_Send_Character FM_Lcd_Send_Character `(v  1 e 1 0 ]
+{
+[v FM_Lcd_Send_Character@character_to_send character_to_send `uc  1 a 1 wreg ]
+[v FM_Lcd_Send_Character@character_to_send character_to_send `uc  1 a 1 wreg ]
+"51
+[v FM_Lcd_Send_Character@character_to_send character_to_send `uc  1 a 1 4 ]
+"53
+} 0
+"87
+[v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
+{
+"97
+} 0
+"43
+[v _FM_Lcd_Send_Command FM_Lcd_Send_Command `(v  1 e 1 0 ]
+{
+[v FM_Lcd_Send_Command@command_to_send command_to_send `uc  1 a 1 wreg ]
+[v FM_Lcd_Send_Command@command_to_send command_to_send `uc  1 a 1 wreg ]
+"45
+[v FM_Lcd_Send_Command@command_to_send command_to_send `uc  1 a 1 4 ]
+"47
+} 0
+"23
+[v _FM_Lcd_Send_Nibble FM_Lcd_Send_Nibble `(v  1 e 1 0 ]
+{
+[v FM_Lcd_Send_Nibble@byte_to_send byte_to_send `uc  1 a 1 wreg ]
+"25
+[v FM_Lcd_Send_Nibble@lower_bits lower_bits `uc  1 a 1 3 ]
+[v FM_Lcd_Send_Nibble@upper_bits upper_bits `uc  1 a 1 2 ]
+"23
+[v FM_Lcd_Send_Nibble@byte_to_send byte_to_send `uc  1 a 1 wreg ]
+"27
+[v FM_Lcd_Send_Nibble@byte_to_send byte_to_send `uc  1 a 1 1 ]
+"40
+} 0
+"11
+[v _FM_Lcd_Easy_Gpio_Init FM_Lcd_Easy_Gpio_Init `(v  1 e 1 0 ]
+{
+"21
+} 0
+"44 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_00_gpio\lcd_easy.X\main.c
+[v _FM_Init_Gpio FM_Init_Gpio `(v  1 e 1 0 ]
+{
+"47
+} 0
