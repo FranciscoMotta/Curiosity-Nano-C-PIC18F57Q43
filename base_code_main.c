@@ -25,7 +25,8 @@
 /*
  * Main
  */
-int main(void) {
+int main(void) 
+{
 
     return (EXIT_SUCCESS);
 }
