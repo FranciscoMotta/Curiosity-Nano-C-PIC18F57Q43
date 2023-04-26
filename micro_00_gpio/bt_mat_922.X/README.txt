@@ -30,4 +30,12 @@ su funcionamiento.
    |---|      PIC18F57Q43       | 
    |---|    Curiosity Nano      | 
    -----------------------------|
+   
+   Pinout:
+C1: 3   C2: 5   C3: 6    C4: 7
+F1: 8   F2: 1   F3: 2    F4: 4
+
+Leyenda: 
+- Cx: Columna X
+- Fx: Fila X
               
