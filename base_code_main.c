@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: jmott
  *
- * Created on 23 de abril de 2023, 06:54 PM
+ * Created on 23 de abril de 2023
  */
 
 /*

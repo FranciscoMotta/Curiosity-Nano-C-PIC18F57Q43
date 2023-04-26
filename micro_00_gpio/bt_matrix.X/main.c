@@ -74,6 +74,7 @@ int main(void)
 {
     Internal_Clock_Init(); // Iniciamos el reloj interno a 16Mhz
     FM_Lcd_Easy_Init(); // Iniciamos el LCD en conf 4bits
+    User_Led_Init();        // Iniciamos el led del usuario
     User_Matrix_Buttons_Init(); // Iniciamos la conf. de la matriz de botones
     FM_Lcd_Set_Cursor(ROW_1, COL_1); 
     FM_Lcd_Send_String("Lect. Matrix 4x4");
@@ -81,6 +82,14 @@ int main(void)
     FM_Lcd_Send_Uint8(123);
     while(1)
     {
+        /*
+         * Ojo: La forma de la lectura de la matriz
+         * de botones es bloqueante.
+         * 
+         * Este código se realizó considerando que no
+         * se usa el 74LC922 el cual es el driver
+         * de manejo de matrices de botones 4x4
+         */
         FM_Lcd_Set_Cursor(ROW_2, COL_1);
         FM_Lcd_Send_String("RAW: ");
         uint8_t raw_data = User_Matrix_Buttons_Read();
