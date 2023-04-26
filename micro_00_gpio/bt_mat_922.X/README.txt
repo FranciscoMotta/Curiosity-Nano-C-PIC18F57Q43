@@ -7,3 +7,27 @@ más simple en la lectura de la matriz de pulsadores, debido a que el driver
 74LS922 facilita su uso a los desarrolladores, ya que reducimos el 
 número de pines de 8 a 5, además, este código no será bloqueante en 
 su funcionamiento. 
+
+-----------------------------------------
+|    1    |     2    |    3    |    A    |
+-----------------------------------------
+|    4    |     5    |    6    |    B    |
+-----------------------------------------
+|    7    |     8    |    9    |    C    |
+-----------------------------------------
+|    *    |     0    |    #    |    D    |
+-----------------------------------------
+          | | | | | | | |  <- pines físicos de mi matriz de botones
+          | | | | | | | | 
+          1 2 3 4 5 6 7 8 
+   ----------------------------
+   |          74LS922         | 
+   |                          |  
+   ----------------------------
+              | | | | |
+              | | | | | 
+   -----------------------------|
+   |---|      PIC18F57Q43       | 
+   |---|    Curiosity Nano      | 
+   -----------------------------|
+              
