@@ -12,6 +12,10 @@
 
 // 'C' source line config statements
 
+#define WITH_CONFIGS
+
+#ifdef WITH_CONFIGS
+
 // CONFIG1
 #pragma config FEXTOSC = OFF    // External Oscillator Selection (Oscillator not enabled)
 #pragma config RSTOSC = HFINTOSC_64MHZ// Reset Oscillator Selection (HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1)
@@ -64,6 +68,8 @@
 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
+
+#endif
 
 #include <xc.h>
 

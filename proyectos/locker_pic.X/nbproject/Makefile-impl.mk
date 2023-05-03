@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=locker_pic.X
 
 # Active Configuration
-DEFAULTCONF=default
+DEFAULTCONF=CON_CONFIGS
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default 
+ALLCONFS=SIN_CONFIGS CON_CONFIGS 
 
 
 # build
@@ -45,13 +45,15 @@ ALLCONFS=default
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=SIN_CONFIGS clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CON_CONFIGS clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=SIN_CONFIGS build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=CON_CONFIGS build
 
 
 
