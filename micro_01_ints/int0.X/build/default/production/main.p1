@@ -62,9 +62,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47854
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47854: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
 [v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
-"39116
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 39116: extern volatile unsigned char ANSELA __attribute__((address(0x400)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@1024 ]
+"39612
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 39612: extern volatile unsigned char ANSELB __attribute__((address(0x408)));
+[v _ANSELB `Vuc ~T0 @X0 0 e@1032 ]
 "47916
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47916: extern volatile unsigned char TRISB __attribute__((address(0x4C7)));
 [v _TRISB `Vuc ~T0 @X0 0 e@1223 ]
@@ -2818,8 +2818,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 91:     LATA &= ~(1 << 2);;
 [e =& _LATA -> ~ << -> 1 `i -> 2 `i `Vuc ]
 "95
-[; ;main.c: 95:     ANSELA &= ~(1 << 0);
-[e =& _ANSELA -> ~ << -> 1 `i -> 0 `i `Vuc ]
+[; ;main.c: 95:     ANSELB &= ~(1 << 0);
+[e =& _ANSELB -> ~ << -> 1 `i -> 0 `i `Vuc ]
 "96
 [; ;main.c: 96:     TRISB |= (1 << 0);
 [e =| _TRISB -> << -> 1 `i -> 0 `i `Vuc ]
@@ -2850,7 +2850,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;main.c: 125:     INTCON0bits.GIE = 1;
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"127
-[; ;main.c: 127: }
+"126
+[; ;main.c: 126: }
 [e :UE 2366 ]
 }

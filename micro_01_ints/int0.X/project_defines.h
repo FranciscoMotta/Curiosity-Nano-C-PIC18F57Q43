@@ -32,7 +32,7 @@
 /* Macros de la entrada de la interrupcion */
 #define Interrupt_Pin_Gpio  0
 #define Interrupt_Pin_Tris  TRISB
-#define Interrupt_Pin_Ansel ANSELA
+#define Interrupt_Pin_Ansel ANSELB
 
 #endif	/* PROJECT_DEFINES_H */
 

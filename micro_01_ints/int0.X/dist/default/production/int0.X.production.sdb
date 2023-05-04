@@ -111,9 +111,9 @@ freq_clk_64MHZ 8
 ]
 [u S241 . 1 `S234 1 . 1 0 `S236 1 . 1 0 ]
 [v _OSCFRQbits OSCFRQbits `VES241  1 e 1 @177 ]
-"39116
-"39116
-[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39612
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
 [s S24 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 ZCDIE 1 0 :1:1 
 `uc 1 ADIE 1 0 :1:2 
@@ -197,7 +197,7 @@ freq_clk_64MHZ 8
 "100 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 [v _Interrupts_Init Interrupts_Init `(v  1 e 1 0 ]
 {
-"127
+"126
 } 0
 "37
 [v _External_Int0 External_Int0 `IIH(v  1 e 1 0 ]

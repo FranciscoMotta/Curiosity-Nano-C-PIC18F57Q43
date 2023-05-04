@@ -23,7 +23,7 @@ text4 CODE 0 1D2 1D2 C 1 2
 text5 CODE 0 174 174 24 1 4
 cstackCOMRAM COMRAM 1 501 501 7 1 1
 config CONFIG 4 300000 300000 A 1 1
-$C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+$C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 idloc IDLOC 5 200000 200000 40 1 1
 init CODE 0 102 102 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -100,7 +100,7 @@ MEDIUMCONST 12600-1FFFF 1
 $dist/default/production\int0.X.production.o
 174 text5 CODE >37:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 174 text5 CODE >39:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
-174 text5 CODE >127:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
+174 text5 CODE >126:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 190 text5 CODE >41:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 194 text5 CODE >42:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 196 text5 CODE >44:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
@@ -110,7 +110,7 @@ $dist/default/production\int0.X.production.o
 1D6 text4 CODE >121:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 1D8 text4 CODE >124:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 1DA text4 CODE >125:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
-1DC text4 CODE >127:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
+1DC text4 CODE >126:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 106 text3 CODE >8:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\system_config.c
 106 text3 CODE >10:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\system_config.c
 110 text3 CODE >11:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\system_config.c
@@ -135,19 +135,19 @@ $dist/default/production\int0.X.production.o
 14A text0 CODE >61:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 14E text0 CODE >64:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
 152 text0 CODE >65:C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_01_ints\int0.X\main.c
-1AE cinit CODE >3585:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1AE cinit CODE >3587:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1AE cinit CODE >3590:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1AE cinit CODE >3598:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1B0 cinit CODE >3599:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1B2 cinit CODE >3600:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1B4 cinit CODE >3601:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1B6 cinit CODE >3602:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1B8 cinit CODE >3603:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1BA cinit CODE >3604:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1BC cinit CODE >3610:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1BC cinit CODE >3612:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
-1BE cinit CODE >3613:C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
+1AE cinit CODE >3585:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1AE cinit CODE >3587:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1AE cinit CODE >3590:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1AE cinit CODE >3598:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1B0 cinit CODE >3599:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1B2 cinit CODE >3600:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1B4 cinit CODE >3601:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1B6 cinit CODE >3602:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1B8 cinit CODE >3603:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1BA cinit CODE >3604:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1BC cinit CODE >3610:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1BC cinit CODE >3612:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
+1BE cinit CODE >3613:C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -167,34 +167,34 @@ __Hspace_1 508 0 ABS 0 - dist/default/production\int0.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\int0.X.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\int0.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\int0.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\int0.X.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\int0.X.production.o
 FM_Hfintosc_Init@clock_params 501 0 COMRAM 1 cstackCOMRAM dist/default/production\int0.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\int0.X.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\int0.X.production.o
 _LATF 4C3 0 ABS 0 - dist/default/production\int0.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 _main 142 0 CODE 0 text0 dist/default/production\int0.X.production.o
-start 102 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+start 102 0 CODE 0 init C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __end_of_Pines_Config 1D2 0 CODE 0 text1 dist/default/production\int0.X.production.o
 _OSCFRQbits B1 0 ABS 0 - dist/default/production\int0.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\int0.X.production.o
 __end_of_Local_Osc_Init 1AE 0 CODE 0 text2 dist/default/production\int0.X.production.o
-__accesstop 560 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+__accesstop 560 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 Local_Osc_Init@my_clock 504 0 COMRAM 1 cstackCOMRAM dist/default/production\int0.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\int0.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\int0.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\int0.X.production.o
 ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\int0.X.production.o
-_ANSELA 400 0 ABS 0 - dist/default/production\int0.X.production.o
+_ANSELB 408 0 ABS 0 - dist/default/production\int0.X.production.o
 __end_of_Interrupts_Init 1DE 0 CODE 0 text4 dist/default/production\int0.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\int0.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\int0.X.production.o
 __end_of_External_Int0 198 0 CODE 0 text5 dist/default/production\int0.X.production.o
@@ -203,7 +203,7 @@ _Interrupts_Init 1D2 0 CODE 0 text4 dist/default/production\int0.X.production.o
 start_initialization 1AE 0 CODE 0 cinit dist/default/production\int0.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\int0.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\int0.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 _FM_Hfintosc_Init 106 0 CODE 0 text3 dist/default/production\int0.X.production.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\int0.X.production.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\int0.X.production.o
@@ -254,7 +254,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\int0.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\int0.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\int0.X.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\int0.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\int0.X.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\int0.X.production.o
 __Lbank5 0 0 ABS 0 bank5 dist/default/production\int0.X.production.o
@@ -347,9 +347,9 @@ __Lconfig 0 0 CONFIG 4 config dist/default/production\int0.X.production.o
 ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/production\int0.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\int0.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\int0.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-stackhi 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\int0.X.production.o
 __Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\int0.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\int0.X.production.o
@@ -372,13 +372,13 @@ __ptext3 106 0 CODE 0 text3 dist/default/production\int0.X.production.o
 __ptext4 1D2 0 CODE 0 text4 dist/default/production\int0.X.production.o
 __ptext5 174 0 CODE 0 text5 dist/default/production\int0.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\int0.X.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\int0.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\int0.X.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\int0.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\int0.X.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\int0.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\int0.X.production.o
 __end_of__initialization 1BC 0 CODE 0 cinit dist/default/production\int0.X.production.o

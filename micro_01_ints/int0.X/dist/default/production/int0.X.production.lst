@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed May 03 20:57:37 2023
+                                                                                               Thu May 04 17:03:03 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F57Q43
@@ -65,7 +65,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
     51                           ; 
     52                           ; SFR Addresses
     53   000000                     _OSCCON1bits	set	173
-    54   000000                     _ANSELA	set	1024
+    54   000000                     _ANSELB	set	1032
     55   000000                     _PIE1bits	set	1183
     56   000000                     _PIR1bits	set	1199
     57   000000                     _LATA	set	1214
@@ -266,9 +266,9 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    232                           ;main.c: 91:     LATA &= ~(1 << 2);;
    233   0001C8  94BE               	bcf	190,2,c	;volatile
    234                           
-   235                           ;main.c: 95:     ANSELA &= ~(1 << 0);
+   235                           ;main.c: 95:     ANSELB &= ~(1 << 0);
    236   0001CA  0104               	movlb	4	; () banked
-   237   0001CC  9100               	bcf	0,0,b	;volatile
+   237   0001CC  9108               	bcf	8,0,b	;volatile
    238                           
    239                           ;main.c: 96:     TRISB |= (1 << 0);
    240   0001CE  80C7               	bsf	199,0,c	;volatile
@@ -1698,8 +1698,8 @@ BITBIGSFRhhhll       2      0       0      74        0.0%
 BITBIGSFRhhlh        4      0       0      75        0.0%
 BITBIGSFRhhll        E      0       0      76        0.0%
 BITBIGSFRhl          F      0       0      77        0.0%
-BITBIGSFRlh         9E      0       0      78        0.0%
-BITBIGSFRllhh      34E      0       0      79        0.0%
+BITBIGSFRlh         96      0       0      78        0.0%
+BITBIGSFRllhh      356      0       0      79        0.0%
 BITBIGSFRllhl        3      0       0      80        0.0%
 BITBIGSFRlll        AD      0       0      81        0.0%
 BIGSFR_1             0      0       0     200        0.0%
@@ -1721,7 +1721,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed May 03 20:57:37 2023
+Symbol Table                                                                                   Thu May 04 17:03:03 2023
 
                           l51 01DC                            l45 01AC                            l48 01D0  
                           l58 0140                            u37 015C             ??_Interrupts_Init 0501  
@@ -1737,7 +1737,7 @@ Symbol Table                                                                    
                        i2l754 0194                         i2l748 0174                         _TRISA 04C6  
                        _TRISB 04C7                         _TRISF 04CB               __initialization 01AE  
                 __end_of_main 0172                        ??_main 0506                 __activetblptr 0000  
-                      _ANSELA 0400                        i2u1_40 0182                        i2u1_41 017E  
+                      _ANSELB 0408                        i2u1_40 0182                        i2u1_41 017E  
                       i2u2_40 0190                        i2u2_41 018C                        isa$std 0001  
               _Local_Osc_Init 0198                 ?_Pines_Config 0501                    __accesstop 0560  
      __end_of__initialization 01BC                 ___rparam_used 0001               _Interrupts_Init 01D2  

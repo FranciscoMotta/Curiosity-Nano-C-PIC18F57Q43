@@ -40,7 +40,7 @@ __Leeprom_data 0 0 EEDATA 0
 _PIR1bits 4AF 0 ABS 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
-_ANSELA 400 0 ABS 0
+_ANSELB 408 0 ABS 0
 __Hbigbss 0 0 BIGRAM 1
 __Lbigbss 0 0 BIGRAM 1
 __Hramtop 2600 0 RAM 0
@@ -249,7 +249,7 @@ cstackCOMRAM 501 507 COMRAM 501 1
 text5 174 1DD CODE 174 0
 %locals
 dist/default/production\int0.X.production.o
-C:\Users\ADMINI~1\AppData\Local\Temp\xcAsklo.\driver_tmp_1.s
+C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_1.s
 3585 1AE 0 CODE 0
 3587 1AE 0 CODE 0
 3590 1AE 0 CODE 0
@@ -298,9 +298,9 @@ main.c
 121 1D6 0 CODE 0
 124 1D8 0 CODE 0
 125 1DA 0 CODE 0
-127 1DC 0 CODE 0
+126 1DC 0 CODE 0
 main.c
-127 174 0 CODE 0
+126 174 0 CODE 0
 37 174 0 CODE 0
 39 174 0 CODE 0
 41 190 0 CODE 0

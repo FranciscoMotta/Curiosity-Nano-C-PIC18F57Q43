@@ -28991,7 +28991,7 @@ void Pines_Config (void)
 
 
 
-    ANSELA &= ~(1 << 0);
+    ANSELB &= ~(1 << 0);
     TRISB |= (1 << 0);
 }
 
@@ -29008,5 +29008,4 @@ void Interrupts_Init (void)
 
     INTCON0bits.IPEN = 0;
     INTCON0bits.GIE = 1;
-
 }
