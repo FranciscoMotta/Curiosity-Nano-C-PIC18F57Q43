@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=locker_pic.X
+PROJECTNAME=int0.X
 
 # Active Configuration
 DEFAULTCONF=default

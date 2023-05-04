@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=locker_pic.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/locker_pic.X.production.hex
+CND_ARTIFACT_NAME_default=int0.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/int0.X.production.hex
