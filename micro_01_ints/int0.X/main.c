@@ -123,5 +123,4 @@ void Interrupts_Init (void)
     /* Configuramos los parámetros generales de configuraciones */
     INTCON0bits.IPEN = 0; // Desabilitamos las prioridades
     INTCON0bits.GIE  = 1; // Habilitamos las interrupciones globales
-    
 }
