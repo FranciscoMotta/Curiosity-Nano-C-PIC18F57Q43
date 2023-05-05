@@ -1,8 +1,8 @@
 El presente proyecto trata acerca de 
-generar pulsos por el pin RA0 del microcontrolador
+generar pulsos por el pin RC4 del microcontrolador
 pic18f57q43, estos pulsos serán puenteados por
-medio de un cable al pin RB0 donde se encuentra la
-interrupción externa 0 por defecto. 
+medio de un cable al pin RB1 donde se encuentra la
+interrupción externa 1 por defecto. 
 Dichos pulsos detonarán las interrupciones en un
 flanco determinado para que en la rutina de 
 servicio a la interrupción se haga parpadear el 
@@ -11,7 +11,7 @@ LED conectado en la placa en el pin RF3
                          ________
                          |      |	
 -------------------------|------|------------
-|			RA0    RB0	    |
+|			RC4    RB1	    |
 |              PIC18F57Q43		    |
 |                              RF3          |
 --------------------------------|------------
