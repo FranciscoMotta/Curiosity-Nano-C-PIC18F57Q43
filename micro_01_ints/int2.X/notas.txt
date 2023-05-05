@@ -1,0 +1,19 @@
+El presente proyecto trata acerca de 
+generar pulsos por el pin RC3 del microcontrolador
+pic18f57q43, estos pulsos serán puenteados por
+medio de un cable al pin RB2 donde se encuentra la
+interrupción externa 2 por defecto. 
+Dichos pulsos detonarán las interrupciones en un
+flanco determinado para que en la rutina de 
+servicio a la interrupción se haga parpadear el 
+LED conectado en la placa en el pin RF3
+
+                         ________
+                         |      |	
+-------------------------|------|------------
+|			RC3    RB2	    |
+|              PIC18F57Q43		    |
+|                              RF3          |
+--------------------------------|------------
+				|
+			       LED
