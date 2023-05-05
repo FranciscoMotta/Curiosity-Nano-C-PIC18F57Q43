@@ -41,6 +41,10 @@ void __interrupt(irq(8)) External_Int0 (void)
         Led_Sys_Tog(); // Hacemos el Toggle del led
         PIR1bits.INT0IF = 0; // Limpiamos la bandera
     }
+    else 
+    {
+        __nop(); // No hacemos nada
+    }
 }
 
 /*

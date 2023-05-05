@@ -1,77 +1,49 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
-[t T1 __interrupt irq ( 8 ) ]
-"45822 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 45822:     struct {
-[s S2162 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2162 . INT0IE ZCDIE ADIE ACTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
-"45821
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 45821: typedef union {
-[u S2161 `S2162 1 ]
-[n S2161 . . ]
-"45833
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 45833: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x49F)));
-[v _PIE1bits `VS2161 ~T0 @X0 0 e@1183 ]
-"46696
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46696:     struct {
-[s S2194 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2194 . INT0IF ZCDIF ADIF ACTIF C1IF SMT1IF SMT1PRAIF SMT1PWAIF ]
-"46695
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46695: typedef union {
-[u S2193 `S2194 1 ]
-[n S2193 . . ]
-"46707
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46707: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x4AF)));
-[v _PIR1bits `VS2193 ~T0 @X0 0 e@1199 ]
+[t T1 __interrupt irq ( 48 ) ]
+"46099 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46099:     struct {
+[s S2172 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2172 . INT1IE CLC2IE CWG1IE NCO1IE DMA2SCNTIE DMA2DCNTIE DMA2ORIE DMA2AIE ]
+"46098
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46098: typedef union {
+[u S2171 `S2172 1 ]
+[n S2171 . . ]
+"46110
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46110: extern volatile PIE6bits_t PIE6bits __attribute__((address(0x4A4)));
+[v _PIE6bits `VS2171 ~T0 @X0 0 e@1188 ]
+"46973
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46973:     struct {
+[s S2204 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2204 . INT1IF CLC2IF CWG1IF NCO1IF DMA2SCNTIF DMA2DCNTIF DMA2ORIF DMA2AIF ]
+"46972
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46972: typedef union {
+[u S2203 `S2204 1 ]
+[n S2203 . . ]
+"46984
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46984: extern volatile PIR6bits_t PIR6bits __attribute__((address(0x4B4)));
+[v _PIR6bits `VS2203 ~T0 @X0 0 e@1204 ]
 "47792
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
 [v _LATF `Vuc ~T0 @X0 0 e@1219 ]
-"8 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
 [p mainexit ]
-"54 main.c
-[; ;main.c: 54: void Local_Osc_Init (void);
-[v _Local_Osc_Init `(v ~T0 @X0 0 ef ]
-"55
-[; ;main.c: 55: void Pines_Config (void);
-[v _Pines_Config `(v ~T0 @X0 0 ef ]
-"56
-[; ;main.c: 56: void Interrupts_Init (void);
-[v _Interrupts_Init `(v ~T0 @X0 0 ef ]
-"47512 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47512: extern volatile unsigned char LATA __attribute__((address(0x4BE)));
-[v _LATA `Vuc ~T0 @X0 0 e@1214 ]
+"43 main.c
+[; ;main.c: 43: void Init_Internal_Clock (void);
+[v _Init_Internal_Clock `(v ~T0 @X0 0 ef ]
+"44
+[; ;main.c: 44: void Init_Pins_Application (void);
+[v _Init_Pins_Application `(v ~T0 @X0 0 ef ]
+"45
+[; ;main.c: 45: void Init_External_Int1 (void);
+[v _Init_External_Int1 `(v ~T0 @X0 0 ef ]
+"47636 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47636: extern volatile unsigned char LATC __attribute__((address(0x4C0)));
+[v _LATC `Vuc ~T0 @X0 0 e@1216 ]
 [v F192 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"80 main.c
-[; ;main.c: 80:     _clock_hfintosc_params_t my_clock;
-[c E17010 0 1 2 3 4 5 6 7 8 9 .. ]
-[n E17010 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
-[c E17022 0 1 2 3 4 5 6 7 8 .. ]
-[n E17022 . freq_clk_1MHZ freq_clk_2MHZ freq_clk_4MHZ freq_clk_8MHZ freq_clk_12MHZ freq_clk_16MHZ freq_clk_32MHZ freq_clk_48MHZ freq_clk_64MHZ  ]
-"103 ./system_config.h
-[; ;./system_config.h: 103: {
-[s S2357 `E17010 1 `E17022 1 ]
-[n S2357 . divisor_clock frecuencia_clock ]
-"118
-[; ;./system_config.h: 118: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-[v _FM_Hfintosc_Init `(v ~T0 @X0 0 ef1`*S2357 ]
-"48134 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
-[v _TRISF `Vuc ~T0 @X0 0 e@1227 ]
-"47854
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47854: extern volatile unsigned char TRISA __attribute__((address(0x4C6)));
-[v _TRISA `Vuc ~T0 @X0 0 e@1222 ]
-"39612
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 39612: extern volatile unsigned char ANSELB __attribute__((address(0x408)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@1032 ]
-"47916
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47916: extern volatile unsigned char TRISB __attribute__((address(0x4C7)));
-[v _TRISB `Vuc ~T0 @X0 0 e@1223 ]
-"48550
+"48550 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48550:     struct {
 [s S2260 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2260 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
@@ -86,6 +58,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48564
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48564: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
 [v _INTCON0bits `VS2259 ~T0 @X0 0 e@1238 ]
+"48134
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
+[v _TRISF `Vuc ~T0 @X0 0 e@1227 ]
+"47978
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47978: extern volatile unsigned char TRISC __attribute__((address(0x4C8)));
+[v _TRISC `Vuc ~T0 @X0 0 e@1224 ]
+"47916
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47916: extern volatile unsigned char TRISB __attribute__((address(0x4C7)));
+[v _TRISB `Vuc ~T0 @X0 0 e@1223 ]
+"39612
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 39612: extern volatile unsigned char ANSELB __attribute__((address(0x408)));
+[v _ANSELB `Vuc ~T0 @X0 0 e@1032 ]
+"95 main.c
+[; ;main.c: 95:     _clock_hfintosc_params_t my_clock;
+[c E17010 0 1 2 3 4 5 6 7 8 9 .. ]
+[n E17010 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
+[c E17022 0 1 2 3 4 5 6 7 8 .. ]
+[n E17022 . freq_clk_1MHZ freq_clk_2MHZ freq_clk_4MHZ freq_clk_8MHZ freq_clk_12MHZ freq_clk_16MHZ freq_clk_32MHZ freq_clk_48MHZ freq_clk_64MHZ  ]
+"103 ./system_config.h
+[; ;./system_config.h: 103: {
+[s S2357 `E17010 1 `E17022 1 ]
+[n S2357 . divisor_clock frecuencia_clock ]
+"118
+[; ;./system_config.h: 118: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
+[v _FM_Hfintosc_Init `(v ~T0 @X0 0 ef1`*S2357 ]
 "328 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2703,170 +2700,157 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRTAPP  =  OFF      ]
 "63
 [p x CP  =  OFF          ]
-[v $root$_External_Int0 `(v ~T0 @X0 0 e ]
-"37 main.c
-[; ;main.c: 37: void __attribute__((picinterrupt(("irq(8)")))) External_Int0 (void)
-[v _External_Int0 `(v ~T1 @X0 1 ef ]
-"38
-[; ;main.c: 38: {
+[v $root$_External_Int1 `(v ~T0 @X0 0 e ]
+"31 main.c
+[; ;main.c: 31: void __attribute__((picinterrupt(("irq(48)")))) External_Int1 (void)
+[v _External_Int1 `(v ~T1 @X0 1 ef ]
+"32
+[; ;main.c: 32: {
 {
-[e :U _External_Int0 ]
+[e :U _External_Int1 ]
 [f ]
-"39
-[; ;main.c: 39:     if(PIE1bits.INT0IE && PIR1bits.INT0IF)
-[e $ ! && != -> . . _PIE1bits 0 0 `i -> 0 `i != -> . . _PIR1bits 0 0 `i -> 0 `i 2359  ]
-"40
-[; ;main.c: 40:     {
+"33
+[; ;main.c: 33:     if(PIE6bits.INT1IE && PIR6bits.INT1IF)
+[e $ ! && != -> . . _PIE6bits 0 0 `i -> 0 `i != -> . . _PIR6bits 0 0 `i -> 0 `i 2359  ]
+"34
+[; ;main.c: 34:     {
 {
-"41
-[; ;main.c: 41:         LATF ^= (1 << 3);;
+"35
+[; ;main.c: 35:         LATF ^= (1 << 3);;
 [e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
-"42
-[; ;main.c: 42:         PIR1bits.INT0IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"43
-[; ;main.c: 43:     }
+"36
+[; ;main.c: 36:         PIR6bits.INT1IF = 0;
+[e = . . _PIR6bits 0 0 -> -> 0 `i `uc ]
+"37
+[; ;main.c: 37:     }
 }
-[e $U 2360  ]
-"44
-[; ;main.c: 44:     else
 [e :U 2359 ]
-"45
-[; ;main.c: 45:     {
-{
-"46
-[; ;main.c: 46:         __nop();
-[e ( ___nop ..  ]
-"47
-[; ;main.c: 47:     }
-}
-[e :U 2360 ]
-"48
-[; ;main.c: 48: }
+"38
+[; ;main.c: 38: }
 [e :UE 2358 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"61
-[; ;main.c: 61: int main(void)
+"49
+[; ;main.c: 49: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"62
-[; ;main.c: 62: {
+"50
+[; ;main.c: 50: {
 {
 [e :U _main ]
 [f ]
-"63
-[; ;main.c: 63:     Local_Osc_Init();
-[e ( _Local_Osc_Init ..  ]
-"64
-[; ;main.c: 64:     Pines_Config();
-[e ( _Pines_Config ..  ]
-"65
-[; ;main.c: 65:     Interrupts_Init();
-[e ( _Interrupts_Init ..  ]
-"66
-[; ;main.c: 66:     while(1)
-[e :U 2363 ]
-"67
-[; ;main.c: 67:     {
-{
-"68
-[; ;main.c: 68:         LATA ^= (1 << 2);;
-[e =^ _LATA -> << -> 1 `i -> 2 `i `Vuc ]
-"69
-[; ;main.c: 69:         _delay((unsigned long)((300)*(48000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `ul `d .4000.0 `ul ]
-"70
-[; ;main.c: 70:     }
-}
+"51
+[; ;main.c: 51:     Init_Internal_Clock();
+[e ( _Init_Internal_Clock ..  ]
+"52
+[; ;main.c: 52:     Init_Pins_Application();
+[e ( _Init_Pins_Application ..  ]
+"53
+[; ;main.c: 53:     Init_External_Int1();
+[e ( _Init_External_Int1 ..  ]
+"54
+[; ;main.c: 54:     while(1)
 [e :U 2362 ]
-[e $U 2363  ]
-[e :U 2364 ]
-"71
-[; ;main.c: 71:     return (0);
+"55
+[; ;main.c: 55:     {
+{
+"56
+[; ;main.c: 56:         LATC ^= (1 << 4);;
+[e =^ _LATC -> << -> 1 `i -> 4 `i `Vuc ]
+"57
+[; ;main.c: 57:         _delay((unsigned long)((100)*(48000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `ul `d .4000.0 `ul ]
+"58
+[; ;main.c: 58:     }
+}
+[e :U 2361 ]
+[e $U 2362  ]
+[e :U 2363 ]
+"59
+[; ;main.c: 59:     return (0);
 [e ) -> 0 `i ]
-[e $UE 2361  ]
-"72
-[; ;main.c: 72: }
-[e :UE 2361 ]
+[e $UE 2360  ]
+"60
+[; ;main.c: 60: }
+[e :UE 2360 ]
+}
+"66
+[; ;main.c: 66: void Init_External_Int1 (void)
+[v _Init_External_Int1 `(v ~T0 @X0 1 ef ]
+"67
+[; ;main.c: 67: {
+{
+[e :U _Init_External_Int1 ]
+[f ]
+"69
+[; ;main.c: 69:     PIE6bits.INT1IE = 1;
+[e = . . _PIE6bits 0 0 -> -> 1 `i `uc ]
+"70
+[; ;main.c: 70:     PIR6bits.INT1IF = 0;
+[e = . . _PIR6bits 0 0 -> -> 0 `i `uc ]
+"73
+[; ;main.c: 73:     INTCON0bits.IPEN = 0;
+[e = . . _INTCON0bits 0 4 -> -> 0 `i `uc ]
+"74
+[; ;main.c: 74:     INTCON0bits.GIE = 1;
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
+"75
+[; ;main.c: 75:     INTCON0bits.INT1EDG = 1;
+[e = . . _INTCON0bits 0 1 -> -> 1 `i `uc ]
+"76
+[; ;main.c: 76: }
+[e :UE 2364 ]
 }
 "78
-[; ;main.c: 78: void Local_Osc_Init (void)
-[v _Local_Osc_Init `(v ~T0 @X0 1 ef ]
+[; ;main.c: 78: void Init_Pins_Application(void)
+[v _Init_Pins_Application `(v ~T0 @X0 1 ef ]
 "79
 [; ;main.c: 79: {
 {
-[e :U _Local_Osc_Init ]
+[e :U _Init_Pins_Application ]
 [f ]
-"80
-[; ;main.c: 80:     _clock_hfintosc_params_t my_clock;
-[v _my_clock `S2357 ~T0 @X0 1 a ]
 "81
-[; ;main.c: 81:     my_clock.divisor_clock = clock_div_1;
-[e = . _my_clock 0 . `E17010 0 ]
+[; ;main.c: 81:     TRISF &= ~(1 << 3);
+[e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
 "82
-[; ;main.c: 82:     my_clock.frecuencia_clock = freq_clk_48MHZ;
-[e = . _my_clock 1 . `E17022 7 ]
-"83
-[; ;main.c: 83:     FM_Hfintosc_Init(&my_clock);
-[e ( _FM_Hfintosc_Init (1 &U _my_clock ]
-"84
-[; ;main.c: 84: }
+[; ;main.c: 82:     LATF |= (1 << 3);;
+[e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+"85
+[; ;main.c: 85:     TRISC &= ~(1 << 4);
+[e =& _TRISC -> ~ << -> 1 `i -> 4 `i `Vuc ]
+"86
+[; ;main.c: 86:     LATC &= ~(1 << 4);;
+[e =& _LATC -> ~ << -> 1 `i -> 4 `i `Vuc ]
+"89
+[; ;main.c: 89:     TRISB |= (1 << 1);
+[e =| _TRISB -> << -> 1 `i -> 1 `i `Vuc ]
+"90
+[; ;main.c: 90:     ANSELB &= ~(1 << 1);
+[e =& _ANSELB -> ~ << -> 1 `i -> 1 `i `Vuc ]
+"91
+[; ;main.c: 91: }
 [e :UE 2365 ]
 }
-"87
-[; ;main.c: 87: void Pines_Config (void)
-[v _Pines_Config `(v ~T0 @X0 1 ef ]
-"88
-[; ;main.c: 88: {
-{
-[e :U _Pines_Config ]
-[f ]
-"90
-[; ;main.c: 90:     TRISF &= ~(1 << 3);
-[e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"91
-[; ;main.c: 91:     LATF |= (1 << 3);;
-[e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+"93
+[; ;main.c: 93: void Init_Internal_Clock (void)
+[v _Init_Internal_Clock `(v ~T0 @X0 1 ef ]
 "94
-[; ;main.c: 94:     TRISA &= ~(1 << 2);
-[e =& _TRISA -> ~ << -> 1 `i -> 2 `i `Vuc ]
-"95
-[; ;main.c: 95:     LATA &= ~(1 << 2);;
-[e =& _LATA -> ~ << -> 1 `i -> 2 `i `Vuc ]
-"99
-[; ;main.c: 99:     ANSELB &= ~(1 << 0);
-[e =& _ANSELB -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"100
-[; ;main.c: 100:     TRISB |= (1 << 0);
-[e =| _TRISB -> << -> 1 `i -> 0 `i `Vuc ]
-"101
-[; ;main.c: 101: }
-[e :UE 2366 ]
-}
-"104
-[; ;main.c: 104: void Interrupts_Init (void)
-[v _Interrupts_Init `(v ~T0 @X0 1 ef ]
-"105
-[; ;main.c: 105: {
+[; ;main.c: 94: {
 {
-[e :U _Interrupts_Init ]
+[e :U _Init_Internal_Clock ]
 [f ]
-"121
-[; ;main.c: 121:     PIE1bits.INT0IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"122
-[; ;main.c: 122:     PIR1bits.INT0IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"125
-[; ;main.c: 125:     INTCON0bits.INT0EDG = 1;
-[e = . . _INTCON0bits 0 0 -> -> 1 `i `uc ]
-"128
-[; ;main.c: 128:     INTCON0bits.IPEN = 0;
-[e = . . _INTCON0bits 0 4 -> -> 0 `i `uc ]
-"129
-[; ;main.c: 129:     INTCON0bits.GIE = 1;
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"130
-[; ;main.c: 130: }
-[e :UE 2367 ]
+"95
+[; ;main.c: 95:     _clock_hfintosc_params_t my_clock;
+[v _my_clock `S2357 ~T0 @X0 1 a ]
+"96
+[; ;main.c: 96:     my_clock.divisor_clock = clock_div_1;
+[e = . _my_clock 0 . `E17010 0 ]
+"97
+[; ;main.c: 97:     my_clock.frecuencia_clock = freq_clk_48MHZ;
+[e = . _my_clock 1 . `E17022 7 ]
+"98
+[; ;main.c: 98:     FM_Hfintosc_Init(&my_clock);
+[e ( _FM_Hfintosc_Init (1 &U _my_clock ]
+"99
+[; ;main.c: 99: }
+[e :UE 2366 ]
 }

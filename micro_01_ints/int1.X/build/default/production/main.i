@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 16 "main.c"
+# 18 "main.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28687,7 +28687,7 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 16 "main.c" 2
+# 18 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 3
@@ -28835,13 +28835,16 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 17 "main.c" 2
+# 19 "main.c" 2
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
-# 20 "main.c" 2
+# 22 "main.c" 2
 
+
+# 1 "./project_defines.h" 1
+# 24 "main.c" 2
 
 # 1 "./system_config.h" 1
 # 16 "./system_config.h"
@@ -28928,44 +28931,40 @@ typedef struct
 }_clock_hfintosc_params_t;
 # 118 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 22 "main.c" 2
+# 25 "main.c" 2
 
-# 1 "./project_defines.h" 1
-# 23 "main.c" 2
-# 37 "main.c"
-void __attribute__((picinterrupt(("irq(8)")))) External_Int0 (void)
+
+
+
+
+
+void __attribute__((picinterrupt(("irq(48)")))) External_Int1 (void)
 {
-    if(PIE1bits.INT0IE && PIR1bits.INT0IF)
+    if(PIE6bits.INT1IE && PIR6bits.INT1IF)
     {
         LATF ^= (1 << 3);;
-        PIR1bits.INT0IF = 0;
-    }
-    else
-    {
-        __nop();
+        PIR6bits.INT1IF = 0;
     }
 }
 
 
 
 
-
-void Local_Osc_Init (void);
-void Pines_Config (void);
-void Interrupts_Init (void);
-
+void Init_Internal_Clock (void);
+void Init_Pins_Application (void);
+void Init_External_Int1 (void);
 
 
 
 int main(void)
 {
-    Local_Osc_Init();
-    Pines_Config();
-    Interrupts_Init();
+    Init_Internal_Clock();
+    Init_Pins_Application();
+    Init_External_Int1();
     while(1)
     {
-        LATA ^= (1 << 2);;
-        _delay((unsigned long)((300)*(48000000UL/4000.0)));
+        LATC ^= (1 << 4);;
+        _delay((unsigned long)((100)*(48000000UL/4000.0)));
     }
     return (0);
 }
@@ -28974,42 +28973,37 @@ int main(void)
 
 
 
-void Local_Osc_Init (void)
+void Init_External_Int1 (void)
 {
-    _clock_hfintosc_params_t my_clock;
-    my_clock.divisor_clock = clock_div_1;
-    my_clock.frecuencia_clock = freq_clk_48MHZ;
-    FM_Hfintosc_Init(&my_clock);
+
+    PIE6bits.INT1IE = 1;
+    PIR6bits.INT1IF = 0;
+
+
+    INTCON0bits.IPEN = 0;
+    INTCON0bits.GIE = 1;
+    INTCON0bits.INT1EDG = 1;
 }
 
-
-void Pines_Config (void)
+void Init_Pins_Application(void)
 {
 
     TRISF &= ~(1 << 3);
     LATF |= (1 << 3);;
 
 
-    TRISA &= ~(1 << 2);
-    LATA &= ~(1 << 2);;
+    TRISC &= ~(1 << 4);
+    LATC &= ~(1 << 4);;
 
 
-
-    ANSELB &= ~(1 << 0);
-    TRISB |= (1 << 0);
+    TRISB |= (1 << 1);
+    ANSELB &= ~(1 << 1);
 }
 
-
-void Interrupts_Init (void)
+void Init_Internal_Clock (void)
 {
-# 121 "main.c"
-    PIE1bits.INT0IE = 1;
-    PIR1bits.INT0IF = 0;
-
-
-    INTCON0bits.INT0EDG = 1;
-
-
-    INTCON0bits.IPEN = 0;
-    INTCON0bits.GIE = 1;
+    _clock_hfintosc_params_t my_clock;
+    my_clock.divisor_clock = clock_div_1;
+    my_clock.frecuencia_clock = freq_clk_48MHZ;
+    FM_Hfintosc_Init(&my_clock);
 }

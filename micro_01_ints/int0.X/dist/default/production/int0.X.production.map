@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -pivt0x8=08h -cn -h+dist/default/production\int0.X.production.sym \
   --cmf=dist/default/production\int0.X.production.cmf -z -Q18F57Q43 \
-  -oC:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_3.o \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\xcAscv4.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/int0.X.production.map \
-  --md=C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\ADMINI~1\AppData\Local\Temp\xcAscv4.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=02600h-026FFhx474 \
   -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0501h-055Fh \
@@ -35,7 +35,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o \
+  C:\Users\ADMINI~1\AppData\Local\Temp\xcAscv4.\driver_tmp_9.o \
   dist/default/production\int0.X.production.o 
 
 Object code version is 3.11
@@ -45,7 +45,7 @@ Machine type is 18F57Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ADMINI~1\AppData\Local\Temp\xcAso7g.\driver_tmp_9.o
+C:\Users\ADMINI~1\AppData\Local\Temp\xcAscv4.\driver_tmp_9.o
                 idloc                            200000   200000       40        0       5
                 config                           300000   300000        A        0       4
                 init                                102      102        4        4       0
@@ -54,27 +54,27 @@ dist/default/production\int0.X.production.o
                 idloc                            200000   200000       40        0       5
                 config                           300000   300000        A        0       4
                 ivt0x8                                8        8       FA        4       0
-                text5                               174      174       24       5D       0
-                text4                               1D2      1D2        C       5D       0
+                text5                               174      174       2A       5D       0
+                text4                               1D8      1D8        C       5D       0
                 text3                               106      106       3C        4       0
-                text2                               198      198       16       5D       0
-                text1                               1C2      1C2       10       5D       0
+                text2                               19E      19E       16       5D       0
+                text1                               1C8      1C8       10       5D       0
                 text0                               142      142       30        4       0
                 cstackCOMRAM                        501      501        7      501       1
-                cinit                               1AE      1AE       14       5D       0
+                cinit                               1B4      1B4       14       5D       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                                102      102        4         0
                 reset_vec                             0        0        4         0
                 ivt0x8                                8        8       FA         0
-                text5                               174      174       24         0
-                text4                               1D2      1D2        C         0
+                text5                               174      174       2A         0
+                text4                               1D8      1D8        C         0
                 text3                               106      106       3C         0
-                text2                               198      198       16         0
-                text1                               1C2      1C2       10         0
+                text2                               19E      19E       16         0
+                text1                               1C8      1C8       10         0
                 text0                               142      142       30         0
-                cinit                               1AE      1AE       14         0
+                cinit                               1B4      1B4       14         0
 
         CLASS   CONST          
 
@@ -179,7 +179,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 ivt0x8                         000008  00016A  000172         4       0  CODE    
-                text5                          000174  00006A  0001DE        5D       0  CODE    
+                text5                          000174  000070  0001E4        5D       0  CODE    
                 cstackCOMRAM                   000501  000007  000508       501       1  COMRAM  
 
 
@@ -223,12 +223,12 @@ UNUSED ADDRESS RANGES
                          002500-0025FF              100
         CODE             000004-000007                4
                          000172-000173                2
-                         0001DE-01FFFF            1FE22
+                         0001E4-01FFFF            1FE1C
         COMRAM           000508-00055F               58
         CONFIG           30000A-300011                8
         CONST            000004-000007                4
                          000172-000173                2
-                         0001DE-01FFFF            1FE22
+                         0001E4-01FFFF            1FE1C
         EEDATA           380000-3803FF              400
         MEDIUMCONST      002600-00FFFF             DA00
                          012600-01FFFF             DA00
@@ -248,15 +248,15 @@ _ANSELB                       (abs)        000408
 _External_Int0                text5        000174
 _FM_Hfintosc_Init             text3        000106
 _INTCON0bits                  (abs)        0004D6
-_Interrupts_Init              text4        0001D2
+_Interrupts_Init              text4        0001D8
 _LATA                         (abs)        0004BE
 _LATF                         (abs)        0004C3
-_Local_Osc_Init               text2        000198
+_Local_Osc_Init               text2        00019E
 _OSCCON1bits                  (abs)        0000AD
 _OSCFRQbits                   (abs)        0000B1
 _PIE1bits                     (abs)        00049F
 _PIR1bits                     (abs)        0004AF
-_Pines_Config                 text1        0001C2
+_Pines_Config                 text1        0001C8
 _TRISA                        (abs)        0004C6
 _TRISB                        (abs)        0004C7
 _TRISF                        (abs)        0004CB
@@ -436,7 +436,7 @@ __Ltext2                      text2        000000
 __Ltext3                      text3        000000
 __Ltext4                      text4        000000
 __Ltext5                      text5        000000
-__S0                          (abs)        0001DE
+__S0                          (abs)        0001E4
 __S1                          (abs)        000508
 __S4                          (abs)        000000
 __S5                          (abs)        000000
@@ -449,28 +449,28 @@ ___rparam_used                (abs)        000001
 ___sp                         stack        000000
 __accesstop                   (abs)        000560
 __activetblptr                (abs)        000000
-__end_of_External_Int0        text5        000198
+__end_of_External_Int0        text5        00019E
 __end_of_FM_Hfintosc_Init     text3        000142
-__end_of_Interrupts_Init      text4        0001DE
-__end_of_Local_Osc_Init       text2        0001AE
-__end_of_Pines_Config         text1        0001D2
-__end_of__initialization      cinit        0001BC
+__end_of_Interrupts_Init      text4        0001E4
+__end_of_Local_Osc_Init       text2        0001B4
+__end_of_Pines_Config         text1        0001D8
+__end_of__initialization      cinit        0001C2
 __end_of_main                 text0        000172
-__initialization              cinit        0001AE
+__initialization              cinit        0001B4
 __mediumconst                 mediumconst  000000
-__pcinit                      cinit        0001AE
+__pcinit                      cinit        0001B4
 __pcstackCOMRAM               cstackCOMRAM 000501
 __pivt0x8                     ivt0x8       000008
 __ptext0                      text0        000142
-__ptext1                      text1        0001C2
-__ptext2                      text2        000198
+__ptext1                      text1        0001C8
+__ptext2                      text2        00019E
 __ptext3                      text3        000106
-__ptext4                      text4        0001D2
+__ptext4                      text4        0001D8
 __ptext5                      text5        000174
 __ramtop                      ramtop       002600
 __smallconst                  smallconst   000000
 _main                         text0        000142
-end_of_initialization         cinit        0001BC
+end_of_initialization         cinit        0001C2
 intlevel0                     text         000000
 intlevel1                     text         000000
 intlevel2                     text         000000
@@ -482,7 +482,7 @@ ivt0x8_undefint               ivt0x8       000100
 stackhi                       (abs)        000000
 stacklo                       (abs)        000000
 start                         init         000102
-start_initialization          cinit        0001AE
+start_initialization          cinit        0001B4
 
 
 MODULE INFORMATION
@@ -494,16 +494,16 @@ system_config.c
 system_config.c estimated size: 60
 
 shared
-		__initialization		CODE           	01AE	0000	14
+		__initialization		CODE           	01B4	0000	14
 
 shared estimated size: 14
 
 main.c
-		_Pines_Config  		CODE           	01C2	0000	16
+		_Pines_Config  		CODE           	01C8	0000	16
 		_main          		CODE           	0142	0000	48
-		_External_Int0 		CODE           	0174	0000	36
-		_Local_Osc_Init		CODE           	0198	0000	22
-		_Interrupts_Init		CODE           	01D2	0000	12
+		_External_Int0 		CODE           	0174	0000	42
+		_Local_Osc_Init		CODE           	019E	0000	22
+		_Interrupts_Init		CODE           	01D8	0000	12
 
-main.c estimated size: 134
+main.c estimated size: 140
 
