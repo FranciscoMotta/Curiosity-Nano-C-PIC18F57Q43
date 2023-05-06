@@ -1,0 +1,25 @@
+El presente proyecto trata acerca de 
+sensar el sentido de giro de un encoder
+rotativo, este proyecto es simple en su desarrollo
+debido a que no ahondará mucho en el uso
+profundo de las interrpciones del sistema.
+Sino que será un uso simple de interrupciones
+con condicionales bloqueantes
+
+				__
+			     	|| Encoder rotativo
+				|| 
+			     --------
+			     |      |
+                             |      |
+                             --------
+                          sens|    |clock
+                              |    |
+			     |	  |		
+-----------------------------|----|----------
+|			    RA2  RB0	    |
+|              PIC18F57Q43		    |
+|   RF1    RF0                RF3           |
+-----|-------|------------------|------------
+     |	     |			|
+  LED(CW)  LED(CCW)	       LED
