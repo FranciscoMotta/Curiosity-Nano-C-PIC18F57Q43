@@ -21,6 +21,7 @@
 #include <stdbool.h>
 
 #include "system_config.h"
+#include "project_defines.h"
 
 /*
  * Macros
@@ -31,6 +32,7 @@
  */
 
 void Init_Internal_Oscillator (void);
+void Init_Gpio_System (void);
 
 /*
  * Main
@@ -38,12 +40,24 @@ void Init_Internal_Oscillator (void);
 int main(void) 
 {
     Init_Internal_Oscillator();
+    Init_Gpio_System();
+    while(true)
+    {
+        Led_Sys_Tog();
+        __delay_ms(100);
+    }
     return (EXIT_SUCCESS);
 }
 
 /*
  * Definicion de funciones
  */
+
+void Init_Gpio_System (void)
+{
+    Led_Sys_Tris &= ~(1 << Led_Sys_Gpio);
+    Led_Sys_Off();
+}
 
 void Init_Internal_Oscillator (void)
 {
