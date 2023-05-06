@@ -1,9 +1,3 @@
-/* 
- * File:   main.c
- * Author: jmott
- *
- * Created on 23 de abril de 2023
- */
 
 /*
  * Includes
