@@ -110,7 +110,7 @@ typedef struct
  */
 
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ 16000000UL
+#define _XTAL_FREQ 4000000UL
 #endif
 
 #define HIGH_FREQ_CONF      0b110

@@ -28933,9 +28933,34 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 
 # 1 "./project_defines.h" 1
 # 24 "main.c" 2
-# 34 "main.c"
+
+
+
+
+
+
+
+
+void __attribute__((picinterrupt(("irq(31)")))) Timer_Interrupt (void)
+{
+    if(PIR3bits.TMR0IF && PIE3bits.TMR0IE)
+    {
+        LATF ^= (1 << 3);;
+        TMR0H = 0x0B;
+        TMR0L = 0xDC;
+
+        PIR3bits.TMR0IF = 0;
+    }
+}
+
+
+
+
+
 void Init_Internal_Oscillator (void);
 void Init_Gpio_System (void);
+void Init_Interrupt_Timer0 (void);
+void Init_Timer0 (void);
 
 
 
@@ -28944,10 +28969,11 @@ int main(void)
 {
     Init_Internal_Oscillator();
     Init_Gpio_System();
+    Init_Interrupt_Timer0();
+    Init_Timer0();
     while(1)
     {
-        LATF ^= (1 << 3);;
-        _delay((unsigned long)((100)*(16000000UL/4000.0)));
+       __nop();
     }
     return (0);
 }
@@ -28955,6 +28981,31 @@ int main(void)
 
 
 
+
+void Init_Interrupt_Timer0 (void)
+{
+    INTCON0bits.GIE = 1;
+    INTCON0bits.IPEN = 0;
+
+
+    PIE3bits.TMR0IE = 1;
+    PIR3bits.TMR0IF = 0;
+}
+
+void Init_Timer0 (void)
+{
+    T0CON0bits.EN = 1;
+    T0CON0bits.MD16 = 1;
+    T0CON0bits.OUTPS = 0b0000;
+    T0CON1bits.CS = 0b010;
+    T0CON1bits.ASYNC = 0;
+    T0CON1bits.CKPS = 0b0011;
+
+
+
+    TMR0H = 0x0B;
+    TMR0L = 0xDC;
+}
 
 void Init_Gpio_System (void)
 {
@@ -28966,7 +29017,7 @@ void Init_Internal_Oscillator (void)
 {
     _clock_hfintosc_params_t my_clock;
     my_clock.divisor_clock = clock_div_1;
-    my_clock.frecuencia_clock = freq_clk_16MHZ;
+    my_clock.frecuencia_clock = freq_clk_4MHZ;
 
 
     FM_Hfintosc_Init(&my_clock);

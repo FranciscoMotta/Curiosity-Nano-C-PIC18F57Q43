@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"64 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"106 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
 [e E17010 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -75,19 +75,25 @@ freq_clk_64MHZ 8
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"40 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
-[v _main main `(i  1 e 2 0 ]
+"32 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+[v _Timer_Interrupt Timer_Interrupt `IIH(v  1 e 1 0 ]
 "56
+[v _main main `(i  1 e 2 0 ]
+"73
+[v _Init_Interrupt_Timer0 Init_Interrupt_Timer0 `(v  1 e 1 0 ]
+"83
+[v _Init_Timer0 Init_Timer0 `(v  1 e 1 0 ]
+"98
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
-"62
+"104
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S103 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S316 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S106 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S319 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -95,45 +101,158 @@ freq_clk_64MHZ 8
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S114 . 1 `S103 1 . 1 0 `S106 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES114  1 e 1 @173 ]
-[s S129 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S327 . 1 `S316 1 . 1 0 `S319 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES327  1 e 1 @173 ]
+[s S342 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S131 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S344 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S136 . 1 `S129 1 . 1 0 `S131 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES136  1 e 1 @177 ]
-"47792
+[u S349 . 1 `S342 1 . 1 0 `S344 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES349  1 e 1 @177 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+[s S115 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23718
+[s S121 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S127 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[u S133 . 1 `S115 1 . 1 0 `S121 1 . 1 0 `S127 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES133  1 e 1 @794 ]
+[s S156 . 1 `uc 1 CKPS 1 0 :4:0 
+`uc 1 ASYNC 1 0 :1:4 
+`uc 1 CS 1 0 :3:5 
+]
+"23825
+[s S160 . 1 `uc 1 CKPS0 1 0 :1:0 
+`uc 1 CKPS1 1 0 :1:1 
+`uc 1 CKPS2 1 0 :1:2 
+`uc 1 CKPS3 1 0 :1:3 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 CS0 1 0 :1:5 
+`uc 1 CS1 1 0 :1:6 
+`uc 1 CS2 1 0 :1:7 
+]
+[s S169 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+[s S173 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+[u S182 . 1 `S156 1 . 1 0 `S160 1 . 1 0 `S169 1 . 1 0 `S173 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES182  1 e 1 @795 ]
+[s S45 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"45940
+[u S54 . 1 `S45 1 . 1 0 ]
+"45940
+"45940
+[v _PIE3bits PIE3bits `VES54  1 e 1 @1185 ]
+[s S24 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"46814
+[u S33 . 1 `S24 1 . 1 0 ]
+"46814
+"46814
+[v _PIR3bits PIR3bits `VES33  1 e 1 @1201 ]
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
 "48134
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-"40 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+[s S89 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"48564
+[s S97 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"48564
+[u S100 . 1 `S89 1 . 1 0 `S97 1 . 1 0 ]
+"48564
+"48564
+[v _INTCON0bits INTCON0bits `VES100  1 e 1 @1238 ]
+"56 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"50
+"67
 } 0
-"62
+"83
+[v _Init_Timer0 Init_Timer0 `(v  1 e 1 0 ]
+{
+"96
+} 0
+"73
+[v _Init_Interrupt_Timer0 Init_Interrupt_Timer0 `(v  1 e 1 0 ]
+{
+"81
+} 0
+"104
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S61 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-"64
-[v Init_Internal_Oscillator@my_clock my_clock `S61  1 a 2 3 ]
-"70
+[s S236 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+"106
+[v Init_Internal_Oscillator@my_clock my_clock `S236  1 a 2 3 ]
+"112
 } 0
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S61 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S61  1 p 2 0 ]
+[s S236 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S236  1 p 2 0 ]
 "13
 } 0
-"56 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"98 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
-"60
+"102
+} 0
+"32
+[v _Timer_Interrupt Timer_Interrupt `IIH(v  1 e 1 0 ]
+{
+"42
 } 0
