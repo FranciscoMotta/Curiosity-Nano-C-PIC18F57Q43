@@ -1,0 +1,36 @@
+/* Declarar a funcion encima de main */
+
+void Init_Timer_0(void) 
+{
+    _timer0_params_config_t my_timer0;
+    my_timer0.timer0_enable = TMR0_Enable;
+    my_timer0.timer0_bits = TMR0_16bits;
+    my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
+    my_timer0.timer0_counter_sync = TMR0_Counter_Not_Sync;
+    my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
+    my_timer0.timer0_postecaler = TMR0_Post_1_1;
+
+    /* Calculamos el valor del registro TMR0H :
+     * Para lo cual consideramos lo siguiente:
+     * Prescaler = 1:8
+     * FOSC = 4MHZ -> TCY = 4 / FOSC
+     * Tiempo = 500ms
+     * Timer = 16bits
+     * 
+     * TMR0 = (2^N - (Fosc / 4) * T) / prescaler 
+     * 
+     * tiempo = TCY*Prescaler*(65536 - carga)
+     * 
+     * carga =  65536 - ((Tiempo)/((4/FOSC) * Prescaler))
+     * carga = 65536 - ((500ms)/((4 / 4Mhz) * 8))
+     * carga = 65536 - ((500*10^-3)/((4 / 4*10^6) * 8))
+     * carga = 3036 DEC
+     * 
+     * Carga = 0x0BDC hex 
+     */
+   
+    /* Se pasan los parámetros */
+    FM_Timer0_Init(&my_timer0);
+    
+    TMR0H = 0x0B; // Bits MSB
+    TMR0L = 0xDC; // Bits LSB
