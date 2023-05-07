@@ -72,7 +72,7 @@ int main(void)
 
 void Init_Interrupt_Timer0 (void)
 {
-    INTCON0bits.GIE = 1; // Interrupciones globales on
+    INTCON0bits.GIE  = 1; // Interrupciones globales on
     INTCON0bits.IPEN = 0; // Sin prioridades
     
     /* Registros del timer 0 */
@@ -87,7 +87,7 @@ void Init_Timer0 (void)
     T0CON0bits.OUTPS = 0b0000; // postcaler 1:1
     T0CON1bits.CS    = 0b010; // Clock FOSC / 4
     T0CON1bits.ASYNC = 0; // Timer 0 sinc. FOSC / 4
-    T0CON1bits.CKPS = 0b0011; // Prescaler a 1:8
+    T0CON1bits.CKPS  = 0b0011; // Prescaler a 1:8
     
     /* Cargamos el valor a los registros */
     // DEC = 3036 -> HEX = 0x0BDC
@@ -104,7 +104,7 @@ void Init_Gpio_System (void)
 void Init_Internal_Oscillator (void)
 {
     _clock_hfintosc_params_t my_clock;
-    my_clock.divisor_clock = clock_div_1;
+    my_clock.divisor_clock    = clock_div_1;
     my_clock.frecuencia_clock = freq_clk_4MHZ;
     
     /* Pasamos los parámetros */

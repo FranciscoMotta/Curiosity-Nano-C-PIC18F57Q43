@@ -1,0 +1,147 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"7 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0_lib.X\FM_Timer0.c
+[e E16689 . `uc
+TMR0_Enable 0
+TMR0_Disable 1
+]
+[e E16693 . `uc
+TMR0_8bits 0
+TMR0_16bits 1
+]
+[e E16697 . `uc
+TMR0_Post_1_1 0
+TMR0_Post_1_2 1
+TMR0_Post_1_3 2
+TMR0_Post_1_4 3
+TMR0_Post_1_5 4
+TMR0_Post_1_6 5
+TMR0_Post_1_7 6
+TMR0_Post_1_8 7
+TMR0_Post_1_9 8
+TMR0_Post_1_10 9
+TMR0_Post_1_11 10
+TMR0_Post_1_12 11
+TMR0_Post_1_13 12
+TMR0_Post_1_14 13
+TMR0_Post_1_15 14
+TMR0_Post_1_16 15
+]
+[e E16715 . `uc
+TMR0_Pin_Select_T0CKIPPS_NI 0
+TMR0_Pin_Select_T0CKIPPS_I 1
+TMR0_Fosc_div_4 2
+TMR0_HFINTOSC 3
+TMR0_LFINTOSC 4
+TMR0_MFINTOSC 5
+TMR0_SOSC 6
+TMR0_CLC1_OUT 7
+]
+[e E16725 . `uc
+TMR0_Counter_Sync_FOSC4 0
+TMR0_Counter_Not_Sync 1
+]
+[e E16729 . `uc
+TMR0_Prescaler_1_1 0
+TMR0_Prescaler_1_2 1
+TMR0_Prescaler_1_4 2
+TMR0_Prescaler_1_8 3
+TMR0_Prescaler_1_16 4
+TMR0_Prescaler_1_32 5
+TMR0_Prescaler_1_64 6
+TMR0_Prescaler_1_128 7
+TMR0_Prescaler_1_256 8
+TMR0_Prescaler_1_512 9
+TMR0_Prescaler_1_1024 10
+TMR0_Prescaler_1_2048 11
+TMR0_Prescaler_1_4096 12
+TMR0_Prescaler_1_8192 13
+TMR0_Prescaler_1_16384 14
+TMR0_Prescaler_1_32768 15
+]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"14 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0_lib.X\main.c
+[v _main main `(i  1 e 2 0 ]
+[s S83 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23718 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[s S89 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S95 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[u S101 . 1 `S83 1 . 1 0 `S89 1 . 1 0 `S95 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES101  1 e 1 @794 ]
+[s S124 . 1 `uc 1 CKPS 1 0 :4:0 
+`uc 1 ASYNC 1 0 :1:4 
+`uc 1 CS 1 0 :3:5 
+]
+"23825
+[s S128 . 1 `uc 1 CKPS0 1 0 :1:0 
+`uc 1 CKPS1 1 0 :1:1 
+`uc 1 CKPS2 1 0 :1:2 
+`uc 1 CKPS3 1 0 :1:3 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 CS0 1 0 :1:5 
+`uc 1 CS1 1 0 :1:6 
+`uc 1 CS2 1 0 :1:7 
+]
+[s S137 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+[s S141 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+[u S150 . 1 `S124 1 . 1 0 `S128 1 . 1 0 `S137 1 . 1 0 `S141 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES150  1 e 1 @795 ]
+"14 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0_lib.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"17
+} 0
