@@ -19,8 +19,8 @@
 
 typedef enum 
 {
-    TMR0_Enable = 0,
-    TMR0_Disable
+    TMR0_Disable = 0,
+    TMR0_Enable
 }_timer0_enable_t;
 
 // Modo de operación del timer 0
@@ -57,7 +57,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Pin_Select_T0CKIPPS_NI = 0,
+    TMR0_Pin_Select_T0CKIPPS_NI = 0b000,
     TMR0_Pin_Select_T0CKIPPS_I,
     TMR0_Fosc_div_4,
     TMR0_HFINTOSC,
@@ -79,7 +79,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Prescaler_1_1 = 0,
+    TMR0_Prescaler_1_1 = 0b0000,
     TMR0_Prescaler_1_2,
     TMR0_Prescaler_1_4,
     TMR0_Prescaler_1_8,

@@ -38,10 +38,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48134
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
 [v _TRISF `Vuc ~T0 @X0 0 e@1227 ]
-"95 main.c
-[; ;main.c: 95:     _timer0_params_config_t my_timer0;
+"99 main.c
+[; ;main.c: 99:     _timer0_params_config_t my_timer0;
 [c E16998 0 1 .. ]
-[n E16998 . TMR0_Enable TMR0_Disable  ]
+[n E16998 . TMR0_Disable TMR0_Enable  ]
 [c E17002 0 1 .. ]
 [n E17002 . TMR0_8bits TMR0_16bits  ]
 [c E17006 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
@@ -59,8 +59,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;./FM_Timer0.h: 114: void FM_Timer0_Init (_timer0_params_config_t *timer_configs);
 [v _FM_Timer0_Init `(v ~T0 @X0 0 ef1`*S2357 ]
-"128 main.c
-[; ;main.c: 128:     _clock_hfintosc_params_t my_clock;
+"133 main.c
+[; ;main.c: 133:     _clock_hfintosc_params_t my_clock;
 [c E17068 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E17068 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E17080 0 1 2 3 4 5 6 7 8 .. ]
@@ -2746,123 +2746,133 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 66:     Init_Gpio_System();
 [e ( _Init_Gpio_System ..  ]
 "69
-[; ;main.c: 69:     while (1) {
+[; ;main.c: 69:     while (1)
 [e :U 2363 ]
-{
 "70
-[; ;main.c: 70:         __nop();
-[e ( ___nop ..  ]
+[; ;main.c: 70:     {
+{
 "71
-[; ;main.c: 71:     }
+[; ;main.c: 71:         __nop();
+[e ( ___nop ..  ]
+"72
+[; ;main.c: 72:     }
 }
 [e :U 2362 ]
 [e $U 2363  ]
 [e :U 2364 ]
-"72
-[; ;main.c: 72:     return (0);
+"73
+[; ;main.c: 73:     return (0);
 [e ) -> 0 `i ]
 [e $UE 2361  ]
-"73
-[; ;main.c: 73: }
+"74
+[; ;main.c: 74: }
 [e :UE 2361 ]
 }
-"79
-[; ;main.c: 79: void Init_Timer_Interrupts(void) {
+"80
+[; ;main.c: 80: void Init_Timer_Interrupts(void)
 [v _Init_Timer_Interrupts `(v ~T0 @X0 1 ef ]
+"81
+[; ;main.c: 81: {
 {
 [e :U _Init_Timer_Interrupts ]
 [f ]
-"81
-[; ;main.c: 81:     INTCON0 &= ~(1 << 0x5);
+"83
+[; ;main.c: 83:     INTCON0 &= ~(1 << 0x5);
 [e =& _INTCON0 -> ~ << -> 1 `i -> 5 `i `Vuc ]
-"82
-[; ;main.c: 82:     INTCON0 |= (1 << 0x7);
+"84
+[; ;main.c: 84:     INTCON0 |= (1 << 0x7);
 [e =| _INTCON0 -> << -> 1 `i -> 7 `i `Vuc ]
-"85
-[; ;main.c: 85:     PIE3 |= (1 << 0x7);
-[e =| _PIE3 -> << -> 1 `i -> 7 `i `Vuc ]
-"86
-[; ;main.c: 86:     PIR3 &= (1 << 0x7);
-[e =& _PIR3 -> << -> 1 `i -> 7 `i `Vuc ]
 "87
-[; ;main.c: 87: }
+[; ;main.c: 87:     PIE3 |= (1 << 0x7);
+[e =| _PIE3 -> << -> 1 `i -> 7 `i `Vuc ]
+"88
+[; ;main.c: 88:     PIR3 &= (1 << 0x7);
+[e =& _PIR3 -> << -> 1 `i -> 7 `i `Vuc ]
+"89
+[; ;main.c: 89: }
 [e :UE 2365 ]
 }
-"89
-[; ;main.c: 89: void Init_Gpio_System(void) {
+"91
+[; ;main.c: 91: void Init_Gpio_System(void)
 [v _Init_Gpio_System `(v ~T0 @X0 1 ef ]
+"92
+[; ;main.c: 92: {
 {
 [e :U _Init_Gpio_System ]
 [f ]
-"90
-[; ;main.c: 90:     TRISF &= ~(1 << 3);
+"93
+[; ;main.c: 93:     TRISF &= ~(1 << 3);
 [e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"91
-[; ;main.c: 91:     LATF |= (1 << 3);;
+"94
+[; ;main.c: 94:     LATF |= (1 << 3);;
 [e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
-"92
-[; ;main.c: 92: }
+"95
+[; ;main.c: 95: }
 [e :UE 2366 ]
 }
-"94
-[; ;main.c: 94: void Init_Timer_0(void) {
+"97
+[; ;main.c: 97: void Init_Timer_0(void)
 [v _Init_Timer_0 `(v ~T0 @X0 1 ef ]
+"98
+[; ;main.c: 98: {
 {
 [e :U _Init_Timer_0 ]
 [f ]
-"95
-[; ;main.c: 95:     _timer0_params_config_t my_timer0;
-[v _my_timer0 `S2357 ~T0 @X0 1 a ]
-"96
-[; ;main.c: 96:     my_timer0.timer0_bits = TMR0_16bits;
-[e = . _my_timer0 1 . `E17002 1 ]
-"97
-[; ;main.c: 97:     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
-[e = . _my_timer0 3 . `E17024 2 ]
-"98
-[; ;main.c: 98:     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
-[e = . _my_timer0 4 . `E17034 0 ]
 "99
-[; ;main.c: 99:     my_timer0.timer0_enable = TMR0_Enable;
-[e = . _my_timer0 0 . `E16998 0 ]
+[; ;main.c: 99:     _timer0_params_config_t my_timer0;
+[v _my_timer0 `S2357 ~T0 @X0 1 a ]
 "100
-[; ;main.c: 100:     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
-[e = . _my_timer0 5 . `E17038 3 ]
+[; ;main.c: 100:     my_timer0.timer0_enable = TMR0_Enable;
+[e = . _my_timer0 0 . `E16998 1 ]
 "101
-[; ;main.c: 101:     my_timer0.timer0_postecaler = TMR0_Post_1_1;
+[; ;main.c: 101:     my_timer0.timer0_bits = TMR0_16bits;
+[e = . _my_timer0 1 . `E17002 1 ]
+"102
+[; ;main.c: 102:     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
+[e = . _my_timer0 3 . `E17024 2 ]
+"103
+[; ;main.c: 103:     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
+[e = . _my_timer0 4 . `E17034 0 ]
+"104
+[; ;main.c: 104:     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
+[e = . _my_timer0 5 . `E17038 3 ]
+"105
+[; ;main.c: 105:     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 [e = . _my_timer0 2 . `E17006 0 ]
-"121
-[; ;main.c: 121:     FM_Timer0_Init(&my_timer0);
-[e ( _FM_Timer0_Init (1 &U _my_timer0 ]
-"123
-[; ;main.c: 123:     TMR0H = 0x0B;
-[e = _TMR0H -> -> 11 `i `uc ]
-"124
-[; ;main.c: 124:     TMR0L = 0xDC;
-[e = _TMR0L -> -> 220 `i `uc ]
 "125
-[; ;main.c: 125: }
+[; ;main.c: 125:     FM_Timer0_Init(&my_timer0);
+[e ( _FM_Timer0_Init (1 &U _my_timer0 ]
+"127
+[; ;main.c: 127:     TMR0H = 0x0B;
+[e = _TMR0H -> -> 11 `i `uc ]
+"128
+[; ;main.c: 128:     TMR0L = 0xDC;
+[e = _TMR0L -> -> 220 `i `uc ]
+"129
+[; ;main.c: 129: }
 [e :UE 2367 ]
 }
-"127
-[; ;main.c: 127: void Init_Internal_Oscillator(void) {
+"131
+[; ;main.c: 131: void Init_Internal_Oscillator(void)
 [v _Init_Internal_Oscillator `(v ~T0 @X0 1 ef ]
+"132
+[; ;main.c: 132: {
 {
 [e :U _Init_Internal_Oscillator ]
 [f ]
-"128
-[; ;main.c: 128:     _clock_hfintosc_params_t my_clock;
-[v _my_clock `S2358 ~T0 @X0 1 a ]
-"129
-[; ;main.c: 129:     my_clock.divisor_clock = clock_div_1;
-[e = . _my_clock 0 . `E17068 0 ]
-"130
-[; ;main.c: 130:     my_clock.frecuencia_clock = freq_clk_4MHZ;
-[e = . _my_clock 1 . `E17080 2 ]
-"132
-[; ;main.c: 132:     FM_Hfintosc_Init(&my_clock);
-[e ( _FM_Hfintosc_Init (1 &U _my_clock ]
 "133
-[; ;main.c: 133: }
+[; ;main.c: 133:     _clock_hfintosc_params_t my_clock;
+[v _my_clock `S2358 ~T0 @X0 1 a ]
+"134
+[; ;main.c: 134:     my_clock.divisor_clock = clock_div_1;
+[e = . _my_clock 0 . `E17068 0 ]
+"135
+[; ;main.c: 135:     my_clock.frecuencia_clock = freq_clk_4MHZ;
+[e = . _my_clock 1 . `E17080 2 ]
+"137
+[; ;main.c: 137:     FM_Hfintosc_Init(&my_clock);
+[e ( _FM_Hfintosc_Init (1 &U _my_clock ]
+"138
+[; ;main.c: 138: }
 [e :UE 2368 ]
 }

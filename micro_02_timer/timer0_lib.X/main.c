@@ -66,7 +66,8 @@ int main(void)
     Init_Gpio_System();
 
     /* Bucle */
-    while (true) {
+    while (true) 
+    {
         __nop();
     }
     return (EXIT_SUCCESS);
@@ -96,10 +97,10 @@ void Init_Gpio_System(void)
 void Init_Timer_0(void) 
 {
     _timer0_params_config_t my_timer0;
+    my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_bits = TMR0_16bits;
     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
-    my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 

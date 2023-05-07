@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 FM_Timer0.c
 [; ;FM_Timer0.c: 7: void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
 [c E16680 0 1 .. ]
-[n E16680 . TMR0_Disable TMR0_Enable  ]
+[n E16680 . TMR0_Enable TMR0_Disable  ]
 [c E16684 0 1 .. ]
 [n E16684 . TMR0_8bits TMR0_16bits  ]
 [c E16688 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
@@ -2632,80 +2632,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;FM_Timer0.c: 8: {
 [f ]
 "11
-[; ;FM_Timer0.c: 11:     T0CON0 = 0x00;
-[e = _T0CON0 -> -> 0 `i `uc ]
-"12
-[; ;FM_Timer0.c: 12:     T0CON1 = 0x00;
-[e = _T0CON1 -> -> 0 `i `uc ]
-"16
-[; ;FM_Timer0.c: 16:     T0CON0 |= (timer_configs->timer0_enable << 0x7);
+[; ;FM_Timer0.c: 11:     T0CON0 |= (timer_configs->timer0_enable << 0x7);
 [e =| _T0CON0 -> << -> . *U _timer_configs 0 `ui -> 7 `i `Vuc ]
-"17
-[; ;FM_Timer0.c: 17:     T0CON0 |= (timer_configs->timer0_bits << 0x4);
+"12
+[; ;FM_Timer0.c: 12:     T0CON0 |= (timer_configs->timer0_bits << 0x4);
 [e =| _T0CON0 -> << -> . *U _timer_configs 1 `ui -> 4 `i `Vuc ]
-"18
-[; ;FM_Timer0.c: 18:     T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
+"13
+[; ;FM_Timer0.c: 13:     T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
 [e =| _T0CON0 -> << -> . *U _timer_configs 2 `ui -> 3 `i `Vuc ]
-"21
-[; ;FM_Timer0.c: 21:     T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
+"16
+[; ;FM_Timer0.c: 16:     T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
 [e =| _T0CON1 -> << -> . *U _timer_configs 3 `ui -> 7 `i `Vuc ]
-"22
-[; ;FM_Timer0.c: 22:     T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
+"17
+[; ;FM_Timer0.c: 17:     T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
 [e =| _T0CON1 -> << -> . *U _timer_configs 4 `ui -> 4 `i `Vuc ]
-"23
-[; ;FM_Timer0.c: 23:     T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
+"18
+[; ;FM_Timer0.c: 18:     T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
 [e =| _T0CON1 -> << -> . *U _timer_configs 5 `ui -> 3 `i `Vuc ]
-"24
-[; ;FM_Timer0.c: 24: }
+"19
+[; ;FM_Timer0.c: 19: }
 [e :UE 2356 ]
 }
-"26
-[; ;FM_Timer0.c: 26: int16_t FM_Timer0_Load_Calculator(uint16_t time)
+"21
+[; ;FM_Timer0.c: 21: int16_t FM_Timer0_Load_Calculator(uint16_t time)
 [v _FM_Timer0_Load_Calculator `(s ~T0 @X0 1 ef1`us ]
-"27
-[; ;FM_Timer0.c: 27: {
+"22
+[; ;FM_Timer0.c: 22: {
 {
 [e :U _FM_Timer0_Load_Calculator ]
-"26
-[; ;FM_Timer0.c: 26: int16_t FM_Timer0_Load_Calculator(uint16_t time)
+"21
+[; ;FM_Timer0.c: 21: int16_t FM_Timer0_Load_Calculator(uint16_t time)
 [v _time `us ~T0 @X0 1 r1 ]
-"27
-[; ;FM_Timer0.c: 27: {
+"22
+[; ;FM_Timer0.c: 22: {
 [f ]
-"28
-[; ;FM_Timer0.c: 28:     int16_t load_timer;
+"23
+[; ;FM_Timer0.c: 23:     int16_t load_timer;
 [v _load_timer `s ~T0 @X0 1 a ]
-"29
-[; ;FM_Timer0.c: 29:     if(T0CON0bits.MD16)
+"24
+[; ;FM_Timer0.c: 24:     if(T0CON0bits.MD16)
 [e $ ! != -> . . _T0CON0bits 0 1 `i -> 0 `i 2358  ]
-"30
-[; ;FM_Timer0.c: 30:     {
+"25
+[; ;FM_Timer0.c: 25:     {
 {
-"31
-[; ;FM_Timer0.c: 31:         load_timer = ((time /((4 / 4000000UL) * T0CON1bits.CKPS)) - 65536);
+"26
+[; ;FM_Timer0.c: 26:         load_timer = ((time /((4 / 4000000UL) * T0CON1bits.CKPS)) - 65536);
 [e = _load_timer -> - / -> _time `ul * / -> -> -> 4 `i `l `ul -> 4000000 `ul -> . . _T0CON1bits 0 0 `ul -> -> 65536 `l `ul `s ]
-"32
-[; ;FM_Timer0.c: 32:     }
+"27
+[; ;FM_Timer0.c: 27:     }
 }
 [e $U 2359  ]
-"33
-[; ;FM_Timer0.c: 33:     else
+"28
+[; ;FM_Timer0.c: 28:     else
 [e :U 2358 ]
-"34
-[; ;FM_Timer0.c: 34:     {
+"29
+[; ;FM_Timer0.c: 29:     {
 {
-"35
-[; ;FM_Timer0.c: 35:         load_timer = ((time / ((4 / 4000000UL) * T0CON1bits.CKPS)) - 256);
+"30
+[; ;FM_Timer0.c: 30:         load_timer = ((time / ((4 / 4000000UL) * T0CON1bits.CKPS)) - 256);
 [e = _load_timer -> - / -> _time `ul * / -> -> -> 4 `i `l `ul -> 4000000 `ul -> . . _T0CON1bits 0 0 `ul -> -> -> 256 `i `l `ul `s ]
-"36
-[; ;FM_Timer0.c: 36:     }
+"31
+[; ;FM_Timer0.c: 31:     }
 }
 [e :U 2359 ]
-"37
-[; ;FM_Timer0.c: 37:     return load_timer;
+"32
+[; ;FM_Timer0.c: 32:     return load_timer;
 [e ) _load_timer ]
 [e $UE 2357  ]
-"38
-[; ;FM_Timer0.c: 38: }
+"33
+[; ;FM_Timer0.c: 33: }
 [e :UE 2357 ]
 }

@@ -6,6 +6,11 @@
 
 void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
 {
+    /* Limpiamos los registros */
+    
+    T0CON0 = 0x00;
+    T0CON1 = 0x00;
+    
     /* Registro T0CON0 */
     
     T0CON0 |= (timer_configs->timer0_enable << _T0CON0_EN_POSITION); // Enable del timer

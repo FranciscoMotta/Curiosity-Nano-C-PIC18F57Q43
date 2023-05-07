@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\timer0_lib.X.production.hex">
+  <executable name="dist/default/debug\timer0_lib.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>674</used>
-      <free>130398</free>
+      <used>666</used>
+      <free>130406</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

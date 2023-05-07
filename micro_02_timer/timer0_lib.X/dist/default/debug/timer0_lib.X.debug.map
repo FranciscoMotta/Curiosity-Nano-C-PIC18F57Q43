@@ -3,12 +3,12 @@ Microchip MPLAB XC8 Compiler V2.32
 Linker command line:
 
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt \
-  -pivt0x8=08h -cn -h+dist/default/production\timer0_lib.X.production.sym \
-  --cmf=dist/default/production\timer0_lib.X.production.cmf -z -Q18F57Q43 \
-  -oC:\Users\jmott\AppData\Local\Temp\xcAs4hk.4 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/timer0_lib.X.production.map -E1 \
-  -ver=XC8 Compiler --acfsm=1493 -ASTACK=0560h-024FFh -pstack=STACK \
-  -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh -ASMALLCONST=02500h-025FFhx475 \
+  -pivt0x8=08h -cn -h+dist/default/debug\timer0_lib.X.debug.sym \
+  --cmf=dist/default/debug\timer0_lib.X.debug.cmf -z -Q18F57Q43 \
+  -oC:\Users\jmott\AppData\Local\Temp\xcAs158.4 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/timer0_lib.X.debug.map -E1 -ver=XC8 Compiler \
+  --acfsm=1493 -ASTACK=0560h-024FFh -pstack=STACK -ACODE=00h-01FFFFh \
+  -ACONST=00h-01FFFFh -ASMALLCONST=02500h-025FFhx475 \
   -AMEDIUMCONST=02500h-0FFFFh,012500h-01FFFFh -ACOMRAM=0501h-055Fh \
   -AABS1=0500h-024FFh -ABIGRAM=0501h-024FFh \
   -ARAM=0560h-05FFh,0600h-06FFhx31 -ABANK5=0560h-05FFh -ABANK6=0600h-06FFh \
@@ -31,8 +31,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\jmott\AppData\Local\Temp\xcAs4hk.o \
-  dist/default/production\timer0_lib.X.production.o 
+  C:\Users\jmott\AppData\Local\Temp\xcAs158.o \
+  dist/default/debug\timer0_lib.X.debug.o 
 
 Object code version is 3.11
 
@@ -41,25 +41,25 @@ Machine type is 18F57Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\jmott\AppData\Local\Temp\xcAs4hk.o
+C:\Users\jmott\AppData\Local\Temp\xcAs158.o
                 idloc                            200000   200000       40        0       5
                 config                           300000   300000        A        0       4
                 init                                102      102        4        4       0
                 reset_vec                             0        0        4        0       0
-dist/default/production\timer0_lib.X.production.o
+dist/default/debug\timer0_lib.X.debug.o
                 idloc                            200000   200000       40        0       5
                 config                           300000   300000        A        0       4
                 ivt0x8                                8        8       FA        4       0
-                text7                               224      224       2E       89       0
-                text6                               2A2      2A2        6       89       0
-                text5                               1B2      1B2       40        4       0
-                text4                               26C      26C       16       89       0
-                text3                               106      106       AC        4       0
-                text2                               1F2      1F2       30        4       0
-                text1                               296      296        C       89       0
-                text0                               252      252       1A       89       0
+                text7                               21C      21C       2E       87       0
+                text6                               29A      29A        6       87       0
+                text5                               1AA      1AA       40        4       0
+                text4                               264      264       16       87       0
+                text3                               106      106       A4        4       0
+                text2                               1EA      1EA       30        4       0
+                text1                               28E      28E        C       87       0
+                text0                               24A      24A       1A       87       0
                 cstackCOMRAM                        501      501        9      501       1
-                cinit                               282      282       14       89       0
+                cinit                               27A      27A       14       87       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -68,15 +68,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 init                                102      102        4         0
                 reset_vec                             0        0        4         0
                 ivt0x8                                8        8       FA         0
-                text7                               224      224       2E         0
-                text6                               2A2      2A2        6         0
-                text5                               1B2      1B2       40         0
-                text4                               26C      26C       16         0
-                text3                               106      106       AC         0
-                text2                               1F2      1F2       30         0
-                text1                               296      296        C         0
-                text0                               252      252       1A         0
-                cinit                               282      282       14         0
+                text7                               21C      21C       2E         0
+                text6                               29A      29A        6         0
+                text5                               1AA      1AA       40         0
+                text4                               264      264       16         0
+                text3                               106      106       A4         0
+                text2                               1EA      1EA       30         0
+                text1                               28E      28E        C         0
+                text0                               24A      24A       1A         0
+                cinit                               27A      27A       14         0
 
         CLASS   CONST          
 
@@ -174,8 +174,8 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                ivt0x8                         000008  00021A  000222         4       0  CODE    
-                text7                          000224  000084  0002A8        89       0  CODE    
+                ivt0x8                         000008  000212  00021A         4       0  CODE    
+                text7                          00021C  000084  0002A0        87       0  CODE    
                 cstackCOMRAM                   000501  000009  00050A       501       1  COMRAM  
 
 
@@ -216,13 +216,13 @@ UNUSED ADDRESS RANGES
         BANK9            000900-0009FF              100
         BIGRAM           00050A-0024FF             1FF6
         CODE             000004-000007                4
-                         000222-000223                2
-                         0002A8-01FFFF            1FD58
+                         00021A-00021B                2
+                         0002A0-01FFFF            1FD60
         COMRAM           00050A-00055F               56
         CONFIG           30000A-300011                8
         CONST            000004-000007                4
-                         000222-000223                2
-                         0002A8-01FFFF            1FD58
+                         00021A-00021B                2
+                         0002A0-01FFFF            1FD60
         EEDATA           380000-3803FF              400
         MEDIUMCONST      002500-00FFFF             DB00
                          012500-01FFFF             DB00
@@ -241,13 +241,13 @@ IVTBASEL                           (abs)        00045D
 IVTBASEU                           (abs)        00045F
 Init_Internal_Oscillator@my_clock  cstackCOMRAM 000504
 Init_Timer_0@my_timer0             cstackCOMRAM 000504
-_FM_Hfintosc_Init                  text5        0001B2
+_FM_Hfintosc_Init                  text5        0001AA
 _FM_Timer0_Init                    text3        000106
 _INTCON0                           (abs)        0004D6
-_Init_Gpio_System                  text6        0002A2
-_Init_Internal_Oscillator          text4        00026C
-_Init_Timer_0                      text2        0001F2
-_Init_Timer_Interrupts             text1        000296
+_Init_Gpio_System                  text6        00029A
+_Init_Internal_Oscillator          text4        000264
+_Init_Timer_0                      text2        0001EA
+_Init_Timer_Interrupts             text1        00028E
 _LATF                              (abs)        0004C3
 _OSCCON1bits                       (abs)        0000AD
 _OSCFRQbits                        (abs)        0000B1
@@ -260,7 +260,7 @@ _T0CON1bits                        (abs)        00031B
 _TMR0H                             (abs)        000319
 _TMR0L                             (abs)        000318
 _TRISF                             (abs)        0004CB
-_Timer_Interrupt                   text7        000224
+_Timer_Interrupt                   text7        00021C
 __HRAM                             (abs)        000000
 __Habs1                            abs1         000000
 __Hbank10                          bank10       000000
@@ -435,7 +435,7 @@ __Ltext4                           text4        000000
 __Ltext5                           text5        000000
 __Ltext6                           text6        000000
 __Ltext7                           text7        000000
-__S0                               (abs)        0002A8
+__S0                               (abs)        0002A0
 __S1                               (abs)        00050A
 __S2                               (abs)        000000
 __S4                               (abs)        000000
@@ -447,28 +447,28 @@ ___rparam_used                     (abs)        000001
 ___sp                              stack        000000
 __accesstop                        (abs)        000560
 __activetblptr                     (abs)        000000
-__end_of_FM_Hfintosc_Init          text5        0001F2
-__end_of_FM_Timer0_Init            text3        0001B2
-__end_of_Init_Gpio_System          text6        0002A8
-__end_of_Init_Internal_Oscillator  text4        000282
-__end_of_Init_Timer_0              text2        000222
-__end_of_Init_Timer_Interrupts     text1        0002A2
-__end_of_Timer_Interrupt           text7        000252
-__end_of__initialization           cinit        000290
-__end_of_main                      text0        00026C
-__initialization                   cinit        000282
+__end_of_FM_Hfintosc_Init          text5        0001EA
+__end_of_FM_Timer0_Init            text3        0001AA
+__end_of_Init_Gpio_System          text6        0002A0
+__end_of_Init_Internal_Oscillator  text4        00027A
+__end_of_Init_Timer_0              text2        00021A
+__end_of_Init_Timer_Interrupts     text1        00029A
+__end_of_Timer_Interrupt           text7        00024A
+__end_of__initialization           cinit        000288
+__end_of_main                      text0        000264
+__initialization                   cinit        00027A
 __mediumconst                      mediumconst  000000
-__pcinit                           cinit        000282
+__pcinit                           cinit        00027A
 __pcstackCOMRAM                    cstackCOMRAM 000501
 __pivt0x8                          ivt0x8       000008
-__ptext0                           text0        000252
-__ptext1                           text1        000296
-__ptext2                           text2        0001F2
+__ptext0                           text0        00024A
+__ptext1                           text1        00028E
+__ptext2                           text2        0001EA
 __ptext3                           text3        000106
-__ptext4                           text4        00026C
-__ptext5                           text5        0001B2
-__ptext6                           text6        0002A2
-__ptext7                           text7        000224
+__ptext4                           text4        000264
+__ptext5                           text5        0001AA
+__ptext6                           text6        00029A
+__ptext7                           text7        00021C
 __ramtop                           ramtop       002500
 __size_of_FM_Hfintosc_Init         (abs)        000000
 __size_of_FM_Timer0_Init           (abs)        000000
@@ -479,8 +479,8 @@ __size_of_Init_Timer_Interrupts    (abs)        000000
 __size_of_Timer_Interrupt          (abs)        000000
 __size_of_main                     (abs)        000000
 __smallconst                       smallconst   000000
-_main                              text0        000252
-end_of_initialization              cinit        000290
+_main                              text0        00024A
+end_of_initialization              cinit        000288
 intlevel0                          text         000000
 intlevel1                          text         000000
 intlevel2                          text         000000
@@ -492,34 +492,34 @@ ivt0x8_undefint                    ivt0x8       000100
 stackhi                            (abs)        0024FF
 stacklo                            (abs)        000560
 start                              init         000102
-start_initialization               cinit        000282
+start_initialization               cinit        00027A
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 FM_Timer0.c
-		_FM_Timer0_Init		CODE           	0106	0000	172
+		_FM_Timer0_Init		CODE           	0106	0000	164
 
-FM_Timer0.c estimated size: 172
+FM_Timer0.c estimated size: 164
 
 system_config.c
-		_FM_Hfintosc_Init		CODE           	01B2	0000	64
+		_FM_Hfintosc_Init		CODE           	01AA	0000	64
 
 system_config.c estimated size: 64
 
 shared
-		__initialization		CODE           	0282	0000	14
+		__initialization		CODE           	027A	0000	14
 
 shared estimated size: 14
 
 main.c
-		_Init_Internal_Oscillator		CODE           	026C	0000	22
-		_Init_Timer_0  		CODE           	01F2	0000	48
-		_main          		CODE           	0252	0000	26
-		_Init_Timer_Interrupts		CODE           	0296	0000	12
-		_Init_Gpio_System		CODE           	02A2	0000	6
-		_Timer_Interrupt		CODE           	0224	0000	46
+		_Init_Internal_Oscillator		CODE           	0264	0000	22
+		_Init_Timer_0  		CODE           	01EA	0000	48
+		_main          		CODE           	024A	0000	26
+		_Init_Timer_Interrupts		CODE           	028E	0000	12
+		_Init_Gpio_System		CODE           	029A	0000	6
+		_Timer_Interrupt		CODE           	021C	0000	46
 
 main.c estimated size: 160
 

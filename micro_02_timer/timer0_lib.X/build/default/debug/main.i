@@ -28839,8 +28839,8 @@ char *tempnam(const char *, const char *);
 # 20 "./FM_Timer0.h"
 typedef enum
 {
-    TMR0_Disable = 0,
-    TMR0_Enable
+    TMR0_Enable = 0,
+    TMR0_Disable
 }_timer0_enable_t;
 
 
@@ -28877,7 +28877,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Pin_Select_T0CKIPPS_NI = 0b000,
+    TMR0_Pin_Select_T0CKIPPS_NI = 0,
     TMR0_Pin_Select_T0CKIPPS_I,
     TMR0_Fosc_div_4,
     TMR0_HFINTOSC,
@@ -28899,7 +28899,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Prescaler_1_1 = 0b0000,
+    TMR0_Prescaler_1_1 = 0,
     TMR0_Prescaler_1_2,
     TMR0_Prescaler_1_4,
     TMR0_Prescaler_1_8,
@@ -29100,10 +29100,10 @@ void Init_Gpio_System(void)
 void Init_Timer_0(void)
 {
     _timer0_params_config_t my_timer0;
-    my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_bits = TMR0_16bits;
     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
+    my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 # 125 "main.c"

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "FM_Timer0.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,11 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 16 "main.c"
+# 1 "FM_Timer0.c" 2
+
+
+# 1 "./FM_Timer0.h" 1
+# 13 "./FM_Timer0.h"
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28686,139 +28689,7 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 16 "main.c" 2
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
+# 13 "./FM_Timer0.h" 2
 
 
 
@@ -28826,21 +28697,10 @@ char *ctermid(char *);
 
 
 
-char *tempnam(const char *, const char *);
-# 18 "main.c" 2
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 21 "main.c" 2
-
-
-# 1 "./FM_Timer0.h" 1
-# 20 "./FM_Timer0.h"
 typedef enum
 {
-    TMR0_Disable = 0,
-    TMR0_Enable
+    TMR0_Enable = 0,
+    TMR0_Disable
 }_timer0_enable_t;
 
 
@@ -28877,7 +28737,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Pin_Select_T0CKIPPS_NI = 0b000,
+    TMR0_Pin_Select_T0CKIPPS_NI = 0,
     TMR0_Pin_Select_T0CKIPPS_I,
     TMR0_Fosc_div_4,
     TMR0_HFINTOSC,
@@ -28899,7 +28759,7 @@ typedef enum
 
 typedef enum
 {
-    TMR0_Prescaler_1_1 = 0b0000,
+    TMR0_Prescaler_1_1 = 0,
     TMR0_Prescaler_1_2,
     TMR0_Prescaler_1_4,
     TMR0_Prescaler_1_8,
@@ -28934,190 +28794,35 @@ typedef struct
 void FM_Timer0_Init (_timer0_params_config_t *timer_configs);
 
 int16_t FM_Timer0_Load_Calculator(uint16_t time);
-# 23 "main.c" 2
-
-# 1 "./project_defines.h" 1
-# 24 "main.c" 2
-
-# 1 "./system_config.h" 1
-# 16 "./system_config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
+# 3 "FM_Timer0.c" 2
 
 
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
 
 
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-# 75 "./system_config.h"
-typedef enum
+void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
 {
-    clock_div_1 = 0b0000,
-    clock_div_2 = 0b0001,
-    clock_div_4 = 0b0010,
-    clock_div_8 = 0b0011,
-    clock_div_16 = 0b0100,
-    clock_div_32 = 0b0101,
-    clock_div_64 = 0b0110,
-    clock_div_128 = 0b0111,
-    clock_div_256 = 0b1000,
-    clock_div_512 = 0b1001
-}_div_clock_hfintosc_t;
 
-typedef enum
+
+    T0CON0 |= (timer_configs->timer0_enable << 0x7);
+    T0CON0 |= (timer_configs->timer0_bits << 0x4);
+    T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
+
+
+    T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
+    T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
+    T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
+}
+
+int16_t FM_Timer0_Load_Calculator(uint16_t time)
 {
-    freq_clk_1MHZ = 0b0000,
-    freq_clk_2MHZ = 0b0001,
-    freq_clk_4MHZ = 0b0010,
-    freq_clk_8MHZ = 0b0011,
-    freq_clk_12MHZ = 0b0100,
-    freq_clk_16MHZ = 0b0101,
-    freq_clk_32MHZ = 0b0110,
-    freq_clk_48MHZ = 0b0111,
-    freq_clk_64MHZ = 0b1000
-}_freq_clock_hfintosc_t;
-
-typedef struct
-{
-    _div_clock_hfintosc_t divisor_clock;
-    _freq_clock_hfintosc_t frecuencia_clock;
-}_clock_hfintosc_params_t;
-# 118 "./system_config.h"
-void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 25 "main.c" 2
-
-
-
-
-
-
-void __attribute__((picinterrupt(("irq(31)")))) Timer_Interrupt(void)
-{
-    if ((PIE3 & (1 << 0x7)) && (PIR3 & (1 << 0x7)))
+    int16_t load_timer;
+    if(T0CON0bits.MD16)
     {
-        TMR0H = 0x0B;
-        TMR0L = 0xDC;
-
-        LATF ^= (1 << 3);;
-
-        PIR3 &= ~(1 << 0x7);
+        load_timer = ((time /((4 / 4000000UL) * T0CON1bits.CKPS)) - 65536);
     }
-}
-
-
-
-
-
-void Init_Internal_Oscillator(void);
-void Init_Timer_0(void);
-void Init_Gpio_System(void);
-void Init_Timer_Interrupts(void);
-
-
-
-
-
-int main(void)
-{
-
-    Init_Internal_Oscillator();
-
-    Init_Timer_Interrupts();
-
-    Init_Timer_0();
-
-    Init_Gpio_System();
-
-
-    while (1)
+    else
     {
-        __nop();
+        load_timer = ((time / ((4 / 4000000UL) * T0CON1bits.CKPS)) - 256);
     }
-    return (0);
-}
-
-
-
-
-
-void Init_Timer_Interrupts(void)
-{
-
-    INTCON0 &= ~(1 << 0x5);
-    INTCON0 |= (1 << 0x7);
-
-
-    PIE3 |= (1 << 0x7);
-    PIR3 &= (1 << 0x7);
-}
-
-void Init_Gpio_System(void)
-{
-    TRISF &= ~(1 << 3);
-    LATF |= (1 << 3);;
-}
-
-void Init_Timer_0(void)
-{
-    _timer0_params_config_t my_timer0;
-    my_timer0.timer0_enable = TMR0_Enable;
-    my_timer0.timer0_bits = TMR0_16bits;
-    my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
-    my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
-    my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
-    my_timer0.timer0_postecaler = TMR0_Post_1_1;
-# 125 "main.c"
-    FM_Timer0_Init(&my_timer0);
-
-    TMR0H = 0x0B;
-    TMR0L = 0xDC;
-}
-
-void Init_Internal_Oscillator(void)
-{
-    _clock_hfintosc_params_t my_clock;
-    my_clock.divisor_clock = clock_div_1;
-    my_clock.frecuencia_clock = freq_clk_4MHZ;
-
-    FM_Hfintosc_Init(&my_clock);
+    return load_timer;
 }
