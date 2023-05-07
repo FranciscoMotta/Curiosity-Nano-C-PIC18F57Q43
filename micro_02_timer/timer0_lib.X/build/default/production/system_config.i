@@ -1,4 +1,4 @@
-# 1 "FM_Timer0.c"
+# 1 "system_config.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,11 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "FM_Timer0.c" 2
-
-
-# 1 "./FM_Timer0.h" 1
-# 13 "./FM_Timer0.h"
+# 1 "system_config.c" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28689,140 +28685,103 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 13 "./FM_Timer0.h" 2
+# 1 "system_config.c" 2
+
+# 1 "./system_config.h" 1
+# 16 "./system_config.h"
+#pragma config FEXTOSC = OFF
+#pragma config RSTOSC = HFINTOSC_64MHZ
 
 
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = OFF
+#pragma config CSWEN = OFF
+#pragma config FCMEN = OFF
 
 
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = ON
+#pragma config IVT1WAY = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
 
 
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = OFF
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+# 75 "./system_config.h"
+typedef enum
+{
+    clock_div_1 = 0b0000,
+    clock_div_2 = 0b0001,
+    clock_div_4 = 0b0010,
+    clock_div_8 = 0b0011,
+    clock_div_16 = 0b0100,
+    clock_div_32 = 0b0101,
+    clock_div_64 = 0b0110,
+    clock_div_128 = 0b0111,
+    clock_div_256 = 0b1000,
+    clock_div_512 = 0b1001
+}_div_clock_hfintosc_t;
 
 typedef enum
 {
-    TMR0_Enable = 0,
-    TMR0_Disable
-}_timer0_enable_t;
-
-
-
-typedef enum
-{
-    TMR0_8bits = 0,
-    TMR0_16bits
-}_timer0_mode_op_t;
-
-
-
-typedef enum
-{
-    TMR0_Post_1_1 = 0b0000,
-    TMR0_Post_1_2,
-    TMR0_Post_1_3,
-    TMR0_Post_1_4,
-    TMR0_Post_1_5,
-    TMR0_Post_1_6,
-    TMR0_Post_1_7,
-    TMR0_Post_1_8,
-    TMR0_Post_1_9,
-    TMR0_Post_1_10,
-    TMR0_Post_1_11,
-    TMR0_Post_1_12,
-    TMR0_Post_1_13,
-    TMR0_Post_1_14,
-    TMR0_Post_1_15,
-    TMR0_Post_1_16
-}_timer0_postescaler_t;
-
-
-
-typedef enum
-{
-    TMR0_Pin_Select_T0CKIPPS_NI = 0,
-    TMR0_Pin_Select_T0CKIPPS_I,
-    TMR0_Fosc_div_4,
-    TMR0_HFINTOSC,
-    TMR0_LFINTOSC,
-    TMR0_MFINTOSC,
-    TMR0_SOSC,
-    TMR0_CLC1_OUT,
-}_timer0_clock_source_t;
-
-
-
-typedef enum
-{
-    TMR0_Counter_Sync_FOSC4 = 0,
-    TMR0_Counter_Not_Sync
-}_timer0_async_t;
-
-
-
-typedef enum
-{
-    TMR0_Prescaler_1_1 = 0,
-    TMR0_Prescaler_1_2,
-    TMR0_Prescaler_1_4,
-    TMR0_Prescaler_1_8,
-    TMR0_Prescaler_1_16,
-    TMR0_Prescaler_1_32,
-    TMR0_Prescaler_1_64,
-    TMR0_Prescaler_1_128,
-    TMR0_Prescaler_1_256,
-    TMR0_Prescaler_1_512,
-    TMR0_Prescaler_1_1024,
-    TMR0_Prescaler_1_2048,
-    TMR0_Prescaler_1_4096,
-    TMR0_Prescaler_1_8192,
-    TMR0_Prescaler_1_16384,
-    TMR0_Prescaler_1_32768
-}_timer0_prescaler_t;
-
-
+    freq_clk_1MHZ = 0b0000,
+    freq_clk_2MHZ = 0b0001,
+    freq_clk_4MHZ = 0b0010,
+    freq_clk_8MHZ = 0b0011,
+    freq_clk_12MHZ = 0b0100,
+    freq_clk_16MHZ = 0b0101,
+    freq_clk_32MHZ = 0b0110,
+    freq_clk_48MHZ = 0b0111,
+    freq_clk_64MHZ = 0b1000
+}_freq_clock_hfintosc_t;
 
 typedef struct
 {
-    _timer0_enable_t timer0_enable;
-    _timer0_mode_op_t timer0_bits;
-    _timer0_postescaler_t timer0_postecaler;
-    _timer0_clock_source_t timer0_clock_source;
-    _timer0_async_t timer0_counter_sync;
-    _timer0_prescaler_t timer0_prescaler;
-}_timer0_params_config_t;
-
-
-
-void FM_Timer0_Init (_timer0_params_config_t *timer_configs);
-
-int16_t FM_Timer0_Load_Calculator(uint16_t time);
-# 3 "FM_Timer0.c" 2
+    _div_clock_hfintosc_t divisor_clock;
+    _freq_clock_hfintosc_t frecuencia_clock;
+}_clock_hfintosc_params_t;
+# 118 "./system_config.h"
+void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
+# 2 "system_config.c" 2
 
 
 
 
-void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
+
+
+void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params)
 {
-
-
-    T0CON0 |= (timer_configs->timer0_enable << 0x7);
-    T0CON0 |= (timer_configs->timer0_bits << 0x4);
-    T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
-
-
-    T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
-    T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
-    T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
-}
-
-int16_t FM_Timer0_Load_Calculator(uint16_t time)
-{
-    int16_t load_timer;
-    if(T0CON0bits.MD16)
-    {
-        load_timer = ((time /((4 / 4000000UL) * T0CON1bits.CKPS)) - 65536);
-    }
-    else
-    {
-        load_timer = ((time / ((4 / 4000000UL) * T0CON1bits.CKPS)) - 256);
-    }
-    return load_timer;
+    OSCCON1bits.NOSC = 0b110;
+    OSCCON1bits.NDIV = clock_params->divisor_clock;
+    OSCFRQbits.HFFRQ = clock_params->frecuencia_clock;
 }

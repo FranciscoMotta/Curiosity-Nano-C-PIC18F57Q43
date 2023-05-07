@@ -1,38 +1,41 @@
 ### HEXMate logfile and output summary ###
-
-### Command-line arguments ###
- C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o
- -Odist/default/production\timer0_lib.X.production.hex
- -logfile=dist/default/production\timer0_lib.X.production.hxl
- -addressing=1
- -break=300000
-
 ### Memory Usage ###
- Input file ranges:
-  0h - 3h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o)
-  1FFF2h - 1FFFFh		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o)
-  200000h - 20003Fh		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o)
-  300000h - 300009h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o)
- Unused ranges:
-  4h - 1FFF1h
-  20000h - 1FFFFFh
+ Unused memory ranges:
+  4h - 7h
+  21Ah - 21Bh
+  2A0h - 1FFFFFh
   200040h - 2FFFFFh
-
+  30000Ah - 30003Fh
+  
+ dist/default/production\timer0_lib.X.production.hex ranges:
+  0h - 3h
+  8h - 219h
+  21Ch - 29Fh
+  200000h - 20003Fh
+  300000h - 300009h
+  
 ### Hex Memory Map ###
  Legend:
-  -- = Unused memory
-  H1 = Input file             (C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1624.\driver_tmp_3.o)
-----------------------------------------------------------
-         | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
-----------------------------------------------------------
-00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
-----------------------------------------------------------
-0001FFF0 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-----------------------------------------------------------
-00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00200010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00200020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00200030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-----------------------------------------------------------
-00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
-00300010 | --
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = dist/default/production\timer0_lib.X.production.hex
+00000000: 1111----11111111111111111111111111111111111111111111111111111111
+00000040: 1111111111111111111111111111111111111111111111111111111111111111
+00000080: 1111111111111111111111111111111111111111111111111111111111111111
+000000C0: 1111111111111111111111111111111111111111111111111111111111111111
+00000100: 1111111111111111111111111111111111111111111111111111111111111111
+00000140: 1111111111111111111111111111111111111111111111111111111111111111
+00000180: 1111111111111111111111111111111111111111111111111111111111111111
+000001C0: 1111111111111111111111111111111111111111111111111111111111111111
+00000200: 11111111111111111111111111--111111111111111111111111111111111111
+00000240: 1111111111111111111111111111111111111111111111111111111111111111
+00000280: 11111111111111111111111111111111--------------------------------
+00200000: 1111111111111111111111111111111111111111111111111111111111111111
+00300000: 1111111111------------------------------------------------------

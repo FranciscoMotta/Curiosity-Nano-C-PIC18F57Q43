@@ -111,7 +111,7 @@ typedef struct
 
 /* Declaracion de funciones */
 
-void FM_Timer0_Init (_timer0_params_config_t timer_configs);
+void FM_Timer0_Init (_timer0_params_config_t *timer_configs);
 
 int16_t FM_Timer0_Load_Calculator(uint16_t time);
 #endif	/* FM_TIMER0_H */

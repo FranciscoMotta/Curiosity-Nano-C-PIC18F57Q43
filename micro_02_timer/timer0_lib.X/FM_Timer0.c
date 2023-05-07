@@ -4,12 +4,18 @@
 
 /* Definicion de funciones */
 
-void FM_Timer0_Init (_timer0_params_config_t timer_configs)
+void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
 {
-    T0CON0bits.OUTPS = timer_configs.timer0_postecaler;
-    T0CON1bits.ASYNC = timer_configs.timer0_counter_sync;
-    T0CON1bits.CS = timer_configs.timer0_clock_source;
-    T0CON1bits.CKPS = timer_configs.timer0_prescaler;
+    /* Registro T0CON0 */
+    
+    T0CON0 |= (timer_configs->timer0_enable << _T0CON0_EN_POSITION); // Enable del timer
+    T0CON0 |= (timer_configs->timer0_bits << _T0CON0_MD16_POSITION); // 8/16bits
+    T0CON0 |= (timer_configs->timer0_postecaler << _T0CON0_OUTPS3_POSITION); // Postescaler
+    
+    /* Registro T0CON1 */
+    T0CON1 |= (timer_configs->timer0_clock_source << _T0CON1_CS2_POSITION); // Clock source
+    T0CON1 |= (timer_configs->timer0_counter_sync << _T0CON1_ASYNC_POSITION); // Sync
+    T0CON1 |= (timer_configs->timer0_prescaler << _T0CON1_T0CKPS3_POSITION); // Prescaler
 }
 
 int16_t FM_Timer0_Load_Calculator(uint16_t time)
