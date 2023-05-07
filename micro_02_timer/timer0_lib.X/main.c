@@ -32,11 +32,10 @@ void __interrupt(irq(IRQ_TMR0)) Timer_Interrupt(void)
 {
     if ((PIE3 & (1 << _PIE3_TMR0IE_POSITION)) && (PIR3 & (1 << _PIR3_TMR0IF_POSITION))) 
     {
+        Led_Sys_Tog();
+        
         TMR0H = 0x0B; // Bits MSB
         TMR0L = 0xDC; // Bits LSB
-
-        Led_Sys_Tog();
-
         PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION); // Limpiamos la bandera
     }
 }
@@ -100,7 +99,7 @@ void Init_Timer_0(void)
     my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_bits = TMR0_16bits;
     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
-    my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
+    my_timer0.timer0_counter_sync = TMR0_Counter_Not_Sync;
     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 
@@ -111,6 +110,8 @@ void Init_Timer_0(void)
      * Tiempo = 500ms
      * Timer = 16bits
      * 
+     * TMR0 = (2^N - (Fosc / 4) * T) / prescaler
+     * 
      * tiempo = TCY*Prescaler*(65536 - carga)
      * 
      * carga =  65536 - ((Tiempo)/((4/FOSC) * Prescaler))
@@ -120,12 +121,11 @@ void Init_Timer_0(void)
      * 
      * Carga = 0x0BDC hex 
      */
-    
-    TMR0H = 0x0B; // Bits MSB
-    TMR0L = 0xDC; // Bits LSB
-    
+   
     /* Se pasan los parámetros */
     FM_Timer0_Init(&my_timer0);
+    
+    TMR0 = 3036;
 }
 
 void Init_Internal_Oscillator(void) 

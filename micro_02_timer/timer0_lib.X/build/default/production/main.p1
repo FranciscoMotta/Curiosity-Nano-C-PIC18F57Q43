@@ -7,27 +7,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46797
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46797: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
 [v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
+"47792
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
+[v _LATF `Vuc ~T0 @X0 0 e@1219 ]
 "23436
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23436: extern volatile unsigned char TMR0H __attribute__((address(0x319)));
 [v _TMR0H `Vuc ~T0 @X0 0 e@793 ]
 "23298
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23298: extern volatile unsigned char TMR0L __attribute__((address(0x318)));
 [v _TMR0L `Vuc ~T0 @X0 0 e@792 ]
-"47792
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
-[v _LATF `Vuc ~T0 @X0 0 e@1219 ]
 [p mainexit ]
-"48 main.c
-[; ;main.c: 48: void Init_Internal_Oscillator(void);
+"47 main.c
+[; ;main.c: 47: void Init_Internal_Oscillator(void);
 [v _Init_Internal_Oscillator `(v ~T0 @X0 0 ef ]
-"51
-[; ;main.c: 51: void Init_Timer_Interrupts(void);
-[v _Init_Timer_Interrupts `(v ~T0 @X0 0 ef ]
-"49
-[; ;main.c: 49: void Init_Timer_0(void);
-[v _Init_Timer_0 `(v ~T0 @X0 0 ef ]
 "50
-[; ;main.c: 50: void Init_Gpio_System(void);
+[; ;main.c: 50: void Init_Timer_Interrupts(void);
+[v _Init_Timer_Interrupts `(v ~T0 @X0 0 ef ]
+"48
+[; ;main.c: 48: void Init_Timer_0(void);
+[v _Init_Timer_0 `(v ~T0 @X0 0 ef ]
+"49
+[; ;main.c: 49: void Init_Gpio_System(void);
 [v _Init_Gpio_System `(v ~T0 @X0 0 ef ]
 "8 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
@@ -38,8 +38,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48134
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
 [v _TRISF `Vuc ~T0 @X0 0 e@1227 ]
-"99 main.c
-[; ;main.c: 99:     _timer0_params_config_t my_timer0;
+"98 main.c
+[; ;main.c: 98:     _timer0_params_config_t my_timer0;
 [c E16998 0 1 .. ]
 [n E16998 . TMR0_Disable TMR0_Enable  ]
 [c E17002 0 1 .. ]
@@ -59,6 +59,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;./FM_Timer0.h: 114: void FM_Timer0_Init (_timer0_params_config_t *timer_configs);
 [v _FM_Timer0_Init `(v ~T0 @X0 0 ef1`*S2357 ]
+"23303 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23303: extern volatile unsigned char TMR0 __attribute__((address(0x318)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@792 ]
 "133 main.c
 [; ;main.c: 133:     _clock_hfintosc_params_t my_clock;
 [c E17068 0 1 2 3 4 5 6 7 8 9 .. ]
@@ -2705,149 +2708,146 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 34:     {
 {
 "35
-[; ;main.c: 35:         TMR0H = 0x0B;
-[e = _TMR0H -> -> 11 `i `uc ]
-"36
-[; ;main.c: 36:         TMR0L = 0xDC;
-[e = _TMR0L -> -> 220 `i `uc ]
-"38
-[; ;main.c: 38:         LATF ^= (1 << 3);;
+[; ;main.c: 35:         LATF ^= (1 << 3);;
 [e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
-"40
-[; ;main.c: 40:         PIR3 &= ~(1 << 0x7);
+"37
+[; ;main.c: 37:         TMR0H = 0x0B;
+[e = _TMR0H -> -> 11 `i `uc ]
+"38
+[; ;main.c: 38:         TMR0L = 0xDC;
+[e = _TMR0L -> -> 220 `i `uc ]
+"39
+[; ;main.c: 39:         PIR3 &= ~(1 << 0x7);
 [e =& _PIR3 -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"41
-[; ;main.c: 41:     }
+"40
+[; ;main.c: 40:     }
 }
 [e :U 2360 ]
-"42
-[; ;main.c: 42: }
+"41
+[; ;main.c: 41: }
 [e :UE 2359 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"57
-[; ;main.c: 57: int main(void)
+"56
+[; ;main.c: 56: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"58
-[; ;main.c: 58: {
+"57
+[; ;main.c: 57: {
 {
 [e :U _main ]
 [f ]
-"60
-[; ;main.c: 60:     Init_Internal_Oscillator();
+"59
+[; ;main.c: 59:     Init_Internal_Oscillator();
 [e ( _Init_Internal_Oscillator ..  ]
-"62
-[; ;main.c: 62:     Init_Timer_Interrupts();
+"61
+[; ;main.c: 61:     Init_Timer_Interrupts();
 [e ( _Init_Timer_Interrupts ..  ]
-"64
-[; ;main.c: 64:     Init_Timer_0();
+"63
+[; ;main.c: 63:     Init_Timer_0();
 [e ( _Init_Timer_0 ..  ]
-"66
-[; ;main.c: 66:     Init_Gpio_System();
+"65
+[; ;main.c: 65:     Init_Gpio_System();
 [e ( _Init_Gpio_System ..  ]
-"69
-[; ;main.c: 69:     while (1)
+"68
+[; ;main.c: 68:     while (1)
 [e :U 2363 ]
-"70
-[; ;main.c: 70:     {
+"69
+[; ;main.c: 69:     {
 {
-"71
-[; ;main.c: 71:         __nop();
+"70
+[; ;main.c: 70:         __nop();
 [e ( ___nop ..  ]
-"72
-[; ;main.c: 72:     }
+"71
+[; ;main.c: 71:     }
 }
 [e :U 2362 ]
 [e $U 2363  ]
 [e :U 2364 ]
-"73
-[; ;main.c: 73:     return (0);
+"72
+[; ;main.c: 72:     return (0);
 [e ) -> 0 `i ]
 [e $UE 2361  ]
-"74
-[; ;main.c: 74: }
+"73
+[; ;main.c: 73: }
 [e :UE 2361 ]
 }
-"80
-[; ;main.c: 80: void Init_Timer_Interrupts(void)
+"79
+[; ;main.c: 79: void Init_Timer_Interrupts(void)
 [v _Init_Timer_Interrupts `(v ~T0 @X0 1 ef ]
-"81
-[; ;main.c: 81: {
+"80
+[; ;main.c: 80: {
 {
 [e :U _Init_Timer_Interrupts ]
 [f ]
-"83
-[; ;main.c: 83:     INTCON0 &= ~(1 << 0x5);
+"82
+[; ;main.c: 82:     INTCON0 &= ~(1 << 0x5);
 [e =& _INTCON0 -> ~ << -> 1 `i -> 5 `i `Vuc ]
-"84
-[; ;main.c: 84:     INTCON0 |= (1 << 0x7);
+"83
+[; ;main.c: 83:     INTCON0 |= (1 << 0x7);
 [e =| _INTCON0 -> << -> 1 `i -> 7 `i `Vuc ]
-"87
-[; ;main.c: 87:     PIE3 |= (1 << 0x7);
+"86
+[; ;main.c: 86:     PIE3 |= (1 << 0x7);
 [e =| _PIE3 -> << -> 1 `i -> 7 `i `Vuc ]
-"88
-[; ;main.c: 88:     PIR3 &= (1 << 0x7);
+"87
+[; ;main.c: 87:     PIR3 &= (1 << 0x7);
 [e =& _PIR3 -> << -> 1 `i -> 7 `i `Vuc ]
-"89
-[; ;main.c: 89: }
+"88
+[; ;main.c: 88: }
 [e :UE 2365 ]
 }
-"91
-[; ;main.c: 91: void Init_Gpio_System(void)
+"90
+[; ;main.c: 90: void Init_Gpio_System(void)
 [v _Init_Gpio_System `(v ~T0 @X0 1 ef ]
-"92
-[; ;main.c: 92: {
+"91
+[; ;main.c: 91: {
 {
 [e :U _Init_Gpio_System ]
 [f ]
-"93
-[; ;main.c: 93:     TRISF &= ~(1 << 3);
+"92
+[; ;main.c: 92:     TRISF &= ~(1 << 3);
 [e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"94
-[; ;main.c: 94:     LATF |= (1 << 3);;
+"93
+[; ;main.c: 93:     LATF |= (1 << 3);;
 [e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
-"95
-[; ;main.c: 95: }
+"94
+[; ;main.c: 94: }
 [e :UE 2366 ]
 }
-"97
-[; ;main.c: 97: void Init_Timer_0(void)
+"96
+[; ;main.c: 96: void Init_Timer_0(void)
 [v _Init_Timer_0 `(v ~T0 @X0 1 ef ]
-"98
-[; ;main.c: 98: {
+"97
+[; ;main.c: 97: {
 {
 [e :U _Init_Timer_0 ]
 [f ]
-"99
-[; ;main.c: 99:     _timer0_params_config_t my_timer0;
+"98
+[; ;main.c: 98:     _timer0_params_config_t my_timer0;
 [v _my_timer0 `S2357 ~T0 @X0 1 a ]
-"100
-[; ;main.c: 100:     my_timer0.timer0_enable = TMR0_Enable;
+"99
+[; ;main.c: 99:     my_timer0.timer0_enable = TMR0_Enable;
 [e = . _my_timer0 0 . `E16998 1 ]
-"101
-[; ;main.c: 101:     my_timer0.timer0_bits = TMR0_16bits;
+"100
+[; ;main.c: 100:     my_timer0.timer0_bits = TMR0_16bits;
 [e = . _my_timer0 1 . `E17002 1 ]
-"102
-[; ;main.c: 102:     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
+"101
+[; ;main.c: 101:     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
 [e = . _my_timer0 3 . `E17024 2 ]
+"102
+[; ;main.c: 102:     my_timer0.timer0_counter_sync = TMR0_Counter_Not_Sync;
+[e = . _my_timer0 4 . `E17034 1 ]
 "103
-[; ;main.c: 103:     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
-[e = . _my_timer0 4 . `E17034 0 ]
-"104
-[; ;main.c: 104:     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
+[; ;main.c: 103:     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
 [e = . _my_timer0 5 . `E17038 3 ]
-"105
-[; ;main.c: 105:     my_timer0.timer0_postecaler = TMR0_Post_1_1;
+"104
+[; ;main.c: 104:     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 [e = . _my_timer0 2 . `E17006 0 ]
-"124
-[; ;main.c: 124:     TMR0H = 0x0B;
-[e = _TMR0H -> -> 11 `i `uc ]
-"125
-[; ;main.c: 125:     TMR0L = 0xDC;
-[e = _TMR0L -> -> 220 `i `uc ]
-"128
-[; ;main.c: 128:     FM_Timer0_Init(&my_timer0);
+"126
+[; ;main.c: 126:     FM_Timer0_Init(&my_timer0);
 [e ( _FM_Timer0_Init (1 &U _my_timer0 ]
+"128
+[; ;main.c: 128:     TMR0 = 3036;
+[e = _TMR0 -> -> 3036 `i `uc ]
 "129
 [; ;main.c: 129: }
 [e :UE 2367 ]

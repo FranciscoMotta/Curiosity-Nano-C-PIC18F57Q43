@@ -3,8 +3,32 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"106 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"106 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\main.c
+[e E16998 . `uc
+clock_div_1 0
+clock_div_2 1
+clock_div_4 2
+clock_div_8 3
+clock_div_16 4
+clock_div_32 5
+clock_div_64 6
+clock_div_128 7
+clock_div_256 8
+clock_div_512 9
+]
 [e E17010 . `uc
+freq_clk_1MHZ 0
+freq_clk_2MHZ 1
+freq_clk_4MHZ 2
+freq_clk_8MHZ 3
+freq_clk_12MHZ 4
+freq_clk_16MHZ 5
+freq_clk_32MHZ 6
+freq_clk_48MHZ 7
+freq_clk_64MHZ 8
+]
+"8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\system_config.c
+[e E16680 . `uc
 clock_div_1 0
 clock_div_2 1
 clock_div_4 2
@@ -16,7 +40,7 @@ clock_div_128 7
 clock_div_256 8
 clock_div_512 9
 ]
-[e E17022 . `uc
+[e E16692 . `uc
 freq_clk_1MHZ 0
 freq_clk_2MHZ 1
 freq_clk_4MHZ 2
@@ -27,55 +51,31 @@ freq_clk_32MHZ 6
 freq_clk_48MHZ 7
 freq_clk_64MHZ 8
 ]
-"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\system_config.c
-[e E16689 . `uc
-clock_div_1 0
-clock_div_2 1
-clock_div_4 2
-clock_div_8 3
-clock_div_16 4
-clock_div_32 5
-clock_div_64 6
-clock_div_128 7
-clock_div_256 8
-clock_div_512 9
-]
-[e E16701 . `uc
-freq_clk_1MHZ 0
-freq_clk_2MHZ 1
-freq_clk_4MHZ 2
-freq_clk_8MHZ 3
-freq_clk_12MHZ 4
-freq_clk_16MHZ 5
-freq_clk_32MHZ 6
-freq_clk_48MHZ 7
-freq_clk_64MHZ 8
-]
-"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"32 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"32 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\main.c
 [v _Timer_Interrupt Timer_Interrupt `IIH(v  1 e 1 0 ]
 "56
 [v _main main `(i  1 e 2 0 ]
@@ -87,12 +87,12 @@ freq_clk_64MHZ 8
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 "104
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
-"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\system_config.c
+"8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 [s S316 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
-"5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+"5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [s S319 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
@@ -216,7 +216,7 @@ freq_clk_64MHZ 8
 "48564
 "48564
 [v _INTCON0bits INTCON0bits `VES100  1 e 1 @1238 ]
-"56 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"56 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "67
@@ -234,19 +234,19 @@ freq_clk_64MHZ 8
 "104
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S236 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[s S236 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
 "106
 [v Init_Internal_Oscillator@my_clock my_clock `S236  1 a 2 3 ]
 "112
 } 0
-"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\system_config.c
+"8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S236 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[s S236 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
 [v FM_Hfintosc_Init@clock_params clock_params `*.39S236  1 p 2 0 ]
 "13
 } 0
-"98 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_02_timer\timer0.X\main.c
+"98 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
 "102

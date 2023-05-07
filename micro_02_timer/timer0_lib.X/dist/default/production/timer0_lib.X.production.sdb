@@ -62,7 +62,7 @@ TMR0_Prescaler_1_8192 13
 TMR0_Prescaler_1_16384 14
 TMR0_Prescaler_1_32768 15
 ]
-"99 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
+"98 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
 [e E16998 . `uc
 TMR0_Disable 0
 TMR0_Enable 1
@@ -199,23 +199,23 @@ freq_clk_64MHZ 8
 [v _FM_Timer0_Init FM_Timer0_Init `(v  1 e 1 0 ]
 "31 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
 [v _Timer_Interrupt Timer_Interrupt `IIH(v  1 e 1 0 ]
-"57
+"56
 [v _main main `(i  1 e 2 0 ]
-"80
+"79
 [v _Init_Timer_Interrupts Init_Timer_Interrupts `(v  1 e 1 0 ]
-"91
+"90
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
-"97
+"96
 [v _Init_Timer_0 Init_Timer_0 `(v  1 e 1 0 ]
 "131
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S368 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S369 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S371 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S372 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -223,20 +223,22 @@ freq_clk_64MHZ 8
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S379 . 1 `S368 1 . 1 0 `S371 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES379  1 e 1 @173 ]
-[s S394 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S380 . 1 `S369 1 . 1 0 `S372 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES380  1 e 1 @173 ]
+[s S395 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S396 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S397 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S401 . 1 `S394 1 . 1 0 `S396 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES401  1 e 1 @177 ]
+[u S402 . 1 `S395 1 . 1 0 `S397 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES402  1 e 1 @177 ]
 "23298
 [v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23303
+[v _TMR0 TMR0 `VEuc  1 e 1 @792 ]
 "23436
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
 "23690
@@ -303,21 +305,21 @@ freq_clk_64MHZ 8
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
 "48544
 [v _INTCON0 INTCON0 `VEuc  1 e 1 @1238 ]
-"57 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
+"56 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"74
+"73
 } 0
-"80
+"79
 [v _Init_Timer_Interrupts Init_Timer_Interrupts `(v  1 e 1 0 ]
 {
-"89
+"88
 } 0
-"97
+"96
 [v _Init_Timer_0 Init_Timer_0 `(v  1 e 1 0 ]
 {
 [s S76 . 6 `E16680 1 timer0_enable 1 0 `E16684 1 timer0_bits 1 1 `E16688 1 timer0_postecaler 1 2 `E16706 1 timer0_clock_source 1 3 `E16716 1 timer0_counter_sync 1 4 `E16720 1 timer0_prescaler 1 5 ]
-"99
+"98
 [v Init_Timer_0@my_timer0 my_timer0 `S76  1 a 6 4 ]
 "129
 } 0
@@ -331,25 +333,25 @@ freq_clk_64MHZ 8
 "131 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S311 . 2 `E17068 1 divisor_clock 1 0 `E17080 1 frecuencia_clock 1 1 ]
+[s S312 . 2 `E17068 1 divisor_clock 1 0 `E17080 1 frecuencia_clock 1 1 ]
 "133
-[v Init_Internal_Oscillator@my_clock my_clock `S311  1 a 2 3 ]
+[v Init_Internal_Oscillator@my_clock my_clock `S312  1 a 2 3 ]
 "138
 } 0
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S311 . 2 `E17068 1 divisor_clock 1 0 `E17080 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S311  1 p 2 0 ]
+[s S312 . 2 `E17068 1 divisor_clock 1 0 `E17080 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S312  1 p 2 0 ]
 "13
 } 0
-"91 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
+"90 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
-"95
+"94
 } 0
 "31
 [v _Timer_Interrupt Timer_Interrupt `IIH(v  1 e 1 0 ]
 {
-"42
+"41
 } 0

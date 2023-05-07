@@ -29035,11 +29035,10 @@ void __attribute__((picinterrupt(("irq(31)")))) Timer_Interrupt(void)
 {
     if ((PIE3 & (1 << 0x7)) && (PIR3 & (1 << 0x7)))
     {
-        TMR0H = 0x0B;
-        TMR0L = 0xDC;
-
         LATF ^= (1 << 3);;
 
+        TMR0H = 0x0B;
+        TMR0L = 0xDC;
         PIR3 &= ~(1 << 0x7);
     }
 }
@@ -29103,15 +29102,13 @@ void Init_Timer_0(void)
     my_timer0.timer0_enable = TMR0_Enable;
     my_timer0.timer0_bits = TMR0_16bits;
     my_timer0.timer0_clock_source = TMR0_Fosc_div_4;
-    my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
+    my_timer0.timer0_counter_sync = TMR0_Counter_Not_Sync;
     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
     my_timer0.timer0_postecaler = TMR0_Post_1_1;
-# 124 "main.c"
-    TMR0H = 0x0B;
-    TMR0L = 0xDC;
-
-
+# 126 "main.c"
     FM_Timer0_Init(&my_timer0);
+
+    TMR0 = 3036;
 }
 
 void Init_Internal_Oscillator(void)
