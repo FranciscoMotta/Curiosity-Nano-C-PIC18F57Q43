@@ -2644,17 +2644,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;FM_Timer0.c: 17:     T0CON0 |= (timer_configs->timer0_bits << 0x4);
 [e =| _T0CON0 -> << -> . *U _timer_configs 1 `ui -> 4 `i `Vuc ]
 "18
-[; ;FM_Timer0.c: 18:     T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
-[e =| _T0CON0 -> << -> . *U _timer_configs 2 `ui -> 3 `i `Vuc ]
+[; ;FM_Timer0.c: 18:     T0CON0 |= (timer_configs->timer0_postecaler << 0x0);
+[e =| _T0CON0 -> << -> . *U _timer_configs 2 `ui -> 0 `i `Vuc ]
 "21
-[; ;FM_Timer0.c: 21:     T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
-[e =| _T0CON1 -> << -> . *U _timer_configs 3 `ui -> 7 `i `Vuc ]
+[; ;FM_Timer0.c: 21:     T0CON1 |= (timer_configs->timer0_clock_source << 0x5);
+[e =| _T0CON1 -> << -> . *U _timer_configs 3 `ui -> 5 `i `Vuc ]
 "22
 [; ;FM_Timer0.c: 22:     T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
 [e =| _T0CON1 -> << -> . *U _timer_configs 4 `ui -> 4 `i `Vuc ]
 "23
-[; ;FM_Timer0.c: 23:     T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
-[e =| _T0CON1 -> << -> . *U _timer_configs 5 `ui -> 3 `i `Vuc ]
+[; ;FM_Timer0.c: 23:     T0CON1 |= (timer_configs->timer0_prescaler << 0x0);
+[e =| _T0CON1 -> << -> . *U _timer_configs 5 `ui -> 0 `i `Vuc ]
 "24
 [; ;FM_Timer0.c: 24: }
 [e :UE 2356 ]

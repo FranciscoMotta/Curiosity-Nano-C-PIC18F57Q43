@@ -2839,15 +2839,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "105
 [; ;main.c: 105:     my_timer0.timer0_postecaler = TMR0_Post_1_1;
 [e = . _my_timer0 2 . `E17006 0 ]
-"125
-[; ;main.c: 125:     FM_Timer0_Init(&my_timer0);
-[e ( _FM_Timer0_Init (1 &U _my_timer0 ]
-"127
-[; ;main.c: 127:     TMR0H = 0x0B;
+"124
+[; ;main.c: 124:     TMR0H = 0x0B;
 [e = _TMR0H -> -> 11 `i `uc ]
-"128
-[; ;main.c: 128:     TMR0L = 0xDC;
+"125
+[; ;main.c: 125:     TMR0L = 0xDC;
 [e = _TMR0L -> -> 220 `i `uc ]
+"128
+[; ;main.c: 128:     FM_Timer0_Init(&my_timer0);
+[e ( _FM_Timer0_Init (1 &U _my_timer0 ]
 "129
 [; ;main.c: 129: }
 [e :UE 2367 ]

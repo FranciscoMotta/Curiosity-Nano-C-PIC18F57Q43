@@ -28810,12 +28810,12 @@ void FM_Timer0_Init (_timer0_params_config_t *timer_configs)
 
     T0CON0 |= (timer_configs->timer0_enable << 0x7);
     T0CON0 |= (timer_configs->timer0_bits << 0x4);
-    T0CON0 |= (timer_configs->timer0_postecaler << 0x3);
+    T0CON0 |= (timer_configs->timer0_postecaler << 0x0);
 
 
-    T0CON1 |= (timer_configs->timer0_clock_source << 0x7);
+    T0CON1 |= (timer_configs->timer0_clock_source << 0x5);
     T0CON1 |= (timer_configs->timer0_counter_sync << 0x4);
-    T0CON1 |= (timer_configs->timer0_prescaler << 0x3);
+    T0CON1 |= (timer_configs->timer0_prescaler << 0x0);
 }
 
 int16_t FM_Timer0_Load_Calculator(uint16_t time)

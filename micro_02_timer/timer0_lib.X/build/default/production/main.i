@@ -29106,11 +29106,12 @@ void Init_Timer_0(void)
     my_timer0.timer0_counter_sync = TMR0_Counter_Sync_FOSC4;
     my_timer0.timer0_prescaler = TMR0_Prescaler_1_8;
     my_timer0.timer0_postecaler = TMR0_Post_1_1;
-# 125 "main.c"
-    FM_Timer0_Init(&my_timer0);
-
+# 124 "main.c"
     TMR0H = 0x0B;
     TMR0L = 0xDC;
+
+
+    FM_Timer0_Init(&my_timer0);
 }
 
 void Init_Internal_Oscillator(void)

@@ -318,7 +318,7 @@ freq_clk_64MHZ 8
 {
 [s S76 . 6 `E16680 1 timer0_enable 1 0 `E16684 1 timer0_bits 1 1 `E16688 1 timer0_postecaler 1 2 `E16706 1 timer0_clock_source 1 3 `E16716 1 timer0_counter_sync 1 4 `E16720 1 timer0_prescaler 1 5 ]
 "99
-[v Init_Timer_0@my_timer0 my_timer0 `S76  1 a 6 3 ]
+[v Init_Timer_0@my_timer0 my_timer0 `S76  1 a 6 4 ]
 "129
 } 0
 "7 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_02_timer\timer0_lib.X\FM_Timer0.c

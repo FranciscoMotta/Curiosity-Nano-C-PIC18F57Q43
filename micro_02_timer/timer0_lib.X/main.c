@@ -120,12 +120,12 @@ void Init_Timer_0(void)
      * 
      * Carga = 0x0BDC hex 
      */
-
-    /* Se pasan los parámetros */
-    FM_Timer0_Init(&my_timer0);
-
+    
     TMR0H = 0x0B; // Bits MSB
     TMR0L = 0xDC; // Bits LSB
+    
+    /* Se pasan los parámetros */
+    FM_Timer0_Init(&my_timer0);
 }
 
 void Init_Internal_Oscillator(void) 
