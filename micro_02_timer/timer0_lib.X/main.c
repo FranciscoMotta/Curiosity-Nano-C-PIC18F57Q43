@@ -110,7 +110,7 @@ void Init_Timer_0(void)
      * Tiempo = 500ms
      * Timer = 16bits
      * 
-     * TMR0 = (2^N - (Fosc / 4) * T) / prescaler
+     * TMR0 = (2^N - (Fosc / 4) * T) / prescaler 
      * 
      * tiempo = TCY*Prescaler*(65536 - carga)
      * 
@@ -125,7 +125,8 @@ void Init_Timer_0(void)
     /* Se pasan los parámetros */
     FM_Timer0_Init(&my_timer0);
     
-    TMR0 = 3036;
+    TMR0H = 0x0B; // Bits MSB
+    TMR0L = 0xDC; // Bits LSB
 }
 
 void Init_Internal_Oscillator(void) 
