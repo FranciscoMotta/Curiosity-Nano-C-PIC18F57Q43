@@ -28888,7 +28888,7 @@ char *tempnam(const char *, const char *);
 
 
 #pragma config CP = OFF
-# 75 "./system_config.h"
+# 74 "./system_config.h"
 typedef enum
 {
     clock_div_1 = 0b0000,
@@ -28921,26 +28921,39 @@ typedef struct
     _div_clock_hfintosc_t divisor_clock;
     _freq_clock_hfintosc_t frecuencia_clock;
 }_clock_hfintosc_params_t;
-# 118 "./system_config.h"
+# 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 24 "main.c" 2
-# 34 "main.c"
+# 36 "main.c"
 void Init_Internal_Oscillator (void);
 void Init_Global_Interrupt (void);
 void Init_Gpio_System (void);
-
+void Init_Uart3 (void);
+void Uart3_Tx_Byte (char dato);
 
 
 
 int main(void)
 {
+
     Init_Internal_Oscillator();
+
     Init_Global_Interrupt();
+
     Init_Gpio_System();
+
+    Init_Uart3();
+
+
+
+    U3RXPPS = 0x29;
+
+    RF0PPS = 0x26;
     while(1)
     {
+        Uart3_Tx_Byte('F');
         LATF ^= (1 << 3);;
-        _delay((unsigned long)((100)*(4000000UL/4000.0)));
+        _delay((unsigned long)((1000)*(4000000UL/4000.0)));
     }
     return (0);
 }
@@ -28948,6 +28961,37 @@ int main(void)
 
 
 
+
+void Uart3_Tx_Byte (char dato)
+{
+    U3TXB = dato;
+
+}
+
+void Init_Uart3 (void)
+{
+
+
+    U3TXB = 0x00;
+    U3RXB = 0x00;
+
+
+    U3CON0 &= ~(1 << 0x7);
+    U3CON0 &= ~(1 << 0x6);
+    U3CON0 |= (1 << 0x5);
+    U3CON0 |= (1 << 0x4);
+    U3CON0 |= (0b0000 << 0x0);
+
+
+    U3CON1 |= (1 << 0x7);
+    U3CON1 &= ~(1 << 0x4);
+
+
+
+
+
+    U3BRG = 25;
+}
 
 void Init_Global_Interrupt (void)
 {
@@ -28967,6 +29011,13 @@ void Init_Gpio_System (void)
 {
     TRISF &= ~(1 << 3);
     LATF |= (1 << 3);;
+
+
+    TRISF &= ~(1 << 0);
+    LATF &= ~(1 << 0);
+
+    ANSELF &= ~(1 << 1);
+    TRISF |= (1 << 1);
 }
 
 void Init_Internal_Oscillator (void)

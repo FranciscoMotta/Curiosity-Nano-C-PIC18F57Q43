@@ -5,8 +5,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E16680 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E16692 0 1 2 3 4 5 6 7 8 .. ]
 [n E16692 . freq_clk_1MHZ freq_clk_2MHZ freq_clk_4MHZ freq_clk_8MHZ freq_clk_12MHZ freq_clk_16MHZ freq_clk_32MHZ freq_clk_48MHZ freq_clk_64MHZ  ]
-"103 ./system_config.h
-[; ;./system_config.h: 103: {
+"102 ./system_config.h
+[; ;./system_config.h: 102: {
 [s S2355 `E16680 1 `E16692 1 ]
 [n S2355 . divisor_clock frecuencia_clock ]
 "5216 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h

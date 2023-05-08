@@ -1,14 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"34 main.c
-[; ;main.c: 34: void Init_Internal_Oscillator (void);
+"36 main.c
+[; ;main.c: 36: void Init_Internal_Oscillator (void);
 [v _Init_Internal_Oscillator `(v ~T0 @X0 0 ef ]
-"35
-[; ;main.c: 35: void Init_Global_Interrupt (void);
+"37
+[; ;main.c: 37: void Init_Global_Interrupt (void);
 [v _Init_Global_Interrupt `(v ~T0 @X0 0 ef ]
-"36
-[; ;main.c: 36: void Init_Gpio_System (void);
+"38
+[; ;main.c: 38: void Init_Gpio_System (void);
 [v _Init_Gpio_System `(v ~T0 @X0 0 ef ]
+"39
+[; ;main.c: 39: void Init_Uart3 (void);
+[v _Init_Uart3 `(v ~T0 @X0 0 ef ]
+"15054 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 15054: extern volatile unsigned char U3RXPPS __attribute__((address(0x276)));
+[v _U3RXPPS `Vuc ~T0 @X0 0 e@630 ]
+"10604
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 10604: extern volatile unsigned char RF0PPS __attribute__((address(0x229)));
+[v _RF0PPS `Vuc ~T0 @X0 0 e@553 ]
+"40 main.c
+[; ;main.c: 40: void Uart3_Tx_Byte (char dato);
+[v _Uart3_Tx_Byte `(v ~T0 @X0 0 ef1`uc ]
 "47792 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
 [v _LATF `Vuc ~T0 @X0 0 e@1219 ]
@@ -16,7 +28,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
 [v __delay `JF183 ~T0 @X0 0 e ]
 [p i __delay ]
-"48544 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+"19091 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19091: extern volatile unsigned char U3TXB __attribute__((address(0x2C9)));
+[v _U3TXB `Vuc ~T0 @X0 0 e@713 ]
+"19053
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19053: extern volatile unsigned char U3RXB __attribute__((address(0x2C7)));
+[v _U3RXB `Vuc ~T0 @X0 0 e@711 ]
+"19210
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19210: extern volatile unsigned char U3CON0 __attribute__((address(0x2D1)));
+[v _U3CON0 `Vuc ~T0 @X0 0 e@721 ]
+"19326
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19326: extern volatile unsigned char U3CON1 __attribute__((address(0x2D2)));
+[v _U3CON1 `Vuc ~T0 @X0 0 e@722 ]
+"19538
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19538: extern volatile unsigned short U3BRG __attribute__((address(0x2D4)));
+[v _U3BRG `Vus ~T0 @X0 0 e@724 ]
+"48544
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48544: extern volatile unsigned char INTCON0 __attribute__((address(0x4D6)));
 [v _INTCON0 `Vuc ~T0 @X0 0 e@1238 ]
 "46274
@@ -28,18 +55,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48134
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48134: extern volatile unsigned char TRISF __attribute__((address(0x4CB)));
 [v _TRISF `Vuc ~T0 @X0 0 e@1227 ]
-"80 main.c
-[; ;main.c: 80:     _clock_hfintosc_params_t my_clock;
+"41149
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 41149: extern volatile unsigned char ANSELF __attribute__((address(0x428)));
+[v _ANSELF `Vuc ~T0 @X0 0 e@1064 ]
+"133 main.c
+[; ;main.c: 133:     _clock_hfintosc_params_t my_clock;
 [c E16998 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E16998 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E17010 0 1 2 3 4 5 6 7 8 .. ]
 [n E17010 . freq_clk_1MHZ freq_clk_2MHZ freq_clk_4MHZ freq_clk_8MHZ freq_clk_12MHZ freq_clk_16MHZ freq_clk_32MHZ freq_clk_48MHZ freq_clk_64MHZ  ]
-"103 ./system_config.h
-[; ;./system_config.h: 103: {
+"102 ./system_config.h
+[; ;./system_config.h: 102: {
 [s S2357 `E16998 1 `E17010 1 ]
 [n S2357 . divisor_clock frecuencia_clock ]
-"118
-[; ;./system_config.h: 118: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
+"117
+[; ;./system_config.h: 117: void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 [v _FM_Hfintosc_Init `(v ~T0 @X0 0 ef1`*S2357 ]
 "328 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
@@ -2659,118 +2689,204 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [p x CP  =  OFF          ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"41 main.c
-[; ;main.c: 41: int main(void)
+"44 main.c
+[; ;main.c: 44: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"42
-[; ;main.c: 42: {
+"45
+[; ;main.c: 45: {
 {
 [e :U _main ]
 [f ]
-"43
-[; ;main.c: 43:     Init_Internal_Oscillator();
-[e ( _Init_Internal_Oscillator ..  ]
-"44
-[; ;main.c: 44:     Init_Global_Interrupt();
-[e ( _Init_Global_Interrupt ..  ]
-"45
-[; ;main.c: 45:     Init_Gpio_System();
-[e ( _Init_Gpio_System ..  ]
-"46
-[; ;main.c: 46:     while(1)
-[e :U 2360 ]
 "47
-[; ;main.c: 47:     {
-{
-"48
-[; ;main.c: 48:         LATF ^= (1 << 3);;
-[e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+[; ;main.c: 47:     Init_Internal_Oscillator();
+[e ( _Init_Internal_Oscillator ..  ]
 "49
-[; ;main.c: 49:         _delay((unsigned long)((100)*(4000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
-"50
-[; ;main.c: 50:     }
+[; ;main.c: 49:     Init_Global_Interrupt();
+[e ( _Init_Global_Interrupt ..  ]
+"51
+[; ;main.c: 51:     Init_Gpio_System();
+[e ( _Init_Gpio_System ..  ]
+"53
+[; ;main.c: 53:     Init_Uart3();
+[e ( _Init_Uart3 ..  ]
+"57
+[; ;main.c: 57:     U3RXPPS = 0x29;
+[e = _U3RXPPS -> -> 41 `i `uc ]
+"59
+[; ;main.c: 59:     RF0PPS = 0x26;
+[e = _RF0PPS -> -> 38 `i `uc ]
+"60
+[; ;main.c: 60:     while(1)
+[e :U 2360 ]
+"61
+[; ;main.c: 61:     {
+{
+"62
+[; ;main.c: 62:         Uart3_Tx_Byte('F');
+[e ( _Uart3_Tx_Byte (1 -> -> 70 `ui `uc ]
+"63
+[; ;main.c: 63:         LATF ^= (1 << 3);;
+[e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+"64
+[; ;main.c: 64:         _delay((unsigned long)((1000)*(4000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"65
+[; ;main.c: 65:     }
 }
 [e :U 2359 ]
 [e $U 2360  ]
 [e :U 2361 ]
-"51
-[; ;main.c: 51:     return (0);
+"66
+[; ;main.c: 66:     return (0);
 [e ) -> 0 `i ]
 [e $UE 2358  ]
-"52
-[; ;main.c: 52: }
+"67
+[; ;main.c: 67: }
 [e :UE 2358 ]
 }
-"58
-[; ;main.c: 58: void Init_Global_Interrupt (void)
+"73
+[; ;main.c: 73: void Uart3_Tx_Byte (char dato)
+[v _Uart3_Tx_Byte `(v ~T0 @X0 1 ef1`uc ]
+"74
+[; ;main.c: 74: {
+{
+[e :U _Uart3_Tx_Byte ]
+"73
+[; ;main.c: 73: void Uart3_Tx_Byte (char dato)
+[v _dato `uc ~T0 @X0 1 r1 ]
+"74
+[; ;main.c: 74: {
+[f ]
+"75
+[; ;main.c: 75:     U3TXB = dato;
+[e = _U3TXB -> _dato `uc ]
+"77
+[; ;main.c: 77: }
+[e :UE 2362 ]
+}
+"79
+[; ;main.c: 79: void Init_Uart3 (void)
+[v _Init_Uart3 `(v ~T0 @X0 1 ef ]
+"80
+[; ;main.c: 80: {
+{
+[e :U _Init_Uart3 ]
+[f ]
+"83
+[; ;main.c: 83:     U3TXB = 0x00;
+[e = _U3TXB -> -> 0 `i `uc ]
+"84
+[; ;main.c: 84:     U3RXB = 0x00;
+[e = _U3RXB -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:     U3CON0 &= ~(1 << 0x7);
+[e =& _U3CON0 -> ~ << -> 1 `i -> 7 `i `Vuc ]
+"88
+[; ;main.c: 88:     U3CON0 &= ~(1 << 0x6);
+[e =& _U3CON0 -> ~ << -> 1 `i -> 6 `i `Vuc ]
+"89
+[; ;main.c: 89:     U3CON0 |= (1 << 0x5);
+[e =| _U3CON0 -> << -> 1 `i -> 5 `i `Vuc ]
+"90
+[; ;main.c: 90:     U3CON0 |= (1 << 0x4);
+[e =| _U3CON0 -> << -> 1 `i -> 4 `i `Vuc ]
+"91
+[; ;main.c: 91:     U3CON0 |= (0b0000 << 0x0);
+[e =| _U3CON0 -> << -> 0 `i -> 0 `i `Vuc ]
+"94
+[; ;main.c: 94:     U3CON1 |= (1 << 0x7);
+[e =| _U3CON1 -> << -> 1 `i -> 7 `i `Vuc ]
+"95
+[; ;main.c: 95:     U3CON1 &= ~(1 << 0x4);
+[e =& _U3CON1 -> ~ << -> 1 `i -> 4 `i `Vuc ]
+"101
+[; ;main.c: 101:     U3BRG = 25;
+[e = _U3BRG -> -> 25 `i `us ]
+"102
+[; ;main.c: 102: }
+[e :UE 2363 ]
+}
+"104
+[; ;main.c: 104: void Init_Global_Interrupt (void)
 [v _Init_Global_Interrupt `(v ~T0 @X0 1 ef ]
-"59
-[; ;main.c: 59: {
+"105
+[; ;main.c: 105: {
 {
 [e :U _Init_Global_Interrupt ]
 [f ]
-"61
-[; ;main.c: 61:     INTCON0 &= ~(1 << 0x5);
+"107
+[; ;main.c: 107:     INTCON0 &= ~(1 << 0x5);
 [e =& _INTCON0 -> ~ << -> 1 `i -> 5 `i `Vuc ]
-"62
-[; ;main.c: 62:     INTCON0 |= (1 << 0x7);
+"108
+[; ;main.c: 108:     INTCON0 |= (1 << 0x7);
 [e =| _INTCON0 -> << -> 1 `i -> 7 `i `Vuc ]
-"65
-[; ;main.c: 65:     PIE9 &= ~(1 << 0x1);
+"111
+[; ;main.c: 111:     PIE9 &= ~(1 << 0x1);
 [e =& _PIE9 -> ~ << -> 1 `i -> 1 `i `Vuc ]
-"66
-[; ;main.c: 66:     PIE9 &= ~(1 << 0x0);
+"112
+[; ;main.c: 112:     PIE9 &= ~(1 << 0x0);
 [e =& _PIE9 -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"68
-[; ;main.c: 68:     PIR9 &= ~(1 << 0x1);
+"114
+[; ;main.c: 114:     PIR9 &= ~(1 << 0x1);
 [e =& _PIR9 -> ~ << -> 1 `i -> 1 `i `Vuc ]
-"69
-[; ;main.c: 69:     PIR9 &= ~(1 << 0x0);
+"115
+[; ;main.c: 115:     PIR9 &= ~(1 << 0x0);
 [e =& _PIR9 -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"70
-[; ;main.c: 70: }
-[e :UE 2362 ]
+"116
+[; ;main.c: 116: }
+[e :UE 2364 ]
 }
-"72
-[; ;main.c: 72: void Init_Gpio_System (void)
+"118
+[; ;main.c: 118: void Init_Gpio_System (void)
 [v _Init_Gpio_System `(v ~T0 @X0 1 ef ]
-"73
-[; ;main.c: 73: {
+"119
+[; ;main.c: 119: {
 {
 [e :U _Init_Gpio_System ]
 [f ]
-"74
-[; ;main.c: 74:     TRISF &= ~(1 << 3);
+"120
+[; ;main.c: 120:     TRISF &= ~(1 << 3);
 [e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"75
-[; ;main.c: 75:     LATF |= (1 << 3);;
+"121
+[; ;main.c: 121:     LATF |= (1 << 3);;
 [e =| _LATF -> << -> 1 `i -> 3 `i `Vuc ]
-"76
-[; ;main.c: 76: }
-[e :UE 2363 ]
+"124
+[; ;main.c: 124:     TRISF &= ~(1 << 0);
+[e =& _TRISF -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"125
+[; ;main.c: 125:     LATF &= ~(1 << 0);
+[e =& _LATF -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"127
+[; ;main.c: 127:     ANSELF &= ~(1 << 1);
+[e =& _ANSELF -> ~ << -> 1 `i -> 1 `i `Vuc ]
+"128
+[; ;main.c: 128:     TRISF |= (1 << 1);
+[e =| _TRISF -> << -> 1 `i -> 1 `i `Vuc ]
+"129
+[; ;main.c: 129: }
+[e :UE 2365 ]
 }
-"78
-[; ;main.c: 78: void Init_Internal_Oscillator (void)
+"131
+[; ;main.c: 131: void Init_Internal_Oscillator (void)
 [v _Init_Internal_Oscillator `(v ~T0 @X0 1 ef ]
-"79
-[; ;main.c: 79: {
+"132
+[; ;main.c: 132: {
 {
 [e :U _Init_Internal_Oscillator ]
 [f ]
-"80
-[; ;main.c: 80:     _clock_hfintosc_params_t my_clock;
+"133
+[; ;main.c: 133:     _clock_hfintosc_params_t my_clock;
 [v _my_clock `S2357 ~T0 @X0 1 a ]
-"81
-[; ;main.c: 81:     my_clock.divisor_clock = clock_div_1;
+"134
+[; ;main.c: 134:     my_clock.divisor_clock = clock_div_1;
 [e = . _my_clock 0 . `E16998 0 ]
-"82
-[; ;main.c: 82:     my_clock.frecuencia_clock = freq_clk_4MHZ;
+"135
+[; ;main.c: 135:     my_clock.frecuencia_clock = freq_clk_4MHZ;
 [e = . _my_clock 1 . `E17010 2 ]
-"84
-[; ;main.c: 84:     FM_Hfintosc_Init(&my_clock);
+"137
+[; ;main.c: 137:     FM_Hfintosc_Init(&my_clock);
 [e ( _FM_Hfintosc_Init (1 &U _my_clock ]
-"85
-[; ;main.c: 85: }
-[e :UE 2364 ]
+"138
+[; ;main.c: 138: }
+[e :UE 2366 ]
 }

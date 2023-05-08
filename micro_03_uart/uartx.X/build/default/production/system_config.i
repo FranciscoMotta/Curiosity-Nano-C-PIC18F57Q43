@@ -28737,7 +28737,7 @@ unsigned char __t3rd16on(void);
 
 
 #pragma config CP = OFF
-# 75 "./system_config.h"
+# 74 "./system_config.h"
 typedef enum
 {
     clock_div_1 = 0b0000,
@@ -28770,7 +28770,7 @@ typedef struct
     _div_clock_hfintosc_t divisor_clock;
     _freq_clock_hfintosc_t frecuencia_clock;
 }_clock_hfintosc_params_t;
-# 118 "./system_config.h"
+# 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 2 "system_config.c" 2
 

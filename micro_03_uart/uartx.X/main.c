@@ -37,20 +37,31 @@ void Init_Internal_Oscillator (void);
 void Init_Global_Interrupt (void);
 void Init_Gpio_System (void);
 void Init_Uart3 (void);
-
+void Uart3_Tx_Byte (char dato);
 /*
  * Main
  */
 int main(void) 
 {
+    /* Se configura el reloj interno */
     Init_Internal_Oscillator();
+    /* Se configuran las interrupciones */
     Init_Global_Interrupt();
+    /* Se configura el gpio del sistema */
     Init_Gpio_System();
+    /* Se configura el UART3 */
     Init_Uart3();
+    /* Se configura los PPS (Periferal Pin Select) */
+    // Considerando que RF1 -> Rx3 y RF0 -> Tx3
+    // PPS Entrada
+    U3RXPPS = 0x29; // Conectado a RF1 UART3 RX
+    // PPS Salida
+    RF0PPS = 0x26; // Conectado a RF0 UART3 TX
     while(true)
     {
+        Uart3_Tx_Byte('F');
         Led_Sys_Tog();
-        __delay_ms(100);
+        __delay_ms(1000);
     }
     return (EXIT_SUCCESS);
 }
@@ -59,6 +70,12 @@ int main(void)
  * Definicion de funciones
  */
 
+void Uart3_Tx_Byte (char dato)
+{
+    U3TXB = dato;
+    //while(!(PIR9 & (1 << _PIR9_U3TXIF_POSITION)));
+}
+
 void Init_Uart3 (void)
 {
     /* Limpiamos los registros */
@@ -66,33 +83,22 @@ void Init_Uart3 (void)
     U3TXB = 0x00;
     U3RXB = 0x00;
     
-    U3CON1 = 0x00;
-    U3CON0 = 0x00;
-    U3CON0 = 0x00;
-    
     /* Configuramos  U3CON0 */
     U3CON0 &= ~(1 << _U3CON0_BRGS_POSITION); // Normal Speed
     U3CON0 &= ~(1 << _U3CON0_ABDEN_POSITION); // No autobaud
-    U3CON0 |= (0b11 << _U3CON0_RXEN_POSITION); // TX and Rx enabled
+    U3CON0 |= (1 << _U3CON0_TXEN_POSITION); // Tx enabled
+    U3CON0 |= (1 << _U3CON0_RXEN_POSITION); // Rx enabled
     U3CON0 |= (0b0000 << _U3CON0_MODE0_POSITION); // 8bits no parity
     
     /* Configuramos U3CON1 */
     U3CON1 |= (1 << _U3CON1_ON_POSITION); // Serial port on
     U3CON1 &= ~(1 << _U3CON1_WUE_POSITION); // Receive normal op
     
+    /* Se configuran el U3CON2 */
+    //U3CON2 |= (1 << _U3CON2_TXPOL_POSITION); // 0 en idle
+    
     /* Configuramos U3BRG */
-    
-    uint16_t register_u3brg = 0;
-    
-    if (U3CON0 & (1 << _U3CON0_BRGS_POSITION))
-    {
-        register_u3brg = ((_FOSC)/(4 * _BAUD_RATE_DES)) - 1;
-    }
-    else
-    {
-        register_u3brg = ((_FOSC)/(16 * _BAUD_RATE_DES)) - 1;
-    }
-    U3BRG = register_u3brg;
+    U3BRG  = 25; // <-- NO FUNCIONA!! 
 }
 
 void Init_Global_Interrupt (void)
@@ -113,6 +119,13 @@ void Init_Gpio_System (void)
 {
     Led_Sys_Tris &= ~(1 << Led_Sys_Gpio);
     Led_Sys_Off();
+    
+    /* Se configura los pines del UART3 */
+    UART3_TX_TRIS &= ~(1 << UART3_TX_GPIO);
+    UART3_TX_LAT &= ~(1 << UART3_TX_GPIO);
+    
+    UART3_RX_ANSEL &= ~(1 << UART3_RX_GPIO); // Pin digital
+    UART3_RX_TRIS |= (1 << UART3_RX_GPIO);
 }
 
 void Init_Internal_Oscillator (void)
