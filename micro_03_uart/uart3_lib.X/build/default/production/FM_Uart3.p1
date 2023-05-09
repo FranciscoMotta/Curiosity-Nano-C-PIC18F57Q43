@@ -25,8 +25,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E16757 . Transmiter_1_SB_Receiver_Verify_SB Transmiter_1_5_SB_Receiver_Verify_SB Transmiter_2_SB_Receiver_Verify_1_2SB Transmiter_2_SB_Receiver_Verify_SB  ]
 [c E16763 0 1 2 3 .. ]
 [n E16763 . Flow_Control_Off XON_XOFF_Software_Flow_Control RTS_CTS_And_TXDE_Hardware_Flow_Control Reserved  ]
-"123 ./FM_Uart3.h
-[; ;./FM_Uart3.h: 123: {
+"129 ./FM_Uart3.h
+[; ;./FM_Uart3.h: 129: {
 [s S2356 `E16769 1 `E16718 1 `E16722 1 `E16726 1 `E16730 1 `E16734 1 `E16741 1 `E16745 1 `E16749 1 `E16753 1 `E16757 1 `E16763 1 ]
 [n S2356 . baudios op_mode_speed auto_baud_mode tx_en rx_en mode_select_data port_enable wake_up rx_pol tx_pol stop_bits hand_shake ]
 "19091 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
@@ -38,6 +38,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19210
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19210: extern volatile unsigned char U3CON0 __attribute__((address(0x2D1)));
 [v _U3CON0 `Vuc ~T0 @X0 0 e@721 ]
+"19326
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19326: extern volatile unsigned char U3CON1 __attribute__((address(0x2D2)));
+[v _U3CON1 `Vuc ~T0 @X0 0 e@722 ]
+"19406
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19406: extern volatile unsigned char U3CON2 __attribute__((address(0x2D3)));
+[v _U3CON2 `Vuc ~T0 @X0 0 e@723 ]
+"19538
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 19538: extern volatile unsigned short U3BRG __attribute__((address(0x2D4)));
+[v _U3BRG `Vus ~T0 @X0 0 e@724 ]
 "16 ./system_config.h
 [p x FEXTOSC  =  OFF     ]
 "17
@@ -2675,9 +2684,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;FM_Uart3.c: 18:     U3RXB = 0x00;
 [e = _U3RXB -> -> 0 `i `uc ]
 "20
-[; ;FM_Uart3.c: 20:     U3CON0 = 000;
+[; ;FM_Uart3.c: 20:     U3CON0 = 0x00;
 [e = _U3CON0 -> -> 0 `i `uc ]
+"21
+[; ;FM_Uart3.c: 21:     U3CON1 = 0x00;
+[e = _U3CON1 -> -> 0 `i `uc ]
 "22
-[; ;FM_Uart3.c: 22: }
+[; ;FM_Uart3.c: 22:     U3CON2 = 0x00;
+[e = _U3CON2 -> -> 0 `i `uc ]
+"25
+[; ;FM_Uart3.c: 25:     U3CON0 |= (uart3_params->op_mode_speed << 0x7);
+[e =| _U3CON0 -> << -> . *U _uart3_params 1 `ui -> 7 `i `Vuc ]
+"26
+[; ;FM_Uart3.c: 26:     U3CON0 |= (uart3_params->auto_baud_mode << 0x6);
+[e =| _U3CON0 -> << -> . *U _uart3_params 2 `ui -> 6 `i `Vuc ]
+"27
+[; ;FM_Uart3.c: 27:     U3CON0 |= (uart3_params->tx_en << 0x5);
+[e =| _U3CON0 -> << -> . *U _uart3_params 3 `ui -> 5 `i `Vuc ]
+"28
+[; ;FM_Uart3.c: 28:     U3CON0 |= (uart3_params->rx_en << 0x4);
+[e =| _U3CON0 -> << -> . *U _uart3_params 4 `ui -> 4 `i `Vuc ]
+"29
+[; ;FM_Uart3.c: 29:     U3CON0 |= (uart3_params->mode_select_data << 0x0);
+[e =| _U3CON0 -> << -> . *U _uart3_params 5 `ui -> 0 `i `Vuc ]
+"32
+[; ;FM_Uart3.c: 32:     U3CON1 |= (uart3_params->port_enable << 0x7);
+[e =| _U3CON1 -> << -> . *U _uart3_params 6 `ui -> 7 `i `Vuc ]
+"33
+[; ;FM_Uart3.c: 33:     U3CON1 |= (uart3_params->wake_up << 0x4);
+[e =| _U3CON1 -> << -> . *U _uart3_params 7 `ui -> 4 `i `Vuc ]
+"36
+[; ;FM_Uart3.c: 36:     U3CON2 |= (uart3_params->rx_pol << 0x6);
+[e =| _U3CON2 -> << -> . *U _uart3_params 8 `ui -> 6 `i `Vuc ]
+"37
+[; ;FM_Uart3.c: 37:     U3CON2 |= (uart3_params->tx_pol << 0x2);
+[e =| _U3CON2 -> << -> . *U _uart3_params 9 `ui -> 2 `i `Vuc ]
+"38
+[; ;FM_Uart3.c: 38:     U3CON2 |= (uart3_params->stop_bits << 0x4);
+[e =| _U3CON2 -> << -> . *U _uart3_params 10 `ui -> 4 `i `Vuc ]
+"39
+[; ;FM_Uart3.c: 39:     U3CON2 |= (uart3_params->hand_shake << 0x0);
+[e =| _U3CON2 -> << -> . *U _uart3_params 11 `ui -> 0 `i `Vuc ]
+"42
+[; ;FM_Uart3.c: 42:     if(U3CON0 & (1 << 0x7))
+[e $ ! != & -> _U3CON0 `i << -> 1 `i -> 7 `i -> 0 `i 2358  ]
+"43
+[; ;FM_Uart3.c: 43:     {
+{
+"45
+[; ;FM_Uart3.c: 45:         U3BRG = (((4000000UL)/(4 * uart3_params->baudios)) - 1);
+[e = _U3BRG -> - / -> 4000000 `ul * -> -> -> 4 `i `l `ul -> -> . *U _uart3_params 0 `l `ul -> -> -> 1 `i `l `ul `us ]
+"46
+[; ;FM_Uart3.c: 46:     }
+}
+[e $U 2359  ]
+"47
+[; ;FM_Uart3.c: 47:     else
+[e :U 2358 ]
+"48
+[; ;FM_Uart3.c: 48:     {
+{
+"50
+[; ;FM_Uart3.c: 50:         U3BRG = (((4000000UL)/(16 * uart3_params->baudios)) - 1);
+[e = _U3BRG -> - / -> 4000000 `ul * -> -> -> 16 `i `l `ul -> -> . *U _uart3_params 0 `l `ul -> -> -> 1 `i `l `ul `us ]
+"51
+[; ;FM_Uart3.c: 51:     }
+}
+[e :U 2359 ]
+"52
+[; ;FM_Uart3.c: 52: }
 [e :UE 2357 ]
 }

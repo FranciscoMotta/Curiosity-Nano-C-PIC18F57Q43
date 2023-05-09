@@ -28933,9 +28933,179 @@ typedef struct
 # 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 20 "main.c" 2
-# 33 "main.c"
+
+# 1 "./FM_Uart3.h" 1
+# 22 "./FM_Uart3.h"
+typedef enum
+{
+    Normal_Operation_Mode = 0,
+    High_Speed_Operation_Mode
+}_uart3_operation_mode_select_t;
+
+typedef enum
+{
+    Auto_Baud_Disabled = 0,
+    Auto_Baud_Enabled
+}_uart3_autobaud_detect_enable_t;
+
+typedef enum
+{
+    Transmiter_Disabled = 0,
+    Transmiter_Enabled
+}_uart3_transmiter_enabled_t;
+
+typedef enum
+{
+    Receiver_Disabled = 0,
+    Receiver_Enabled
+}_uart3_receiver_enabled_t;
+# 60 "./FM_Uart3.h"
+typedef enum
+{
+    Asynchronous_8bits_Uart_Mode = 0b0000,
+    Asynchronous_7bits_Uart_Mode,
+    Asynchronous_9bits_Uart_Mode_Odd_Parity,
+    Asynchronous_9bits_Uart_Mode_Even_Parity,
+    Asynchronous_9bits_Uart_Address_Mode
+}_uart3_mode_select_t;
+
+typedef enum
+{
+    Uart3_Port_Disabled = 0,
+    Uart3_Port_Enabled
+}_uart3_enabled_port_t;
+
+typedef enum
+{
+    Receiver_Wake_Up_Disabled = 0,
+    Receiver_Wake_Up_Enabled
+}_uart3_Wake_Up_Receiver_t;
+
+typedef enum
+{
+    Rx_Polarity_High_Def = 0,
+    Rx_Polarity_Low
+}_uart3_Rx_Polarity_t;
+
+typedef enum
+{
+    Tx_Polarity_High_Def = 0,
+    Tx_Polarity_Low
+}_uart3_Tx_Polarity_t;
+
+typedef enum
+{
+    Transmiter_1_SB_Receiver_Verify_SB = 0b00,
+    Transmiter_1_5_SB_Receiver_Verify_SB,
+    Transmiter_2_SB_Receiver_Verify_1_2SB,
+    Transmiter_2_SB_Receiver_Verify_SB
+}_uart3_Stop_Bits_Ctrl_t;
+
+typedef enum
+{
+    Flow_Control_Off = 0b00,
+    XON_XOFF_Software_Flow_Control,
+    RTS_CTS_And_TXDE_Hardware_Flow_Control,
+    Reserved
+}_uart3_hand_shake_config_t;
+
+typedef enum
+{
+    Baud_Rate_300BPS = 300UL,
+    Baud_Rate_600BPS = 600UL,
+    Baud_Rate_1200BPS = 1200UL,
+    Baud_Rate_2400BPS = 2400UL,
+    Baud_Rate_4800BPS = 4800UL,
+    Baud_Rate_9600BPS = 9600UL,
+    Baud_Rate_14400BPS = 14400UL,
+    Baud_Rate_19200BPS = 19200UL,
+    Baud_Rate_38400BPS = 38400UL,
+    Baud_Rate_57600BPS = 57600UL,
+    Baud_Rate_115200BPS = 115200UL,
+    Baud_Rate_230400BPS = 230400UL,
+    Baud_Rate_460800BPS = 460800UL
+}_uart3_baud_rate_select_t;
+
+
+
+typedef struct
+{
+    _uart3_baud_rate_select_t baudios;
+    _uart3_operation_mode_select_t op_mode_speed;
+    _uart3_autobaud_detect_enable_t auto_baud_mode;
+    _uart3_transmiter_enabled_t tx_en;
+    _uart3_receiver_enabled_t rx_en;
+    _uart3_mode_select_t mode_select_data;
+    _uart3_enabled_port_t port_enable;
+    _uart3_Wake_Up_Receiver_t wake_up;
+    _uart3_Rx_Polarity_t rx_pol;
+    _uart3_Tx_Polarity_t tx_pol;
+    _uart3_Stop_Bits_Ctrl_t stop_bits;
+    _uart3_hand_shake_config_t hand_shake;
+}_my_uart3_config_params_t;
+
+
+
+void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
+# 21 "main.c" 2
+# 31 "main.c"
+void Init_Internal_Oscillator (void);
+void Init_Uart3 (void);
+
+
+
 int main(void)
 {
 
+    Init_Internal_Oscillator();
+
+    Init_Uart3();
+
+
+
+
+
+    U3RXPPS = 0x29;
+
+    RF0PPS = 0x26;
+    while(1)
+    {
+
+    }
     return (0);
+}
+
+
+
+
+
+void Init_Uart3 (void)
+{
+    _my_uart3_config_params_t my_uart3;
+
+
+    my_uart3.auto_baud_mode = Auto_Baud_Disabled;
+    my_uart3.baudios = Baud_Rate_9600BPS;
+    my_uart3.hand_shake = Flow_Control_Off;
+    my_uart3.mode_select_data = Asynchronous_8bits_Uart_Mode;
+    my_uart3.op_mode_speed = Normal_Operation_Mode;
+    my_uart3.port_enable = Uart3_Port_Enabled;
+    my_uart3.rx_en = Receiver_Enabled;
+    my_uart3.tx_en = Transmiter_Enabled;
+    my_uart3.rx_pol = Rx_Polarity_High_Def;
+    my_uart3.tx_pol = Tx_Polarity_High_Def;
+    my_uart3.stop_bits = Transmiter_1_SB_Receiver_Verify_SB;
+    my_uart3.wake_up = Receiver_Wake_Up_Disabled;
+
+    FM_Uart3_Config(&my_uart3);
+}
+
+void Init_Internal_Oscillator (void)
+{
+    _clock_hfintosc_params_t my_clock;
+    my_clock.divisor_clock = clock_div_1;
+    my_clock.frecuencia_clock = freq_clk_4MHZ;
+
+
+    FM_Hfintosc_Init(&my_clock);
 }

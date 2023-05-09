@@ -28792,10 +28792,7 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 
 # 1 "./project_defines.h" 1
 # 12 "./FM_Uart3.h" 2
-
-
-
-
+# 22 "./FM_Uart3.h"
 typedef enum
 {
     Normal_Operation_Mode = 0,
@@ -28819,7 +28816,7 @@ typedef enum
     Receiver_Disabled = 0,
     Receiver_Enabled
 }_uart3_receiver_enabled_t;
-# 54 "./FM_Uart3.h"
+# 60 "./FM_Uart3.h"
 typedef enum
 {
     Asynchronous_8bits_Uart_Mode = 0b0000,
@@ -28923,6 +28920,36 @@ void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params)
     U3TXB = 0x00;
     U3RXB = 0x00;
 
-    U3CON0 = 000;
+    U3CON0 = 0x00;
+    U3CON1 = 0x00;
+    U3CON2 = 0x00;
 
+
+    U3CON0 |= (uart3_params->op_mode_speed << 0x7);
+    U3CON0 |= (uart3_params->auto_baud_mode << 0x6);
+    U3CON0 |= (uart3_params->tx_en << 0x5);
+    U3CON0 |= (uart3_params->rx_en << 0x4);
+    U3CON0 |= (uart3_params->mode_select_data << 0x0);
+
+
+    U3CON1 |= (uart3_params->port_enable << 0x7);
+    U3CON1 |= (uart3_params->wake_up << 0x4);
+
+
+    U3CON2 |= (uart3_params->rx_pol << 0x6);
+    U3CON2 |= (uart3_params->tx_pol << 0x2);
+    U3CON2 |= (uart3_params->stop_bits << 0x4);
+    U3CON2 |= (uart3_params->hand_shake << 0x0);
+
+
+    if(U3CON0 & (1 << 0x7))
+    {
+
+        U3BRG = (((4000000UL)/(4 * uart3_params->baudios)) - 1);
+    }
+    else
+    {
+
+        U3BRG = (((4000000UL)/(16 * uart3_params->baudios)) - 1);
+    }
 }

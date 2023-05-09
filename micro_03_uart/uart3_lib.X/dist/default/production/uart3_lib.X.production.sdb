@@ -3,6 +3,97 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
+"63 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+[e E17090 . `ui
+Baud_Rate_300BPS 300
+Baud_Rate_600BPS 600
+Baud_Rate_1200BPS 1200
+Baud_Rate_2400BPS 2400
+Baud_Rate_4800BPS 4800
+Baud_Rate_9600BPS 9600
+Baud_Rate_14400BPS 14400
+Baud_Rate_19200BPS 19200
+Baud_Rate_38400BPS -27136
+Baud_Rate_57600BPS -7936
+Baud_Rate_115200BPS -15872
+Baud_Rate_230400BPS -31744
+Baud_Rate_460800BPS 2048
+]
+[e E17039 . `uc
+Normal_Operation_Mode 0
+High_Speed_Operation_Mode 1
+]
+[e E17043 . `uc
+Auto_Baud_Disabled 0
+Auto_Baud_Enabled 1
+]
+[e E17047 . `uc
+Transmiter_Disabled 0
+Transmiter_Enabled 1
+]
+[e E17051 . `uc
+Receiver_Disabled 0
+Receiver_Enabled 1
+]
+[e E17055 . `uc
+Asynchronous_8bits_Uart_Mode 0
+Asynchronous_7bits_Uart_Mode 1
+Asynchronous_9bits_Uart_Mode_Odd_Parity 2
+Asynchronous_9bits_Uart_Mode_Even_Parity 3
+Asynchronous_9bits_Uart_Address_Mode 4
+]
+[e E17062 . `uc
+Uart3_Port_Disabled 0
+Uart3_Port_Enabled 1
+]
+[e E17066 . `uc
+Receiver_Wake_Up_Disabled 0
+Receiver_Wake_Up_Enabled 1
+]
+[e E17070 . `uc
+Rx_Polarity_High_Def 0
+Rx_Polarity_Low 1
+]
+[e E17074 . `uc
+Tx_Polarity_High_Def 0
+Tx_Polarity_Low 1
+]
+[e E17078 . `uc
+Transmiter_1_SB_Receiver_Verify_SB 0
+Transmiter_1_5_SB_Receiver_Verify_SB 1
+Transmiter_2_SB_Receiver_Verify_1_2SB 2
+Transmiter_2_SB_Receiver_Verify_SB 3
+]
+[e E17084 . `uc
+Flow_Control_Off 0
+XON_XOFF_Software_Flow_Control 1
+RTS_CTS_And_TXDE_Hardware_Flow_Control 2
+Reserved 3
+]
+"84
+[e E17010 . `uc
+clock_div_1 0
+clock_div_2 1
+clock_div_4 2
+clock_div_8 3
+clock_div_16 4
+clock_div_32 5
+clock_div_64 6
+clock_div_128 7
+clock_div_256 8
+clock_div_512 9
+]
+[e E17022 . `uc
+freq_clk_1MHZ 0
+freq_clk_2MHZ 1
+freq_clk_4MHZ 2
+freq_clk_8MHZ 3
+freq_clk_12MHZ 4
+freq_clk_16MHZ 5
+freq_clk_32MHZ 6
+freq_clk_48MHZ 7
+freq_clk_64MHZ 8
+]
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\system_config.c
 [e E16689 . `uc
 clock_div_1 0
@@ -94,6 +185,8 @@ XON_XOFF_Software_Flow_Control 1
 RTS_CTS_And_TXDE_Hardware_Flow_Control 2
 Reserved 3
 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
@@ -118,13 +211,21 @@ Reserved 3
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"33 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+"11 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\FM_Uart3.c
+[v _FM_Uart3_Config FM_Uart3_Config `(v  1 e 1 0 ]
+"36 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
 [v _main main `(i  1 e 2 0 ]
-[s S53 . 1 `uc 1 NDIV 1 0 :4:0 
+"61
+[v _Init_Uart3 Init_Uart3 `(v  1 e 1 0 ]
+"82
+[v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
+"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\system_config.c
+[v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
+[s S182 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S56 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S185 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -132,26 +233,78 @@ Reserved 3
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S64 . 1 `S53 1 . 1 0 `S56 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES64  1 e 1 @173 ]
-[s S79 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S193 . 1 `S182 1 . 1 0 `S185 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES193  1 e 1 @173 ]
+[s S208 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S81 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S210 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S86 . 1 `S79 1 . 1 0 `S81 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES86  1 e 1 @177 ]
+[u S215 . 1 `S208 1 . 1 0 `S210 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES215  1 e 1 @177 ]
+"10604
+[v _RF0PPS RF0PPS `VEuc  1 e 1 @553 ]
+"15054
+[v _U3RXPPS U3RXPPS `VEuc  1 e 1 @630 ]
 "19053
 [v _U3RXB U3RXB `VEuc  1 e 1 @711 ]
 "19091
 [v _U3TXB U3TXB `VEuc  1 e 1 @713 ]
 "19210
 [v _U3CON0 U3CON0 `VEuc  1 e 1 @721 ]
-"33 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+"19326
+[v _U3CON1 U3CON1 `VEuc  1 e 1 @722 ]
+"19406
+[v _U3CON2 U3CON2 `VEuc  1 e 1 @723 ]
+"19538
+[v _U3BRG U3BRG `VEus  1 e 2 @724 ]
+"36 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"37
+"55
+} 0
+"61
+[v _Init_Uart3 Init_Uart3 `(v  1 e 1 0 ]
+{
+[s S88 . 13 `E17090 1 baudios 2 0 `E17039 1 op_mode_speed 1 2 `E17043 1 auto_baud_mode 1 3 `E17047 1 tx_en 1 4 `E17051 1 rx_en 1 5 `E17055 1 mode_select_data 1 6 `E17062 1 port_enable 1 7 `E17066 1 wake_up 1 8 `E17070 1 rx_pol 1 9 `E17074 1 tx_pol 1 10 `E17078 1 stop_bits 1 11 `E17084 1 hand_shake 1 12 ]
+"63
+[v Init_Uart3@my_uart3 my_uart3 `S88  1 a 13 21 ]
+"80
+} 0
+"11 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\FM_Uart3.c
+[v _FM_Uart3_Config FM_Uart3_Config `(v  1 e 1 0 ]
+{
+[s S88 . 13 `E17090 1 baudios 2 0 `E17039 1 op_mode_speed 1 2 `E17043 1 auto_baud_mode 1 3 `E17047 1 tx_en 1 4 `E17051 1 rx_en 1 5 `E17055 1 mode_select_data 1 6 `E17062 1 port_enable 1 7 `E17066 1 wake_up 1 8 `E17070 1 rx_pol 1 9 `E17074 1 tx_pol 1 10 `E17078 1 stop_bits 1 11 `E17084 1 hand_shake 1 12 ]
+[v FM_Uart3_Config@uart3_params uart3_params `*.39S88  1 p 2 13 ]
+"52
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"30
+} 0
+"82 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+[v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
+{
+[s S127 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+"84
+[v Init_Internal_Oscillator@my_clock my_clock `S127  1 a 2 3 ]
+"90
+} 0
+"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\system_config.c
+[v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
+{
+[s S127 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S127  1 p 2 0 ]
+"13
 } 0
