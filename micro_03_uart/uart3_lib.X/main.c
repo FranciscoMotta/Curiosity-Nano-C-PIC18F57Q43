@@ -27,15 +27,31 @@
  * Declaracion de funciones
  */
 
+void Init_Internal_Oscillator (void);
+
 /*
  * Main
  */
 int main(void) 
 {
-
+    Init_Internal_Oscillator();
+    while(true)
+    {
+        
+    }
     return (EXIT_SUCCESS);
 }
 
 /*
  * Definicion de funciones
  */
+
+void Init_Internal_Oscillator (void)
+{
+    _clock_hfintosc_params_t my_clock;
+    my_clock.divisor_clock = clock_div_1;
+    my_clock.frecuencia_clock = freq_clk_4MHZ;
+    
+    /* Pasamos los parámetros */
+    FM_Hfintosc_Init(&my_clock);
+}
