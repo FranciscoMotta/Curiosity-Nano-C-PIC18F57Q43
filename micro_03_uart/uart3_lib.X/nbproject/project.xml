@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>timer0_lib</name>
-            <creation-uuid>85d0a979-9573-432b-b01f-1a97ce55d3ea</creation-uuid>
+            <name>uart3_lib</name>
+            <creation-uuid>2e779d11-8454-41b1-9e4a-ed642baf0806</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

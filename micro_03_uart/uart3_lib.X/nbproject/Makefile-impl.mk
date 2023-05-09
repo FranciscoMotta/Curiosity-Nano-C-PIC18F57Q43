@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=timer0.X
+PROJECTNAME=uart3_lib.X
 
 # Active Configuration
 DEFAULTCONF=default

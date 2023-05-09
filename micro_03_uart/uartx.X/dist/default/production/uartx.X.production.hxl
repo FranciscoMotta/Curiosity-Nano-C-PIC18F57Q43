@@ -1,33 +1,69 @@
 ### HEXMate logfile and output summary ###
+
+### Command-line arguments ###
+ C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o
+ -Odist/default/production\uartx.X.production.hex
+ -logfile=dist/default/production\uartx.X.production.hxl
+ -addressing=1
+ -break=300000
+
 ### Memory Usage ###
- Unused memory ranges:
-  4h - 1FF13h
+ Input file ranges:
+  0h - 3h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+  2600h - 2620h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+  2622h - 2797h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+  1FFFCh - 1FFFFh		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+  200000h - 20003Fh		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+  300000h - 300009h		(C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+ Unused ranges:
+  4h - 25FFh
+  2621h - 2621h
+  2798h - 1FFFBh
   20000h - 1FFFFFh
   200040h - 2FFFFFh
-  30000Ah - 30003Fh
-  
- dist/default/production\uartx.X.production.hex ranges:
-  0h - 3h
-  1FF14h - 1FFFFh
-  200000h - 20003Fh
-  300000h - 300009h
-  
+
 ### Hex Memory Map ###
  Legend:
-  - = Unused memory
-  F = Filled ROM
-  S = Stored serial code
-  A = Stored ASCII string
-  R = Reserved for checksum
-  C = Stored checksum result
-  T = Trailing code
-  & = Find & replace opcode
-  X = Find & delete opcode
-  1 = dist/default/production\uartx.X.production.hex
-00000000: 1111------------------------------------------------------------
-0001FF00: --------------------11111111111111111111111111111111111111111111
-0001FF40: 1111111111111111111111111111111111111111111111111111111111111111
-0001FF80: 1111111111111111111111111111111111111111111111111111111111111111
-0001FFC0: 1111111111111111111111111111111111111111111111111111111111111111
-00200000: 1111111111111111111111111111111111111111111111111111111111111111
-00300000: 1111111111------------------------------------------------------
+  -- = Unused memory
+  H1 = Input file             (C:\Users\ADMINI~1\AppData\Local\Temp\xcAs1lsg.\driver_tmp_3.o)
+----------------------------------------------------------
+         | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----------------------------------------------------------
+00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+----------------------------------------------------------
+00002600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002620 | H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002650 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002660 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002670 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002680 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002690 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000026F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002700 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002710 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002720 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002730 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002740 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002750 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002760 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002770 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002780 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002790 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+----------------------------------------------------------
+0001FFF0 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
+----------------------------------------------------------
+00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00200010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00200020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00200030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+----------------------------------------------------------
+00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
+00300010 | --

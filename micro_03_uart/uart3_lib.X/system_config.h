@@ -66,7 +66,6 @@
 // Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
-#include <pic18.h>
 
 /*
  * Configuracion del oscilador interno de alta frecuencia

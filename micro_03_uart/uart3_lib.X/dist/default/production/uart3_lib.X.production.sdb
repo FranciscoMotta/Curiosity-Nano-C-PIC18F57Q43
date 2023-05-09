@@ -1,0 +1,157 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\system_config.c
+[e E16689 . `uc
+clock_div_1 0
+clock_div_2 1
+clock_div_4 2
+clock_div_8 3
+clock_div_16 4
+clock_div_32 5
+clock_div_64 6
+clock_div_128 7
+clock_div_256 8
+clock_div_512 9
+]
+[e E16701 . `uc
+freq_clk_1MHZ 0
+freq_clk_2MHZ 1
+freq_clk_4MHZ 2
+freq_clk_8MHZ 3
+freq_clk_12MHZ 4
+freq_clk_16MHZ 5
+freq_clk_32MHZ 6
+freq_clk_48MHZ 7
+freq_clk_64MHZ 8
+]
+"11 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\FM_Uart3.c
+[e E16769 . `ui
+Baud_Rate_300BPS 300
+Baud_Rate_600BPS 600
+Baud_Rate_1200BPS 1200
+Baud_Rate_2400BPS 2400
+Baud_Rate_4800BPS 4800
+Baud_Rate_9600BPS 9600
+Baud_Rate_14400BPS 14400
+Baud_Rate_19200BPS 19200
+Baud_Rate_38400BPS -27136
+Baud_Rate_57600BPS -7936
+Baud_Rate_115200BPS -15872
+Baud_Rate_230400BPS -31744
+Baud_Rate_460800BPS 2048
+]
+[e E16718 . `uc
+Normal_Operation_Mode 0
+High_Speed_Operation_Mode 1
+]
+[e E16722 . `uc
+Auto_Baud_Disabled 0
+Auto_Baud_Enabled 1
+]
+[e E16726 . `uc
+Transmiter_Disabled 0
+Transmiter_Enabled 1
+]
+[e E16730 . `uc
+Receiver_Disabled 0
+Receiver_Enabled 1
+]
+[e E16734 . `uc
+Asynchronous_8bits_Uart_Mode 0
+Asynchronous_7bits_Uart_Mode 1
+Asynchronous_9bits_Uart_Mode_Odd_Parity 2
+Asynchronous_9bits_Uart_Mode_Even_Parity 3
+Asynchronous_9bits_Uart_Address_Mode 4
+]
+[e E16741 . `uc
+Uart3_Port_Disabled 0
+Uart3_Port_Enabled 1
+]
+[e E16745 . `uc
+Receiver_Wake_Up_Disabled 0
+Receiver_Wake_Up_Enabled 1
+]
+[e E16749 . `uc
+Rx_Polarity_High_Def 0
+Rx_Polarity_Low 1
+]
+[e E16753 . `uc
+Tx_Polarity_High_Def 0
+Tx_Polarity_Low 1
+]
+[e E16757 . `uc
+Transmiter_1_SB_Receiver_Verify_SB 0
+Transmiter_1_5_SB_Receiver_Verify_SB 1
+Transmiter_2_SB_Receiver_Verify_1_2SB 2
+Transmiter_2_SB_Receiver_Verify_SB 3
+]
+[e E16763 . `uc
+Flow_Control_Off 0
+XON_XOFF_Software_Flow_Control 1
+RTS_CTS_And_TXDE_Hardware_Flow_Control 2
+Reserved 3
+]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"33 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+[v _main main `(i  1 e 2 0 ]
+[s S53 . 1 `uc 1 NDIV 1 0 :4:0 
+`uc 1 NOSC 1 0 :3:4 
+]
+"5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[s S56 . 1 `uc 1 NDIV0 1 0 :1:0 
+`uc 1 NDIV1 1 0 :1:1 
+`uc 1 NDIV2 1 0 :1:2 
+`uc 1 NDIV3 1 0 :1:3 
+`uc 1 NOSC0 1 0 :1:4 
+`uc 1 NOSC1 1 0 :1:5 
+`uc 1 NOSC2 1 0 :1:6 
+]
+[u S64 . 1 `S53 1 . 1 0 `S56 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES64  1 e 1 @173 ]
+[s S79 . 1 `uc 1 HFFRQ 1 0 :4:0 
+]
+"5469
+[s S81 . 1 `uc 1 FRQ0 1 0 :1:0 
+`uc 1 FRQ1 1 0 :1:1 
+`uc 1 FRQ2 1 0 :1:2 
+`uc 1 FRQ3 1 0 :1:3 
+]
+[u S86 . 1 `S79 1 . 1 0 `S81 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES86  1 e 1 @177 ]
+"19053
+[v _U3RXB U3RXB `VEuc  1 e 1 @711 ]
+"19091
+[v _U3TXB U3TXB `VEuc  1 e 1 @713 ]
+"19210
+[v _U3CON0 U3CON0 `VEuc  1 e 1 @721 ]
+"33 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\micro_03_uart\uart3_lib.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"37
+} 0

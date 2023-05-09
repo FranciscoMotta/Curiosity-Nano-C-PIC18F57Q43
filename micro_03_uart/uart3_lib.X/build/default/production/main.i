@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 16 "main.c"
+# 12 "main.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28687,7 +28687,7 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 16 "main.c" 2
+# 12 "main.c" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 1 3
@@ -28836,16 +28836,16 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 18 "main.c" 2
+# 14 "main.c" 2
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
-# 21 "main.c" 2
+# 17 "main.c" 2
 
 
 # 1 "./project_defines.h" 1
-# 23 "main.c" 2
+# 19 "main.c" 2
 
 # 1 "./system_config.h" 1
 # 16 "./system_config.h"
@@ -28932,136 +28932,10 @@ typedef struct
 }_clock_hfintosc_params_t;
 # 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 24 "main.c" 2
-# 36 "main.c"
-void Init_Internal_Oscillator (void);
-void Init_Global_Interrupt (void);
-void Init_Gpio_System (void);
-void Init_Uart3 (void);
-void Uart3_Tx_Byte (char dato);
-void Uart3_TX_String (char *string);
-
-
-
-
+# 20 "main.c" 2
+# 33 "main.c"
 int main(void)
 {
 
-    Init_Internal_Oscillator();
-
-    Init_Global_Interrupt();
-
-    Init_Gpio_System();
-
-    Init_Uart3();
-
-
-
-    U3RXPPS = 0x29;
-
-    RF0PPS = 0x26;
-    Uart3_TX_String("Hola! - UART3 - PIC18F57Q43 \n\r");
-    while(1)
-    {
-        LATF ^= (1 << 3);;
-        _delay((unsigned long)((250)*(4000000UL/4000.0)));
-    }
     return (0);
-}
-
-
-
-
-
-void Uart3_TX_String (char *string)
-{
-    uint16_t string_index = 0;
-    while(string[string_index] != '\0')
-    {
-        Uart3_Tx_Byte(string[string_index]);
-        string_index ++;
-    }
-}
-
-void Uart3_Tx_Byte (char dato)
-{
-    U3TXB = dato;
-    while(!(PIR9 & (1 << 0x1)));
-}
-
-void Init_Uart3 (void)
-{
-
-
-    U3TXB = 0x00;
-    U3RXB = 0x00;
-
-    U3CON0 = 0x00;
-    U3CON1 = 0x00;
-
-
-    U3CON0 &= ~(1 << 0x7);
-    U3CON0 &= ~(1 << 0x6);
-    U3CON0 |= (1 << 0x5);
-    U3CON0 |= (1 << 0x4);
-    U3CON0 |= (0b0000 << 0x0);
-
-
-    U3CON1 |= (1 << 0x7);
-    U3CON1 &= ~(1 << 0x4);
-
-
-
-
-
-
-    if(U3CON0 & (1 << 0x7))
-    {
-
-        U3BRG = (((4000000UL)/(4 * 9600UL)) - 1);
-    }
-    else
-    {
-
-        U3BRG = (((4000000UL)/(16 * 9600UL)) - 1);
-    }
-
-
-
-}
-
-void Init_Global_Interrupt (void)
-{
-
-    INTCON0 &= ~(1 << 0x5);
-    INTCON0 |= (1 << 0x7);
-
-
-    PIE9 &= ~(1 << 0x1);
-    PIE9 &= ~(1 << 0x0);
-
-    PIR9 &= ~(1 << 0x1);
-    PIR9 &= ~(1 << 0x0);
-}
-
-void Init_Gpio_System (void)
-{
-    TRISF &= ~(1 << 3);
-    LATF |= (1 << 3);;
-
-
-    TRISF &= ~(1 << 0);
-    LATF &= ~(1 << 0);
-
-    ANSELF &= ~(1 << 1);
-    TRISF |= (1 << 1);
-}
-
-void Init_Internal_Oscillator (void)
-{
-    _clock_hfintosc_params_t my_clock;
-    my_clock.divisor_clock = clock_div_1;
-    my_clock.frecuencia_clock = freq_clk_4MHZ;
-
-    FM_Hfintosc_Init(&my_clock);
 }

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "FM_Uart3.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,68 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 16 "main.c"
+# 1 "FM_Uart3.c" 2
+
+
+
+
+# 1 "./FM_Uart3.h" 1
+# 11 "./FM_Uart3.h"
+# 1 "./system_config.h" 1
+# 16 "./system_config.h"
+#pragma config FEXTOSC = OFF
+#pragma config RSTOSC = HFINTOSC_64MHZ
+
+
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = OFF
+#pragma config CSWEN = OFF
+#pragma config FCMEN = OFF
+
+
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = ON
+#pragma config IVT1WAY = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
+
+
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = OFF
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+
+
+
+
+
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -28687,217 +28747,13 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 16 "main.c" 2
+# 68 "./system_config.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 1 3
 
 
 
 
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 25 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-int getch(void);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-void putch(char);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 18 "main.c" 2
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
-# 21 "main.c" 2
-
-
-# 1 "./project_defines.h" 1
-# 23 "main.c" 2
-
-# 1 "./system_config.h" 1
-# 16 "./system_config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-# 74 "./system_config.h"
 typedef enum
 {
     clock_div_1 = 0b0000,
@@ -28932,136 +28788,141 @@ typedef struct
 }_clock_hfintosc_params_t;
 # 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 24 "main.c" 2
-# 36 "main.c"
-void Init_Internal_Oscillator (void);
-void Init_Global_Interrupt (void);
-void Init_Gpio_System (void);
-void Init_Uart3 (void);
-void Uart3_Tx_Byte (char dato);
-void Uart3_TX_String (char *string);
+# 11 "./FM_Uart3.h" 2
+
+# 1 "./project_defines.h" 1
+# 12 "./FM_Uart3.h" 2
 
 
 
 
-int main(void)
+typedef enum
+{
+    Normal_Operation_Mode = 0,
+    High_Speed_Operation_Mode
+}_uart3_operation_mode_select_t;
+
+typedef enum
+{
+    Auto_Baud_Disabled = 0,
+    Auto_Baud_Enabled
+}_uart3_autobaud_detect_enable_t;
+
+typedef enum
+{
+    Transmiter_Disabled = 0,
+    Transmiter_Enabled
+}_uart3_transmiter_enabled_t;
+
+typedef enum
+{
+    Receiver_Disabled = 0,
+    Receiver_Enabled
+}_uart3_receiver_enabled_t;
+# 54 "./FM_Uart3.h"
+typedef enum
+{
+    Asynchronous_8bits_Uart_Mode = 0b0000,
+    Asynchronous_7bits_Uart_Mode,
+    Asynchronous_9bits_Uart_Mode_Odd_Parity,
+    Asynchronous_9bits_Uart_Mode_Even_Parity,
+    Asynchronous_9bits_Uart_Address_Mode
+}_uart3_mode_select_t;
+
+typedef enum
+{
+    Uart3_Port_Disabled = 0,
+    Uart3_Port_Enabled
+}_uart3_enabled_port_t;
+
+typedef enum
+{
+    Receiver_Wake_Up_Disabled = 0,
+    Receiver_Wake_Up_Enabled
+}_uart3_Wake_Up_Receiver_t;
+
+typedef enum
+{
+    Rx_Polarity_High_Def = 0,
+    Rx_Polarity_Low
+}_uart3_Rx_Polarity_t;
+
+typedef enum
+{
+    Tx_Polarity_High_Def = 0,
+    Tx_Polarity_Low
+}_uart3_Tx_Polarity_t;
+
+typedef enum
+{
+    Transmiter_1_SB_Receiver_Verify_SB = 0b00,
+    Transmiter_1_5_SB_Receiver_Verify_SB,
+    Transmiter_2_SB_Receiver_Verify_1_2SB,
+    Transmiter_2_SB_Receiver_Verify_SB
+}_uart3_Stop_Bits_Ctrl_t;
+
+typedef enum
+{
+    Flow_Control_Off = 0b00,
+    XON_XOFF_Software_Flow_Control,
+    RTS_CTS_And_TXDE_Hardware_Flow_Control,
+    Reserved
+}_uart3_hand_shake_config_t;
+
+typedef enum
+{
+    Baud_Rate_300BPS = 300UL,
+    Baud_Rate_600BPS = 600UL,
+    Baud_Rate_1200BPS = 1200UL,
+    Baud_Rate_2400BPS = 2400UL,
+    Baud_Rate_4800BPS = 4800UL,
+    Baud_Rate_9600BPS = 9600UL,
+    Baud_Rate_14400BPS = 14400UL,
+    Baud_Rate_19200BPS = 19200UL,
+    Baud_Rate_38400BPS = 38400UL,
+    Baud_Rate_57600BPS = 57600UL,
+    Baud_Rate_115200BPS = 115200UL,
+    Baud_Rate_230400BPS = 230400UL,
+    Baud_Rate_460800BPS = 460800UL
+}_uart3_baud_rate_select_t;
+
+
+
+typedef struct
+{
+    _uart3_baud_rate_select_t baudios;
+    _uart3_operation_mode_select_t op_mode_speed;
+    _uart3_autobaud_detect_enable_t auto_baud_mode;
+    _uart3_transmiter_enabled_t tx_en;
+    _uart3_receiver_enabled_t rx_en;
+    _uart3_mode_select_t mode_select_data;
+    _uart3_enabled_port_t port_enable;
+    _uart3_Wake_Up_Receiver_t wake_up;
+    _uart3_Rx_Polarity_t rx_pol;
+    _uart3_Tx_Polarity_t tx_pol;
+    _uart3_Stop_Bits_Ctrl_t stop_bits;
+    _uart3_hand_shake_config_t hand_shake;
+}_my_uart3_config_params_t;
+
+
+
+void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
+# 5 "FM_Uart3.c" 2
+
+
+
+
+
+
+void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params)
 {
 
-    Init_Internal_Oscillator();
 
-    Init_Global_Interrupt();
-
-    Init_Gpio_System();
-
-    Init_Uart3();
-
-
-
-    U3RXPPS = 0x29;
-
-    RF0PPS = 0x26;
-    Uart3_TX_String("Hola! - UART3 - PIC18F57Q43 \n\r");
-    while(1)
-    {
-        LATF ^= (1 << 3);;
-        _delay((unsigned long)((250)*(4000000UL/4000.0)));
-    }
-    return (0);
-}
-
-
-
-
-
-void Uart3_TX_String (char *string)
-{
-    uint16_t string_index = 0;
-    while(string[string_index] != '\0')
-    {
-        Uart3_Tx_Byte(string[string_index]);
-        string_index ++;
-    }
-}
-
-void Uart3_Tx_Byte (char dato)
-{
-    U3TXB = dato;
-    while(!(PIR9 & (1 << 0x1)));
-}
-
-void Init_Uart3 (void)
-{
 
 
     U3TXB = 0x00;
     U3RXB = 0x00;
 
-    U3CON0 = 0x00;
-    U3CON1 = 0x00;
+    U3CON0 = 000;
 
-
-    U3CON0 &= ~(1 << 0x7);
-    U3CON0 &= ~(1 << 0x6);
-    U3CON0 |= (1 << 0x5);
-    U3CON0 |= (1 << 0x4);
-    U3CON0 |= (0b0000 << 0x0);
-
-
-    U3CON1 |= (1 << 0x7);
-    U3CON1 &= ~(1 << 0x4);
-
-
-
-
-
-
-    if(U3CON0 & (1 << 0x7))
-    {
-
-        U3BRG = (((4000000UL)/(4 * 9600UL)) - 1);
-    }
-    else
-    {
-
-        U3BRG = (((4000000UL)/(16 * 9600UL)) - 1);
-    }
-
-
-
-}
-
-void Init_Global_Interrupt (void)
-{
-
-    INTCON0 &= ~(1 << 0x5);
-    INTCON0 |= (1 << 0x7);
-
-
-    PIE9 &= ~(1 << 0x1);
-    PIE9 &= ~(1 << 0x0);
-
-    PIR9 &= ~(1 << 0x1);
-    PIR9 &= ~(1 << 0x0);
-}
-
-void Init_Gpio_System (void)
-{
-    TRISF &= ~(1 << 3);
-    LATF |= (1 << 3);;
-
-
-    TRISF &= ~(1 << 0);
-    LATF &= ~(1 << 0);
-
-    ANSELF &= ~(1 << 1);
-    TRISF |= (1 << 1);
-}
-
-void Init_Internal_Oscillator (void)
-{
-    _clock_hfintosc_params_t my_clock;
-    my_clock.divisor_clock = clock_div_1;
-    my_clock.frecuencia_clock = freq_clk_4MHZ;
-
-    FM_Hfintosc_Init(&my_clock);
 }

@@ -28,7 +28,7 @@
  */
 
 #define _FOSC   _XTAL_FREQ
-#define _BAUD_RATE_DES  9600
+#define _BAUD_RATE_DES  9600UL
 /*
  * Declaracion de funciones
  */
@@ -38,6 +38,8 @@ void Init_Global_Interrupt (void);
 void Init_Gpio_System (void);
 void Init_Uart3 (void);
 void Uart3_Tx_Byte (char dato);
+void Uart3_TX_String (char *string);
+
 /*
  * Main
  */
@@ -57,11 +59,11 @@ int main(void)
     U3RXPPS = 0x29; // Conectado a RF1 UART3 RX
     // PPS Salida
     RF0PPS = 0x26; // Conectado a RF0 UART3 TX
+    Uart3_TX_String("Hola! - UART3 - PIC18F57Q43 \n\r");
     while(true)
     {
-        Uart3_Tx_Byte('F');
         Led_Sys_Tog();
-        __delay_ms(1000);
+        __delay_ms(250);
     }
     return (EXIT_SUCCESS);
 }
@@ -70,10 +72,20 @@ int main(void)
  * Definicion de funciones
  */
 
+void Uart3_TX_String (char *string)
+{
+    uint16_t string_index = 0;
+    while(string[string_index] != '\0')
+    {
+        Uart3_Tx_Byte(string[string_index]);
+        string_index ++;
+    }
+}
+
 void Uart3_Tx_Byte (char dato)
 {
     U3TXB = dato;
-    //while(!(PIR9 & (1 << _PIR9_U3TXIF_POSITION)));
+    while(!(PIR9 & (1 << _PIR9_U3TXIF_POSITION)));
 }
 
 void Init_Uart3 (void)
@@ -82,6 +94,9 @@ void Init_Uart3 (void)
     
     U3TXB = 0x00;
     U3RXB = 0x00;
+    
+    U3CON0 = 0x00;
+    U3CON1 = 0x00;
     
     /* Configuramos  U3CON0 */
     U3CON0 &= ~(1 << _U3CON0_BRGS_POSITION); // Normal Speed
@@ -97,8 +112,21 @@ void Init_Uart3 (void)
     /* Se configuran el U3CON2 */
     //U3CON2 |= (1 << _U3CON2_TXPOL_POSITION); // 0 en idle
     
+    /* Codigo de cálculo del valor del registros U3BRG */
+    
+    if(U3CON0 & (1 << _U3CON0_BRGS_POSITION))
+    {
+        /* Modo alta velocidad */
+        U3BRG = (((_FOSC)/(4 * _BAUD_RATE_DES)) - 1);
+    }
+    else 
+    {
+        /* Modo normal */
+        U3BRG = (((_FOSC)/(16 * _BAUD_RATE_DES)) - 1);
+    }
+    
     /* Configuramos U3BRG */
-    U3BRG  = 25; // <-- NO FUNCIONA!! 
+    //U3BRG  = 25; // <-- NO FUNCIONA!! 
 }
 
 void Init_Global_Interrupt (void)
