@@ -15,7 +15,16 @@
 #define _XTAL_FREQ 4000000UL
 #endif
 
-#define _FOSC   _XTAL_FREQ
+#define _FOSC  4000000UL
+
+/* Macros de los pines del UART3 */
+#define UART3_TX_GPIO        0
+#define UART3_TX_TRIS        TRISF
+#define UART3_TX_LAT         LATF
+
+#define UART3_RX_GPIO        1
+#define UART3_RX_TRIS        TRISF
+#define UART3_RX_ANSEL       ANSELF
 
 /* Tipo de datos enumarados */
 
@@ -59,7 +68,7 @@ typedef enum
 
 typedef enum
 {
-    Asynchronous_8bits_Uart_Mode = 0b0000,
+    Asynchronous_8bits_Uart_Mode = 0,
     Asynchronous_7bits_Uart_Mode,
     Asynchronous_9bits_Uart_Mode_Odd_Parity,
     Asynchronous_9bits_Uart_Mode_Even_Parity,
@@ -76,31 +85,31 @@ typedef enum
 {
     Receiver_Wake_Up_Disabled = 0,
     Receiver_Wake_Up_Enabled
-}_uart3_Wake_Up_Receiver_t;
+}_uart3_wake_up_receiver_t;
 
 typedef enum
 {
     Rx_Polarity_High_Def = 0,
     Rx_Polarity_Low
-}_uart3_Rx_Polarity_t;
+}_uart3_rx_polarity_t;
 
 typedef enum
 {
     Tx_Polarity_High_Def = 0,
     Tx_Polarity_Low
-}_uart3_Tx_Polarity_t;
+}_uart3_tx_polarity_t;
 
 typedef enum
 {
-    Transmiter_1_SB_Receiver_Verify_SB = 0b00,
+    Transmiter_1_SB_Receiver_Verify_SB = 0,
     Transmiter_1_5_SB_Receiver_Verify_SB,
     Transmiter_2_SB_Receiver_Verify_1_2SB,
     Transmiter_2_SB_Receiver_Verify_SB
-}_uart3_Stop_Bits_Ctrl_t;
+}_uart3_stop_bits_ctrl_t;
 
 typedef enum
 {
-    Flow_Control_Off = 0b00,
+    Flow_Control_Off = 0,
     XON_XOFF_Software_Flow_Control,
     RTS_CTS_And_TXDE_Hardware_Flow_Control,
     Reserved
@@ -118,9 +127,7 @@ typedef enum
     Baud_Rate_19200BPS  = 19200UL,
     Baud_Rate_38400BPS  = 38400UL,
     Baud_Rate_57600BPS  = 57600UL,
-    Baud_Rate_115200BPS = 115200UL,
-    Baud_Rate_230400BPS = 230400UL,
-    Baud_Rate_460800BPS = 460800UL
+    Baud_Rate_115200BPS = 115200UL
 }_uart3_baud_rate_select_t;
 
 /* Creamos la estructura de configuracion */
@@ -134,16 +141,17 @@ typedef struct
     _uart3_receiver_enabled_t rx_en;
     _uart3_mode_select_t mode_select_data;
     _uart3_enabled_port_t port_enable;
-    _uart3_Wake_Up_Receiver_t wake_up;
-    _uart3_Rx_Polarity_t rx_pol;
-    _uart3_Tx_Polarity_t tx_pol;
-    _uart3_Stop_Bits_Ctrl_t stop_bits;
+    _uart3_wake_up_receiver_t wake_up;
+    _uart3_rx_polarity_t rx_pol;
+    _uart3_tx_polarity_t tx_pol;
+    _uart3_stop_bits_ctrl_t stop_bits;
     _uart3_hand_shake_config_t hand_shake;
 }_my_uart3_config_params_t;
 
 /* Declaramos las funciones de configuración */
 
 void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
-
+void FM_Send_Uart3_Byte (char byte);
+void FM_Send_Uart3_String (char *string);
 #endif	/* FM_UART3_H */
 

@@ -126,7 +126,7 @@ void Init_Uart3 (void)
     }
     
     /* Configuramos U3BRG */
-    //U3BRG  = 25; // <-- NO FUNCIONA!! 
+    //U3BRG  = 25; // <-- SI FUNCIONA!! 
 }
 
 void Init_Global_Interrupt (void)

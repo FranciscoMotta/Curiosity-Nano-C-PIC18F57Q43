@@ -29,6 +29,8 @@
  */
 
 void Init_Internal_Oscillator (void);
+void Init_Gpio_System (void);
+void Init_Interrupt_Uart (void);
 void Init_Uart3 (void);
 /*
  * Main
@@ -37,6 +39,8 @@ int main(void)
 {
     /* Se configura el reloj interno */
     Init_Internal_Oscillator();
+    /* Se configura las interrupciones */
+    Init_Interrupt_Uart();
     /* Se configura el uart3 */
     Init_Uart3();
     /* NOTA:
@@ -47,9 +51,14 @@ int main(void)
     U3RXPPS = 0x29; // Conectado a RF1 UART3 RX
     // PPS Salida
     RF0PPS = 0x26; // Conectado a RF0 UART3 TX
+    /* Se configuran los pines del sistema */
+    Init_Gpio_System();
+    /* Bucle principal */
     while(true)
     {
-        
+        FM_Send_Uart3_String("HOLA UART3 PIC18F57Q43 - LIB\n\r");
+        Led_Sys_Tog();
+        __delay_ms(1000);
     }
     return (EXIT_SUCCESS);
 }
@@ -57,6 +66,33 @@ int main(void)
 /*
  * Definicion de funciones
  */
+
+void Init_Interrupt_Uart (void)
+{
+    /* Se configura los registros INTCON0 */
+    INTCON0 &= ~(1 << _INTCON0_IPEN_POSITION); // Sin prioridades
+    INTCON0 |= (1 << _INTCON0_GIE_POSITION); // Interrupciones gloables activadas
+    
+    /* Se configura los registros PIE9 y PIR9 */
+    PIE9 &= ~(1 << _PIE9_U3TXIE_POSITION); // Desahilitamos interrupción por transm
+    PIE9 &= ~(1 << _PIE9_U3RXIE_POSITION); // Dehabilitamos interrupción por recep
+    
+    PIR9 &= ~(1 << _PIR9_U3TXIF_POSITION); // Limpiamos bandera de transm
+    PIR9 &= ~(1 << _PIR9_U3RXIF_POSITION); // Limpiamos bandera de recep
+}
+
+void Init_Gpio_System (void)
+{
+    /* Configuramos el led del sistema */
+    Led_Sys_Tris &= ~(1 << Led_Sys_Gpio);
+    Led_Sys_Off();
+    /* Configuramos los pines del UART3 */
+    UART3_RX_ANSEL &= ~(1 << UART3_RX_GPIO);
+    UART3_RX_TRIS |= (1 << UART3_RX_GPIO);
+    
+    UART3_TX_TRIS &= ~(1 << UART3_TX_GPIO);
+    UART3_TX_LAT &= ~(1 << UART3_TX_GPIO);  
+}
 
 void Init_Uart3 (void)
 {

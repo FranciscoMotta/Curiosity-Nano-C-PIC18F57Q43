@@ -28792,7 +28792,7 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 
 # 1 "./project_defines.h" 1
 # 12 "./FM_Uart3.h" 2
-# 22 "./FM_Uart3.h"
+# 31 "./FM_Uart3.h"
 typedef enum
 {
     Normal_Operation_Mode = 0,
@@ -28816,10 +28816,10 @@ typedef enum
     Receiver_Disabled = 0,
     Receiver_Enabled
 }_uart3_receiver_enabled_t;
-# 60 "./FM_Uart3.h"
+# 69 "./FM_Uart3.h"
 typedef enum
 {
-    Asynchronous_8bits_Uart_Mode = 0b0000,
+    Asynchronous_8bits_Uart_Mode = 0,
     Asynchronous_7bits_Uart_Mode,
     Asynchronous_9bits_Uart_Mode_Odd_Parity,
     Asynchronous_9bits_Uart_Mode_Even_Parity,
@@ -28836,31 +28836,31 @@ typedef enum
 {
     Receiver_Wake_Up_Disabled = 0,
     Receiver_Wake_Up_Enabled
-}_uart3_Wake_Up_Receiver_t;
+}_uart3_wake_up_receiver_t;
 
 typedef enum
 {
     Rx_Polarity_High_Def = 0,
     Rx_Polarity_Low
-}_uart3_Rx_Polarity_t;
+}_uart3_rx_polarity_t;
 
 typedef enum
 {
     Tx_Polarity_High_Def = 0,
     Tx_Polarity_Low
-}_uart3_Tx_Polarity_t;
+}_uart3_tx_polarity_t;
 
 typedef enum
 {
-    Transmiter_1_SB_Receiver_Verify_SB = 0b00,
+    Transmiter_1_SB_Receiver_Verify_SB = 0,
     Transmiter_1_5_SB_Receiver_Verify_SB,
     Transmiter_2_SB_Receiver_Verify_1_2SB,
     Transmiter_2_SB_Receiver_Verify_SB
-}_uart3_Stop_Bits_Ctrl_t;
+}_uart3_stop_bits_ctrl_t;
 
 typedef enum
 {
-    Flow_Control_Off = 0b00,
+    Flow_Control_Off = 0,
     XON_XOFF_Software_Flow_Control,
     RTS_CTS_And_TXDE_Hardware_Flow_Control,
     Reserved
@@ -28878,9 +28878,7 @@ typedef enum
     Baud_Rate_19200BPS = 19200UL,
     Baud_Rate_38400BPS = 38400UL,
     Baud_Rate_57600BPS = 57600UL,
-    Baud_Rate_115200BPS = 115200UL,
-    Baud_Rate_230400BPS = 230400UL,
-    Baud_Rate_460800BPS = 460800UL
+    Baud_Rate_115200BPS = 115200UL
 }_uart3_baud_rate_select_t;
 
 
@@ -28894,16 +28892,18 @@ typedef struct
     _uart3_receiver_enabled_t rx_en;
     _uart3_mode_select_t mode_select_data;
     _uart3_enabled_port_t port_enable;
-    _uart3_Wake_Up_Receiver_t wake_up;
-    _uart3_Rx_Polarity_t rx_pol;
-    _uart3_Tx_Polarity_t tx_pol;
-    _uart3_Stop_Bits_Ctrl_t stop_bits;
+    _uart3_wake_up_receiver_t wake_up;
+    _uart3_rx_polarity_t rx_pol;
+    _uart3_tx_polarity_t tx_pol;
+    _uart3_stop_bits_ctrl_t stop_bits;
     _uart3_hand_shake_config_t hand_shake;
 }_my_uart3_config_params_t;
 
 
 
 void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
+void FM_Send_Uart3_Byte (char byte);
+void FM_Send_Uart3_String (char *string);
 # 5 "FM_Uart3.c" 2
 
 
@@ -28942,14 +28942,32 @@ void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params)
     U3CON2 |= (uart3_params->hand_shake << 0x0);
 
 
+
     if(U3CON0 & (1 << 0x7))
     {
 
-        U3BRG = (((4000000UL)/(4 * uart3_params->baudios)) - 1);
+        U3BRG = (((4000000UL)/(4UL * uart3_params->baudios)) - 1UL);
     }
     else
     {
 
-        U3BRG = (((4000000UL)/(16 * uart3_params->baudios)) - 1);
+        U3BRG = (((4000000UL)/(16UL * uart3_params->baudios)) - 1UL);
+    }
+}
+
+void FM_Send_Uart3_Byte (char byte)
+{
+
+    U3TXB = byte;
+    while(!(PIR9 & (1 << 0x1)));
+}
+
+void FM_Send_Uart3_String (char *string)
+{
+    uint16_t index = 0;
+    while(string[index] != '\0')
+    {
+        FM_Send_Uart3_Byte(string[index]);
+        index++;
     }
 }

@@ -28935,7 +28935,7 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 20 "main.c" 2
 
 # 1 "./FM_Uart3.h" 1
-# 22 "./FM_Uart3.h"
+# 31 "./FM_Uart3.h"
 typedef enum
 {
     Normal_Operation_Mode = 0,
@@ -28959,10 +28959,10 @@ typedef enum
     Receiver_Disabled = 0,
     Receiver_Enabled
 }_uart3_receiver_enabled_t;
-# 60 "./FM_Uart3.h"
+# 69 "./FM_Uart3.h"
 typedef enum
 {
-    Asynchronous_8bits_Uart_Mode = 0b0000,
+    Asynchronous_8bits_Uart_Mode = 0,
     Asynchronous_7bits_Uart_Mode,
     Asynchronous_9bits_Uart_Mode_Odd_Parity,
     Asynchronous_9bits_Uart_Mode_Even_Parity,
@@ -28979,31 +28979,31 @@ typedef enum
 {
     Receiver_Wake_Up_Disabled = 0,
     Receiver_Wake_Up_Enabled
-}_uart3_Wake_Up_Receiver_t;
+}_uart3_wake_up_receiver_t;
 
 typedef enum
 {
     Rx_Polarity_High_Def = 0,
     Rx_Polarity_Low
-}_uart3_Rx_Polarity_t;
+}_uart3_rx_polarity_t;
 
 typedef enum
 {
     Tx_Polarity_High_Def = 0,
     Tx_Polarity_Low
-}_uart3_Tx_Polarity_t;
+}_uart3_tx_polarity_t;
 
 typedef enum
 {
-    Transmiter_1_SB_Receiver_Verify_SB = 0b00,
+    Transmiter_1_SB_Receiver_Verify_SB = 0,
     Transmiter_1_5_SB_Receiver_Verify_SB,
     Transmiter_2_SB_Receiver_Verify_1_2SB,
     Transmiter_2_SB_Receiver_Verify_SB
-}_uart3_Stop_Bits_Ctrl_t;
+}_uart3_stop_bits_ctrl_t;
 
 typedef enum
 {
-    Flow_Control_Off = 0b00,
+    Flow_Control_Off = 0,
     XON_XOFF_Software_Flow_Control,
     RTS_CTS_And_TXDE_Hardware_Flow_Control,
     Reserved
@@ -29021,9 +29021,7 @@ typedef enum
     Baud_Rate_19200BPS = 19200UL,
     Baud_Rate_38400BPS = 38400UL,
     Baud_Rate_57600BPS = 57600UL,
-    Baud_Rate_115200BPS = 115200UL,
-    Baud_Rate_230400BPS = 230400UL,
-    Baud_Rate_460800BPS = 460800UL
+    Baud_Rate_115200BPS = 115200UL
 }_uart3_baud_rate_select_t;
 
 
@@ -29037,19 +29035,23 @@ typedef struct
     _uart3_receiver_enabled_t rx_en;
     _uart3_mode_select_t mode_select_data;
     _uart3_enabled_port_t port_enable;
-    _uart3_Wake_Up_Receiver_t wake_up;
-    _uart3_Rx_Polarity_t rx_pol;
-    _uart3_Tx_Polarity_t tx_pol;
-    _uart3_Stop_Bits_Ctrl_t stop_bits;
+    _uart3_wake_up_receiver_t wake_up;
+    _uart3_rx_polarity_t rx_pol;
+    _uart3_tx_polarity_t tx_pol;
+    _uart3_stop_bits_ctrl_t stop_bits;
     _uart3_hand_shake_config_t hand_shake;
 }_my_uart3_config_params_t;
 
 
 
 void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
+void FM_Send_Uart3_Byte (char byte);
+void FM_Send_Uart3_String (char *string);
 # 21 "main.c" 2
 # 31 "main.c"
 void Init_Internal_Oscillator (void);
+void Init_Gpio_System (void);
+void Init_Interrupt_Uart (void);
 void Init_Uart3 (void);
 
 
@@ -29058,6 +29060,8 @@ int main(void)
 {
 
     Init_Internal_Oscillator();
+
+    Init_Interrupt_Uart();
 
     Init_Uart3();
 
@@ -29068,9 +29072,14 @@ int main(void)
     U3RXPPS = 0x29;
 
     RF0PPS = 0x26;
+
+    Init_Gpio_System();
+
     while(1)
     {
-
+        FM_Send_Uart3_String("HOLA UART3 PIC18F57Q43 - LIB\n\r");
+        LATF ^= (1 << 3);;
+        _delay((unsigned long)((1000)*(4000000UL/4000.0)));
     }
     return (0);
 }
@@ -29078,6 +29087,33 @@ int main(void)
 
 
 
+
+void Init_Interrupt_Uart (void)
+{
+
+    INTCON0 &= ~(1 << 0x5);
+    INTCON0 |= (1 << 0x7);
+
+
+    PIE9 &= ~(1 << 0x1);
+    PIE9 &= ~(1 << 0x0);
+
+    PIR9 &= ~(1 << 0x1);
+    PIR9 &= ~(1 << 0x0);
+}
+
+void Init_Gpio_System (void)
+{
+
+    TRISF &= ~(1 << 3);
+    LATF |= (1 << 3);;
+
+    ANSELF &= ~(1 << 1);
+    TRISF |= (1 << 1);
+
+    TRISF &= ~(1 << 0);
+    LATF &= ~(1 << 0);
+}
 
 void Init_Uart3 (void)
 {
