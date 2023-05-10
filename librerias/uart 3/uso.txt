@@ -1,0 +1,52 @@
+
+/* Declarar la funcion void Init_Uart3 (void) */
+
+void Init_Uart3 (void)
+{
+    _my_uart3_config_params_t my_uart3;
+    
+    /* Configuramos el protocolo */
+    my_uart3.auto_baud_mode = Auto_Baud_Disabled;
+    my_uart3.baudios = Baud_Rate_9600BPS;
+    my_uart3.hand_shake = Flow_Control_Off;
+    my_uart3.mode_select_data = Asynchronous_8bits_Uart_Mode;
+    my_uart3.op_mode_speed = Normal_Operation_Mode;
+    my_uart3.port_enable = Uart3_Port_Enabled;
+    my_uart3.rx_en = Receiver_Enabled;
+    my_uart3.tx_en = Transmiter_Enabled;
+    my_uart3.rx_pol = Rx_Polarity_High_Def;
+    my_uart3.tx_pol = Tx_Polarity_High_Def;
+    my_uart3.stop_bits = Transmiter_1_SB_Receiver_Verify_SB;
+    my_uart3.wake_up = Receiver_Wake_Up_Disabled;
+    /* Pasamos los parámetros configurados */
+    FM_Uart3_Config(&my_uart3);
+}
+
+/* Si se desea usar la salida usb del debuger usar los pps */
+
+// PPS Entrada
+U3RXPPS = 0x29; // Conectado a RF1 UART3 RX
+// PPS Salida
+RF0PPS = 0x26; // Conectado a RF0 UART3 TX
+
+/* Dentro del main o en alguna parte del código configurar
+* los pines RX y TX como entrada y salida respectivamente 
+*/
+
+/* Configuramos los pines del UART3 */
+UART3_RX_ANSEL &= ~(1 << UART3_RX_GPIO);
+UART3_RX_TRIS |= (1 << UART3_RX_GPIO);
+    
+UART3_TX_TRIS &= ~(1 << UART3_TX_GPIO);
+UART3_TX_LAT &= ~(1 << UART3_TX_GPIO);  
+
+/* Para este caso */
+
+/* Macros de los pines del UART3 */
+#define UART3_TX_GPIO        0
+#define UART3_TX_TRIS        TRISF
+#define UART3_TX_LAT         LATF
+
+#define UART3_RX_GPIO        1
+#define UART3_RX_TRIS        TRISF
+#define UART3_RX_ANSEL       ANSELF
