@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"64 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+"65 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
 [e E16998 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -77,17 +77,17 @@ freq_clk_64MHZ 8
 [v ___omul __omul `(uo  1 e 8 0 ]
 "38 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"54
+"55
 [v _FM_Gpio_Config FM_Gpio_Config `(v  1 e 1 0 ]
-"62
+"63
 [v _FM_Internal_Oscillator_Config FM_Internal_Oscillator_Config `(v  1 e 1 0 ]
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S103 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S104 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S106 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S107 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -95,18 +95,18 @@ freq_clk_64MHZ 8
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S114 . 1 `S103 1 . 1 0 `S106 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES114  1 e 1 @173 ]
-[s S129 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S115 . 1 `S104 1 . 1 0 `S107 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES115  1 e 1 @173 ]
+[s S130 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S131 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S132 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S136 . 1 `S129 1 . 1 0 `S131 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES136  1 e 1 @177 ]
+[u S137 . 1 `S130 1 . 1 0 `S132 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES137  1 e 1 @177 ]
 "47792
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
@@ -115,15 +115,15 @@ freq_clk_64MHZ 8
 "38 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"48
+"49
 } 0
-"62
+"63
 [v _FM_Internal_Oscillator_Config FM_Internal_Oscillator_Config `(v  1 e 1 0 ]
 {
 [s S61 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
-"64
+"65
 [v FM_Internal_Oscillator_Config@my_clock my_clock `S61  1 a 2 3 ]
-"72
+"73
 } 0
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
@@ -132,8 +132,8 @@ freq_clk_64MHZ 8
 [v FM_Hfintosc_Init@clock_params clock_params `*.39S61  1 p 2 0 ]
 "13
 } 0
-"54 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+"55 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
 [v _FM_Gpio_Config FM_Gpio_Config `(v  1 e 1 0 ]
 {
-"60
+"61
 } 0

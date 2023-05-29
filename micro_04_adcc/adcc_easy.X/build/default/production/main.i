@@ -28935,10 +28935,11 @@ int main(void)
 {
     FM_Internal_Oscillator_Config();
     FM_Gpio_Config();
+    uint8_t data = 0x55;
     while(1)
     {
         LATF ^= (1 << 3);;
-        _delay((unsigned long)((150)*(4000000UL/4000.0)));
+        _delay((unsigned long)((250)*(4000000UL/4000.0)));
     }
     return (0);
 }

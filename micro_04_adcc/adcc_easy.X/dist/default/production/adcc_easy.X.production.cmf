@@ -11,19 +11,19 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+$C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 idloc IDLOC 5 200000 200000 40 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 4 300000 300000 A 1
 $dist/default/production\adcc_easy.X.production.o
-cinit CODE 0 1FF7C 1FF7C 6 1
+cinit CODE 0 1FF76 1FF76 6 1
 idloc IDLOC 5 200000 200000 40 1
-text0 CODE 0 1FF98 1FF98 24 1
-text1 CODE 0 1FF82 1FF82 16 1
+text0 CODE 0 1FF92 1FF92 2A 1
+text1 CODE 0 1FF7C 1FF7C 16 1
 text2 CODE 0 1FFBC 1FFBC 40 1
-text3 CODE 0 1FF76 1FF76 6 1
-cstackCOMRAM COMRAM 1 501 501 6 1
+text3 CODE 0 1FF70 1FF70 6 1
+cstackCOMRAM COMRAM 1 501 501 7 1
 config CONFIG 4 300000 300000 A 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -39,10 +39,10 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 4-1FF75 1
+CONST 4-1FF6F 1
 STACK 560-24FF 1
-SMALLCONST 2500-1FF75 1
-CODE 4-1FF75 1
+SMALLCONST 2500-1FF6F 1
+CODE 4-1FF6F 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -70,12 +70,12 @@ BANK33 2100-21FF 1
 BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
-BIGRAM 507-24FF 1
-COMRAM 507-55F 1
+BIGRAM 508-24FF 1
+COMRAM 508-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
 MEDIUMCONST 2500-FFFF 1
-MEDIUMCONST 12500-1FF75 1
+MEDIUMCONST 12500-1FF6F 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -90,31 +90,32 @@ MEDIUMCONST 12500-1FF75 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\adcc_easy.X.production.o
-1FF76 text3 CODE >54:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF76 text3 CODE >57:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF78 text3 CODE >59:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF7A text3 CODE >60:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF70 text3 CODE >55:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF70 text3 CODE >58:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF72 text3 CODE >60:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF74 text3 CODE >61:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
 1FFBC text2 CODE >8:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 1FFBC text2 CODE >10:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 1FFC6 text2 CODE >11:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 1FFE0 text2 CODE >12:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
 1FFFA text2 CODE >13:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\system_config.c
-1FF82 text1 CODE >62:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF82 text1 CODE >67:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF86 text1 CODE >68:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF8A text1 CODE >71:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF96 text1 CODE >72:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF98 text0 CODE >38:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF98 text0 CODE >40:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF9C text0 CODE >41:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FFA0 text0 CODE >44:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FFA4 text0 CODE >45:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
-1FF7C cinit CODE >3567:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
-1FF7C cinit CODE >3569:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
-1FF7C cinit CODE >3572:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
-1FF7C cinit CODE >3578:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
-1FF7C cinit CODE >3580:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
-1FF7E cinit CODE >3581:C:\Users\jmott\AppData\Local\Temp\xcAshck.s
+1FF7C text1 CODE >63:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF7C text1 CODE >68:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF80 text1 CODE >69:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF84 text1 CODE >72:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF90 text1 CODE >73:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF92 text0 CODE >38:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF92 text0 CODE >40:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF96 text0 CODE >41:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF9A text0 CODE >42:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF9A text0 CODE >45:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF9E text0 CODE >46:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\micro_04_adcc\adcc_easy.X\main.c
+1FF76 cinit CODE >3567:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
+1FF76 cinit CODE >3569:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
+1FF76 cinit CODE >3572:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
+1FF76 cinit CODE >3578:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
+1FF76 cinit CODE >3580:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
+1FF78 cinit CODE >3581:C:\Users\jmott\AppData\Local\Temp\xcAs1mo.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -129,39 +130,39 @@ $dist/default/production\adcc_easy.X.production.o
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\adcc_easy.X.production.o
 __Hspace_0 20000 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-__Hspace_1 507 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
+__Hspace_1 508 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\adcc_easy.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\adcc_easy.X.production.o
 FM_Hfintosc_Init@clock_params 501 0 COMRAM 1 cstackCOMRAM dist/default/production\adcc_easy.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\adcc_easy.X.production.o
 _LATF 4C3 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-_main 1FF98 0 CODE 0 text0 dist/default/production\adcc_easy.X.production.o
-start 1FFFC 0 CODE 0 init C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+___sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+_main 1FF92 0 CODE 0 text0 dist/default/production\adcc_easy.X.production.o
+start 1FFFC 0 CODE 0 init C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __size_of_main 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 _OSCFRQbits B1 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\adcc_easy.X.production.o
-__accesstop 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-intlevel0 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-intlevel1 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-intlevel2 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-intlevel3 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+__accesstop 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+intlevel0 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+intlevel1 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+intlevel2 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+intlevel3 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\adcc_easy.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\adcc_easy.X.production.o
 __size_of_FM_Gpio_Config 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\adcc_easy.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-_FM_Internal_Oscillator_Config 1FF82 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+_FM_Internal_Oscillator_Config 1FF7C 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\adcc_easy.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\adcc_easy.X.production.o
-start_initialization 1FF7C 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
+start_initialization 1FF76 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\adcc_easy.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+isa$xinst 0 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 _FM_Hfintosc_Init 1FFBC 0 CODE 0 text2 dist/default/production\adcc_easy.X.production.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\adcc_easy.X.production.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\adcc_easy.X.production.o
@@ -209,7 +210,7 @@ __Hbank35 0 0 ABS 0 bank35 dist/default/production\adcc_easy.X.production.o
 __Hbank36 0 0 ABS 0 bank36 dist/default/production\adcc_easy.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\adcc_easy.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\adcc_easy.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\adcc_easy.X.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\adcc_easy.X.production.o
 __Lbank5 0 0 ABS 0 bank5 dist/default/production\adcc_easy.X.production.o
@@ -247,7 +248,7 @@ __Ltext 0 0 ABS 0 text dist/default/production\adcc_easy.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\adcc_easy.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\adcc_easy.X.production.o
 __S0 20000 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-__S1 507 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
+__S1 508 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __S4 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __S5 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
@@ -256,12 +257,12 @@ __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\adcc_easy.X.production.o
 __Hramtop 2500 0 RAM 0 ramtop dist/default/production\adcc_easy.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\adcc_easy.X.production.o
 __end_of_FM_Hfintosc_Init 1FFFC 0 CODE 0 text2 dist/default/production\adcc_easy.X.production.o
-__end_of_FM_Internal_Oscillator_Config 1FF98 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
+__end_of_FM_Internal_Oscillator_Config 1FF92 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
 FM_Internal_Oscillator_Config@my_clock 504 0 COMRAM 1 cstackCOMRAM dist/default/production\adcc_easy.X.production.o
 __activetblptr 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\adcc_easy.X.production.o
 __size_of_FM_Hfintosc_Init 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-_FM_Gpio_Config 1FF76 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
+_FM_Gpio_Config 1FF70 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\adcc_easy.X.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\adcc_easy.X.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\adcc_easy.X.production.o
@@ -295,36 +296,36 @@ __Lcomram 0 0 ABS 0 comram dist/default/production\adcc_easy.X.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\adcc_easy.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\adcc_easy.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\adcc_easy.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-stackhi 24FF 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAshck.o
-stacklo 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+isa$std 1 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+stackhi 24FF 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
+stacklo 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\adcc_easy.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\adcc_easy.X.production.o
-__end_of_FM_Gpio_Config 1FF7C 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
-end_of_initialization 1FF7C 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
+__end_of_FM_Gpio_Config 1FF76 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
+end_of_initialization 1FF76 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\adcc_easy.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\adcc_easy.X.production.o
 __Lramtop 2500 0 RAM 0 ramtop dist/default/production\adcc_easy.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\adcc_easy.X.production.o
-__pcinit 1FF7C 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
+__pcinit 1FF76 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
 _OSCCON1bits AD 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
-__ptext0 1FF98 0 CODE 0 text0 dist/default/production\adcc_easy.X.production.o
-__ptext1 1FF82 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
+__ptext0 1FF92 0 CODE 0 text0 dist/default/production\adcc_easy.X.production.o
+__ptext1 1FF7C 0 CODE 0 text1 dist/default/production\adcc_easy.X.production.o
 __ptext2 1FFBC 0 CODE 0 text2 dist/default/production\adcc_easy.X.production.o
-__ptext3 1FF76 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
+__ptext3 1FF70 0 CODE 0 text3 dist/default/production\adcc_easy.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\adcc_easy.X.production.o
-__ramtop 2500 0 RAM 0 ramtop C:\Users\jmott\AppData\Local\Temp\xcAshck.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\jmott\AppData\Local\Temp\xcAs1mo.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\adcc_easy.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\adcc_easy.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\adcc_easy.X.production.o
 __size_of_FM_Internal_Oscillator_Config 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\adcc_easy.X.production.o
-__end_of__initialization 1FF7C 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
+__end_of__initialization 1FF76 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\adcc_easy.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\adcc_easy.X.production.o
 __pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\adcc_easy.X.production.o
@@ -338,7 +339,7 @@ __LRAM 1 0 ABS 0 - dist/default/production\adcc_easy.X.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\adcc_easy.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\adcc_easy.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\adcc_easy.X.production.o
-__initialization 1FF7C 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
+__initialization 1FF76 0 CODE 0 cinit dist/default/production\adcc_easy.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\adcc_easy.X.production.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\adcc_easy.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\adcc_easy.X.production.o
@@ -367,12 +368,12 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\adcc_easy.X.pr
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 1FF7C 1FF7C 6 1
-text0 0 1FF98 1FF98 24 1
-text1 0 1FF82 1FF82 16 1
+cinit 0 1FF76 1FF76 6 1
+text0 0 1FF92 1FF92 2A 1
+text1 0 1FF7C 1FF7C 16 1
 text2 0 1FFBC 1FFBC 40 1
-text3 0 1FF76 1FF76 6 1
-cstackCOMRAM 1 501 501 6 1
+text3 0 1FF70 1FF70 6 1
+cstackCOMRAM 1 501 501 7 1
 init 0 1FFFC 1FFFC 4 1
 reset_vec 0 0 0 4 1
 # %NOTES Section
