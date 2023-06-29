@@ -1,4 +1,3 @@
-
 /*
  * Includes
  */
@@ -23,7 +22,7 @@ char msj[16];
  * Macros
  */
 
-#define Led_Sys    3
+#define Led_Sys_Gpio    3
 #define Led_Sys_Tris    TRISF
 #define Led_Sys_Lat     LATF
 #define Led_Sys_Ansel   ANSELF
@@ -39,7 +38,8 @@ void Init_ADCC_Module(void);
 /*
  * Main
  */
-int main(void) {
+int main(void) 
+{
     /* Configurar el Oscilador Interno */
     Init_Internal_Oscillator();
     /* Configurar el ADC */
@@ -63,7 +63,7 @@ int main(void) {
         sprintf(msj, "V=%-3u%%", val_percent);
         FM_Lcd_Set_Cursor(ROW_2, COL_1);
         FM_Lcd_Send_String(msj);
-        Led_Sys_Lat ^= (1 << Led_Sys);
+        Led_Sys_Lat ^= (1 << Led_Sys_Gpio);
         __delay_ms(100);
     }
     return (EXIT_SUCCESS);
@@ -73,7 +73,8 @@ int main(void) {
  * Definicion de funciones
  */
 
-void Init_ADCC_Module(void) {
+void Init_ADCC_Module(void) 
+{
     /* Limpiar los registros */
     ADCON0 = 0x00;
     ADCON1 = 0x00;
@@ -117,7 +118,7 @@ void Init_ADCC_Module(void) {
     /* Elegimos los voltajes de referencia */
     ADREF &= ~(1 << _ADREF_NREF_POSITION); // NREF a VSS
     ADREF &= ~(0b11 << _ADREF_PREF0_POSITION); // PREF a VDD
-
+    
     /* Elegimos el canal de conversión del ADCC */
     ADPCH = 0x00; // Elegimos la entrada analógica 0 del puerto A
 
@@ -136,14 +137,16 @@ void Init_ADCC_Module(void) {
     ADCON0 |= (1 << _ADCON0_ON_POSITION); // Módulo ADC prendido
 }
 
-void Init_Gpio_System(void) {
+void Init_Gpio_System(void) 
+{
     /* Configurar el GPIO */
-    Led_Sys_Tris &= ~(1 << Led_Sys);
-    Led_Sys_Ansel &= ~(1 << Led_Sys);
-    Led_Sys_Lat &= ~(1 << Led_Sys);
+    Led_Sys_Tris &= ~(1 << Led_Sys_Gpio);
+    Led_Sys_Ansel &= ~(1 << Led_Sys_Gpio);
+    Led_Sys_Lat &= ~(1 << Led_Sys_Gpio);
 }
 
-void Init_Internal_Oscillator(void) {
+void Init_Internal_Oscillator(void) 
+{
     /* INTOSC a 8mhz */
     _clock_hfintosc_params_t my_clock;
     my_clock.frecuencia_clock = freq_clk_16MHZ;
