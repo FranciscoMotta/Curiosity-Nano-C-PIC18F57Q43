@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"72 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"88 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [e E17027 . `uc
 ROW_1 0
 ROW_2 1
@@ -25,7 +25,7 @@ COL_13 12
 COL_14 13
 COL_15 14
 ]
-"242
+"275
 [e E16998 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -167,21 +167,21 @@ COL_15 14
 [v _FM_Lcd_Send_String FM_Lcd_Send_String `(v  1 e 1 0 ]
 "88
 [v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
-"35 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
-"67
+"38 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"84
 [v _main main `(i  1 e 2 0 ]
-"95
+"125
 [v _System_Init System_Init `(v  1 e 1 0 ]
-"111
+"140
 [v _Init_Timer0_As_Timer Init_Timer0_As_Timer `(v  1 e 1 0 ]
-"148
+"176
 [v _Init_Interrupts Init_Interrupts `(v  1 e 1 0 ]
-"167
+"194
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]
-"231
+"257
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
-"239
+"273
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
@@ -193,11 +193,11 @@ COL_15 14
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-[s S224 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S198 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S227 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S201 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -205,18 +205,18 @@ COL_15 14
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S235 . 1 `S224 1 . 1 0 `S227 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES235  1 e 1 @173 ]
-[s S250 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S209 . 1 `S198 1 . 1 0 `S201 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES209  1 e 1 @173 ]
+[s S224 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S252 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S226 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S257 . 1 `S250 1 . 1 0 `S252 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES257  1 e 1 @177 ]
+[u S231 . 1 `S224 1 . 1 0 `S226 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES231  1 e 1 @177 ]
 "23303
 [v _TMR0 TMR0 `VEuc  1 e 1 @792 ]
 "23690
@@ -246,6 +246,8 @@ COL_15 14
 [v _ADCLK ADCLK `VEuc  1 e 1 @1018 ]
 "39116
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39612
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
 "41149
 [v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
 "45816
@@ -256,52 +258,54 @@ COL_15 14
 [v _PIR1 PIR1 `VEuc  1 e 1 @1199 ]
 "46797
 [v _PIR3 PIR3 `VEuc  1 e 1 @1201 ]
-[s S24 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
-`uc 1 SPI1TXIF 1 0 :1:1 
-`uc 1 SPI1IF 1 0 :1:2 
-`uc 1 TMR2IF 1 0 :1:3 
-`uc 1 TMR1IF 1 0 :1:4 
-`uc 1 TMR1GIF 1 0 :1:5 
-`uc 1 CCP1IF 1 0 :1:6 
-`uc 1 TMR0IF 1 0 :1:7 
-]
-"46814
-[u S33 . 1 `S24 1 . 1 0 ]
-"46814
-"46814
-[v _PIR3bits PIR3bits `VES33  1 e 1 @1201 ]
 "47792
 [v _LATF LATF `VEuc  1 e 1 @1219 ]
 "47854
 [v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"47916
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "48134
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
 "48544
 [v _INTCON0 INTCON0 `VEuc  1 e 1 @1238 ]
-"19 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"20 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _msj msj `[16]uc  1 e 16 0 ]
-"20
-[v _timer0_1sec_cont timer0_1sec_cont `us  1 e 2 0 ]
-"67
+"21
+[v _led_counter led_counter `uo  1 e 8 0 ]
+"22
+[v _rpm_counter rpm_counter `uo  1 e 8 0 ]
+"23
+[v _print_counter print_counter `us  1 e 2 0 ]
+"25
+[v _print_flag print_flag `a  1 e 1 0 ]
+"27
+[v _contador_ms contador_ms `VEus  1 e 2 0 ]
+"28
+[v _indicador_ms indicador_ms `VEus  1 e 2 0 ]
+"29
+[v _sample_counter sample_counter `VEus  1 e 2 0 ]
+"30
+[v _average_ms average_ms `VEus  1 e 2 0 ]
+"84
 [v _main main `(i  1 e 2 0 ]
 {
-"81
-[v main@adc_val adc_val `us  1 a 2 10 ]
-"82
-[v main@val_percent val_percent `uc  1 a 1 12 ]
-"89
+"96
+[v main@adc_val adc_val `us  1 a 2 91 ]
+"97
+[v main@val_percent val_percent `uc  1 a 1 93 ]
+"119
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S762 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S740 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S762  1 a 6 2 ]
+[v sprintf@f f `S740  1 a 6 10 ]
 "12
-[v sprintf@ap ap `[1]*.39v  1 a 2 0 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 8 ]
 "9
-[v sprintf@s s `*.39uc  1 p 2 89 ]
-[v sprintf@fmt fmt `*.32Cuc  1 p 2 91 ]
+[v sprintf@s s `*.39uc  1 p 2 0 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 2 ]
 "23
 } 0
 "1390 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
@@ -309,9 +313,9 @@ COL_15 14
 {
 "1393
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 87 ]
-[s S788 _IO_FILE 0 ]
+[s S766 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S788  1 p 2 81 ]
+[v vfprintf@fp fp `*.39S766  1 p 2 81 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 83 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 85 ]
 "1404
@@ -323,9 +327,9 @@ COL_15 14
 [v vfpfcnvrt@llu llu `uo  1 a 8 69 ]
 "695
 [v vfpfcnvrt@done done `i  1 a 2 77 ]
-[s S788 _IO_FILE 0 ]
+[s S766 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S788  1 p 2 59 ]
+[v vfpfcnvrt@fp fp `*.39S766  1 p 2 59 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 61 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 63 ]
 "1387
@@ -339,9 +343,9 @@ COL_15 14
 [v utoa@i i `i  1 a 2 57 ]
 [v utoa@w w `i  1 a 2 47 ]
 [v utoa@p p `i  1 a 2 45 ]
-[s S788 _IO_FILE 0 ]
+[s S766 _IO_FILE 0 ]
 "615
-[v utoa@fp fp `*.39S788  1 p 2 27 ]
+[v utoa@fp fp `*.39S766  1 p 2 27 ]
 [v utoa@d d `uo  1 p 8 29 ]
 "641
 } 0
@@ -351,9 +355,9 @@ COL_15 14
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S788 _IO_FILE 0 ]
+[s S766 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S788  1 p 2 16 ]
+[v pad@fp fp `*.39S766  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "95
@@ -376,16 +380,16 @@ COL_15 14
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[s S762 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S762  1 p 2 11 ]
+[s S740 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S740  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S762 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S762  1 p 2 2 ]
+[s S740 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S740  1 p 2 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
@@ -475,17 +479,17 @@ COL_15 14
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S627 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S605 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S632 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S635 . 4 `l 1 i 4 0 `d 1 f 4 0 `S627 1 fAsBytes 4 0 `S632 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S635  1 a 4 58 ]
+[s S610 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S613 . 4 `l 1 i 4 0 `d 1 f 4 0 `S605 1 fAsBytes 4 0 `S610 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S613  1 a 4 58 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 52 ]
-[s S703 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S681 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S706 . 2 `s 1 i 2 0 `us 1 n 2 0 `S703 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S706  1 a 2 62 ]
+[u S684 . 2 `s 1 i 2 0 `us 1 n 2 0 `S681 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S684  1 a 2 62 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 57 ]
 "11
@@ -517,45 +521,45 @@ COL_15 14
 [v ___fldiv@a a `d  1 p 4 18 ]
 "185
 } 0
-"95 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"125 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _System_Init System_Init `(v  1 e 1 0 ]
 {
-"109
+"138
 } 0
-"111
+"140
 [v _Init_Timer0_As_Timer Init_Timer0_As_Timer `(v  1 e 1 0 ]
 {
-"146
+"174
 } 0
-"148
+"176
 [v _Init_Interrupts Init_Interrupts `(v  1 e 1 0 ]
 {
-"165
+"192
 } 0
-"239
+"273
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S159 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
-"242
-[v Init_Internal_Oscillator@my_clock my_clock `S159  1 a 2 3 ]
-"246
+[s S134 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
+"275
+[v Init_Internal_Oscillator@my_clock my_clock `S134  1 a 2 3 ]
+"279
 } 0
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S159 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S159  1 p 2 0 ]
+[s S134 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S134  1 p 2 0 ]
 "13
 } 0
-"231 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"257 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
-"237
+"271
 } 0
-"167
+"194
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]
 {
-"229
+"255
 } 0
 "88 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
 [v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
@@ -620,8 +624,8 @@ COL_15 14
 [v FM_Lcd_Send_Nibble@byte_to_send byte_to_send `uc  1 a 1 1 ]
 "41
 } 0
-"35 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+"38 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"50
+"68
 } 0

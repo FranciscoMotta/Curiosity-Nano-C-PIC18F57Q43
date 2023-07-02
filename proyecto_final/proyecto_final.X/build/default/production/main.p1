@@ -1,32 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( 31 8 ) ]
-"46803 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46803:     struct {
-[s S2198 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2198 . SPI1RXIF SPI1TXIF SPI1IF TMR2IF TMR1IF TMR1GIF CCP1IF TMR0IF ]
-"46802
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46802: typedef union {
-[u S2197 `S2198 1 ]
-[n S2197 . . ]
-"46814
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46814: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x4B1)));
-[v _PIR3bits `VS2197 ~T0 @X0 0 e@1201 ]
+"46797 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46797: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
+[v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
 "47792
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
 [v _LATF `Vuc ~T0 @X0 0 e@1219 ]
 "23303
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23303: extern volatile unsigned char TMR0 __attribute__((address(0x318)));
 [v _TMR0 `Vuc ~T0 @X0 0 e@792 ]
-"46797
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46797: extern volatile unsigned char PIR3 __attribute__((address(0x4B1)));
-[v _PIR3 `Vuc ~T0 @X0 0 e@1201 ]
+"46690
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46690: extern volatile unsigned char PIR1 __attribute__((address(0x4AF)));
+[v _PIR1 `Vuc ~T0 @X0 0 e@1199 ]
 [p mainexit ]
-"56 main.c
-[; ;main.c: 56: void System_Init (void);
+"74 main.c
+[; ;main.c: 74: void System_Init(void);
 [v _System_Init `(v ~T0 @X0 0 ef ]
-"72
-[; ;main.c: 72:     FM_Lcd_Set_Cursor(ROW_1, COL_3);
+"88
+[; ;main.c: 88:     FM_Lcd_Set_Cursor(ROW_1, COL_3);
 [c E17027 0 1 .. ]
 [n E17027 . ROW_1 ROW_2  ]
 [c E17031 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
@@ -46,26 +38,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37426
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 37426: extern volatile unsigned char ADRESL __attribute__((address(0x3EA)));
 [v _ADRESL `Vuc ~T0 @X0 0 e@1002 ]
+"48544
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48544: extern volatile unsigned char INTCON0 __attribute__((address(0x4D6)));
+[v _INTCON0 `Vuc ~T0 @X0 0 e@1238 ]
 "113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-[v F183 `(v ~T0 @X0 1 tf1`ul ]
-"12 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\builtins.h
-[v __delay `JF183 ~T0 @X0 0 e ]
-[p i __delay ]
-"58 main.c
-[; ;main.c: 58: void Init_Internal_Oscillator(void);
+"75 main.c
+[; ;main.c: 75: void Init_Internal_Oscillator(void);
 [v _Init_Internal_Oscillator `(v ~T0 @X0 0 ef ]
-"62
-[; ;main.c: 62: void Init_Interrupts (void);
+"79
+[; ;main.c: 79: void Init_Interrupts(void);
 [v _Init_Interrupts `(v ~T0 @X0 0 ef ]
-"61
-[; ;main.c: 61: void Init_Timer0_As_Timer (void);
+"78
+[; ;main.c: 78: void Init_Timer0_As_Timer(void);
 [v _Init_Timer0_As_Timer `(v ~T0 @X0 0 ef ]
-"60
-[; ;main.c: 60: void Init_ADCC_Module(void);
+"77
+[; ;main.c: 77: void Init_ADCC_Module(void);
 [v _Init_ADCC_Module `(v ~T0 @X0 0 ef ]
-"59
-[; ;main.c: 59: void Init_Gpio_System(void);
+"76
+[; ;main.c: 76: void Init_Gpio_System(void);
 [v _Init_Gpio_System `(v ~T0 @X0 0 ef ]
 "113 ./FM_Lcd_Easy.h
 [; ;./FM_Lcd_Easy.h: 113: void FM_Lcd_Easy_Init (void);
@@ -76,12 +67,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23788
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23788: extern volatile unsigned char T0CON1 __attribute__((address(0x31B)));
 [v _T0CON1 `Vuc ~T0 @X0 0 e@795 ]
-"48544
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48544: extern volatile unsigned char INTCON0 __attribute__((address(0x4D6)));
-[v _INTCON0 `Vuc ~T0 @X0 0 e@1238 ]
-"46690
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 46690: extern volatile unsigned char PIR1 __attribute__((address(0x4AF)));
-[v _PIR1 `Vuc ~T0 @X0 0 e@1199 ]
 "45816
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 45816: extern volatile unsigned char PIE1 __attribute__((address(0x49F)));
 [v _PIE1 `Vuc ~T0 @X0 0 e@1183 ]
@@ -121,8 +106,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41149
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 41149: extern volatile unsigned char ANSELF __attribute__((address(0x428)));
 [v _ANSELF `Vuc ~T0 @X0 0 e@1064 ]
-"242 main.c
-[; ;main.c: 242:     _clock_hfintosc_params_t my_clock;
+"39612
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 39612: extern volatile unsigned char ANSELB __attribute__((address(0x408)));
+[v _ANSELB `Vuc ~T0 @X0 0 e@1032 ]
+"47916
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47916: extern volatile unsigned char TRISB __attribute__((address(0x4C7)));
+[v _TRISB `Vuc ~T0 @X0 0 e@1223 ]
+"275 main.c
+[; ;main.c: 275:     _clock_hfintosc_params_t my_clock;
 [c E16998 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E16998 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E17010 0 1 2 3 4 5 6 7 8 .. ]
@@ -2751,344 +2742,458 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRTAPP  =  OFF      ]
 "63
 [p x CP  =  OFF          ]
-"19 main.c
-[; ;main.c: 19: char msj[16];
+"20 main.c
+[; ;main.c: 20: char msj[16];
 [v _msj `uc ~T0 @X0 -> 16 `i e ]
-"20
-[; ;main.c: 20: uint16_t timer0_1sec_cont = 0;
-[v _timer0_1sec_cont `us ~T0 @X0 1 e ]
-[i _timer0_1sec_cont
+"21
+[; ;main.c: 21: uint64_t led_counter = 0;
+[v _led_counter `uo ~T0 @X0 1 e ]
+[i _led_counter
+-> -> -> 0 `i `o `uo
+]
+"22
+[; ;main.c: 22: uint64_t rpm_counter = 0;
+[v _rpm_counter `uo ~T0 @X0 1 e ]
+[i _rpm_counter
+-> -> -> 0 `i `o `uo
+]
+"23
+[; ;main.c: 23: uint16_t print_counter = 0;
+[v _print_counter `us ~T0 @X0 1 e ]
+[i _print_counter
 -> -> 0 `i `us
 ]
-[v $root$_TMR0_ISR `(v ~T0 @X0 0 e ]
-"35
-[; ;main.c: 35: void __attribute__((picinterrupt(("irq(31, 8)")))) TMR0_ISR (void)
-[v _TMR0_ISR `(v ~T1 @X0 1 ef ]
-"36
-[; ;main.c: 36: {
-{
-[e :U _TMR0_ISR ]
-[f ]
-"37
-[; ;main.c: 37:     if (PIR3bits.TMR0IF)
-[e $ ! != -> . . _PIR3bits 0 7 `i -> 0 `i 2359  ]
+"25
+[; ;main.c: 25: _Bool print_flag = 0;
+[v _print_flag `a ~T0 @X0 1 e ]
+[i _print_flag
+-> -> 0 `i `a
+]
+"27
+[; ;main.c: 27: volatile uint16_t contador_ms = 0;
+[v _contador_ms `Vus ~T0 @X0 1 e ]
+[i _contador_ms
+-> -> 0 `i `us
+]
+"28
+[; ;main.c: 28: volatile uint16_t indicador_ms = 0;
+[v _indicador_ms `Vus ~T0 @X0 1 e ]
+[i _indicador_ms
+-> -> 0 `i `us
+]
+"29
+[; ;main.c: 29: volatile uint16_t sample_counter = 0;
+[v _sample_counter `Vus ~T0 @X0 1 e ]
+[i _sample_counter
+-> -> 0 `i `us
+]
+"30
+[; ;main.c: 30: volatile uint16_t average_ms = 0;
+[v _average_ms `Vus ~T0 @X0 1 e ]
+[i _average_ms
+-> -> 0 `i `us
+]
+[v $root$_ISR `(v ~T0 @X0 0 e ]
 "38
-[; ;main.c: 38:     {
+[; ;main.c: 38: void __attribute__((picinterrupt(("irq(31, 8)")))) ISR(void) {
+[v _ISR `(v ~T1 @X0 1 ef ]
 {
+[e :U _ISR ]
+[f ]
 "40
-[; ;main.c: 40:         if(timer0_1sec_cont++ == 500)
-[e $ ! == -> ++ _timer0_1sec_cont -> -> 1 `i `us `ui -> -> 500 `i `ui 2360  ]
-"41
-[; ;main.c: 41:         {
+[; ;main.c: 40:     if (PIR3 & (1 << 0x7)) {
+[e $ ! != & -> _PIR3 `i << -> 1 `i -> 7 `i -> 0 `i 2359  ]
 {
 "42
-[; ;main.c: 42:             timer0_1sec_cont = 0;
-[e = _timer0_1sec_cont -> -> 0 `i `us ]
+[; ;main.c: 42:         led_counter++;
+[e ++ _led_counter -> -> -> 1 `i `o `uo ]
 "43
-[; ;main.c: 43:             LATF ^= (1 << 3);
-[e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+[; ;main.c: 43:         rpm_counter++;
+[e ++ _rpm_counter -> -> -> 1 `i `o `uo ]
 "44
-[; ;main.c: 44:         }
+[; ;main.c: 44:         print_counter++;
+[e ++ _print_counter -> -> 1 `i `us ]
+"45
+[; ;main.c: 45:         if(print_counter >= 50)
+[e $ ! >= -> _print_counter `ui -> -> 50 `i `ui 2360  ]
+"46
+[; ;main.c: 46:         {
+{
+"47
+[; ;main.c: 47:             print_flag = !print_flag;
+[e = _print_flag -> -> ! != -> _print_flag `i -> 0 `i `i `a ]
+"48
+[; ;main.c: 48:             print_counter = 0;
+[e = _print_counter -> -> 0 `i `us ]
+"49
+[; ;main.c: 49:         }
 }
 [e :U 2360 ]
-"46
-[; ;main.c: 46:         TMR0 = 6;
+"50
+[; ;main.c: 50:         if (led_counter >= 500) {
+[e $ ! >= _led_counter -> -> -> 500 `i `o `uo 2361  ]
+{
+"51
+[; ;main.c: 51:             LATF ^= (1 << 3);
+[e =^ _LATF -> << -> 1 `i -> 3 `i `Vuc ]
+"52
+[; ;main.c: 52:             led_counter = 0;
+[e = _led_counter -> -> -> 0 `i `o `uo ]
+"53
+[; ;main.c: 53:         }
+}
+[e :U 2361 ]
+"55
+[; ;main.c: 55:         TMR0 = 6;
 [e = _TMR0 -> -> 6 `i `uc ]
-"48
-[; ;main.c: 48:         PIR3 &= ~(1 << 0x7);
+"57
+[; ;main.c: 57:         PIR3 &= ~(1 << 0x7);
 [e =& _PIR3 -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"49
-[; ;main.c: 49:     }
+"58
+[; ;main.c: 58:     }
 }
 [e :U 2359 ]
-"50
-[; ;main.c: 50: }
+"60
+[; ;main.c: 60:     if(PIR1 & (1 << 0x0))
+[e $ ! != & -> _PIR1 `i << -> 1 `i -> 0 `i -> 0 `i 2362  ]
+"61
+[; ;main.c: 61:     {
+{
+"63
+[; ;main.c: 63:         contador_ms = rpm_counter;
+[e = _contador_ms -> _rpm_counter `us ]
+"64
+[; ;main.c: 64:         rpm_counter = 0;
+[e = _rpm_counter -> -> -> 0 `i `o `uo ]
+"66
+[; ;main.c: 66:         PIR1 &= ~(1 << 0x0);
+[e =& _PIR1 -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"67
+[; ;main.c: 67:     }
+}
+[e :U 2362 ]
+"68
+[; ;main.c: 68: }
 [e :UE 2358 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"67
-[; ;main.c: 67: int main(void)
+"84
+[; ;main.c: 84: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
-"68
-[; ;main.c: 68: {
 {
 [e :U _main ]
 [f ]
-"70
-[; ;main.c: 70:     System_Init();
+"86
+[; ;main.c: 86:     System_Init();
 [e ( _System_Init ..  ]
-"72
-[; ;main.c: 72:     FM_Lcd_Set_Cursor(ROW_1, COL_3);
+"88
+[; ;main.c: 88:     FM_Lcd_Set_Cursor(ROW_1, COL_3);
 [e ( _FM_Lcd_Set_Cursor (2 , . `E17027 0 . `E17031 2 ]
-"73
-[; ;main.c: 73:     FM_Lcd_Send_String("PF MOTOR RPM");
+"89
+[; ;main.c: 89:     FM_Lcd_Send_String("PF MOTOR RPM");
 [e ( _FM_Lcd_Send_String (1 :s 1C ]
-"75
-[; ;main.c: 75:     while (1)
-[e :U 2363 ]
-"76
-[; ;main.c: 76:     {
-{
-"78
-[; ;main.c: 78:         ADCON0 |= (1 << 0x0);
-[e =| _ADCON0 -> << -> 1 `i -> 0 `i `Vuc ]
-"80
-[; ;main.c: 80:         while(ADCON0 & (1 << 0x0));
-[e $U 2365  ]
-[e :U 2366 ]
+"91
+[; ;main.c: 91:     while (1) {
 [e :U 2365 ]
-[e $ != & -> _ADCON0 `i << -> 1 `i -> 0 `i -> 0 `i 2366  ]
+{
+"93
+[; ;main.c: 93:         ADCON0 |= (1 << 0x0);
+[e =| _ADCON0 -> << -> 1 `i -> 0 `i `Vuc ]
+"95
+[; ;main.c: 95:         while (ADCON0 & (1 << 0x0));
+[e $U 2367  ]
+[e :U 2368 ]
 [e :U 2367 ]
-"81
-[; ;main.c: 81:         uint16_t adc_val = (ADRESH << 8) | ADRESL;
+[e $ != & -> _ADCON0 `i << -> 1 `i -> 0 `i -> 0 `i 2368  ]
+[e :U 2369 ]
+"96
+[; ;main.c: 96:         uint16_t adc_val = (ADRESH << 8) | ADRESL;
 [v _adc_val `us ~T0 @X0 1 a ]
 [e = _adc_val -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-"82
-[; ;main.c: 82:         uint8_t val_percent = ((float)adc_val / 4095.0) * 100.0;
+"97
+[; ;main.c: 97:         uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
 [v _val_percent `uc ~T0 @X0 1 a ]
 [e = _val_percent -> * / -> -> _adc_val `f `d .4095.0 .100.0 `uc ]
-"83
-[; ;main.c: 83:         sprintf(msj, "V=%-3u%%", val_percent);
-[e ( _sprintf (1 , (. , &U _msj :s 2C -> _val_percent `i ]
-"84
-[; ;main.c: 84:         FM_Lcd_Set_Cursor(ROW_2, COL_1);
+"99
+[; ;main.c: 99:         INTCON0 &= ~(1 << 0x7);
+[e =& _INTCON0 -> ~ << -> 1 `i -> 7 `i `Vuc ]
+"100
+[; ;main.c: 100:         average_ms += contador_ms;
+[e =+ _average_ms -> _contador_ms `Vus ]
+"101
+[; ;main.c: 101:         sample_counter++;
+[e ++ _sample_counter -> -> 1 `i `Vus ]
+"103
+[; ;main.c: 103:         INTCON0 |= (1 << 0x7);
+[e =| _INTCON0 -> << -> 1 `i -> 7 `i `Vuc ]
+"104
+[; ;main.c: 104:         if(sample_counter >= 4)
+[e $ ! >= -> _sample_counter `ui -> -> 4 `i `ui 2370  ]
+"105
+[; ;main.c: 105:         {
+{
+"106
+[; ;main.c: 106:             indicador_ms = average_ms / 4;
+[e = _indicador_ms -> / -> _average_ms `ui -> -> 4 `i `ui `us ]
+"107
+[; ;main.c: 107:             sample_counter = 0;
+[e = _sample_counter -> -> 0 `i `us ]
+"108
+[; ;main.c: 108:             average_ms = 0;
+[e = _average_ms -> -> 0 `i `us ]
+"109
+[; ;main.c: 109:         }
+}
+[e :U 2370 ]
+"111
+[; ;main.c: 111:         if(print_flag)
+[e $ ! != -> _print_flag `i -> 0 `i 2371  ]
+"112
+[; ;main.c: 112:         {
+{
+"113
+[; ;main.c: 113:             sprintf(msj, "V=%-3u%% T=%-3u", val_percent, indicador_ms);
+[e ( _sprintf (1 , , (. , &U _msj :s 2C -> _val_percent `i -> _indicador_ms `ui ]
+"114
+[; ;main.c: 114:             FM_Lcd_Set_Cursor(ROW_2, COL_1);
 [e ( _FM_Lcd_Set_Cursor (2 , . `E17027 1 . `E17031 0 ]
-"85
-[; ;main.c: 85:         FM_Lcd_Send_String(msj);
+"115
+[; ;main.c: 115:             FM_Lcd_Send_String(msj);
 [e ( _FM_Lcd_Send_String (1 &U _msj ]
-"86
-[; ;main.c: 86:         _delay((unsigned long)((100)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
-"87
-[; ;main.c: 87:     }
+"116
+[; ;main.c: 116:         }
 }
-[e :U 2362 ]
-[e $U 2363  ]
+[e :U 2371 ]
+"117
+[; ;main.c: 117:     }
+}
 [e :U 2364 ]
-"88
-[; ;main.c: 88:     return (0);
+[e $U 2365  ]
+[e :U 2366 ]
+"118
+[; ;main.c: 118:     return (0);
 [e ) -> 0 `i ]
-[e $UE 2361  ]
-"89
-[; ;main.c: 89: }
-[e :UE 2361 ]
+[e $UE 2363  ]
+"119
+[; ;main.c: 119: }
+[e :UE 2363 ]
 }
-"95
-[; ;main.c: 95: void System_Init (void)
+"125
+[; ;main.c: 125: void System_Init(void) {
 [v _System_Init `(v ~T0 @X0 1 ef ]
-"96
-[; ;main.c: 96: {
 {
 [e :U _System_Init ]
 [f ]
-"98
-[; ;main.c: 98:     Init_Internal_Oscillator();
+"127
+[; ;main.c: 127:     Init_Internal_Oscillator();
 [e ( _Init_Internal_Oscillator ..  ]
-"100
-[; ;main.c: 100:     Init_Interrupts();
+"129
+[; ;main.c: 129:     Init_Interrupts();
 [e ( _Init_Interrupts ..  ]
-"102
-[; ;main.c: 102:     Init_Timer0_As_Timer();
+"131
+[; ;main.c: 131:     Init_Timer0_As_Timer();
 [e ( _Init_Timer0_As_Timer ..  ]
-"104
-[; ;main.c: 104:     Init_ADCC_Module();
+"133
+[; ;main.c: 133:     Init_ADCC_Module();
 [e ( _Init_ADCC_Module ..  ]
-"106
-[; ;main.c: 106:     Init_Gpio_System();
+"135
+[; ;main.c: 135:     Init_Gpio_System();
 [e ( _Init_Gpio_System ..  ]
-"108
-[; ;main.c: 108:     FM_Lcd_Easy_Init();
+"137
+[; ;main.c: 137:     FM_Lcd_Easy_Init();
 [e ( _FM_Lcd_Easy_Init ..  ]
-"109
-[; ;main.c: 109: }
-[e :UE 2368 ]
+"138
+[; ;main.c: 138: }
+[e :UE 2372 ]
 }
-"111
-[; ;main.c: 111: void Init_Timer0_As_Timer (void)
+"140
+[; ;main.c: 140: void Init_Timer0_As_Timer(void) {
 [v _Init_Timer0_As_Timer `(v ~T0 @X0 1 ef ]
-"112
-[; ;main.c: 112: {
 {
 [e :U _Init_Timer0_As_Timer ]
 [f ]
-"114
-[; ;main.c: 114:     T0CON0 = 0x00;
-[e = _T0CON0 -> -> 0 `i `uc ]
-"115
-[; ;main.c: 115:     T0CON1 = 0x00;
-[e = _T0CON1 -> -> 0 `i `uc ]
-"118
-[; ;main.c: 118:     T0CON0 &= ~(1 << 0x7);
-[e =& _T0CON0 -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"119
-[; ;main.c: 119:     T0CON0 &= ~(1 << 0x4);
-[e =& _T0CON0 -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"120
-[; ;main.c: 120:     T0CON0 |= (0b0000 << 0x0);
-[e =| _T0CON0 -> << -> 0 `i -> 0 `i `Vuc ]
-"122
-[; ;main.c: 122:     T0CON1 |= (0b010 << 0x5);
-[e =| _T0CON1 -> << -> 2 `i -> 5 `i `Vuc ]
-"123
-[; ;main.c: 123:     T0CON1 |= (1 << 0x4);
-[e =| _T0CON1 -> << -> 1 `i -> 4 `i `Vuc ]
-"124
-[; ;main.c: 124:     T0CON1 |= (0b0100 << 0x0);
-[e =| _T0CON1 -> << -> 4 `i -> 0 `i `Vuc ]
 "142
-[; ;main.c: 142:     TMR0 = 6;
-[e = _TMR0 -> -> 6 `i `uc ]
-"145
-[; ;main.c: 145:     T0CON0 |= (1 << 0x7);
-[e =| _T0CON0 -> << -> 1 `i -> 7 `i `Vuc ]
+[; ;main.c: 142:     T0CON0 = 0x00;
+[e = _T0CON0 -> -> 0 `i `uc ]
+"143
+[; ;main.c: 143:     T0CON1 = 0x00;
+[e = _T0CON1 -> -> 0 `i `uc ]
 "146
-[; ;main.c: 146: }
-[e :UE 2369 ]
-}
+[; ;main.c: 146:     T0CON0 &= ~(1 << 0x7);
+[e =& _T0CON0 -> ~ << -> 1 `i -> 7 `i `Vuc ]
+"147
+[; ;main.c: 147:     T0CON0 &= ~(1 << 0x4);
+[e =& _T0CON0 -> ~ << -> 1 `i -> 4 `i `Vuc ]
 "148
-[; ;main.c: 148: void Init_Interrupts (void)
+[; ;main.c: 148:     T0CON0 |= (0b0000 << 0x0);
+[e =| _T0CON0 -> << -> 0 `i -> 0 `i `Vuc ]
+"150
+[; ;main.c: 150:     T0CON1 |= (0b010 << 0x5);
+[e =| _T0CON1 -> << -> 2 `i -> 5 `i `Vuc ]
+"151
+[; ;main.c: 151:     T0CON1 |= (1 << 0x4);
+[e =| _T0CON1 -> << -> 1 `i -> 4 `i `Vuc ]
+"152
+[; ;main.c: 152:     T0CON1 |= (0b0100 << 0x0);
+[e =| _T0CON1 -> << -> 4 `i -> 0 `i `Vuc ]
+"170
+[; ;main.c: 170:     TMR0 = 6;
+[e = _TMR0 -> -> 6 `i `uc ]
+"173
+[; ;main.c: 173:     T0CON0 |= (1 << 0x7);
+[e =| _T0CON0 -> << -> 1 `i -> 7 `i `Vuc ]
+"174
+[; ;main.c: 174: }
+[e :UE 2373 ]
+}
+"176
+[; ;main.c: 176: void Init_Interrupts(void) {
 [v _Init_Interrupts `(v ~T0 @X0 1 ef ]
-"149
-[; ;main.c: 149: {
 {
 [e :U _Init_Interrupts ]
 [f ]
-"151
-[; ;main.c: 151:     INTCON0 = 0x00;
+"178
+[; ;main.c: 178:     INTCON0 = 0x00;
 [e = _INTCON0 -> -> 0 `i `uc ]
-"154
-[; ;main.c: 154:     INTCON0 |= (1 << 0x7);
+"181
+[; ;main.c: 181:     INTCON0 |= (1 << 0x7);
 [e =| _INTCON0 -> << -> 1 `i -> 7 `i `Vuc ]
-"155
-[; ;main.c: 155:     INTCON0 &= ~(1 << 0x5);
+"182
+[; ;main.c: 182:     INTCON0 &= ~(1 << 0x5);
 [e =& _INTCON0 -> ~ << -> 1 `i -> 5 `i `Vuc ]
-"158
-[; ;main.c: 158:     PIR1 &= ~(1 << 0x0);
+"185
+[; ;main.c: 185:     PIR1 &= ~(1 << 0x0);
 [e =& _PIR1 -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"159
-[; ;main.c: 159:     PIE1 |= (1 << 0x0);
+"186
+[; ;main.c: 186:     PIE1 |= (1 << 0x0);
 [e =| _PIE1 -> << -> 1 `i -> 0 `i `Vuc ]
-"160
-[; ;main.c: 160:     INTCON0 |= (1 << 0x0);
-[e =| _INTCON0 -> << -> 1 `i -> 0 `i `Vuc ]
-"163
-[; ;main.c: 163:     PIR3 &= ~(1 << 0x7);
+"187
+[; ;main.c: 187:     INTCON0 &= ~(1 << 0x0);
+[e =& _INTCON0 -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"190
+[; ;main.c: 190:     PIR3 &= ~(1 << 0x7);
 [e =& _PIR3 -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"164
-[; ;main.c: 164:     PIE3 |= (1 << 0x7);
+"191
+[; ;main.c: 191:     PIE3 |= (1 << 0x7);
 [e =| _PIE3 -> << -> 1 `i -> 7 `i `Vuc ]
-"165
-[; ;main.c: 165: }
-[e :UE 2370 ]
+"192
+[; ;main.c: 192: }
+[e :UE 2374 ]
 }
-"167
-[; ;main.c: 167: void Init_ADCC_Module(void)
+"194
+[; ;main.c: 194: void Init_ADCC_Module(void) {
 [v _Init_ADCC_Module `(v ~T0 @X0 1 ef ]
-"168
-[; ;main.c: 168: {
 {
 [e :U _Init_ADCC_Module ]
 [f ]
-"170
-[; ;main.c: 170:     ADCON0 = 0x00;
+"196
+[; ;main.c: 196:     ADCON0 = 0x00;
 [e = _ADCON0 -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:     ADCON1 = 0x00;
+"197
+[; ;main.c: 197:     ADCON1 = 0x00;
 [e = _ADCON1 -> -> 0 `i `uc ]
-"172
-[; ;main.c: 172:     ADCON2 = 0x00;
+"198
+[; ;main.c: 198:     ADCON2 = 0x00;
 [e = _ADCON2 -> -> 0 `i `uc ]
-"175
-[; ;main.c: 175:     ADCON0 &= ~(1 << 0x7);
+"201
+[; ;main.c: 201:     ADCON0 &= ~(1 << 0x7);
 [e =& _ADCON0 -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"176
-[; ;main.c: 176:     ADCON0 &= ~(1 << 0x6);
+"202
+[; ;main.c: 202:     ADCON0 &= ~(1 << 0x6);
 [e =& _ADCON0 -> ~ << -> 1 `i -> 6 `i `Vuc ]
-"177
-[; ;main.c: 177:     ADCON0 &= ~(1 << 0x4);
-[e =& _ADCON0 -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"178
-[; ;main.c: 178:     ADCON0 &= ~(1 << 0x0);
-[e =& _ADCON0 -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"180
-[; ;main.c: 180:     ADCLK = 0x01;
-[e = _ADCLK -> -> 1 `i `uc ]
 "203
-[; ;main.c: 203:     ADCON0 |= (1 << 0x2);
-[e =| _ADCON0 -> << -> 1 `i -> 2 `i `Vuc ]
-"210
-[; ;main.c: 210:     ADREF &= ~(1 << 0x4);
-[e =& _ADREF -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"211
-[; ;main.c: 211:     ADREF &= ~(0b11 << 0x0);
-[e =& _ADREF -> ~ << -> 3 `i -> 0 `i `Vuc ]
-"214
-[; ;main.c: 214:     ADPCH = 0x00;
-[e = _ADPCH -> -> 0 `i `uc ]
-"217
-[; ;main.c: 217:     TRISA |= (1 << 0x0);
-[e =| _TRISA -> << -> 1 `i -> 0 `i `Vuc ]
-"218
-[; ;main.c: 218:     ANSELA |= (1 << 0x0);
-[e =| _ANSELA -> << -> 1 `i -> 0 `i `Vuc ]
-"224
-[; ;main.c: 224:     ADPRE = 0x00;
-[e = _ADPRE -> -> 0 `i `us ]
-"225
-[; ;main.c: 225:     ADACQ = 0x00;
-[e = _ADACQ -> -> 0 `i `us ]
-"228
-[; ;main.c: 228:     ADCON0 |= (1 << 0x7);
-[e =| _ADCON0 -> << -> 1 `i -> 7 `i `Vuc ]
+[; ;main.c: 203:     ADCON0 &= ~(1 << 0x4);
+[e =& _ADCON0 -> ~ << -> 1 `i -> 4 `i `Vuc ]
+"204
+[; ;main.c: 204:     ADCON0 &= ~(1 << 0x0);
+[e =& _ADCON0 -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"206
+[; ;main.c: 206:     ADCLK = 0x01;
+[e = _ADCLK -> -> 1 `i `uc ]
 "229
-[; ;main.c: 229: }
-[e :UE 2371 ]
+[; ;main.c: 229:     ADCON0 |= (1 << 0x2);
+[e =| _ADCON0 -> << -> 1 `i -> 2 `i `Vuc ]
+"236
+[; ;main.c: 236:     ADREF &= ~(1 << 0x4);
+[e =& _ADREF -> ~ << -> 1 `i -> 4 `i `Vuc ]
+"237
+[; ;main.c: 237:     ADREF &= ~(0b11 << 0x0);
+[e =& _ADREF -> ~ << -> 3 `i -> 0 `i `Vuc ]
+"240
+[; ;main.c: 240:     ADPCH = 0x00;
+[e = _ADPCH -> -> 0 `i `uc ]
+"243
+[; ;main.c: 243:     TRISA |= (1 << 0x0);
+[e =| _TRISA -> << -> 1 `i -> 0 `i `Vuc ]
+"244
+[; ;main.c: 244:     ANSELA |= (1 << 0x0);
+[e =| _ANSELA -> << -> 1 `i -> 0 `i `Vuc ]
+"250
+[; ;main.c: 250:     ADPRE = 0x00;
+[e = _ADPRE -> -> 0 `i `us ]
+"251
+[; ;main.c: 251:     ADACQ = 0x00;
+[e = _ADACQ -> -> 0 `i `us ]
+"254
+[; ;main.c: 254:     ADCON0 |= (1 << 0x7);
+[e =| _ADCON0 -> << -> 1 `i -> 7 `i `Vuc ]
+"255
+[; ;main.c: 255: }
+[e :UE 2375 ]
 }
-"231
-[; ;main.c: 231: void Init_Gpio_System(void)
+"257
+[; ;main.c: 257: void Init_Gpio_System(void) {
 [v _Init_Gpio_System `(v ~T0 @X0 1 ef ]
-"232
-[; ;main.c: 232: {
 {
 [e :U _Init_Gpio_System ]
 [f ]
-"234
-[; ;main.c: 234:     TRISF &= ~(1 << 3);
+"260
+[; ;main.c: 260:     TRISF &= ~(1 << 3);
 [e =& _TRISF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"235
-[; ;main.c: 235:     ANSELF &= ~(1 << 3);
+"261
+[; ;main.c: 261:     ANSELF &= ~(1 << 3);
 [e =& _ANSELF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"236
-[; ;main.c: 236:     LATF &= ~(1 << 3);
+"262
+[; ;main.c: 262:     LATF &= ~(1 << 3);
 [e =& _LATF -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"237
-[; ;main.c: 237: }
-[e :UE 2372 ]
+"265
+[; ;main.c: 265:     TRISA |= (1 << 2);
+[e =| _TRISA -> << -> 1 `i -> 2 `i `Vuc ]
+"266
+[; ;main.c: 266:     ANSELA &= ~(1 << 2);
+[e =& _ANSELA -> ~ << -> 1 `i -> 2 `i `Vuc ]
+"269
+[; ;main.c: 269:     ANSELB &= ~(1 << 0);
+[e =& _ANSELB -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"270
+[; ;main.c: 270:     TRISB |= (1 << 0);
+[e =| _TRISB -> << -> 1 `i -> 0 `i `Vuc ]
+"271
+[; ;main.c: 271: }
+[e :UE 2376 ]
 }
-"239
-[; ;main.c: 239: void Init_Internal_Oscillator(void)
+"273
+[; ;main.c: 273: void Init_Internal_Oscillator(void) {
 [v _Init_Internal_Oscillator `(v ~T0 @X0 1 ef ]
-"240
-[; ;main.c: 240: {
 {
 [e :U _Init_Internal_Oscillator ]
 [f ]
-"242
-[; ;main.c: 242:     _clock_hfintosc_params_t my_clock;
+"275
+[; ;main.c: 275:     _clock_hfintosc_params_t my_clock;
 [v _my_clock `S2357 ~T0 @X0 1 a ]
-"243
-[; ;main.c: 243:     my_clock.frecuencia_clock = freq_clk_16MHZ;
+"276
+[; ;main.c: 276:     my_clock.frecuencia_clock = freq_clk_16MHZ;
 [e = . _my_clock 1 . `E17010 5 ]
-"244
-[; ;main.c: 244:     my_clock.divisor_clock = clock_div_1;
+"277
+[; ;main.c: 277:     my_clock.divisor_clock = clock_div_1;
 [e = . _my_clock 0 . `E16998 0 ]
-"245
-[; ;main.c: 245:     FM_Hfintosc_Init(&my_clock);
+"278
+[; ;main.c: 278:     FM_Hfintosc_Init(&my_clock);
 [e ( _FM_Hfintosc_Init (1 &U _my_clock ]
-"246
-[; ;main.c: 246: }
-[e :UE 2373 ]
+"279
+[; ;main.c: 279: }
+[e :UE 2377 ]
 }
 [p f _sprintf 9470984 ]
+[a 2C 86 61 37 45 51 117 37 37 32 84 61 37 45 51 117 0 ]
 [a 1C 80 70 32 77 79 84 79 82 32 82 80 77 0 ]
-[a 2C 86 61 37 45 51 117 37 37 0 ]

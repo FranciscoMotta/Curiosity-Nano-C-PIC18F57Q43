@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>system_config.h</itemPath>
       <itemPath>FM_Lcd_Easy.h</itemPath>
+      <itemPath>project_defines.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

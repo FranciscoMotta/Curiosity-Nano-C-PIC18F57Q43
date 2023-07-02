@@ -38,7 +38,7 @@ volatile uint16_t average_ms = 0;
 void __interrupt(irq(IRQ_TMR0, IRQ_INT0)) ISR(void) {
     /* Timer */
     if (PIR3 & (1 << _PIR3_TMR0IF_POSITION)) {
-        /* C骴igo */
+        /* C贸digo */
         led_counter++;
         rpm_counter++;
         print_counter++;
@@ -59,7 +59,7 @@ void __interrupt(irq(IRQ_TMR0, IRQ_INT0)) ISR(void) {
     /* Int. Ext 0 */
     if(PIR1 & (1 << _PIR1_INT0IF_POSITION))
     {
-        /* C骴igo */
+        /* C贸digo */
         contador_ms = rpm_counter;
         rpm_counter = 0;
         /* Limpiar la bandera */
@@ -82,16 +82,16 @@ void Init_Interrupts(void);
  * Main
  */
 int main(void) {
-    /* Configuraci髇 general */
+    /* Configuraci贸n general */
     System_Init();
     /* Mensaje por el LCD */
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
     /* Bucle principal */
     while (true) {
-        /* Iniciar la conversi髇 */
+        /* Iniciar la conversi贸n */
         ADCON0 |= (1 << _ADCON0_GO_NOT_DONE_POSITION);
-        /* Esperar a que termine la conversi髇 */
+        /* Esperar a que termine la conversi贸n */
         while (ADCON0 & (1 << _ADCON0_GO_NOT_DONE_POSITION));
         uint16_t adc_val = (ADRESH << 8) | ADRESL;
         uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
@@ -181,12 +181,12 @@ void Init_Interrupts(void) {
     INTCON0 |= (1 << _INTCON0_GIE_POSITION); // Enable Ints
     INTCON0 &= ~(1 << _INTCON0_IPEN_POSITION); // Sin Prior
 
-    /* Interrupci髇 externa */
+    /* Interrupci贸n externa */
     PIR1 &= ~(1 << _PIR1_INT0IF_POSITION); // Int0 flag clear
     PIE1 |= (1 << _PIE1_INT0IE_POSITION); // Int0 int enable
     INTCON0 &= ~(1 << _INTCON0_INT0EDG_POSITION); // Falling Edge
 
-    /* Interrupci髇 Timer0 */
+    /* Interrupci贸n Timer0 */
     PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION); // TMR0 flag clear
     PIE3 |= (1 << _PIE3_TMR0IE_POSITION); // TMR0 Int enable
 }
@@ -204,7 +204,7 @@ void Init_ADCC_Module(void) {
     ADCON0 &= ~(1 << _ADCON0_GO_POSITION); // No se inicia la conv.
 
     ADCLK = 0x01; // ADCLK = 1 / FOSC / 4
-    /* La justificaci髇 hace referencia a la como deseamos
+    /* La justificaci贸n hace referencia a la como deseamos
      * colocar los 12 bits del ADC en los registros del 
      * ADRESH y ADRESL, registros de 8 bits que componen
      * el registro ADRES de 16bits
@@ -229,29 +229,29 @@ void Init_ADCC_Module(void) {
     ADCON0 |= (1 << _ADCON0_FM_POSITION); // Right Justify
 
     /* Los registros ADCON1 ADCON2 ADCON3 son para el 
-     * manejo de las caracter韘ticas del m骴ulo computacional
+     * manejo de las caracter铆sticas del m贸dulo computacional
      * por ahora no lo usaremos */
 
     /* Elegimos los voltajes de referencia */
     ADREF &= ~(1 << _ADREF_NREF_POSITION); // NREF a VSS
     ADREF &= ~(0b11 << _ADREF_PREF0_POSITION); // PREF a VDD
 
-    /* Elegimos el canal de conversi髇 del ADCC */
-    ADPCH = 0x00; // Elegimos la entrada anal骻ica 0 del puerto A
+    /* Elegimos el canal de conversi贸n del ADCC */
+    ADPCH = 0x00; // Elegimos la entrada anal贸gica 0 del puerto A
 
-    /* Como vamos a usar el RA0 como entrada anal骻ica configuramos */
+    /* Como vamos a usar el RA0 como entrada anal贸gica configuramos */
     TRISA |= (1 << _TRISA_TRISA0_POSITION); // RA0 como entrada
-    ANSELA |= (1 << _ANSELA_ANSELA0_POSITION); // RA0 como an醠ogo
+    ANSELA |= (1 << _ANSELA_ANSELA0_POSITION); // RA0 como an谩logo
 
     /* Los registros 
      * ADPRE = ADC Precharge Time Control Register
      * ADACQ = ADC Acquisition Time Control Register
-     * No ser醤 usados por ahora */
+     * No ser谩n usados por ahora */
     ADPRE = 0x00;
     ADACQ = 0x00;
 
     /* Encendemos el ADC */
-    ADCON0 |= (1 << _ADCON0_ON_POSITION); // M骴ulo ADC prendido
+    ADCON0 |= (1 << _ADCON0_ON_POSITION); // M贸dulo ADC prendido
 }
 
 void Init_Gpio_System(void) {
