@@ -14,58 +14,13 @@
 #include "project_defines.h"
 
 /*
- * Variables globales
- */
-
-char msj[16];
-uint64_t led_counter = 0;
-uint64_t rpm_counter = 0;
-uint16_t print_counter = 0;
-
-bool print_flag = 0;
-
-volatile uint16_t contador_ms = 0;
-volatile uint16_t indicador_ms = 0;
-volatile uint16_t sample_counter = 0;
-volatile uint16_t average_ms = 0;
-
-/*
  * Macros
  */
 
-/* Rutinas de servicio a interrupciones */
-
-void __interrupt(irq(IRQ_TMR0, IRQ_INT0)) ISR(void) {
-    /* Timer */
-    if (PIR3 & (1 << _PIR3_TMR0IF_POSITION)) {
-        /* Código */
-        led_counter++;
-        rpm_counter++;
-        print_counter++;
-        if(print_counter >= 50)
-        {
-            print_flag = !print_flag;
-            print_counter = 0;
-        }
-        if (led_counter >= 500) {
-            Led_Sys_Lat ^= (1 << Led_Sys_Gpio);
-            led_counter = 0;
-        }
-        /* Cargar el valor al registro */
-        TMR0 = 6;
-        /* Limpiar la bandera de interrupcion */
-        PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION);
-    }
-    /* Int. Ext 0 */
-    if(PIR1 & (1 << _PIR1_INT0IF_POSITION))
-    {
-        /* Código */
-        contador_ms = rpm_counter;
-        rpm_counter = 0;
-        /* Limpiar la bandera */
-        PIR1 &= ~(1 << _PIR1_INT0IF_POSITION);
-    }
-}
+#define ERROR_CORRECT_FACTOR 6
+#define MINIMUN_PERIOD      100
+#define MAXIMUN_PERIOD      5000
+#define FROM_MS_TO_HERTZ(x)    (1/(x * (0.001)))
 
 /*
  * Declaracion de funciones
@@ -78,6 +33,71 @@ void Init_ADCC_Module(void);
 void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
 
+bool Detect_Falling_Edge (void);
+
+/*
+ * Variables globales
+ */
+
+char msj[16];
+uint64_t led_counter = 0;
+uint64_t rpm_counter = 0;
+uint16_t print_counter = 0;
+
+bool print_flag = 0;
+bool refresh_flag = 0;
+
+volatile uint16_t contador_ms = 0;
+volatile uint16_t indicador_ms = 0;
+volatile uint16_t sample_counter = 0;
+volatile uint16_t average_ms = 0;
+
+
+/* Rutinas de servicio a interrupciones */
+
+void __interrupt(irq(IRQ_TMR0)) ISR(void) 
+{
+    /* Timer */
+    if (PIR3 & (1 << _PIR3_TMR0IF_POSITION)) 
+    {
+        /* Código */
+        led_counter++;
+        rpm_counter++;
+        print_counter++;
+
+        if(print_counter >= 50)
+        {
+            print_flag = !print_flag;
+            print_counter = 0;
+        }
+        if (led_counter >= 500) {
+            Led_Sys_Lat ^= (1 << Led_Sys_Gpio);
+            led_counter = 0;
+        }
+        
+        if(Detect_Falling_Edge())
+        {
+            /* Código */
+            contador_ms = rpm_counter;
+            rpm_counter = 0;
+        } 
+        else
+        {   
+            if(rpm_counter >= MAXIMUN_PERIOD)
+            {
+                rpm_counter = MAXIMUN_PERIOD;
+                indicador_ms = rpm_counter;
+            }
+        }
+
+        /* Cargar el valor al registro */
+        TMR0 = 6;
+        /* Limpiar la bandera de interrupcion */
+        PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION);
+    }
+    /* Int. Ext 0 */
+}
+
 /*
  * Main
  */
@@ -85,6 +105,7 @@ int main(void) {
     /* Configuración general */
     System_Init();
     /* Mensaje por el LCD */
+    FM_Lcd_Send_Command(0x01);
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
     /* Bucle principal */
@@ -103,16 +124,30 @@ int main(void) {
         INTCON0 |= (1 << _INTCON0_GIE_POSITION); // Enable Ints
         if(sample_counter >= 4)
         {
-            indicador_ms = average_ms / 4;
+            indicador_ms = (average_ms / 4) + ERROR_CORRECT_FACTOR;
             sample_counter = 0;
             average_ms = 0;
         }
         /* Imprimir LCD cada 100ms*/
         if(print_flag)
         {
-            sprintf(msj, "V=%-3u%% T=%-3u", val_percent, indicador_ms);
-            FM_Lcd_Set_Cursor(ROW_2, COL_1);
-            FM_Lcd_Send_String(msj);
+            if(indicador_ms <= MINIMUN_PERIOD)
+            {
+               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+               FM_Lcd_Send_String("MAX SPEED!      "); 
+            }
+            else if (indicador_ms >= MAXIMUN_PERIOD)
+            {
+               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+               FM_Lcd_Send_String("MOTOR STOPPED!      "); 
+            }
+            else
+            {
+                float rpm = (FROM_MS_TO_HERTZ(indicador_ms)) * 60;
+                sprintf(msj, "V=%-3u%% R=%.2f", val_percent, rpm);
+                FM_Lcd_Set_Cursor(ROW_2, COL_1);
+                FM_Lcd_Send_String(msj);
+            }
         }
     }
     return (EXIT_SUCCESS);
@@ -121,6 +156,18 @@ int main(void) {
 /*
  * Definicion de funciones
  */
+
+bool Detect_Falling_Edge (void)
+{
+    static bool past_value = true;
+    bool current_value = false;
+    bool falling_edge_detected = false;
+    /* Se convierte a bool */
+    current_value = !!(Interrupt_Pin_Port & (1 << Interrupt_Pin_Gpio));
+    falling_edge_detected = past_value && !current_value;
+    past_value = current_value;
+    return falling_edge_detected;
+}
 
 void System_Init(void) {
     /* Configurar el Oscilador Interno */
@@ -181,10 +228,10 @@ void Init_Interrupts(void) {
     INTCON0 |= (1 << _INTCON0_GIE_POSITION); // Enable Ints
     INTCON0 &= ~(1 << _INTCON0_IPEN_POSITION); // Sin Prior
 
-    /* Interrupción externa */
-    PIR1 &= ~(1 << _PIR1_INT0IF_POSITION); // Int0 flag clear
-    PIE1 |= (1 << _PIE1_INT0IE_POSITION); // Int0 int enable
-    INTCON0 &= ~(1 << _INTCON0_INT0EDG_POSITION); // Falling Edge
+    //    /* Interrupción externa */
+    //    PIR1 &= ~(1 << _PIR1_INT0IF_POSITION); // Int0 flag clear
+    //    PIE1 |= (1 << _PIE1_INT0IE_POSITION); // Int0 int enable
+    //    INTCON0 &= ~(1 << _INTCON0_INT0EDG_POSITION); // Falling Edge
 
     /* Interrupción Timer0 */
     PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION); // TMR0 flag clear

@@ -26,6 +26,7 @@
 /* Macros de la entrada de la interrupcion */
 #define Interrupt_Pin_Gpio  0
 #define Interrupt_Pin_Tris  TRISB
+#define Interrupt_Pin_Port  PORTB
 #define Interrupt_Pin_Ansel ANSELB
 
 

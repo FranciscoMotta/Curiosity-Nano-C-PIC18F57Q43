@@ -28965,7 +28965,15 @@ void FM_Lcd_Easy_Init (void);
 
 # 1 "./project_defines.h" 1
 # 14 "main.c" 2
+# 29 "main.c"
+void System_Init(void);
+void Init_Internal_Oscillator(void);
+void Init_Gpio_System(void);
+void Init_ADCC_Module(void);
+void Init_Timer0_As_Timer(void);
+void Init_Interrupts(void);
 
+_Bool Detect_Falling_Edge (void);
 
 
 
@@ -28977,6 +28985,7 @@ uint64_t rpm_counter = 0;
 uint16_t print_counter = 0;
 
 _Bool print_flag = 0;
+_Bool refresh_flag = 0;
 
 volatile uint16_t contador_ms = 0;
 volatile uint16_t indicador_ms = 0;
@@ -28986,16 +28995,16 @@ volatile uint16_t average_ms = 0;
 
 
 
+void __attribute__((picinterrupt(("irq(31)")))) ISR(void)
+{
 
-
-
-void __attribute__((picinterrupt(("irq(31, 8)")))) ISR(void) {
-
-    if (PIR3 & (1 << 0x7)) {
+    if (PIR3 & (1 << 0x7))
+    {
 
         led_counter++;
         rpm_counter++;
         print_counter++;
+
         if(print_counter >= 50)
         {
             print_flag = !print_flag;
@@ -29006,31 +29015,28 @@ void __attribute__((picinterrupt(("irq(31, 8)")))) ISR(void) {
             led_counter = 0;
         }
 
+        if(Detect_Falling_Edge())
+        {
+
+            contador_ms = rpm_counter;
+            rpm_counter = 0;
+        }
+        else
+        {
+            if(rpm_counter >= 5000)
+            {
+                rpm_counter = 5000;
+                indicador_ms = rpm_counter;
+            }
+        }
+
+
         TMR0 = 6;
 
         PIR3 &= ~(1 << 0x7);
     }
 
-    if(PIR1 & (1 << 0x0))
-    {
-
-        contador_ms = rpm_counter;
-        rpm_counter = 0;
-
-        PIR1 &= ~(1 << 0x0);
-    }
 }
-
-
-
-
-
-void System_Init(void);
-void Init_Internal_Oscillator(void);
-void Init_Gpio_System(void);
-void Init_ADCC_Module(void);
-void Init_Timer0_As_Timer(void);
-void Init_Interrupts(void);
 
 
 
@@ -29039,6 +29045,7 @@ int main(void) {
 
     System_Init();
 
+    FM_Lcd_Send_Command(0x01);
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
 
@@ -29057,16 +29064,30 @@ int main(void) {
         INTCON0 |= (1 << 0x7);
         if(sample_counter >= 4)
         {
-            indicador_ms = average_ms / 4;
+            indicador_ms = (average_ms / 4) + 6;
             sample_counter = 0;
             average_ms = 0;
         }
 
         if(print_flag)
         {
-            sprintf(msj, "V=%-3u%% T=%-3u", val_percent, indicador_ms);
-            FM_Lcd_Set_Cursor(ROW_2, COL_1);
-            FM_Lcd_Send_String(msj);
+            if(indicador_ms <= 100)
+            {
+               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+               FM_Lcd_Send_String("MAX SPEED!      ");
+            }
+            else if (indicador_ms >= 5000)
+            {
+               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+               FM_Lcd_Send_String("MOTOR STOPPED!      ");
+            }
+            else
+            {
+                float rpm = ((1/(indicador_ms * (0.001)))) * 60;
+                sprintf(msj, "V=%-3u%% R=%.2f", val_percent, rpm);
+                FM_Lcd_Set_Cursor(ROW_2, COL_1);
+                FM_Lcd_Send_String(msj);
+            }
         }
     }
     return (0);
@@ -29075,6 +29096,18 @@ int main(void) {
 
 
 
+
+_Bool Detect_Falling_Edge (void)
+{
+    static _Bool past_value = 1;
+    _Bool current_value = 0;
+    _Bool falling_edge_detected = 0;
+
+    current_value = !!(PORTB & (1 << 0));
+    falling_edge_detected = past_value && !current_value;
+    past_value = current_value;
+    return falling_edge_detected;
+}
 
 void System_Init(void) {
 
@@ -29104,7 +29137,7 @@ void Init_Timer0_As_Timer(void) {
     T0CON1 |= (0b010 << 0x5);
     T0CON1 |= (1 << 0x4);
     T0CON1 |= (0b0100 << 0x0);
-# 170 "main.c"
+# 217 "main.c"
     TMR0 = 6;
 
 
@@ -29120,9 +29153,9 @@ void Init_Interrupts(void) {
     INTCON0 &= ~(1 << 0x5);
 
 
-    PIR1 &= ~(1 << 0x0);
-    PIE1 |= (1 << 0x0);
-    INTCON0 &= ~(1 << 0x0);
+
+
+
 
 
     PIR3 &= ~(1 << 0x7);
@@ -29142,7 +29175,7 @@ void Init_ADCC_Module(void) {
     ADCON0 &= ~(1 << 0x0);
 
     ADCLK = 0x01;
-# 229 "main.c"
+# 276 "main.c"
     ADCON0 |= (1 << 0x2);
 
 
