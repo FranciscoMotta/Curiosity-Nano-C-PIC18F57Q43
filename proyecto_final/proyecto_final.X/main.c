@@ -12,6 +12,7 @@
 #include "system_config.h"
 #include "FM_Lcd_Easy.h"
 #include "project_defines.h"
+#include "FM_Uart3.h"
 
 /*
  * Macros
@@ -32,7 +33,7 @@ void Init_Gpio_System(void);
 void Init_ADCC_Module(void);
 void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
-
+void Init_Uart3 (void);
 bool Detect_Falling_Edge (void);
 
 /*
@@ -157,6 +158,29 @@ int main(void) {
  * Definicion de funciones
  */
 
+
+void Init_Uart3 (void)
+{
+    /* Creamos la variable de config. */
+    _my_uart3_config_params_t my_uart3;
+    
+    /* Configuramos el protocolo */
+    my_uart3.auto_baud_mode = Auto_Baud_Disabled;
+    my_uart3.baudios = Baud_Rate_9600BPS;
+    my_uart3.hand_shake = Flow_Control_Off;
+    my_uart3.mode_select_data = Asynchronous_8bits_Uart_Mode;
+    my_uart3.op_mode_speed = Normal_Operation_Mode;
+    my_uart3.port_enable = Uart3_Port_Enabled;
+    my_uart3.rx_en = Receiver_Enabled;
+    my_uart3.tx_en = Transmiter_Enabled;
+    my_uart3.rx_pol = Rx_Polarity_High_Def;
+    my_uart3.tx_pol = Tx_Polarity_High_Def;
+    my_uart3.stop_bits = Transmiter_1_SB_Receiver_Verify_SB;
+    my_uart3.wake_up = Receiver_Wake_Up_Disabled;
+    /* Pasamos los parámetros configurados */
+    FM_Uart3_Config(&my_uart3);
+}
+
 bool Detect_Falling_Edge (void)
 {
     static bool past_value = true;
@@ -182,6 +206,8 @@ void System_Init(void) {
     Init_Gpio_System();
     /* Configurar el LCD */
     FM_Lcd_Easy_Init();
+    /* Configurar el Uart3 */
+    Init_Uart3();
 }
 
 void Init_Timer0_As_Timer(void) {

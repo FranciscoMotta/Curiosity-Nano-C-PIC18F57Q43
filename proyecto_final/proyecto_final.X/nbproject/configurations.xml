@@ -7,6 +7,7 @@
       <itemPath>system_config.h</itemPath>
       <itemPath>FM_Lcd_Easy.h</itemPath>
       <itemPath>project_defines.h</itemPath>
+      <itemPath>FM_Uart3.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +19,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>system_config.c</itemPath>
       <itemPath>FM_Lcd_Easy.c</itemPath>
+      <itemPath>FM_Uart3.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

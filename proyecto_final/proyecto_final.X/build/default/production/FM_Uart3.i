@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "FM_Uart3.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,64 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "FM_Uart3.c" 2
+
+
+
+
+# 1 "./FM_Uart3.h" 1
+# 11 "./FM_Uart3.h"
+# 1 "./system_config.h" 1
+# 16 "./system_config.h"
+#pragma config FEXTOSC = OFF
+#pragma config RSTOSC = HFINTOSC_64MHZ
+
+
+#pragma config CLKOUTEN = OFF
+#pragma config PR1WAY = OFF
+#pragma config CSWEN = OFF
+#pragma config FCMEN = OFF
+
+
+#pragma config MCLRE = EXTMCLR
+#pragma config PWRTS = PWRT_OFF
+#pragma config MVECEN = OFF
+#pragma config IVT1WAY = OFF
+#pragma config LPBOREN = OFF
+#pragma config BOREN = SBORDIS
+
+
+#pragma config BORV = VBOR_1P9
+#pragma config ZCD = OFF
+#pragma config PPS1WAY = OFF
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config XINST = OFF
+
+
+#pragma config WDTCPS = WDTCPS_31
+#pragma config WDTE = OFF
+
+
+#pragma config WDTCWS = WDTCWS_7
+#pragma config WDTCCS = SC
+
+
+#pragma config BBSIZE = BBSIZE_512
+#pragma config BBEN = OFF
+#pragma config SAFEN = OFF
+#pragma config DEBUG = OFF
+
+
+#pragma config WRTB = OFF
+#pragma config WRTC = OFF
+#pragma config WRTD = OFF
+#pragma config WRTSAF = OFF
+#pragma config WRTAPP = OFF
+
+
+#pragma config CP = OFF
+
 
 
 
@@ -28689,206 +28746,13 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\\pic\\include\\xc.h" 2 3
-# 5 "main.c" 2
+# 68 "./system_config.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
 
 
 
 
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "main.c" 2
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 10 "main.c" 2
-
-
-# 1 "./system_config.h" 1
-# 16 "./system_config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = OFF
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = OFF
-#pragma config IVT1WAY = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-# 74 "./system_config.h"
 typedef enum
 {
     clock_div_1 = 0b0000,
@@ -28923,50 +28787,10 @@ typedef struct
 }_clock_hfintosc_params_t;
 # 117 "./system_config.h"
 void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
-# 12 "main.c" 2
-
-# 1 "./FM_Lcd_Easy.h" 1
-# 80 "./FM_Lcd_Easy.h"
-typedef enum
-{
-    ROW_1 = 0,
-    ROW_2
-}_row_lcd_t;
-
-typedef enum
-{
-    COL_1 = 0,
-    COL_2,
-    COL_3,
-    COL_4,
-    COL_5,
-    COL_6,
-    COL_7,
-    COL_8,
-    COL_9,
-    COL_10,
-    COL_11,
-    COL_12,
-    COL_13,
-    COL_14,
-    COL_15
-}_column_lcd_t;
-
-
-
-void FM_Lcd_Easy_Gpio_Init (void);
-void FM_Lcd_Send_Nibble (char byte_to_send);
-void FM_Lcd_Send_Command (char command_to_send);
-void FM_Lcd_Send_Character (char character_to_send);
-void FM_Lcd_Set_Cursor (_row_lcd_t filas, _column_lcd_t columna);
-void FM_Lcd_Send_String (char *cadena);
-void FM_Lcd_Easy_Init (void);
-# 13 "main.c" 2
+# 11 "./FM_Uart3.h" 2
 
 # 1 "./project_defines.h" 1
-# 14 "main.c" 2
-
-# 1 "./FM_Uart3.h" 1
+# 12 "./FM_Uart3.h" 2
 # 31 "./FM_Uart3.h"
 typedef enum
 {
@@ -29079,291 +28903,70 @@ typedef struct
 void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params);
 void FM_Send_Uart3_Byte (char byte);
 void FM_Send_Uart3_String (char *string);
-# 15 "main.c" 2
-# 30 "main.c"
-void System_Init(void);
-void Init_Internal_Oscillator(void);
-void Init_Gpio_System(void);
-void Init_ADCC_Module(void);
-void Init_Timer0_As_Timer(void);
-void Init_Interrupts(void);
-void Init_Uart3 (void);
-_Bool Detect_Falling_Edge (void);
+# 5 "FM_Uart3.c" 2
 
 
 
 
 
-char msj[16];
-uint64_t led_counter = 0;
-uint64_t rpm_counter = 0;
-uint16_t print_counter = 0;
 
-_Bool print_flag = 0;
-_Bool refresh_flag = 0;
-
-volatile uint16_t contador_ms = 0;
-volatile uint16_t indicador_ms = 0;
-volatile uint16_t sample_counter = 0;
-volatile uint16_t average_ms = 0;
-
-
-
-
-void __attribute__((picinterrupt(("irq(31)")))) ISR(void)
+void FM_Uart3_Config (_my_uart3_config_params_t *uart3_params)
 {
 
-    if (PIR3 & (1 << 0x7))
+
+
+
+    U3TXB = 0x00;
+    U3RXB = 0x00;
+
+    U3CON0 = 0x00;
+    U3CON1 = 0x00;
+    U3CON2 = 0x00;
+
+
+    U3CON0 |= (uart3_params->op_mode_speed << 0x7);
+    U3CON0 |= (uart3_params->auto_baud_mode << 0x6);
+    U3CON0 |= (uart3_params->tx_en << 0x5);
+    U3CON0 |= (uart3_params->rx_en << 0x4);
+    U3CON0 |= (uart3_params->mode_select_data << 0x0);
+
+
+    U3CON1 |= (uart3_params->port_enable << 0x7);
+    U3CON1 |= (uart3_params->wake_up << 0x4);
+
+
+    U3CON2 |= (uart3_params->rx_pol << 0x6);
+    U3CON2 |= (uart3_params->tx_pol << 0x2);
+    U3CON2 |= (uart3_params->stop_bits << 0x4);
+    U3CON2 |= (uart3_params->hand_shake << 0x0);
+
+
+
+    if(U3CON0 & (1 << 0x7))
     {
 
-        led_counter++;
-        rpm_counter++;
-        print_counter++;
-
-        if(print_counter >= 50)
-        {
-            print_flag = !print_flag;
-            print_counter = 0;
-        }
-        if (led_counter >= 500) {
-            LATF ^= (1 << 3);
-            led_counter = 0;
-        }
-
-        if(Detect_Falling_Edge())
-        {
-
-            contador_ms = rpm_counter;
-            rpm_counter = 0;
-        }
-        else
-        {
-            if(rpm_counter >= 5000)
-            {
-                rpm_counter = 5000;
-                indicador_ms = rpm_counter;
-            }
-        }
-
-
-        TMR0 = 6;
-
-        PIR3 &= ~(1 << 0x7);
+        U3BRG = (((4000000UL)/(4UL * uart3_params->baudios)) - 1UL);
     }
+    else
+    {
 
+        U3BRG = (((4000000UL)/(16UL * uart3_params->baudios)) - 1UL);
+    }
 }
 
-
-
-
-int main(void) {
-
-    System_Init();
-
-    FM_Lcd_Send_Command(0x01);
-    FM_Lcd_Set_Cursor(ROW_1, COL_3);
-    FM_Lcd_Send_String("PF MOTOR RPM");
-
-    while (1) {
-
-        ADCON0 |= (1 << 0x0);
-
-        while (ADCON0 & (1 << 0x0));
-        uint16_t adc_val = (ADRESH << 8) | ADRESL;
-        uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
-
-        INTCON0 &= ~(1 << 0x7);
-        average_ms += contador_ms;
-        sample_counter++;
-
-        INTCON0 |= (1 << 0x7);
-        if(sample_counter >= 4)
-        {
-            indicador_ms = (average_ms / 4) + 6;
-            sample_counter = 0;
-            average_ms = 0;
-        }
-
-        if(print_flag)
-        {
-            if(indicador_ms <= 100)
-            {
-               FM_Lcd_Set_Cursor(ROW_2, COL_1);
-               FM_Lcd_Send_String("MAX SPEED!      ");
-            }
-            else if (indicador_ms >= 5000)
-            {
-               FM_Lcd_Set_Cursor(ROW_2, COL_1);
-               FM_Lcd_Send_String("MOTOR STOPPED!      ");
-            }
-            else
-            {
-                float rpm = ((1/(indicador_ms * (0.001)))) * 60;
-                sprintf(msj, "V=%-3u%% R=%.2f", val_percent, rpm);
-                FM_Lcd_Set_Cursor(ROW_2, COL_1);
-                FM_Lcd_Send_String(msj);
-            }
-        }
-    }
-    return (0);
-}
-
-
-
-
-
-
-void Init_Uart3 (void)
+void FM_Send_Uart3_Byte (char byte)
 {
 
-    _my_uart3_config_params_t my_uart3;
-
-
-    my_uart3.auto_baud_mode = Auto_Baud_Disabled;
-    my_uart3.baudios = Baud_Rate_9600BPS;
-    my_uart3.hand_shake = Flow_Control_Off;
-    my_uart3.mode_select_data = Asynchronous_8bits_Uart_Mode;
-    my_uart3.op_mode_speed = Normal_Operation_Mode;
-    my_uart3.port_enable = Uart3_Port_Enabled;
-    my_uart3.rx_en = Receiver_Enabled;
-    my_uart3.tx_en = Transmiter_Enabled;
-    my_uart3.rx_pol = Rx_Polarity_High_Def;
-    my_uart3.tx_pol = Tx_Polarity_High_Def;
-    my_uart3.stop_bits = Transmiter_1_SB_Receiver_Verify_SB;
-    my_uart3.wake_up = Receiver_Wake_Up_Disabled;
-
-    FM_Uart3_Config(&my_uart3);
+    U3TXB = byte;
+    while(!(PIR9 & (1 << 0x1)));
 }
 
-_Bool Detect_Falling_Edge (void)
+void FM_Send_Uart3_String (char *string)
 {
-    static _Bool past_value = 1;
-    _Bool current_value = 0;
-    _Bool falling_edge_detected = 0;
-
-    current_value = !!(PORTB & (1 << 0));
-    falling_edge_detected = past_value && !current_value;
-    past_value = current_value;
-    return falling_edge_detected;
-}
-
-void System_Init(void) {
-
-    Init_Internal_Oscillator();
-
-    Init_Interrupts();
-
-    Init_Timer0_As_Timer();
-
-    Init_ADCC_Module();
-
-    Init_Gpio_System();
-
-    FM_Lcd_Easy_Init();
-
-    Init_Uart3();
-}
-
-void Init_Timer0_As_Timer(void) {
-
-    T0CON0 = 0x00;
-    T0CON1 = 0x00;
-
-
-    T0CON0 &= ~(1 << 0x7);
-    T0CON0 &= ~(1 << 0x4);
-    T0CON0 |= (0b0000 << 0x0);
-
-    T0CON1 |= (0b010 << 0x5);
-    T0CON1 |= (1 << 0x4);
-    T0CON1 |= (0b0100 << 0x0);
-# 243 "main.c"
-    TMR0 = 6;
-
-
-    T0CON0 |= (1 << 0x7);
-}
-
-void Init_Interrupts(void) {
-
-    INTCON0 = 0x00;
-
-
-    INTCON0 |= (1 << 0x7);
-    INTCON0 &= ~(1 << 0x5);
-
-
-
-
-
-
-
-    PIR3 &= ~(1 << 0x7);
-    PIE3 |= (1 << 0x7);
-}
-
-void Init_ADCC_Module(void) {
-
-    ADCON0 = 0x00;
-    ADCON1 = 0x00;
-    ADCON2 = 0x00;
-
-
-    ADCON0 &= ~(1 << 0x7);
-    ADCON0 &= ~(1 << 0x6);
-    ADCON0 &= ~(1 << 0x4);
-    ADCON0 &= ~(1 << 0x0);
-
-    ADCLK = 0x01;
-# 302 "main.c"
-    ADCON0 |= (1 << 0x2);
-
-
-
-
-
-
-    ADREF &= ~(1 << 0x4);
-    ADREF &= ~(0b11 << 0x0);
-
-
-    ADPCH = 0x00;
-
-
-    TRISA |= (1 << 0x0);
-    ANSELA |= (1 << 0x0);
-
-
-
-
-
-    ADPRE = 0x00;
-    ADACQ = 0x00;
-
-
-    ADCON0 |= (1 << 0x7);
-}
-
-void Init_Gpio_System(void) {
-
-
-    TRISF &= ~(1 << 3);
-    ANSELF &= ~(1 << 3);
-    LATF &= ~(1 << 3);
-
-
-    TRISA |= (1 << 2);
-    ANSELA &= ~(1 << 2);
-
-
-    ANSELB &= ~(1 << 0);
-    TRISB |= (1 << 0);
-}
-
-void Init_Internal_Oscillator(void) {
-
-    _clock_hfintosc_params_t my_clock;
-    my_clock.frecuencia_clock = freq_clk_16MHZ;
-    my_clock.divisor_clock = clock_div_1;
-    FM_Hfintosc_Init(&my_clock);
+    uint16_t index = 0;
+    while(string[index] != '\0')
+    {
+        FM_Send_Uart3_Byte(string[index]);
+        index++;
+    }
 }
