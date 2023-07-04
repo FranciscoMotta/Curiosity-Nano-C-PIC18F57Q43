@@ -34,6 +34,7 @@ void Init_ADCC_Module(void);
 void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
 void Init_Uart3 (void);
+void Init_PPS (void);
 bool Detect_Falling_Edge (void);
 
 /*
@@ -102,7 +103,8 @@ void __interrupt(irq(IRQ_TMR0)) ISR(void)
 /*
  * Main
  */
-int main(void) {
+int main(void) 
+{
     /* Configuración general */
     System_Init();
     /* Mensaje por el LCD */
@@ -110,7 +112,8 @@ int main(void) {
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
     /* Bucle principal */
-    while (true) {
+    while (true) 
+    {
         /* Iniciar la conversión */
         ADCON0 |= (1 << _ADCON0_GO_NOT_DONE_POSITION);
         /* Esperar a que termine la conversión */
@@ -158,6 +161,21 @@ int main(void) {
  * Definicion de funciones
  */
 
+
+void Init_PPS (void)
+{
+    // PPS Entrada
+    U3RXPPS = 0x29; // Conectado a RF1 UART3 RX
+    // PPS Salida
+    RF0PPS = 0x26; // Conectado a RF0 UART3 TX
+    
+    /* Configuramos los pines del UART3 */
+    UART3_RX_ANSEL &= ~(1 << UART3_RX_GPIO);
+    UART3_RX_TRIS |= (1 << UART3_RX_GPIO);
+    
+    UART3_TX_TRIS &= ~(1 << UART3_TX_GPIO);
+    UART3_TX_LAT &= ~(1 << UART3_TX_GPIO);  
+}
 
 void Init_Uart3 (void)
 {
@@ -208,6 +226,8 @@ void System_Init(void) {
     FM_Lcd_Easy_Init();
     /* Configurar el Uart3 */
     Init_Uart3();
+    /* Configurar el PPS */
+    Init_PPS();
 }
 
 void Init_Timer0_As_Timer(void) {

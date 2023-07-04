@@ -29088,6 +29088,7 @@ void Init_ADCC_Module(void);
 void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
 void Init_Uart3 (void);
+void Init_PPS (void);
 _Bool Detect_Falling_Edge (void);
 
 
@@ -29156,7 +29157,8 @@ void __attribute__((picinterrupt(("irq(31)")))) ISR(void)
 
 
 
-int main(void) {
+int main(void)
+{
 
     System_Init();
 
@@ -29164,7 +29166,8 @@ int main(void) {
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
 
-    while (1) {
+    while (1)
+    {
 
         ADCON0 |= (1 << 0x0);
 
@@ -29212,6 +29215,21 @@ int main(void) {
 
 
 
+
+void Init_PPS (void)
+{
+
+    U3RXPPS = 0x29;
+
+    RF0PPS = 0x26;
+
+
+    ANSELF &= ~(1 << 1);
+    TRISF |= (1 << 1);
+
+    TRISF &= ~(1 << 0);
+    LATF &= ~(1 << 0);
+}
 
 void Init_Uart3 (void)
 {
@@ -29262,6 +29280,8 @@ void System_Init(void) {
     FM_Lcd_Easy_Init();
 
     Init_Uart3();
+
+    Init_PPS();
 }
 
 void Init_Timer0_As_Timer(void) {
@@ -29277,7 +29297,7 @@ void Init_Timer0_As_Timer(void) {
     T0CON1 |= (0b010 << 0x5);
     T0CON1 |= (1 << 0x4);
     T0CON1 |= (0b0100 << 0x0);
-# 243 "main.c"
+# 263 "main.c"
     TMR0 = 6;
 
 
@@ -29315,7 +29335,7 @@ void Init_ADCC_Module(void) {
     ADCON0 &= ~(1 << 0x0);
 
     ADCLK = 0x01;
-# 302 "main.c"
+# 322 "main.c"
     ADCON0 |= (1 << 0x2);
 
 

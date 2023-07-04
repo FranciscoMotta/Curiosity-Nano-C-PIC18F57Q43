@@ -31,7 +31,7 @@ text12 CODE 0 5B0A 5B0A C2 1
 text13 CODE 0 6312 6312 3A 1
 text14 CODE 0 6184 6184 44 1
 text15 CODE 0 589E 589E D8 1
-text16 CODE 0 64B6 64B6 2 1
+text16 CODE 0 64D0 64D0 2 1
 text17 CODE 0 4B02 4B02 212 1
 text18 CODE 0 55B6 55B6 FE 1
 text19 CODE 0 53AC 53AC 106 1
@@ -49,36 +49,37 @@ text30 CODE 0 60A4 60A4 52 1
 text31 CODE 0 63BC 63BC 38 1
 text32 CODE 0 63F4 63F4 2A 1
 text33 CODE 0 50CC 50CC 1B4 1
-text34 CODE 0 641E 641E 1E 1
+text34 CODE 0 641E 641E 22 1
 text35 CODE 0 620C 620C 42 1
 text36 CODE 0 48EE 48EE 214 1
 text37 CODE 0 5D26 5D26 A4 1
-text38 CODE 0 643C 643C 1E 1
-text39 CODE 0 6482 6482 E 1
-text40 CODE 0 645A 645A 16 1
-text41 CODE 0 62D2 62D2 40 1
-text42 CODE 0 6470 6470 12 1
-text43 CODE 0 624E 624E 42 1
-text44 CODE 0 6290 6290 42 1
-text45 CODE 0 6490 6490 E 1
-text46 CODE 0 61C8 61C8 44 1
-text47 CODE 0 649E 649E C 1
-text48 CODE 0 5DCA 5DCA 84 1
-text49 CODE 0 64AA 64AA C 1
-text50 CODE 0 5E4E 5E4E 74 1
-text51 CODE 0 5280 5280 12C 1
-text52 CODE 0 5FF2 5FF2 60 1
+text38 CODE 0 6440 6440 1E 1
+text39 CODE 0 645E 645E 16 1
+text40 CODE 0 649C 649C E 1
+text41 CODE 0 6474 6474 16 1
+text42 CODE 0 62D2 62D2 40 1
+text43 CODE 0 648A 648A 12 1
+text44 CODE 0 624E 624E 42 1
+text45 CODE 0 6290 6290 42 1
+text46 CODE 0 64AA 64AA E 1
+text47 CODE 0 61C8 61C8 44 1
+text48 CODE 0 64B8 64B8 C 1
+text49 CODE 0 5DCA 5DCA 84 1
+text50 CODE 0 64C4 64C4 C 1
+text51 CODE 0 5E4E 5E4E 74 1
+text52 CODE 0 5280 5280 12C 1
+text53 CODE 0 5FF2 5FF2 60 1
 cstackCOMRAM COMRAM 1 501 501 58 1
 cstackBANK5 BANK5 1 560 560 79 1
 cstackBANK6 BANK6 1 66C 66C B 1
 bssBANK5 BANK5 1 5D9 5D9 1C 1
 bssBANK6 BANK6 1 600 600 6C 1
 smallconst SMALLCONST 0 2500 2500 58 1
-idataBANK5 CODE 0 64B8 64B8 1 1
+idataBANK5 CODE 0 64D2 64D2 1 1
 dataBANK5 BANK5 1 5F5 5F5 1 1
 bssCOMRAM COMRAM 1 559 559 4 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+$C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 idloc IDLOC 5 200000 200000 40 1
 init CODE 0 1A 1A 4 1
 reset_vec CODE 0 0 0 4 1
@@ -100,12 +101,12 @@ BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
 CONST 1E-24FF 1
-CONST 64B9-1FFFF 1
+CONST 64D3-1FFFF 1
 STACK 677-24FF 1
-SMALLCONST 64B9-1FFFF 1
+SMALLCONST 64D3-1FFFF 1
 CODE 4-7 1
 CODE 1E-24FF 1
-CODE 64B9-1FFFF 1
+CODE 64D3-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -139,7 +140,7 @@ BIGRAM 677-24FF 1
 COMRAM 55D-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
-MEDIUMCONST 64B9-FFFF 1
+MEDIUMCONST 64D3-FFFF 1
 MEDIUMCONST 12500-1FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -155,154 +156,162 @@ MEDIUMCONST 12500-1FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\proyecto_final.X.production.o
-5FF2 text52 CODE >184:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5FF2 text52 CODE >187:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5FF6 text52 CODE >190:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-600A text52 CODE >191:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-604A text52 CODE >192:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-604E text52 CODE >193:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6050 text52 CODE >194:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5280 text51 CODE >59:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5280 text51 CODE >62:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-528E text51 CODE >65:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52A4 text51 CODE >66:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52BA text51 CODE >67:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52BE text51 CODE >69:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52D4 text51 CODE >71:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52EA text51 CODE >72:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-52F2 text51 CODE >74:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5318 text51 CODE >75:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-531C text51 CODE >76:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5328 text51 CODE >79:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-533C text51 CODE >82:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5344 text51 CODE >83:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5350 text51 CODE >84:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5354 text51 CODE >87:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-537A text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-537E text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5382 text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5386 text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-538A text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-538E text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5392 text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5396 text51 CODE >89:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-539A text51 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-53A2 text51 CODE >92:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-53A2 text51 CODE >95:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-53A8 text51 CODE >97:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-53AA text51 CODE >100:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-5E4E text50 CODE >24:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E50 text50 CODE >28:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E56 text50 CODE >29:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E64 text50 CODE >35:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E68 text50 CODE >36:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E8C text50 CODE >37:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E92 text50 CODE >38:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E96 text50 CODE >39:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5EBA text50 CODE >40:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5EC0 text50 CODE >41:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64AA text49 CODE >50:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64AC text49 CODE >52:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64AE text49 CODE >53:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64B4 text49 CODE >54:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5DCA text48 CODE >78:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5DCA text48 CODE >80:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5DCE text48 CODE >81:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5DD2 text48 CODE >83:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E08 text48 CODE >84:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E0A text48 CODE >81:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-5E4C text48 CODE >86:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-649E text47 CODE >44:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64A0 text47 CODE >46:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64A2 text47 CODE >47:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-64A8 text47 CODE >48:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61C8 text46 CODE >56:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61CA text46 CODE >58:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61CE text46 CODE >59:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61DE text46 CODE >61:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61E2 text46 CODE >62:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61E6 text46 CODE >63:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61F6 text46 CODE >65:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61FA text46 CODE >66:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61FE text46 CODE >67:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-61FE text46 CODE >69:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6200 text46 CODE >73:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6204 text46 CODE >74:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-620A text46 CODE >75:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-620A text46 CODE >76:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6490 text45 CODE >11:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6490 text45 CODE >15:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6490 text45 CODE >19:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6494 text45 CODE >20:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-649A text45 CODE >21:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-649C text45 CODE >22:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6290 text44 CODE >88:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6290 text44 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-6294 text44 CODE >91:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62AC text44 CODE >93:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62B2 text44 CODE >94:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62B8 text44 CODE >95:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62BE text44 CODE >96:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62C4 text44 CODE >97:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62CA text44 CODE >98:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-62D0 text44 CODE >99:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
-624E text43 CODE >267:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-624E text43 CODE >269:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6254 text43 CODE >270:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6258 text43 CODE >271:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-625C text43 CODE >274:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-625E text43 CODE >275:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6260 text43 CODE >276:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6262 text43 CODE >277:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6264 text43 CODE >279:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6268 text43 CODE >302:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-626A text43 CODE >309:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-626C text43 CODE >310:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6270 text43 CODE >313:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6274 text43 CODE >316:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6276 text43 CODE >317:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-627A text43 CODE >323:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6284 text43 CODE >324:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-628C text43 CODE >327:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-628E text43 CODE >328:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6470 text42 CODE >330:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6470 text42 CODE >333:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6472 text42 CODE >334:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6476 text42 CODE >335:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6478 text42 CODE >338:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-647A text42 CODE >339:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-647C text42 CODE >342:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-647E text42 CODE >343:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6480 text42 CODE >344:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-62D2 text41 CODE >8:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
-62D2 text41 CODE >10:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
-62DC text41 CODE >11:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
-62F6 text41 CODE >12:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
-6310 text41 CODE >13:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
-645A text40 CODE >346:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-645A text40 CODE >349:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-645E text40 CODE >350:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6462 text40 CODE >351:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-646E text40 CODE >352:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6482 text39 CODE >249:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6482 text39 CODE >251:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6486 text39 CODE >254:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6488 text39 CODE >255:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-648A text39 CODE >263:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-648C text39 CODE >264:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-648E text39 CODE >265:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-643C text38 CODE >213:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-643C text38 CODE >215:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6442 text38 CODE >216:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6446 text38 CODE >219:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6448 text38 CODE >220:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-644A text38 CODE >221:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-644C text38 CODE >223:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-644E text38 CODE >224:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6450 text38 CODE >225:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6452 text38 CODE >243:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6456 text38 CODE >246:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6458 text38 CODE >247:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5FF2 text53 CODE >202:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5FF2 text53 CODE >205:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5FF6 text53 CODE >208:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+600A text53 CODE >209:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+604A text53 CODE >210:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+604E text53 CODE >211:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6050 text53 CODE >212:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5280 text52 CODE >60:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5280 text52 CODE >63:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+528E text52 CODE >66:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52A4 text52 CODE >67:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52BA text52 CODE >68:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52BE text52 CODE >70:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52D4 text52 CODE >72:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52EA text52 CODE >73:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+52F2 text52 CODE >75:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5318 text52 CODE >76:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+531C text52 CODE >77:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5328 text52 CODE >80:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+533C text52 CODE >83:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5344 text52 CODE >84:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5350 text52 CODE >85:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5354 text52 CODE >88:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+537A text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+537E text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5382 text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5386 text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+538A text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+538E text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5392 text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5396 text52 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+539A text52 CODE >91:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+53A2 text52 CODE >93:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+53A2 text52 CODE >96:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+53A8 text52 CODE >98:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+53AA text52 CODE >101:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+5E4E text51 CODE >24:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E50 text51 CODE >28:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E56 text51 CODE >29:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E64 text51 CODE >35:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E68 text51 CODE >36:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E8C text51 CODE >37:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E92 text51 CODE >38:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E96 text51 CODE >39:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5EBA text51 CODE >40:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5EC0 text51 CODE >41:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64C4 text50 CODE >50:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64C6 text50 CODE >52:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64C8 text50 CODE >53:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64CE text50 CODE >54:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5DCA text49 CODE >78:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5DCA text49 CODE >80:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5DCE text49 CODE >81:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5DD2 text49 CODE >83:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E08 text49 CODE >84:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E0A text49 CODE >81:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+5E4C text49 CODE >86:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64B8 text48 CODE >44:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64BA text48 CODE >46:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64BC text48 CODE >47:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64C2 text48 CODE >48:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61C8 text47 CODE >56:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61CA text47 CODE >58:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61CE text47 CODE >59:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61DE text47 CODE >61:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61E2 text47 CODE >62:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61E6 text47 CODE >63:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61F6 text47 CODE >65:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61FA text47 CODE >66:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61FE text47 CODE >67:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+61FE text47 CODE >69:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+6200 text47 CODE >73:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+6204 text47 CODE >74:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+620A text47 CODE >75:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+620A text47 CODE >76:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64AA text46 CODE >11:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64AA text46 CODE >15:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64AA text46 CODE >19:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64AE text46 CODE >20:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64B4 text46 CODE >21:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+64B6 text46 CODE >22:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+6290 text45 CODE >88:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+6290 text45 CODE >90:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+6294 text45 CODE >91:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62AC text45 CODE >93:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62B2 text45 CODE >94:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62B8 text45 CODE >95:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62BE text45 CODE >96:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62C4 text45 CODE >97:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62CA text45 CODE >98:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+62D0 text45 CODE >99:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
+624E text44 CODE >287:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+624E text44 CODE >289:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6254 text44 CODE >290:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6258 text44 CODE >291:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+625C text44 CODE >294:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+625E text44 CODE >295:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6260 text44 CODE >296:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6262 text44 CODE >297:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6264 text44 CODE >299:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6268 text44 CODE >322:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+626A text44 CODE >329:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+626C text44 CODE >330:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6270 text44 CODE >333:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6274 text44 CODE >336:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6276 text44 CODE >337:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+627A text44 CODE >343:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6284 text44 CODE >344:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+628C text44 CODE >347:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+628E text44 CODE >348:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+648A text43 CODE >350:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+648A text43 CODE >353:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+648C text43 CODE >354:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6490 text43 CODE >355:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6492 text43 CODE >358:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6494 text43 CODE >359:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6496 text43 CODE >362:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6498 text43 CODE >363:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+649A text43 CODE >364:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+62D2 text42 CODE >8:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
+62D2 text42 CODE >10:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
+62DC text42 CODE >11:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
+62F6 text42 CODE >12:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
+6310 text42 CODE >13:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
+6474 text41 CODE >366:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6474 text41 CODE >369:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6478 text41 CODE >370:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+647C text41 CODE >371:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6488 text41 CODE >372:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+649C text40 CODE >269:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+649C text40 CODE >271:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+64A0 text40 CODE >274:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+64A2 text40 CODE >275:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+64A4 text40 CODE >283:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+64A6 text40 CODE >284:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+64A8 text40 CODE >285:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+645E text39 CODE >165:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+645E text39 CODE >168:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6464 text39 CODE >170:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6468 text39 CODE >173:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+646C text39 CODE >174:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+646E text39 CODE >176:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6470 text39 CODE >177:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6472 text39 CODE >178:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6440 text38 CODE >233:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6440 text38 CODE >235:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6446 text38 CODE >236:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+644A text38 CODE >239:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+644C text38 CODE >240:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+644E text38 CODE >241:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6450 text38 CODE >243:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6452 text38 CODE >244:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6454 text38 CODE >245:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6456 text38 CODE >263:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+645A text38 CODE >266:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+645C text38 CODE >267:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 5D26 text37 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__lldiv.c
 5D26 text37 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__lldiv.c
 5D36 text37 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__lldiv.c
@@ -342,30 +351,31 @@ $dist/default/production\proyecto_final.X.production.o
 4A94 text36 CODE >47:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Uart3.c
 4A98 text36 CODE >51:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Uart3.c
 4B00 text36 CODE >53:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Uart3.c
-620C text35 CODE >162:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-620C text35 CODE >168:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6210 text35 CODE >169:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6218 text35 CODE >170:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-621C text35 CODE >171:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6220 text35 CODE >172:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6224 text35 CODE >173:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6228 text35 CODE >174:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-622C text35 CODE >175:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6230 text35 CODE >176:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6234 text35 CODE >177:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6238 text35 CODE >178:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-623C text35 CODE >179:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6240 text35 CODE >181:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-624C text35 CODE >182:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-641E text34 CODE >196:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-641E text34 CODE >198:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6422 text34 CODE >200:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6426 text34 CODE >202:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-642A text34 CODE >204:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-642E text34 CODE >206:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6432 text34 CODE >208:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-6436 text34 CODE >210:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-643A text34 CODE >211:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+620C text35 CODE >180:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+620C text35 CODE >186:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6210 text35 CODE >187:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6218 text35 CODE >188:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+621C text35 CODE >189:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6220 text35 CODE >190:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6224 text35 CODE >191:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6228 text35 CODE >192:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+622C text35 CODE >193:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6230 text35 CODE >194:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6234 text35 CODE >195:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6238 text35 CODE >196:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+623C text35 CODE >197:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6240 text35 CODE >199:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+624C text35 CODE >200:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+641E text34 CODE >214:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+641E text34 CODE >216:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6422 text34 CODE >218:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6426 text34 CODE >220:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+642A text34 CODE >222:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+642E text34 CODE >224:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6432 text34 CODE >226:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+6436 text34 CODE >228:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+643A text34 CODE >230:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+643E text34 CODE >231:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 50CC text33 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 50CE text33 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 50EC text33 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
@@ -832,8 +842,8 @@ $dist/default/production\proyecto_final.X.production.o
 4CF2 text17 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 4D02 text17 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 4D12 text17 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
-64B6 text16 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
-64B6 text16 CODE >9:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
+64D0 text16 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
+64D0 text16 CODE >9:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
 589E text15 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 589E text15 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 58C2 text15 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
@@ -1173,73 +1183,73 @@ $dist/default/production\proyecto_final.X.production.o
 6074 text1 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 6090 text1 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 60A2 text1 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
-4678 text0 CODE >105:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4678 text0 CODE >107:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-467C text0 CODE >109:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4682 text0 CODE >110:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-468C text0 CODE >111:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4698 text0 CODE >115:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-469C text0 CODE >117:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-46AA text0 CODE >118:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-46CA text0 CODE >119:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-473E text0 CODE >121:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4740 text0 CODE >122:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-474A text0 CODE >123:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-474E text0 CODE >125:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4750 text0 CODE >126:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4766 text0 CODE >128:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4786 text0 CODE >129:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-478E text0 CODE >130:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4796 text0 CODE >133:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47A6 text0 CODE >135:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47BC text0 CODE >137:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47C6 text0 CODE >138:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47D2 text0 CODE >139:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47D6 text0 CODE >140:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47EC text0 CODE >142:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-47F6 text0 CODE >143:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4802 text0 CODE >144:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-4806 text0 CODE >147:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-48A4 text0 CODE >148:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-48D0 text0 CODE >149:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-48DA text0 CODE >150:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
-60F6 cinit CODE >7244:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60F6 cinit CODE >7246:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60F6 cinit CODE >7249:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60F6 cinit CODE >7317:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60F8 cinit CODE >7318:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60FA cinit CODE >7319:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60FC cinit CODE >7320:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-60FE cinit CODE >7321:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6100 cinit CODE >7322:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6102 cinit CODE >7323:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6104 cinit CODE >7324:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-610A cinit CODE >7328:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-610E cinit CODE >7329:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6110 cinit CODE >7330:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6110 cinit CODE >7331:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6112 cinit CODE >7332:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6114 cinit CODE >7333:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6116 cinit CODE >7336:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-611A cinit CODE >7337:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-611C cinit CODE >7338:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-611C cinit CODE >7339:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-611E cinit CODE >7340:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6120 cinit CODE >7341:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6122 cinit CODE >7344:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6124 cinit CODE >7345:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6126 cinit CODE >7346:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6128 cinit CODE >7347:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-612A cinit CODE >7355:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-612C cinit CODE >7356:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-612E cinit CODE >7357:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6130 cinit CODE >7358:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6132 cinit CODE >7359:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6134 cinit CODE >7360:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6136 cinit CODE >7361:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6138 cinit CODE >7367:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-6138 cinit CODE >7369:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
-613A cinit CODE >7370:C:\Users\jmott\AppData\Local\Temp\xcAs8ao.s
+4678 text0 CODE >106:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4678 text0 CODE >109:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+467C text0 CODE >111:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4682 text0 CODE >112:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+468C text0 CODE >113:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4698 text0 CODE >118:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+469C text0 CODE >120:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+46AA text0 CODE >121:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+46CA text0 CODE >122:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+473E text0 CODE >124:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4740 text0 CODE >125:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+474A text0 CODE >126:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+474E text0 CODE >128:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4750 text0 CODE >129:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4766 text0 CODE >131:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4786 text0 CODE >132:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+478E text0 CODE >133:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4796 text0 CODE >136:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47A6 text0 CODE >138:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47BC text0 CODE >140:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47C6 text0 CODE >141:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47D2 text0 CODE >142:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47D6 text0 CODE >143:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47EC text0 CODE >145:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+47F6 text0 CODE >146:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4802 text0 CODE >147:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+4806 text0 CODE >150:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+48A4 text0 CODE >151:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+48D0 text0 CODE >152:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+48DA text0 CODE >153:D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+60F6 cinit CODE >7249:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60F6 cinit CODE >7251:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60F6 cinit CODE >7254:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60F6 cinit CODE >7322:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60F8 cinit CODE >7323:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60FA cinit CODE >7324:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60FC cinit CODE >7325:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+60FE cinit CODE >7326:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6100 cinit CODE >7327:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6102 cinit CODE >7328:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6104 cinit CODE >7329:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+610A cinit CODE >7333:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+610E cinit CODE >7334:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6110 cinit CODE >7335:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6110 cinit CODE >7336:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6112 cinit CODE >7337:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6114 cinit CODE >7338:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6116 cinit CODE >7341:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+611A cinit CODE >7342:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+611C cinit CODE >7343:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+611C cinit CODE >7344:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+611E cinit CODE >7345:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6120 cinit CODE >7346:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6122 cinit CODE >7349:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6124 cinit CODE >7350:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6126 cinit CODE >7351:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6128 cinit CODE >7352:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+612A cinit CODE >7360:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+612C cinit CODE >7361:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+612E cinit CODE >7362:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6130 cinit CODE >7363:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6132 cinit CODE >7364:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6134 cinit CODE >7365:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6136 cinit CODE >7366:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6138 cinit CODE >7372:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+6138 cinit CODE >7374:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
+613A cinit CODE >7375:C:\Users\jmott\AppData\Local\Temp\xcAsf2g.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1258,7 +1268,7 @@ ___fpclassifyf@u 50E 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_fi
 ___fpclassifyf@x 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __LdataBANK5 0 0 ABS 0 dataBANK5 dist/default/production\proyecto_final.X.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\proyecto_final.X.production.o
-__Hspace_0 64B9 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
+__Hspace_0 64D3 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hspace_1 677 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1266,11 +1276,11 @@ __HidataBANK5 0 0 ABS 0 idataBANK5 dist/default/production\proyecto_final.X.prod
 __size_of_FM_Uart3_Config 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 strncmp@_l 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 strncmp@_r 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Send_Command 64AA 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Send_Command 64C4 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\proyecto_final.X.production.o
-__end_of_Detect_Falling_Edge 6052 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
+__end_of_Detect_Falling_Edge 6052 0 CODE 0 text53 dist/default/production\proyecto_final.X.production.o
 __size_of_FM_Lcd_Send_Nibble 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\proyecto_final.X.production.o
 _average_ms 5E9 0 BANK5 1 bssBANK5 dist/default/production\proyecto_final.X.production.o
 ?_pad 514 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1283,7 +1293,7 @@ _PIE3 4A1 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _PIR3 4B1 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _PIR9 4B7 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _TMR0 318 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+___sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 _atoi 4F14 0 CODE 0 text29 dist/default/production\proyecto_final.X.production.o
 _dbuf 60C 0 BANK6 1 bssBANK6 dist/default/production\proyecto_final.X.production.o
 _main 4678 0 CODE 0 text0 dist/default/production\proyecto_final.X.production.o
@@ -1293,7 +1303,7 @@ _utoa 4D14 0 CODE 0 text4 dist/default/production\proyecto_final.X.production.o
 pad@i 51B 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 pad@p 518 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 pad@w 51D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-start 1A 0 CODE 0 init C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+start 1A 0 CODE 0 init C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 ___flmul@aexp 538 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___flmul@bexp 53D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___flmul@prod 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1328,10 +1338,10 @@ efgtoa@ne 575 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.pro
 efgtoa@ou 579 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 efgtoa@pp 573 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 __LidataBANK5 0 0 ABS 0 idataBANK5 dist/default/production\proyecto_final.X.production.o
-__end_of_Init_Interrupts 6490 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
+__end_of_Init_Interrupts 64AA 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
 __size_of_System_Init 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Easy_Init 6290 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Easy_Init 6290 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
 _print_flag 5F2 0 BANK5 1 bssBANK5 dist/default/production\proyecto_final.X.production.o
 __end_of_vfpfcnvrt 39D0 0 CODE 0 text3 dist/default/production\proyecto_final.X.production.o
 ___awmod@sign 509 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1342,11 +1352,11 @@ utoa@i 53D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.prod
 utoa@n 535 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 utoa@p 531 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 utoa@w 533 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__accesstop 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-intlevel0 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-intlevel1 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-intlevel2 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-intlevel3 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+__accesstop 560 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+intlevel0 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+intlevel1 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+intlevel2 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+intlevel3 0 0 CODE 0 text C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 floorf@e 539 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 floorf@m 535 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 floorf@u 53B 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1364,7 +1374,7 @@ ___awdiv@sign 509 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\proyecto_final.X.production.o
 _vfpfcnvrt 31B6 0 CODE 0 text3 dist/default/production\proyecto_final.X.production.o
 ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\proyecto_final.X.production.o
-_Init_Internal_Oscillator 645A 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
+_Init_Internal_Oscillator 6474 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
 ___wmul@multiplicand 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 _ADCON0 3F3 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _ADCON1 3F4 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1374,12 +1384,13 @@ _ADRESL 3EA 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _ANSELA 400 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _ANSELB 408 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _ANSELF 428 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-_Init_Timer0_As_Timer 643C 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
+_Init_Timer0_As_Timer 6440 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
 ___awdiv@dividend 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+_U3RXPPS 276 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 ?_tolower 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_Init_Interrupts 6482 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
+_Init_Interrupts 649C 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
 _sample_counter 5EB 0 BANK5 1 bssBANK5 dist/default/production\proyecto_final.X.production.o
 __end_of___fleq 5D26 0 CODE 0 text25 dist/default/production\proyecto_final.X.production.o
 __end_of___flge 55B6 0 CODE 0 text24 dist/default/production\proyecto_final.X.production.o
@@ -1387,14 +1398,14 @@ __end_of___wmul 641E 0 CODE 0 text32 dist/default/production\proyecto_final.X.pr
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\proyecto_final.X.production.o
 main@rpm 66C 0 BANK6 1 cstackBANK6 dist/default/production\proyecto_final.X.production.o
 __size_of_sprintf 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-_Detect_Falling_Edge$265 502 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_Detect_Falling_Edge$268 502 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fldiv@aexp 52A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fldiv@bexp 529 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fldiv@sign 522 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\proyecto_final.X.production.o
-_atoi$1131 513 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_atoi$1132 517 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_atoi$1133 515 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_atoi$1135 513 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_atoi$1136 517 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_atoi$1137 515 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___awdiv@divisor 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __end_of___awdiv 5B0A 0 CODE 0 text28 dist/default/production\proyecto_final.X.production.o
 __end_of___awmod 5C7C 0 CODE 0 text27 dist/default/production\proyecto_final.X.production.o
@@ -1419,7 +1430,7 @@ __end_of_efgtoa 31B6 0 CODE 0 text8 dist/default/production\proyecto_final.X.pro
 __size_of_strncmp 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 utoa@fp 51F 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 _Init_Uart3 620C 0 CODE 0 text35 dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Easy_Init 62D2 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Easy_Init 62D2 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
 __end_of_floorf 4D14 0 CODE 0 text17 dist/default/production\proyecto_final.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1453,23 +1464,24 @@ efgtoa@p 581 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.prod
 efgtoa@t 571 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 efgtoa@u 599 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 efgtoa@w 583 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_tolower$1226 510 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_tolower$1230 510 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 efgtoa@mode 586 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 efgtoa@sign 57F 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_RF0PPS 229 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _led_counter 600 0 BANK6 1 bssBANK6 dist/default/production\proyecto_final.X.production.o
 __pcstackBANK5 560 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 __pcstackBANK6 66C 0 BANK6 1 cstackBANK6 dist/default/production\proyecto_final.X.production.o
 _T0CON0 31A 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _T0CON1 31B 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 FM_Lcd_Set_Cursor@columna 509 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_Init_Gpio_System 6470 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
+_Init_Gpio_System 648A 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
 _U3CON0 2D1 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _U3CON1 2D2 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _U3CON2 2D3 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Set_Cursor 620C 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-_FM_Hfintosc_Init 62D2 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Set_Cursor 620C 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+_FM_Hfintosc_Init 62D2 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
 fputc@fp 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 fputs@fp 50F 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 FM_Uart3_Config@uart3_params 511 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1500,7 +1512,7 @@ __Htext6 0 0 ABS 0 text6 dist/default/production\proyecto_final.X.production.o
 __Htext7 0 0 ABS 0 text7 dist/default/production\proyecto_final.X.production.o
 __Htext8 0 0 ABS 0 text8 dist/default/production\proyecto_final.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\proyecto_final.X.production.o
-_main$1435 670 0 BANK6 1 cstackBANK6 dist/default/production\proyecto_final.X.production.o
+_main$1441 670 0 BANK6 1 cstackBANK6 dist/default/production\proyecto_final.X.production.o
 __Hbank10 0 0 ABS 0 bank10 dist/default/production\proyecto_final.X.production.o
 __Hbank11 0 0 ABS 0 bank11 dist/default/production\proyecto_final.X.production.o
 __Hbank12 0 0 ABS 0 bank12 dist/default/production\proyecto_final.X.production.o
@@ -1533,7 +1545,7 @@ __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\proyecto_final.X.productio
 __Hbigram 0 0 ABS 0 bigram dist/default/production\proyecto_final.X.production.o
 __size_of_Init_Internal_Oscillator 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __end_of_Init_Uart3 624E 0 CODE 0 text35 dist/default/production\proyecto_final.X.production.o
-__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 ___xxtofl@arg 50E 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___xxtofl@exp 50D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___xxtofl@val 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1596,8 +1608,9 @@ __LcstackBANK6 0 0 ABS 0 cstackBANK6 dist/default/production\proyecto_final.X.pr
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 isspace@c 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\proyecto_final.X.production.o
-_ISR 5280 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
-__S0 64B9 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
+__size_of_Init_PPS 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
+_ISR 5280 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
+__S0 64D3 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __S1 677 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __S4 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1616,14 +1629,14 @@ _efgtoa 2558 0 CODE 0 text8 dist/default/production\proyecto_final.X.production.
 __size_of_tolower 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\proyecto_final.X.production.o
 sprintf@fmt 5C7 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-__end_of_Init_Gpio_System 6482 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
-_vfpfcnvrt$1091 5B1 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_vfpfcnvrt$1092 5B3 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_vfpfcnvrt$1096 5B5 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+__end_of_Init_Gpio_System 649C 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
+_vfpfcnvrt$1095 5B1 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_vfpfcnvrt$1096 5B3 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_vfpfcnvrt$1100 5B5 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 ___xxtofl 50CC 0 CODE 0 text33 dist/default/production\proyecto_final.X.production.o
 _floorf 4B02 0 CODE 0 text17 dist/default/production\proyecto_final.X.production.o
 _refresh_flag 5F1 0 BANK5 1 bssBANK5 dist/default/production\proyecto_final.X.production.o
-__end_of_ISR 53AC 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
+__end_of_ISR 53AC 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
 __end_of_pad 5BCC 0 CODE 0 text12 dist/default/production\proyecto_final.X.production.o
 ___lldiv@divisor 508 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 strcpy@d 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1633,8 +1646,8 @@ __Hramtop 2500 0 RAM 0 ramtop dist/default/production\proyecto_final.X.productio
 strlen@a 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 strlen@s 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Set_Cursor 61C8 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Hfintosc_Init 6312 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Set_Cursor 61C8 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Hfintosc_Init 6312 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
 __end_of___xxtofl 5280 0 CODE 0 text33 dist/default/production\proyecto_final.X.production.o
 __pdataBANK5 5F5 0 BANK5 1 dataBANK5 dist/default/production\proyecto_final.X.production.o
 __activetblptr 3 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1687,23 +1700,25 @@ __Htext49 0 0 ABS 0 text49 dist/default/production\proyecto_final.X.production.o
 __Htext50 0 0 ABS 0 text50 dist/default/production\proyecto_final.X.production.o
 __Htext51 0 0 ABS 0 text51 dist/default/production\proyecto_final.X.production.o
 __Htext52 0 0 ABS 0 text52 dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Send_Nibble 5EC2 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
-_Init_ADCC_Module 624E 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
+__Htext53 0 0 ABS 0 text53 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Send_Nibble 5EC2 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
+_Init_ADCC_Module 624E 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
 vfpfcnvrt@fmt 59F 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 vfpfcnvrt@llu 5A7 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 __size_of_FM_Hfintosc_Init 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 ___awmod@counter 508 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__end_of_Init_Internal_Oscillator 6470 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
+__end_of_Init_Internal_Oscillator 648A 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
 main@adc_val 674 0 BANK6 1 cstackBANK6 dist/default/production\proyecto_final.X.production.o
 pad@buf 516 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fladd@signs 510 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_Init_PPS 645E 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
 __ptext10 634C 0 CODE 0 text10 dist/default/production\proyecto_final.X.production.o
 __ptext11 5F2C 0 CODE 0 text11 dist/default/production\proyecto_final.X.production.o
 __ptext12 5B0A 0 CODE 0 text12 dist/default/production\proyecto_final.X.production.o
 __ptext13 6312 0 CODE 0 text13 dist/default/production\proyecto_final.X.production.o
 __ptext14 6184 0 CODE 0 text14 dist/default/production\proyecto_final.X.production.o
 __ptext15 589E 0 CODE 0 text15 dist/default/production\proyecto_final.X.production.o
-__ptext16 64B6 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
+__ptext16 64D0 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
 __ptext17 4B02 0 CODE 0 text17 dist/default/production\proyecto_final.X.production.o
 __ptext18 55B6 0 CODE 0 text18 dist/default/production\proyecto_final.X.production.o
 __ptext19 53AC 0 CODE 0 text19 dist/default/production\proyecto_final.X.production.o
@@ -1725,21 +1740,22 @@ __ptext34 641E 0 CODE 0 text34 dist/default/production\proyecto_final.X.producti
 __ptext35 620C 0 CODE 0 text35 dist/default/production\proyecto_final.X.production.o
 __ptext36 48EE 0 CODE 0 text36 dist/default/production\proyecto_final.X.production.o
 __ptext37 5D26 0 CODE 0 text37 dist/default/production\proyecto_final.X.production.o
-__ptext38 643C 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
-__ptext39 6482 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
-__ptext40 645A 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
-__ptext41 62D2 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
-__ptext42 6470 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
-__ptext43 624E 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
-__ptext44 6290 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
-__ptext45 6490 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
-__ptext46 61C8 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
-__ptext47 649E 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
-__ptext48 5DCA 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
-__ptext49 64AA 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
-__ptext50 5E4E 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
-__ptext51 5280 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
-__ptext52 5FF2 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
+__ptext38 6440 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
+__ptext39 645E 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
+__ptext40 649C 0 CODE 0 text40 dist/default/production\proyecto_final.X.production.o
+__ptext41 6474 0 CODE 0 text41 dist/default/production\proyecto_final.X.production.o
+__ptext42 62D2 0 CODE 0 text42 dist/default/production\proyecto_final.X.production.o
+__ptext43 648A 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
+__ptext44 624E 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
+__ptext45 6290 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
+__ptext46 64AA 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
+__ptext47 61C8 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
+__ptext48 64B8 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
+__ptext49 5DCA 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
+__ptext50 64C4 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
+__ptext51 5E4E 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
+__ptext52 5280 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
+__ptext53 5FF2 0 CODE 0 text53 dist/default/production\proyecto_final.X.production.o
 ___awdiv 5A46 0 CODE 0 text28 dist/default/production\proyecto_final.X.production.o
 ___awmod 5BCC 0 CODE 0 text27 dist/default/production\proyecto_final.X.production.o
 ___fladd 39D0 0 CODE 0 text21 dist/default/production\proyecto_final.X.production.o
@@ -1782,13 +1798,14 @@ __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\proyecto_final.X.productio
 __Lbigram 0 0 ABS 0 bigram dist/default/production\proyecto_final.X.production.o
 ?_atoi 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ?_utoa 51F 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Send_String 5E4E 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Send_String 5E4E 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\proyecto_final.X.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\proyecto_final.X.production.o
 __size_of_efgtoa 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 strncmp@l 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 strncmp@n 508 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 strncmp@r 50D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+__end_of_Init_PPS 6474 0 CODE 0 text39 dist/default/production\proyecto_final.X.production.o
 ___wmul@multiplier 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fldiv@grs 525 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fldiv@rem 51E 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1797,18 +1814,18 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\proyecto_final.X.productio
 _strcpy 5F2C 0 CODE 0 text11 dist/default/production\proyecto_final.X.production.o
 _strlen 6312 0 CODE 0 text13 dist/default/production\proyecto_final.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\proyecto_final.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+isa$std 1 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 ___fldiv@new_exp 523 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Send_Nibble 5E4E 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Send_Nibble 5E4E 0 CODE 0 text51 dist/default/production\proyecto_final.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-stackhi 24FF 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
-stacklo 677 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+stackhi 24FF 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
+stacklo 677 0 ABS 0 - C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 tolower@c 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Easy_Gpio_Init 649E 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Easy_Gpio_Init 64B8 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
 __Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\proyecto_final.X.production.o
 ___fladd@grs 513 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__end_of_FM_Lcd_Send_Character 64B6 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
+__end_of_FM_Lcd_Send_Character 64D0 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
 strcpy@dest 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fleq@ff1 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fleq@ff2 508 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1823,7 +1840,7 @@ __HcstackBANK6 0 0 ABS 0 cstackBANK6 dist/default/production\proyecto_final.X.pr
 ___flge@ff1 544 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___flge@ff2 548 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __end_of_tolower 5FF2 0 CODE 0 text9 dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Send_String 5DCA 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Send_String 5DCA 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
 __end_of_FM_Uart3_Config 4B02 0 CODE 0 text36 dist/default/production\proyecto_final.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___fltol@exp1 54D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1839,8 +1856,8 @@ fputc@c 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.pro
 fputs@c 511 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 fputs@i 512 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 fputs@s 50D 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Easy_Gpio_Init 6490 0 CODE 0 text45 dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Send_Character 64AA 0 CODE 0 text49 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Easy_Gpio_Init 64AA 0 CODE 0 text46 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Send_Character 64C4 0 CODE 0 text50 dist/default/production\proyecto_final.X.production.o
 ___awdiv@quotient 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ?___awdiv 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ?___awmod 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1859,12 +1876,12 @@ __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\proyecto_final.X.produ
 __HbssBANK5 0 0 ABS 0 bssBANK5 dist/default/production\proyecto_final.X.production.o
 __HbssBANK6 0 0 ABS 0 bssBANK6 dist/default/production\proyecto_final.X.production.o
 ___awmod@dividend 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__end_of_Init_ADCC_Module 6290 0 CODE 0 text43 dist/default/production\proyecto_final.X.production.o
+__end_of_Init_ADCC_Module 6290 0 CODE 0 text44 dist/default/production\proyecto_final.X.production.o
 __Lramtop 2500 0 RAM 0 ramtop dist/default/production\proyecto_final.X.production.o
 __size_of_strcpy 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __size_of_strlen 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\proyecto_final.X.production.o
-__end_of_Init_Timer0_As_Timer 645A 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
+__end_of_Init_Timer0_As_Timer 645E 0 CODE 0 text38 dist/default/production\proyecto_final.X.production.o
 __pcinit 60F6 0 CODE 0 cinit dist/default/production\proyecto_final.X.production.o
 vfpfcnvrt@ap 5A1 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 vfpfcnvrt@ct 5BB 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
@@ -1928,8 +1945,9 @@ __Ltext49 0 0 ABS 0 text49 dist/default/production\proyecto_final.X.production.o
 __Ltext50 0 0 ABS 0 text50 dist/default/production\proyecto_final.X.production.o
 __Ltext51 0 0 ABS 0 text51 dist/default/production\proyecto_final.X.production.o
 __Ltext52 0 0 ABS 0 text52 dist/default/production\proyecto_final.X.production.o
+__Ltext53 0 0 ABS 0 text53 dist/default/production\proyecto_final.X.production.o
 __size_of_Init_ADCC_Module 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-__ramtop 2500 0 RAM 0 ramtop C:\Users\jmott\AppData\Local\Temp\xcAs8ao.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\jmott\AppData\Local\Temp\xcAsf2g.o
 _sprintf 6052 0 CODE 0 text1 dist/default/production\proyecto_final.X.production.o
 _vfprintf 5EC2 0 CODE 0 text2 dist/default/production\proyecto_final.X.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\proyecto_final.X.production.o
@@ -1949,10 +1967,10 @@ _isupper 634C 0 CODE 0 text10 dist/default/production\proyecto_final.X.productio
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\proyecto_final.X.production.o
 __end_of_vfprintf 5F2C 0 CODE 0 text2 dist/default/production\proyecto_final.X.production.o
 _strncmp 56B4 0 CODE 0 text7 dist/default/production\proyecto_final.X.production.o
-_FM_Lcd_Send_Command 649E 0 CODE 0 text47 dist/default/production\proyecto_final.X.production.o
+_FM_Lcd_Send_Command 64B8 0 CODE 0 text48 dist/default/production\proyecto_final.X.production.o
 ___lomod@dividend 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-_Detect_Falling_Edge 5FF2 0 CODE 0 text52 dist/default/production\proyecto_final.X.production.o
-__end_of_System_Init 643C 0 CODE 0 text34 dist/default/production\proyecto_final.X.production.o
+_Detect_Falling_Edge 5FF2 0 CODE 0 text53 dist/default/production\proyecto_final.X.production.o
+__end_of_System_Init 6440 0 CODE 0 text34 dist/default/production\proyecto_final.X.production.o
 ___fltol@f1 544 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 _FM_Uart3_Config 48EE 0 CODE 0 text36 dist/default/production\proyecto_final.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
@@ -1963,9 +1981,9 @@ ___awmod@divisor 506 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_fi
 _INTCON0 4D6 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\proyecto_final.X.production.o
 Detect_Falling_Edge@falling_edge_detected 501 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
-__pidataBANK5 64B8 0 CODE 0 idataBANK5 dist/default/production\proyecto_final.X.production.o
+__pidataBANK5 64D2 0 CODE 0 idataBANK5 dist/default/production\proyecto_final.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\proyecto_final.X.production.o
-_isspace$1162 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
+_isspace$1166 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 FM_Lcd_Set_Cursor@base_pos 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 ___lldiv@quotient 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
 __pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -1997,7 +2015,7 @@ _TRISF 4CB 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _U3BRG 2D4 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _U3RXB 2C7 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 _U3TXB 2C9 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
-__end_of_putch 64B8 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
+__end_of_putch 64D2 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
 __HRAM 0 0 ABS 0 - dist/default/production\proyecto_final.X.production.o
 __Hbss 0 0 RAM 1 bss dist/default/production\proyecto_final.X.production.o
 __Hram 0 0 ABS 0 ram dist/default/production\proyecto_final.X.production.o
@@ -2010,13 +2028,13 @@ atoi@neg 511 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.pr
 _flags 55B 0 COMRAM 1 bssCOMRAM dist/default/production\proyecto_final.X.production.o
 _fputc 589E 0 CODE 0 text15 dist/default/production\proyecto_final.X.production.o
 _fputs 6184 0 CODE 0 text14 dist/default/production\proyecto_final.X.production.o
-_putch 64B6 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1058 565 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1059 567 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1064 569 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1068 56B 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1069 56D 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
-_efgtoa$1070 56F 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_putch 64D0 0 CODE 0 text16 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1062 565 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1063 567 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1068 569 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1072 56B 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1073 56D 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
+_efgtoa$1074 56F 0 BANK5 1 cstackBANK5 dist/default/production\proyecto_final.X.production.o
 _width 5E7 0 BANK5 1 bssBANK5 dist/default/production\proyecto_final.X.production.o
 floorf@F527 608 0 BANK6 1 bssBANK6 dist/default/production\proyecto_final.X.production.o
 ?_isdigit 504 0 COMRAM 1 cstackCOMRAM dist/default/production\proyecto_final.X.production.o
@@ -2062,7 +2080,7 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\proyecto_final
 # All other numeric quantities are in decimal.
 %SEGMENTS
 ivt0x8 0 8 8 16 1
-text8 0 2558 2558 3F61 1
+text8 0 2558 2558 3F7B 1
 cstackCOMRAM 1 501 501 5C 1
 cstackBANK5 1 560 560 96 1
 reset_vec 0 0 0 4 1

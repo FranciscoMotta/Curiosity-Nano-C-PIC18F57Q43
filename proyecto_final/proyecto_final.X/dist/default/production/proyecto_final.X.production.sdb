@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57Q43 ]
 [d frameptr 1249 ]
-"110 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"112 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [e E17027 . `uc
 ROW_1 0
 ROW_2 1
@@ -25,7 +25,7 @@ COL_13 12
 COL_14 13
 COL_15 14
 ]
-"165
+"183
 [e E17112 . `ui
 Baud_Rate_300BPS 300
 Baud_Rate_600BPS 600
@@ -90,7 +90,7 @@ XON_XOFF_Software_Flow_Control 1
 RTS_CTS_And_TXDE_Hardware_Flow_Control 2
 Reserved 3
 ]
-"348
+"368
 [e E16998 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -325,25 +325,27 @@ Reserved 3
 [v _FM_Uart3_Config FM_Uart3_Config `(v  1 e 1 0 ]
 "55
 [v _FM_Send_Uart3_Byte FM_Send_Uart3_Byte `(v  1 e 1 0 ]
-"59 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"60 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"105
+"106
 [v _main main `(i  1 e 2 0 ]
-"162
+"165
+[v _Init_PPS Init_PPS `(v  1 e 1 0 ]
+"180
 [v _Init_Uart3 Init_Uart3 `(v  1 e 1 0 ]
-"184
+"202
 [v _Detect_Falling_Edge Detect_Falling_Edge `(a  1 e 1 0 ]
-"196
+"214
 [v _System_Init System_Init `(v  1 e 1 0 ]
-"213
+"233
 [v _Init_Timer0_As_Timer Init_Timer0_As_Timer `(v  1 e 1 0 ]
-"249
+"269
 [v _Init_Interrupts Init_Interrupts `(v  1 e 1 0 ]
-"267
+"287
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]
-"330
+"350
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
-"346
+"366
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
@@ -355,11 +357,11 @@ Reserved 3
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-[s S300 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S304 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S303 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S307 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -367,18 +369,22 @@ Reserved 3
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S311 . 1 `S300 1 . 1 0 `S303 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES311  1 e 1 @173 ]
-[s S326 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S315 . 1 `S304 1 . 1 0 `S307 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES315  1 e 1 @173 ]
+[s S330 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S328 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S332 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S333 . 1 `S326 1 . 1 0 `S328 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES333  1 e 1 @177 ]
+[u S337 . 1 `S330 1 . 1 0 `S332 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES337  1 e 1 @177 ]
+"10604
+[v _RF0PPS RF0PPS `VEuc  1 e 1 @553 ]
+"15054
+[v _U3RXPPS U3RXPPS `VEuc  1 e 1 @630 ]
 "19053
 [v _U3RXB U3RXB `VEuc  1 e 1 @711 ]
 "19091
@@ -441,41 +447,41 @@ Reserved 3
 [v _PORTB PORTB `VEuc  1 e 1 @1231 ]
 "48544
 [v _INTCON0 INTCON0 `VEuc  1 e 1 @1238 ]
-"43 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"44 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _msj msj `[16]uc  1 e 16 0 ]
-"44
-[v _led_counter led_counter `uo  1 e 8 0 ]
 "45
-[v _rpm_counter rpm_counter `uo  1 e 8 0 ]
+[v _led_counter led_counter `uo  1 e 8 0 ]
 "46
+[v _rpm_counter rpm_counter `uo  1 e 8 0 ]
+"47
 [v _print_counter print_counter `us  1 e 2 0 ]
-"48
+"49
 [v _print_flag print_flag `a  1 e 1 0 ]
-"51
-[v _contador_ms contador_ms `VEus  1 e 2 0 ]
 "52
-[v _indicador_ms indicador_ms `VEus  1 e 2 0 ]
+[v _contador_ms contador_ms `VEus  1 e 2 0 ]
 "53
-[v _sample_counter sample_counter `VEus  1 e 2 0 ]
+[v _indicador_ms indicador_ms `VEus  1 e 2 0 ]
 "54
+[v _sample_counter sample_counter `VEus  1 e 2 0 ]
+"55
 [v _average_ms average_ms `VEus  1 e 2 0 ]
-"105
+"106
 [v _main main `(i  1 e 2 0 ]
 {
-"147
+"150
 [v main@rpm rpm `f  1 a 4 0 ]
-"118
+"121
 [v main@adc_val adc_val `us  1 a 2 8 ]
-"119
+"122
 [v main@val_percent val_percent `uc  1 a 1 10 ]
-"155
+"158
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S933 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S937 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S933  1 a 6 113 ]
+[v sprintf@f f `S937  1 a 6 113 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 111 ]
 "9
@@ -488,9 +494,9 @@ Reserved 3
 {
 "1393
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 86 ]
-[s S959 _IO_FILE 0 ]
+[s S963 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S959  1 p 2 95 ]
+[v vfprintf@fp fp `*.39S963  1 p 2 95 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 97 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 99 ]
 "1404
@@ -508,9 +514,9 @@ Reserved 3
 [v vfpfcnvrt@done done `i  1 a 2 79 ]
 "694
 [v vfpfcnvrt@c c `uc  1 a 1 94 ]
-[s S959 _IO_FILE 0 ]
+[s S963 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S959  1 p 2 61 ]
+[v vfpfcnvrt@fp fp `*.39S963  1 p 2 61 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 63 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 65 ]
 "1387
@@ -524,9 +530,9 @@ Reserved 3
 [v utoa@i i `i  1 a 2 60 ]
 [v utoa@w w `i  1 a 2 50 ]
 [v utoa@p p `i  1 a 2 48 ]
-[s S959 _IO_FILE 0 ]
+[s S963 _IO_FILE 0 ]
 "615
-[v utoa@fp fp `*.39S959  1 p 2 30 ]
+[v utoa@fp fp `*.39S963  1 p 2 30 ]
 [v utoa@d d `uo  1 p 8 32 ]
 "641
 } 0
@@ -588,9 +594,9 @@ Reserved 3
 "334
 [v efgtoa@mode mode `uc  1 a 1 38 ]
 [v efgtoa@nmode nmode `uc  1 a 1 37 ]
-[s S959 _IO_FILE 0 ]
+[s S963 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S959  1 p 2 79 ]
+[v efgtoa@fp fp `*.39S963  1 p 2 79 ]
 [v efgtoa@f f `d  1 p 4 81 ]
 [v efgtoa@c c `uc  1 p 1 85 ]
 "525
@@ -625,9 +631,9 @@ Reserved 3
 "74
 [v pad@w w `i  1 a 2 28 ]
 [v pad@i i `i  1 a 2 26 ]
-[s S959 _IO_FILE 0 ]
+[s S963 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S959  1 p 2 19 ]
+[v pad@fp fp `*.39S963  1 p 2 19 ]
 [v pad@buf buf `*.39uc  1 p 2 21 ]
 [v pad@p p `i  1 p 2 23 ]
 "95
@@ -650,16 +656,16 @@ Reserved 3
 [v fputs@c c `uc  1 a 1 16 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 12 ]
-[s S933 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S933  1 p 2 14 ]
+[s S937 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S937  1 p 2 14 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 3 ]
-[s S933 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S933  1 p 2 5 ]
+[s S937 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S937  1 p 2 5 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
@@ -670,9 +676,9 @@ Reserved 3
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1109 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1113 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1109  1 a 4 58 ]
+[v floorf@u u `S1113  1 a 4 58 ]
 "7
 [v floorf@m m `ul  1 a 4 52 ]
 "6
@@ -680,21 +686,21 @@ Reserved 3
 "3
 [v floorf@x x `f  1 p 4 42 ]
 "4
-[v floorf@F527 F527 `S1109  1 s 4 F527 ]
+[v floorf@F527 F527 `S1113  1 s 4 F527 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1109 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1113 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1109  1 a 4 13 ]
+[v ___fpclassifyf@u u `S1113  1 a 4 13 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 11 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 3 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1109  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1113  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
@@ -739,17 +745,17 @@ Reserved 3
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S798 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S802 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S803 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S806 . 4 `l 1 i 4 0 `d 1 f 4 0 `S798 1 fAsBytes 4 0 `S803 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S806  1 a 4 61 ]
+[s S807 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S810 . 4 `l 1 i 4 0 `d 1 f 4 0 `S802 1 fAsBytes 4 0 `S807 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S810  1 a 4 61 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 56 ]
-[s S874 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S878 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S877 . 2 `s 1 i 2 0 `us 1 n 2 0 `S874 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S877  1 a 2 65 ]
+[u S881 . 2 `s 1 i 2 0 `us 1 n 2 0 `S878 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S881  1 a 2 65 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 60 ]
 "11
@@ -866,24 +872,24 @@ Reserved 3
 [v ___xxtofl@sign sign `uc  1 a 1 11 ]
 "44
 } 0
-"196 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"214 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _System_Init System_Init `(v  1 e 1 0 ]
 {
-"211
+"231
 } 0
-"162
+"180
 [v _Init_Uart3 Init_Uart3 `(v  1 e 1 0 ]
 {
-[s S132 . 13 `E17112 1 baudios 2 0 `E17061 1 op_mode_speed 1 2 `E17065 1 auto_baud_mode 1 3 `E17069 1 tx_en 1 4 `E17073 1 rx_en 1 5 `E17077 1 mode_select_data 1 6 `E17084 1 port_enable 1 7 `E17088 1 wake_up 1 8 `E17092 1 rx_pol 1 9 `E17096 1 tx_pol 1 10 `E17100 1 stop_bits 1 11 `E17106 1 hand_shake 1 12 ]
-"165
-[v Init_Uart3@my_uart3 my_uart3 `S132  1 a 13 24 ]
-"182
+[s S136 . 13 `E17112 1 baudios 2 0 `E17061 1 op_mode_speed 1 2 `E17065 1 auto_baud_mode 1 3 `E17069 1 tx_en 1 4 `E17073 1 rx_en 1 5 `E17077 1 mode_select_data 1 6 `E17084 1 port_enable 1 7 `E17088 1 wake_up 1 8 `E17092 1 rx_pol 1 9 `E17096 1 tx_pol 1 10 `E17100 1 stop_bits 1 11 `E17106 1 hand_shake 1 12 ]
+"183
+[v Init_Uart3@my_uart3 my_uart3 `S136  1 a 13 24 ]
+"200
 } 0
 "11 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Uart3.c
 [v _FM_Uart3_Config FM_Uart3_Config `(v  1 e 1 0 ]
 {
-[s S132 . 13 `E17112 1 baudios 2 0 `E17061 1 op_mode_speed 1 2 `E17065 1 auto_baud_mode 1 3 `E17069 1 tx_en 1 4 `E17073 1 rx_en 1 5 `E17077 1 mode_select_data 1 6 `E17084 1 port_enable 1 7 `E17088 1 wake_up 1 8 `E17092 1 rx_pol 1 9 `E17096 1 tx_pol 1 10 `E17100 1 stop_bits 1 11 `E17106 1 hand_shake 1 12 ]
-[v FM_Uart3_Config@uart3_params uart3_params `*.39S132  1 p 2 16 ]
+[s S136 . 13 `E17112 1 baudios 2 0 `E17061 1 op_mode_speed 1 2 `E17065 1 auto_baud_mode 1 3 `E17069 1 tx_en 1 4 `E17073 1 rx_en 1 5 `E17077 1 mode_select_data 1 6 `E17084 1 port_enable 1 7 `E17088 1 wake_up 1 8 `E17092 1 rx_pol 1 9 `E17096 1 tx_pol 1 10 `E17100 1 stop_bits 1 11 `E17106 1 hand_shake 1 12 ]
+[v FM_Uart3_Config@uart3_params uart3_params `*.39S136  1 p 2 16 ]
 "53
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__lldiv.c
@@ -898,40 +904,45 @@ Reserved 3
 [v ___lldiv@divisor divisor `ul  1 p 4 7 ]
 "30
 } 0
-"213 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"233 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _Init_Timer0_As_Timer Init_Timer0_As_Timer `(v  1 e 1 0 ]
 {
-"247
+"267
 } 0
-"249
+"165
+[v _Init_PPS Init_PPS `(v  1 e 1 0 ]
+{
+"178
+} 0
+"269
 [v _Init_Interrupts Init_Interrupts `(v  1 e 1 0 ]
 {
-"265
+"285
 } 0
-"346
+"366
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S212 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
-"348
-[v Init_Internal_Oscillator@my_clock my_clock `S212  1 a 2 6 ]
-"352
+[s S214 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
+"368
+[v Init_Internal_Oscillator@my_clock my_clock `S214  1 a 2 6 ]
+"372
 } 0
 "8 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S212 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S212  1 p 2 3 ]
+[s S214 . 2 `E16998 1 divisor_clock 1 0 `E17010 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S214  1 p 2 3 ]
 "13
 } 0
-"330 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"350 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
-"344
+"364
 } 0
-"267
+"287
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]
 {
-"328
+"348
 } 0
 "88 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\FM_Lcd_Easy.c
 [v _FM_Lcd_Easy_Init FM_Lcd_Easy_Init `(v  1 e 1 0 ]
@@ -996,19 +1007,19 @@ Reserved 3
 [v FM_Lcd_Send_Nibble@byte_to_send byte_to_send `uc  1 a 1 4 ]
 "41
 } 0
-"59 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
+"60 D:\Escritorio\Curiosity-Nano-C-PIC18F57Q43\proyecto_final\proyecto_final.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"100
+"101
 } 0
-"184
+"202
 [v _Detect_Falling_Edge Detect_Falling_Edge `(a  1 e 1 0 ]
 {
-"187
+"205
 [v Detect_Falling_Edge@current_value current_value `a  1 a 1 2 ]
-"188
+"206
 [v Detect_Falling_Edge@falling_edge_detected falling_edge_detected `a  1 a 1 0 ]
-"186
+"204
 [v Detect_Falling_Edge@past_value past_value `a  1 s 1 past_value ]
-"194
+"212
 } 0
