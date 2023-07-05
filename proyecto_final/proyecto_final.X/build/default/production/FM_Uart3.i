@@ -28791,7 +28791,7 @@ void FM_Hfintosc_Init (_clock_hfintosc_params_t *clock_params);
 # 11 "./FM_Uart3.h" 2
 
 # 1 "./project_defines.h" 1
-# 41 "./project_defines.h"
+# 47 "./project_defines.h"
 typedef enum
 {
     ANA0_CHANEL = 0b000000,

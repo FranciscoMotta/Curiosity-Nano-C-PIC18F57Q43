@@ -36,6 +36,12 @@
 #define Motor_Ena_Lat       LATD
 #define Motor_Ena_Ansel     ANSELD
 
+/* Led Warning */
+#define Led_Warning_Indicator   0
+#define Led_Warning_Tris        TRISC
+#define Led_Warning_Lat         LATC
+#define Led_Warning_Ansel       ANSELC
+
 /* Tipos de datos y enumeraciones */
 
 typedef enum

@@ -28973,7 +28973,7 @@ void FM_Lcd_Easy_Init (void);
 # 13 "main.c" 2
 
 # 1 "./project_defines.h" 1
-# 41 "./project_defines.h"
+# 47 "./project_defines.h"
 typedef enum
 {
     ANA0_CHANEL = 0b000000,
@@ -29108,6 +29108,7 @@ void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
 void Init_Uart3 (void);
 void Init_PPS (void);
+void Init_PWM_Motor (void);
 _Bool Detect_Falling_Edge (void);
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
 
@@ -29128,7 +29129,6 @@ volatile uint16_t contador_ms = 0;
 volatile uint16_t indicador_ms = 0;
 volatile uint16_t sample_counter = 0;
 volatile uint16_t average_ms = 0;
-
 
 
 
@@ -29214,30 +29214,25 @@ int main(void)
 
         if(print_flag)
         {
-            if(indicador_ms <= 100)
-            {
-               FM_Lcd_Send_Command(0x01);
-               FM_Lcd_Set_Cursor(ROW_1, COL_2);
-               FM_Lcd_Send_String("MAX SPEED!      ");
-               _delay((unsigned long)((500)*(16000000UL/4000.0)));
-            }
-            else if (indicador_ms >= 5000)
+            if (indicador_ms >= 5000)
             {
 
                FM_Lcd_Send_Command(0x01);
                FM_Lcd_Set_Cursor(ROW_1, COL_2);
-               FM_Lcd_Send_String("MOTOR STOPPED!      ");
-               _delay((unsigned long)((500)*(16000000UL/4000.0)));
+               FM_Lcd_Send_String("MOTOR STOPPED!");
+               LATC |= (1 << 0);
+               _delay((unsigned long)((1000)*(16000000UL/4000.0)));
             }
             else
             {
                 float rpm = ((1/(indicador_ms * (0.001)))) * 60;
-                sprintf(msj1, "V=%-3u%% R=%.2f", val_percent, rpm);
+                sprintf(msj1, "V=%-3u%% R=%-3.0frpm", val_percent, rpm);
                 sprintf(msj2, "C=%-3.3fA", curr_motor/10);
                 FM_Lcd_Set_Cursor(ROW_1, COL_1);
                 FM_Lcd_Send_String(msj1);
                 FM_Lcd_Set_Cursor(ROW_2, COL_1);
                 FM_Lcd_Send_String(msj2);
+                LATC &= ~(1 << 0);
             }
         }
     }
@@ -29247,6 +29242,11 @@ int main(void)
 
 
 
+
+void Init_PWM_Motor (void)
+{
+
+}
 
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin)
 {
@@ -29426,6 +29426,11 @@ void Init_Gpio_System(void) {
 
     ANSELD &= ~(1 << 7);
     TRISD &= ~(1 << 7);
+
+
+    TRISC &= ~(1 << 0);
+    ANSELC &= ~(1 << 0);
+    LATC &= ~(1 << 0);
 }
 
 void Init_Internal_Oscillator(void) {

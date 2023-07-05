@@ -19,7 +19,7 @@
  */
 
 #define ERROR_CORRECT_FACTOR 6
-#define MINIMUN_PERIOD      100
+#define MINIMUN_PERIOD      0
 #define MAXIMUN_PERIOD      5000
 #define FROM_MS_TO_HERTZ(x)    (1/(x * (0.001)))
 
@@ -35,6 +35,7 @@ void Init_Timer0_As_Timer(void);
 void Init_Interrupts(void);
 void Init_Uart3 (void);
 void Init_PPS (void);
+void Init_PWM_Motor (void);
 bool Detect_Falling_Edge (void);
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
 
@@ -55,7 +56,6 @@ volatile uint16_t contador_ms = 0;
 volatile uint16_t indicador_ms = 0;
 volatile uint16_t sample_counter = 0;
 volatile uint16_t average_ms = 0;
-
 
 /* Rutinas de servicio a interrupciones */
 
@@ -141,30 +141,25 @@ int main(void)
         /* Imprimir LCD cada 100ms*/
         if(print_flag)
         {
-            if(indicador_ms <= MINIMUN_PERIOD)
-            {
-               FM_Lcd_Send_Command(0x01);
-               FM_Lcd_Set_Cursor(ROW_1, COL_2);
-               FM_Lcd_Send_String("MAX SPEED!      "); 
-               __delay_ms(500);
-            }
-            else if (indicador_ms >= MAXIMUN_PERIOD)
+            if (indicador_ms >= MAXIMUN_PERIOD)
             {
                 
                FM_Lcd_Send_Command(0x01);
                FM_Lcd_Set_Cursor(ROW_1, COL_2);
-               FM_Lcd_Send_String("MOTOR STOPPED!      "); 
-               __delay_ms(500);
+               FM_Lcd_Send_String("MOTOR STOPPED!"); 
+               Led_Warning_Lat |= (1 << Led_Warning_Indicator);
+               __delay_ms(1000);
             }
             else
             {
                 float rpm = (FROM_MS_TO_HERTZ(indicador_ms)) * 60;
-                sprintf(msj1, "V=%-3u%% R=%.2f", val_percent, rpm);
+                sprintf(msj1, "V=%-3u%% R=%-3.0frpm", val_percent, rpm);
                 sprintf(msj2, "C=%-3.3fA", curr_motor/10);
                 FM_Lcd_Set_Cursor(ROW_1, COL_1);
                 FM_Lcd_Send_String(msj1);
                 FM_Lcd_Set_Cursor(ROW_2, COL_1);
                 FM_Lcd_Send_String(msj2);
+                Led_Warning_Lat &= ~(1 << Led_Warning_Indicator);
             }
         }
     }
@@ -174,6 +169,23 @@ int main(void)
 /*
  * Definicion de funciones
  */
+
+void Init_PWM_Motor (void)
+{
+    /* Limpiar registros */
+    CCP1CON = 0x00;
+    CCPR1H = 0x00;
+    CCPR1L = 0x00;
+    CCPTMRS0 = 0x00;
+    
+    /* Configurar el módulo CCP1 como PWM */
+    CCP1CON |= (1 << _CCP1CON_EN_POSITION); // CCP1 Encendido
+    CCP1CON |= (1 << _CCP1CON_FMT_POSITION); // Left Justify
+    CCP1CON |= (0b1100 << _CCP1CON_CCP1MODE0_POSITION); // PWM mode
+    
+    /* Asignamos el timer 2 */
+    CCPTMRS0 |= (0b01 << _CCPTMRS0_C1TSEL0_POSITION);
+}
 
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin)
 {
@@ -390,6 +402,11 @@ void Init_Gpio_System(void) {
     // Habilitador del motor
     Motor_Ena_Ansel &= ~(1 << Motor_Ena_Gpio);
     Motor_Ena_Tris &= ~(1 << Motor_Ena_Gpio);
+    
+    // Led Indicator
+    Led_Warning_Tris &= ~(1 << Led_Warning_Indicator);
+    Led_Warning_Ansel &= ~(1 << Led_Warning_Indicator);
+    Led_Warning_Lat &= ~(1 << Led_Warning_Indicator);
 }
 
 void Init_Internal_Oscillator(void) {

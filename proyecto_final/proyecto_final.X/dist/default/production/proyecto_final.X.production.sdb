@@ -99,7 +99,7 @@ XON_XOFF_Software_Flow_Control 1
 RTS_CTS_And_TXDE_Hardware_Flow_Control 2
 Reserved 3
 ]
-"397
+"402
 [e E17010 . `uc
 clock_div_1 0
 clock_div_2 1
@@ -340,15 +340,15 @@ Reserved 3
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]
 "375
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
-"395
+"400
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
-[s S331 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S334 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5230 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
-[s S334 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S337 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -356,18 +356,18 @@ Reserved 3
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S342 . 1 `S331 1 . 1 0 `S334 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES342  1 e 1 @173 ]
-[s S357 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S345 . 1 `S334 1 . 1 0 `S337 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES345  1 e 1 @173 ]
+[s S360 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5469
-[s S359 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S362 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S364 . 1 `S357 1 . 1 0 `S359 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES364  1 e 1 @177 ]
+[u S367 . 1 `S360 1 . 1 0 `S362 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES367  1 e 1 @177 ]
 "10604
 [v _RF0PPS RF0PPS `VEuc  1 e 1 @553 ]
 "15054
@@ -414,6 +414,8 @@ Reserved 3
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
 "39612
 [v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40108
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
 "40604
 [v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
 "41149
@@ -424,6 +426,8 @@ Reserved 3
 [v _PIR3 PIR3 `VEuc  1 e 1 @1201 ]
 "47148
 [v _PIR9 PIR9 `VEuc  1 e 1 @1207 ]
+"47636
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
 "47698
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "47792
@@ -432,6 +436,8 @@ Reserved 3
 [v _TRISA TRISA `VEuc  1 e 1 @1222 ]
 "47916
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"47978
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
 "48040
 [v _TRISD TRISD `VEuc  1 e 1 @1225 ]
 "48134
@@ -447,30 +453,30 @@ Reserved 3
 [v _flags flags `uc  1 s 1 flags ]
 "144
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
-"45 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\proyecto_final\proyecto_final.X\main.c
+"46 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\proyecto_final\proyecto_final.X\main.c
 [v _msj1 msj1 `[16]uc  1 e 16 0 ]
-"46
-[v _msj2 msj2 `[16]uc  1 e 16 0 ]
 "47
-[v _led_counter led_counter `uo  1 e 8 0 ]
+[v _msj2 msj2 `[16]uc  1 e 16 0 ]
 "48
-[v _rpm_counter rpm_counter `uo  1 e 8 0 ]
+[v _led_counter led_counter `uo  1 e 8 0 ]
 "49
+[v _rpm_counter rpm_counter `uo  1 e 8 0 ]
+"50
 [v _print_counter print_counter `us  1 e 2 0 ]
-"51
+"52
 [v _print_flag print_flag `a  1 e 1 0 ]
-"54
-[v _contador_ms contador_ms `VEus  1 e 2 0 ]
 "55
-[v _indicador_ms indicador_ms `VEus  1 e 2 0 ]
+[v _contador_ms contador_ms `VEus  1 e 2 0 ]
 "56
-[v _sample_counter sample_counter `VEus  1 e 2 0 ]
+[v _indicador_ms indicador_ms `VEus  1 e 2 0 ]
 "57
+[v _sample_counter sample_counter `VEus  1 e 2 0 ]
+"58
 [v _average_ms average_ms `VEus  1 e 2 0 ]
 "107
 [v _main main `(i  1 e 2 0 ]
 {
-"161
+"155
 [v main@rpm rpm `f  1 a 4 99 ]
 "127
 [v main@curr_motor curr_motor `f  1 a 4 95 ]
@@ -480,15 +486,15 @@ Reserved 3
 [v main@adc_val adc_val `us  1 a 2 111 ]
 "128
 [v main@val_percent val_percent `uc  1 a 1 115 ]
-"172
+"167
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S960 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S963 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S963 _IO_FILE 12 `S960 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v sprintf@f f `S963  1 a 12 81 ]
+[s S966 _IO_FILE 12 `S963 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S966  1 a 12 81 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 79 ]
 "9
@@ -501,9 +507,9 @@ Reserved 3
 {
 "1549
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 67 ]
-[s S995 _IO_FILE 0 ]
+[s S998 _IO_FILE 0 ]
 "1546
-[v vfprintf@fp fp `*.39S995  1 p 2 61 ]
+[v vfprintf@fp fp `*.39S998  1 p 2 61 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 63 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 65 ]
 "1569
@@ -511,18 +517,18 @@ Reserved 3
 "1048
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1045 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+[u S1048 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
 "1059
-[v vfpfcnvrt@convarg convarg `S1045  1 a 4 54 ]
+[v vfpfcnvrt@convarg convarg `S1048  1 a 4 54 ]
 "1050
 [v vfpfcnvrt@cp cp `*.32uc  1 a 2 59 ]
 "1051
 [v vfpfcnvrt@done done `i  1 a 2 52 ]
 "1050
 [v vfpfcnvrt@c c `uc  1 a 1 58 ]
-[s S995 _IO_FILE 0 ]
+[s S998 _IO_FILE 0 ]
 "1048
-[v vfpfcnvrt@fp fp `*.39S995  1 p 2 44 ]
+[v vfpfcnvrt@fp fp `*.39S998  1 p 2 44 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 46 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 48 ]
 "1543
@@ -534,9 +540,9 @@ Reserved 3
 [v utoa@i i `i  1 a 2 38 ]
 [v utoa@p p `i  1 a 2 36 ]
 [v utoa@w w `i  1 a 2 34 ]
-[s S995 _IO_FILE 0 ]
+[s S998 _IO_FILE 0 ]
 "917
-[v utoa@fp fp `*.39S995  1 p 2 30 ]
+[v utoa@fp fp `*.39S998  1 p 2 30 ]
 [v utoa@d d `ui  1 p 2 32 ]
 "947
 } 0
@@ -587,15 +593,15 @@ Reserved 3
 "531 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
 [v _efgtoa efgtoa `(v  1 s 1 efgtoa ]
 {
-[u S1008 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
+[u S1011 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
 "536
-[v efgtoa@u u `S1008  1 a 4 40 ]
-[v efgtoa@g g `S1008  1 a 4 34 ]
+[v efgtoa@u u `S1011  1 a 4 40 ]
+[v efgtoa@g g `S1011  1 a 4 34 ]
 "535
 [v efgtoa@l l `d  1 a 4 29 ]
 [v efgtoa@h h `d  1 a 4 25 ]
 "536
-[v efgtoa@ou ou `S1008  1 a 4 19 ]
+[v efgtoa@ou ou `S1011  1 a 4 19 ]
 "534
 [v efgtoa@n n `i  1 a 2 38 ]
 [v efgtoa@i i `i  1 a 2 23 ]
@@ -611,9 +617,9 @@ Reserved 3
 [v efgtoa@nmode nmode `uc  1 a 1 10 ]
 [v efgtoa@mode mode `uc  1 a 1 9 ]
 [v efgtoa@pp pp `uc  1 a 1 8 ]
-[s S995 _IO_FILE 0 ]
+[s S998 _IO_FILE 0 ]
 "531
-[v efgtoa@fp fp `*.39S995  1 p 2 79 ]
+[v efgtoa@fp fp `*.39S998  1 p 2 79 ]
 [v efgtoa@f f `d  1 p 4 81 ]
 [v efgtoa@c c `uc  1 p 1 85 ]
 "812
@@ -636,9 +642,9 @@ Reserved 3
 "154
 [v pad@w w `i  1 a 2 28 ]
 [v pad@i i `i  1 a 2 26 ]
-[s S995 _IO_FILE 0 ]
+[s S998 _IO_FILE 0 ]
 "152
-[v pad@fp fp `*.39S995  1 p 2 19 ]
+[v pad@fp fp `*.39S998  1 p 2 19 ]
 [v pad@buf buf `*.39uc  1 p 2 21 ]
 [v pad@p p `i  1 p 2 23 ]
 "183
@@ -652,18 +658,18 @@ Reserved 3
 [v fputs@c c `uc  1 a 1 16 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 12 ]
-[u S960 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S963 _IO_FILE 12 `S960 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputs@fp fp `*.39S963  1 p 2 14 ]
+[u S963 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S966 _IO_FILE 12 `S963 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.39S966  1 p 2 14 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 3 ]
-[u S960 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S963 _IO_FILE 12 `S960 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputc@fp fp `*.39S963  1 p 2 5 ]
+[u S963 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S966 _IO_FILE 12 `S963 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S966  1 p 2 5 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\putch.c
@@ -695,9 +701,9 @@ Reserved 3
 "3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1133 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1136 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1133  1 a 4 58 ]
+[v floorf@u u `S1136  1 a 4 58 ]
 "7
 [v floorf@m m `ul  1 a 4 52 ]
 "6
@@ -705,21 +711,21 @@ Reserved 3
 "3
 [v floorf@x x `f  1 p 4 42 ]
 "4
-[v floorf@F526 F526 `S1133  1 s 4 F526 ]
+[v floorf@F526 F526 `S1136  1 s 4 F526 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1133 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1136 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1133  1 a 4 13 ]
+[v ___fpclassifyf@u u `S1136  1 a 4 13 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 11 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 3 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1133  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1136  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
@@ -764,17 +770,17 @@ Reserved 3
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S825 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S828 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S830 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S833 . 4 `l 1 i 4 0 `d 1 f 4 0 `S825 1 fAsBytes 4 0 `S830 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S833  1 a 4 61 ]
+[s S833 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S836 . 4 `l 1 i 4 0 `d 1 f 4 0 `S828 1 fAsBytes 4 0 `S833 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S836  1 a 4 61 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 56 ]
-[s S901 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S904 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S904 . 2 `s 1 i 2 0 `us 1 n 2 0 `S901 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S904  1 a 2 65 ]
+[u S907 . 2 `s 1 i 2 0 `us 1 n 2 0 `S904 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S907  1 a 2 65 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 60 ]
 "11
@@ -850,25 +856,25 @@ Reserved 3
 {
 "310
 } 0
-"395
+"400
 [v _Init_Internal_Oscillator Init_Internal_Oscillator `(v  1 e 1 0 ]
 {
-[s S235 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-"397
-[v Init_Internal_Oscillator@my_clock my_clock `S235  1 a 2 6 ]
-"401
+[s S238 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+"402
+[v Init_Internal_Oscillator@my_clock my_clock `S238  1 a 2 6 ]
+"406
 } 0
 "8 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\proyecto_final\proyecto_final.X\system_config.c
 [v _FM_Hfintosc_Init FM_Hfintosc_Init `(v  1 e 1 0 ]
 {
-[s S235 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
-[v FM_Hfintosc_Init@clock_params clock_params `*.39S235  1 p 2 3 ]
+[s S238 . 2 `E17010 1 divisor_clock 1 0 `E17022 1 frecuencia_clock 1 1 ]
+[v FM_Hfintosc_Init@clock_params clock_params `*.39S238  1 p 2 3 ]
 "13
 } 0
 "375 C:\Users\Administrador\Desktop\Curiosity_Nano_Codes\proyecto_final\proyecto_final.X\main.c
 [v _Init_Gpio_System Init_Gpio_System `(v  1 e 1 0 ]
 {
-"393
+"398
 } 0
 "312
 [v _Init_ADCC_Module Init_ADCC_Module `(v  1 e 1 0 ]

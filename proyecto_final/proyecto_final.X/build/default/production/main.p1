@@ -7,8 +7,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47792
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47792: extern volatile unsigned char LATF __attribute__((address(0x4C3)));
 [v _LATF `Vuc ~T0 @X0 0 e@1219 ]
-"38 main.c
-[; ;main.c: 38: _Bool Detect_Falling_Edge (void);
+"39 main.c
+[; ;main.c: 39: _Bool Detect_Falling_Edge (void);
 [v _Detect_Falling_Edge `(a ~T0 @X0 0 ef ]
 "23303 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 23303: extern volatile unsigned char TMR0 __attribute__((address(0x318)));
@@ -43,12 +43,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 125:         uint16_t adc_val = Adc_Read_Analog_Pin(ANA0_CHANEL);
 [c E17073 0 1 2 3 4 5 .. ]
 [n E17073 . ANA0_CHANEL ANA1_CHANEL ANA2_CHANEL ANA3_CHANEL ANA4_CHANEL ANA5_CHANEL  ]
-"39
-[; ;main.c: 39: uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
+"40
+[; ;main.c: 40: uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
 [v _Adc_Read_Analog_Pin `(us ~T0 @X0 0 ef1`E17073 ]
 "48544 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48544: extern volatile unsigned char INTCON0 __attribute__((address(0x4D6)));
 [v _INTCON0 `Vuc ~T0 @X0 0 e@1238 ]
+"47636
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47636: extern volatile unsigned char LATC __attribute__((address(0x4C0)));
+[v _LATC `Vuc ~T0 @X0 0 e@1216 ]
 "111 C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h: 111: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
@@ -175,8 +178,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48040
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 48040: extern volatile unsigned char TRISD __attribute__((address(0x4C9)));
 [v _TRISD `Vuc ~T0 @X0 0 e@1225 ]
-"397 main.c
-[; ;main.c: 397:     _clock_hfintosc_params_t my_clock;
+"47978
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 47978: extern volatile unsigned char TRISC __attribute__((address(0x4C8)));
+[v _TRISC `Vuc ~T0 @X0 0 e@1224 ]
+"40108
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-Q_DFP/1.14.237/xc8\pic\include\proc\pic18f57q43.h: 40108: extern volatile unsigned char ANSELC __attribute__((address(0x410)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@1040 ]
+"402 main.c
+[; ;main.c: 402:     _clock_hfintosc_params_t my_clock;
 [c E17010 0 1 2 3 4 5 6 7 8 9 .. ]
 [n E17010 . clock_div_1 clock_div_2 clock_div_4 clock_div_8 clock_div_16 clock_div_32 clock_div_64 clock_div_128 clock_div_256 clock_div_512  ]
 [c E17022 0 1 2 3 4 5 6 7 8 .. ]
@@ -2805,62 +2814,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRTAPP  =  OFF      ]
 "63
 [p x CP  =  OFF          ]
-"45 main.c
-[; ;main.c: 45: char msj1[16];
+"46 main.c
+[; ;main.c: 46: char msj1[16];
 [v _msj1 `uc ~T0 @X0 -> 16 `i e ]
-"46
-[; ;main.c: 46: char msj2[16];
-[v _msj2 `uc ~T0 @X0 -> 16 `i e ]
 "47
-[; ;main.c: 47: uint64_t led_counter = 0;
+[; ;main.c: 47: char msj2[16];
+[v _msj2 `uc ~T0 @X0 -> 16 `i e ]
+"48
+[; ;main.c: 48: uint64_t led_counter = 0;
 [v _led_counter `uo ~T0 @X0 1 e ]
 [i _led_counter
 -> -> -> 0 `i `o `uo
 ]
-"48
-[; ;main.c: 48: uint64_t rpm_counter = 0;
+"49
+[; ;main.c: 49: uint64_t rpm_counter = 0;
 [v _rpm_counter `uo ~T0 @X0 1 e ]
 [i _rpm_counter
 -> -> -> 0 `i `o `uo
 ]
-"49
-[; ;main.c: 49: uint16_t print_counter = 0;
+"50
+[; ;main.c: 50: uint16_t print_counter = 0;
 [v _print_counter `us ~T0 @X0 1 e ]
 [i _print_counter
 -> -> 0 `i `us
 ]
-"51
-[; ;main.c: 51: _Bool print_flag = 0;
+"52
+[; ;main.c: 52: _Bool print_flag = 0;
 [v _print_flag `a ~T0 @X0 1 e ]
 [i _print_flag
 -> -> 0 `i `a
 ]
-"52
-[; ;main.c: 52: _Bool refresh_flag = 0;
+"53
+[; ;main.c: 53: _Bool refresh_flag = 0;
 [v _refresh_flag `a ~T0 @X0 1 e ]
 [i _refresh_flag
 -> -> 0 `i `a
 ]
-"54
-[; ;main.c: 54: volatile uint16_t contador_ms = 0;
+"55
+[; ;main.c: 55: volatile uint16_t contador_ms = 0;
 [v _contador_ms `Vus ~T0 @X0 1 e ]
 [i _contador_ms
 -> -> 0 `i `us
 ]
-"55
-[; ;main.c: 55: volatile uint16_t indicador_ms = 0;
+"56
+[; ;main.c: 56: volatile uint16_t indicador_ms = 0;
 [v _indicador_ms `Vus ~T0 @X0 1 e ]
 [i _indicador_ms
 -> -> 0 `i `us
 ]
-"56
-[; ;main.c: 56: volatile uint16_t sample_counter = 0;
+"57
+[; ;main.c: 57: volatile uint16_t sample_counter = 0;
 [v _sample_counter `Vus ~T0 @X0 1 e ]
 [i _sample_counter
 -> -> 0 `i `us
 ]
-"57
-[; ;main.c: 57: volatile uint16_t average_ms = 0;
+"58
+[; ;main.c: 58: volatile uint16_t average_ms = 0;
 [v _average_ms `Vus ~T0 @X0 1 e ]
 [i _average_ms
 -> -> 0 `i `us
@@ -3071,100 +3080,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 143:         {
 {
 "144
-[; ;main.c: 144:             if(indicador_ms <= 100)
-[e $ ! <= -> _indicador_ms `ui -> -> 100 `i `ui 2372  ]
+[; ;main.c: 144:             if (indicador_ms >= 5000)
+[e $ ! >= -> _indicador_ms `ui -> -> 5000 `i `ui 2372  ]
 "145
 [; ;main.c: 145:             {
 {
-"146
-[; ;main.c: 146:                FM_Lcd_Send_Command(0x01);
-[e ( _FM_Lcd_Send_Command (1 -> -> 1 `i `uc ]
 "147
-[; ;main.c: 147:                FM_Lcd_Set_Cursor(ROW_1, COL_2);
-[e ( _FM_Lcd_Set_Cursor (2 , . `E17039 0 . `E17043 1 ]
+[; ;main.c: 147:                FM_Lcd_Send_Command(0x01);
+[e ( _FM_Lcd_Send_Command (1 -> -> 1 `i `uc ]
 "148
-[; ;main.c: 148:                FM_Lcd_Send_String("MAX SPEED!      ");
-[e ( _FM_Lcd_Send_String (1 :s 3C ]
+[; ;main.c: 148:                FM_Lcd_Set_Cursor(ROW_1, COL_2);
+[e ( _FM_Lcd_Set_Cursor (2 , . `E17039 0 . `E17043 1 ]
 "149
-[; ;main.c: 149:                _delay((unsigned long)((500)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 149:                FM_Lcd_Send_String("MOTOR STOPPED!");
+[e ( _FM_Lcd_Send_String (1 :s 3C ]
 "150
-[; ;main.c: 150:             }
+[; ;main.c: 150:                LATC |= (1 << 0);
+[e =| _LATC -> << -> 1 `i -> 0 `i `Vuc ]
+"151
+[; ;main.c: 151:                _delay((unsigned long)((1000)*(16000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
+"152
+[; ;main.c: 152:             }
 }
 [e $U 2373  ]
-"151
-[; ;main.c: 151:             else if (indicador_ms >= 5000)
+"153
+[; ;main.c: 153:             else
 [e :U 2372 ]
-[e $ ! >= -> _indicador_ms `ui -> -> 5000 `i `ui 2374  ]
-"152
-[; ;main.c: 152:             {
-{
 "154
-[; ;main.c: 154:                FM_Lcd_Send_Command(0x01);
-[e ( _FM_Lcd_Send_Command (1 -> -> 1 `i `uc ]
-"155
-[; ;main.c: 155:                FM_Lcd_Set_Cursor(ROW_1, COL_2);
-[e ( _FM_Lcd_Set_Cursor (2 , . `E17039 0 . `E17043 1 ]
-"156
-[; ;main.c: 156:                FM_Lcd_Send_String("MOTOR STOPPED!      ");
-[e ( _FM_Lcd_Send_String (1 :s 4C ]
-"157
-[; ;main.c: 157:                _delay((unsigned long)((500)*(16000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `ul `d .4000.0 `ul ]
-"158
-[; ;main.c: 158:             }
-}
-[e $U 2375  ]
-"159
-[; ;main.c: 159:             else
-[e :U 2374 ]
-"160
-[; ;main.c: 160:             {
+[; ;main.c: 154:             {
 {
-"161
-[; ;main.c: 161:                 float rpm = ((1/(indicador_ms * (0.001)))) * 60;
+"155
+[; ;main.c: 155:                 float rpm = ((1/(indicador_ms * (0.001)))) * 60;
 [v _rpm `f ~T0 @X0 1 a ]
 [e = _rpm -> * / -> -> 1 `i `d * -> -> _indicador_ms `ui `d .0.001 -> -> 60 `i `d `f ]
-"162
-[; ;main.c: 162:                 sprintf(msj1, "V=%-3u%% R=%.2f", val_percent, rpm);
-[e ( _sprintf (1 , , (. , &U _msj1 :s 5C -> _val_percent `i -> _rpm `d ]
-"163
-[; ;main.c: 163:                 sprintf(msj2, "C=%-3.3fA", curr_motor/10);
-[e ( _sprintf (1 , (. , &U _msj2 :s 6C -> / _curr_motor -> -> 10 `i `f `d ]
-"164
-[; ;main.c: 164:                 FM_Lcd_Set_Cursor(ROW_1, COL_1);
+"156
+[; ;main.c: 156:                 sprintf(msj1, "V=%-3u%% R=%-3.0frpm", val_percent, rpm);
+[e ( _sprintf (1 , , (. , &U _msj1 :s 4C -> _val_percent `i -> _rpm `d ]
+"157
+[; ;main.c: 157:                 sprintf(msj2, "C=%-3.3fA", curr_motor/10);
+[e ( _sprintf (1 , (. , &U _msj2 :s 5C -> / _curr_motor -> -> 10 `i `f `d ]
+"158
+[; ;main.c: 158:                 FM_Lcd_Set_Cursor(ROW_1, COL_1);
 [e ( _FM_Lcd_Set_Cursor (2 , . `E17039 0 . `E17043 0 ]
-"165
-[; ;main.c: 165:                 FM_Lcd_Send_String(msj1);
+"159
+[; ;main.c: 159:                 FM_Lcd_Send_String(msj1);
 [e ( _FM_Lcd_Send_String (1 &U _msj1 ]
-"166
-[; ;main.c: 166:                 FM_Lcd_Set_Cursor(ROW_2, COL_1);
+"160
+[; ;main.c: 160:                 FM_Lcd_Set_Cursor(ROW_2, COL_1);
 [e ( _FM_Lcd_Set_Cursor (2 , . `E17039 1 . `E17043 0 ]
-"167
-[; ;main.c: 167:                 FM_Lcd_Send_String(msj2);
+"161
+[; ;main.c: 161:                 FM_Lcd_Send_String(msj2);
 [e ( _FM_Lcd_Send_String (1 &U _msj2 ]
-"168
-[; ;main.c: 168:             }
+"162
+[; ;main.c: 162:                 LATC &= ~(1 << 0);
+[e =& _LATC -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"163
+[; ;main.c: 163:             }
 }
-[e :U 2375 ]
 [e :U 2373 ]
-"169
-[; ;main.c: 169:         }
+"164
+[; ;main.c: 164:         }
 }
 [e :U 2371 ]
-"170
-[; ;main.c: 170:     }
+"165
+[; ;main.c: 165:     }
 }
 [e :U 2367 ]
 [e $U 2368  ]
 [e :U 2369 ]
-"171
-[; ;main.c: 171:     return (0);
+"166
+[; ;main.c: 166:     return (0);
 [e ) -> 0 `i ]
 [e $UE 2366  ]
-"172
-[; ;main.c: 172: }
+"167
+[; ;main.c: 167: }
 [e :UE 2366 ]
+}
+"173
+[; ;main.c: 173: void Init_PWM_Motor (void)
+[v _Init_PWM_Motor `(v ~T0 @X0 1 ef ]
+"174
+[; ;main.c: 174: {
+{
+[e :U _Init_PWM_Motor ]
+[f ]
+"176
+[; ;main.c: 176: }
+[e :UE 2374 ]
 }
 "178
 [; ;main.c: 178: uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin)
@@ -3187,11 +3190,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _ADCON0 -> << -> 1 `i -> 0 `i `Vuc ]
 "185
 [; ;main.c: 185:     while (ADCON0 & (1 << 0x0));
-[e $U 2377  ]
-[e :U 2378 ]
+[e $U 2376  ]
 [e :U 2377 ]
-[e $ != & -> _ADCON0 `i << -> 1 `i -> 0 `i -> 0 `i 2378  ]
-[e :U 2379 ]
+[e :U 2376 ]
+[e $ != & -> _ADCON0 `i << -> 1 `i -> 0 `i -> 0 `i 2377  ]
+[e :U 2378 ]
 "186
 [; ;main.c: 186:     uint16_t adc_val = (ADRESH << 8) | ADRESL;
 [v _adc_val `us ~T0 @X0 1 a ]
@@ -3199,10 +3202,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187
 [; ;main.c: 187:     return adc_val;
 [e ) _adc_val ]
-[e $UE 2376  ]
+[e $UE 2375  ]
 "188
 [; ;main.c: 188: }
-[e :UE 2376 ]
+[e :UE 2375 ]
 }
 "190
 [; ;main.c: 190: void Init_PPS (void)
@@ -3232,7 +3235,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =& _LATF -> ~ << -> 1 `i -> 0 `i `Vuc ]
 "203
 [; ;main.c: 203: }
-[e :UE 2380 ]
+[e :UE 2379 ]
 }
 "205
 [; ;main.c: 205: void Init_Uart3 (void)
@@ -3286,7 +3289,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _FM_Uart3_Config (1 &U _my_uart3 ]
 "225
 [; ;main.c: 225: }
-[e :UE 2381 ]
+[e :UE 2380 ]
 }
 "227
 [; ;main.c: 227: _Bool Detect_Falling_Edge (void)
@@ -3298,8 +3301,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "229
 [; ;main.c: 229:     static _Bool past_value = 1;
-[v F17201 `a ~T0 @X0 1 s past_value ]
-[i F17201
+[v F17203 `a ~T0 @X0 1 s past_value ]
+[i F17203
 -> -> 1 `i `a
 ]
 "230
@@ -3315,17 +3318,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _current_value -> -> ! ! != & -> _PORTB `i << -> 1 `i -> 0 `i -> 0 `i `i `a ]
 "234
 [; ;main.c: 234:     falling_edge_detected = past_value && !current_value;
-[e = _falling_edge_detected -> -> && != -> F17201 `i -> 0 `i ! != -> _current_value `i -> 0 `i `i `a ]
+[e = _falling_edge_detected -> -> && != -> F17203 `i -> 0 `i ! != -> _current_value `i -> 0 `i `i `a ]
 "235
 [; ;main.c: 235:     past_value = current_value;
-[e = F17201 _current_value ]
+[e = F17203 _current_value ]
 "236
 [; ;main.c: 236:     return falling_edge_detected;
 [e ) _falling_edge_detected ]
-[e $UE 2382  ]
+[e $UE 2381  ]
 "237
 [; ;main.c: 237: }
-[e :UE 2382 ]
+[e :UE 2381 ]
 }
 "239
 [; ;main.c: 239: void System_Init(void) {
@@ -3353,7 +3356,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _FM_Lcd_Easy_Init ..  ]
 "256
 [; ;main.c: 256: }
-[e :UE 2383 ]
+[e :UE 2382 ]
 }
 "258
 [; ;main.c: 258: void Init_Timer0_As_Timer(void) {
@@ -3393,7 +3396,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _T0CON0 -> << -> 1 `i -> 7 `i `Vuc ]
 "292
 [; ;main.c: 292: }
-[e :UE 2384 ]
+[e :UE 2383 ]
 }
 "294
 [; ;main.c: 294: void Init_Interrupts(void) {
@@ -3418,7 +3421,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _PIE3 -> << -> 1 `i -> 7 `i `Vuc ]
 "310
 [; ;main.c: 310: }
-[e :UE 2385 ]
+[e :UE 2384 ]
 }
 "312
 [; ;main.c: 312: void Init_ADCC_Module(void) {
@@ -3479,7 +3482,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _ADCON0 -> << -> 1 `i -> 7 `i `Vuc ]
 "373
 [; ;main.c: 373: }
-[e :UE 2386 ]
+[e :UE 2385 ]
 }
 "375
 [; ;main.c: 375: void Init_Gpio_System(void) {
@@ -3514,36 +3517,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 "392
 [; ;main.c: 392:     TRISD &= ~(1 << 7);
 [e =& _TRISD -> ~ << -> 1 `i -> 7 `i `Vuc ]
-"393
-[; ;main.c: 393: }
-[e :UE 2387 ]
-}
 "395
-[; ;main.c: 395: void Init_Internal_Oscillator(void) {
+[; ;main.c: 395:     TRISC &= ~(1 << 0);
+[e =& _TRISC -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"396
+[; ;main.c: 396:     ANSELC &= ~(1 << 0);
+[e =& _ANSELC -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"397
+[; ;main.c: 397:     LATC &= ~(1 << 0);
+[e =& _LATC -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"398
+[; ;main.c: 398: }
+[e :UE 2386 ]
+}
+"400
+[; ;main.c: 400: void Init_Internal_Oscillator(void) {
 [v _Init_Internal_Oscillator `(v ~T0 @X0 1 ef ]
 {
 [e :U _Init_Internal_Oscillator ]
 [f ]
-"397
-[; ;main.c: 397:     _clock_hfintosc_params_t my_clock;
+"402
+[; ;main.c: 402:     _clock_hfintosc_params_t my_clock;
 [v _my_clock `S2357 ~T0 @X0 1 a ]
-"398
-[; ;main.c: 398:     my_clock.frecuencia_clock = freq_clk_16MHZ;
+"403
+[; ;main.c: 403:     my_clock.frecuencia_clock = freq_clk_16MHZ;
 [e = . _my_clock 1 . `E17022 5 ]
-"399
-[; ;main.c: 399:     my_clock.divisor_clock = clock_div_1;
+"404
+[; ;main.c: 404:     my_clock.divisor_clock = clock_div_1;
 [e = . _my_clock 0 . `E17010 0 ]
-"400
-[; ;main.c: 400:     FM_Hfintosc_Init(&my_clock);
+"405
+[; ;main.c: 405:     FM_Hfintosc_Init(&my_clock);
 [e ( _FM_Hfintosc_Init (1 &U _my_clock ]
-"401
-[; ;main.c: 401: }
-[e :UE 2388 ]
+"406
+[; ;main.c: 406: }
+[e :UE 2387 ]
 }
 [p f _sprintf 9544712 ]
-[a 5C 86 61 37 45 51 117 37 37 32 82 61 37 46 50 102 0 ]
+[a 4C 86 61 37 45 51 117 37 37 32 82 61 37 45 51 46 48 102 114 112 109 0 ]
 [a 2C 74 117 108 105 111 32 77 111 116 116 97 0 ]
 [a 1C 80 70 32 77 79 84 79 82 32 82 80 77 0 ]
-[a 6C 67 61 37 45 51 46 51 102 65 0 ]
-[a 4C 77 79 84 79 82 32 83 84 79 80 80 69 68 33 32 32 32 32 32 32 0 ]
-[a 3C 77 65 88 32 83 80 69 69 68 33 32 32 32 32 32 32 0 ]
+[a 5C 67 61 37 45 51 46 51 102 65 0 ]
+[a 3C 77 79 84 79 82 32 83 84 79 80 80 69 68 33 0 ]
