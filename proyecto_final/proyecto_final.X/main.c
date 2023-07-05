@@ -36,12 +36,14 @@ void Init_Interrupts(void);
 void Init_Uart3 (void);
 void Init_PPS (void);
 bool Detect_Falling_Edge (void);
+uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
 
 /*
  * Variables globales
  */
 
-char msj[16];
+char msj1[16];
+char msj2[16];
 uint64_t led_counter = 0;
 uint64_t rpm_counter = 0;
 uint16_t print_counter = 0;
@@ -72,7 +74,7 @@ void __interrupt(irq(IRQ_TMR0)) ISR(void)
             print_flag = !print_flag;
             print_counter = 0;
         }
-        if (led_counter >= 500) {
+        if (led_counter >= 250) {
             Led_Sys_Lat ^= (1 << Led_Sys_Gpio);
             led_counter = 0;
         }
@@ -97,7 +99,6 @@ void __interrupt(irq(IRQ_TMR0)) ISR(void)
         /* Limpiar la bandera de interrupcion */
         PIR3 &= ~(1 << _PIR3_TMR0IF_POSITION);
     }
-    /* Int. Ext 0 */
 }
 
 /*
@@ -107,18 +108,23 @@ int main(void)
 {
     /* Configuración general */
     System_Init();
+    /* Habilitar el enable del motor */
+    Motor_Ena_Lat |= (1 << Motor_Ena_Gpio);
     /* Mensaje por el LCD */
     FM_Lcd_Send_Command(0x01);
     FM_Lcd_Set_Cursor(ROW_1, COL_3);
     FM_Lcd_Send_String("PF MOTOR RPM");
+    FM_Lcd_Set_Cursor(ROW_2, COL_3);
+    FM_Lcd_Send_String("Julio Motta");  
+    __delay_ms(4000);
+    FM_Lcd_Send_Command(0x01);
     /* Bucle principal */
     while (true) 
     {
-        /* Iniciar la conversión */
-        ADCON0 |= (1 << _ADCON0_GO_NOT_DONE_POSITION);
-        /* Esperar a que termine la conversión */
-        while (ADCON0 & (1 << _ADCON0_GO_NOT_DONE_POSITION));
-        uint16_t adc_val = (ADRESH << 8) | ADRESL;
+        /* Leemos el valor del ADC0 */
+        uint16_t adc_val = Adc_Read_Analog_Pin(ANA0_CHANEL);
+        uint16_t com_val = Adc_Read_Analog_Pin(ANA1_CHANEL);
+        float curr_motor = (com_val / 4095.0) * 5.0;
         uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
         /* Detener interrupciones */
         INTCON0 &= ~(1 << _INTCON0_GIE_POSITION); // Disnable Ints
@@ -137,20 +143,28 @@ int main(void)
         {
             if(indicador_ms <= MINIMUN_PERIOD)
             {
-               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+               FM_Lcd_Send_Command(0x01);
+               FM_Lcd_Set_Cursor(ROW_1, COL_2);
                FM_Lcd_Send_String("MAX SPEED!      "); 
+               __delay_ms(500);
             }
             else if (indicador_ms >= MAXIMUN_PERIOD)
             {
-               FM_Lcd_Set_Cursor(ROW_2, COL_1);
+                
+               FM_Lcd_Send_Command(0x01);
+               FM_Lcd_Set_Cursor(ROW_1, COL_2);
                FM_Lcd_Send_String("MOTOR STOPPED!      "); 
+               __delay_ms(500);
             }
             else
             {
                 float rpm = (FROM_MS_TO_HERTZ(indicador_ms)) * 60;
-                sprintf(msj, "V=%-3u%% R=%.2f", val_percent, rpm);
+                sprintf(msj1, "V=%-3u%% R=%.2f", val_percent, rpm);
+                sprintf(msj2, "C=%-3.3fA", curr_motor/10);
+                FM_Lcd_Set_Cursor(ROW_1, COL_1);
+                FM_Lcd_Send_String(msj1);
                 FM_Lcd_Set_Cursor(ROW_2, COL_1);
-                FM_Lcd_Send_String(msj);
+                FM_Lcd_Send_String(msj2);
             }
         }
     }
@@ -161,6 +175,17 @@ int main(void)
  * Definicion de funciones
  */
 
+uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin)
+{
+    /* Seleccionar el canal a leer */
+    ADPCH = pin;
+    /* Iniciar la conversión */
+    ADCON0 |= (1 << _ADCON0_GO_NOT_DONE_POSITION);
+    /* Esperar a que termine la conversión */
+    while (ADCON0 & (1 << _ADCON0_GO_NOT_DONE_POSITION));
+    uint16_t adc_val = (ADRESH << 8) | ADRESL;
+    return adc_val;
+}
 
 void Init_PPS (void)
 {
@@ -225,9 +250,9 @@ void System_Init(void) {
     /* Configurar el LCD */
     FM_Lcd_Easy_Init();
     /* Configurar el Uart3 */
-    Init_Uart3();
+    // Init_Uart3();
     /* Configurar el PPS */
-    Init_PPS();
+    // Init_PPS();
 }
 
 void Init_Timer0_As_Timer(void) {
@@ -361,6 +386,10 @@ void Init_Gpio_System(void) {
     // Entrada de interrupciones
     Interrupt_Pin_Ansel &= ~(1 << Interrupt_Pin_Gpio); 
     Interrupt_Pin_Tris |= (1 << Interrupt_Pin_Gpio);
+    
+    // Habilitador del motor
+    Motor_Ena_Ansel &= ~(1 << Motor_Ena_Gpio);
+    Motor_Ena_Tris &= ~(1 << Motor_Ena_Gpio);
 }
 
 void Init_Internal_Oscillator(void) {
