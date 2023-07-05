@@ -36,6 +36,7 @@ void Init_Interrupts(void);
 void Init_Uart3 (void);
 void Init_PPS (void);
 void Init_PWM_Motor (void);
+void Init_Timer2_As_Timer (void);
 bool Detect_Falling_Edge (void);
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin);
 
@@ -61,12 +62,12 @@ volatile uint16_t average_ms = 0;
 
 void __interrupt(irq(IRQ_TMR0)) ISR(void) 
 {
-    /* Timer */
+    /* Timer 0 - 1ms*/
     if (PIR3 & (1 << _PIR3_TMR0IF_POSITION)) 
     {
         /* Código */
         led_counter++;
-        rpm_counter++;
+        rpm_counter++; // < ESTE IMPORTA
         print_counter++;
 
         if(print_counter >= 50)
@@ -121,14 +122,18 @@ int main(void)
     /* Bucle principal */
     while (true) 
     {
-        /* Leemos el valor del ADC0 */
+        /* Leemos el valor del ADC0 - Velocidad (RPM)*/
         uint16_t adc_val = Adc_Read_Analog_Pin(ANA0_CHANEL);
+        /* Leemos el valor del ADC1 - Consumo (Amp)*/
         uint16_t com_val = Adc_Read_Analog_Pin(ANA1_CHANEL);
+        /* Conversiones */
         float curr_motor = (com_val / 4095.0) * 5.0;
         uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
+        /* Sacamos el valor PWM */
+        CCPR1 = (adc_val << 2);
         /* Detener interrupciones */
         INTCON0 &= ~(1 << _INTCON0_GIE_POSITION); // Disnable Ints
-        average_ms += contador_ms;
+        average_ms += contador_ms; // average_ms = average_ms + contador_ms;
         sample_counter++;
         /* Reanudar interrupciones */
         INTCON0 |= (1 << _INTCON0_GIE_POSITION); // Enable Ints
@@ -170,6 +175,36 @@ int main(void)
  * Definicion de funciones
  */
 
+void Init_Timer2_As_Timer (void)
+{
+    /* Limpiar los registros */
+    T2CON = 0x00;
+    T2HLT = 0x00;
+    T2RST = 0x00;
+    /* Configurar el timer */
+    T2CLKCON = 0b0001; // Se elige Fosc/4
+    T2CON &= ~(1 << _T2CON_ON_POSITION); // Timer 2 off
+    /* Recordamos:
+     * PWM Period = [T2PR + 1] * 4 * Tosc * (TMR2 Prescaler)
+     * T2PR = (PWM Period / (4 * Tosc * (TMR2 Prescaler))) - 1
+     * Se desea: 10Hkz - Freq = 0.1ms = 10^-4seg
+     * Por lo tanto:
+     * PWM Period = 10^-4seg
+     * Tosc = (125/2)nseg
+     * TMR2 Prescaler = 4
+     * T2PR = (10^-4 / (4 * (125 / 2) * 10^-9 * 4)) - 1
+     * T2PR = 99
+     *  */
+    T2CON |= (0b010 << _T2CON_CKPS0_POSITION); // Prescaler 1:4
+    T2CON |= (0b0000 << _T2CON_OUTPS0_POSITION); // Postcaler 1:1
+    
+    /* Se carga el valor del T2PR */
+    T2PR = 99;
+    
+    /* Habilitamos el Timer 2 */
+    T2CON |= (1 << _T2CON_ON_POSITION); // Enable timer2
+}
+
 void Init_PWM_Motor (void)
 {
     /* Limpiar registros */
@@ -185,6 +220,14 @@ void Init_PWM_Motor (void)
     
     /* Asignamos el timer 2 */
     CCPTMRS0 |= (0b01 << _CCPTMRS0_C1TSEL0_POSITION);
+    
+    /* Asignamos la salida del CCP1 - RC1 */
+    RC1PPS = 0x15;
+    
+    /* Pin RC1 como salida */
+    ANSELC |= (1 << _ANSELC_ANSELC1_POSITION); // Pin analógico
+    TRISC &= ~(1 << _TRISC_TRISC1_POSITION); // Pin como salida
+    LATC &= ~(1 << _LATC_LATC1_POSITION); // Inicia apagado
 }
 
 uint16_t Adc_Read_Analog_Pin (_adc_pin_to_read_t pin)
@@ -261,10 +304,10 @@ void System_Init(void) {
     Init_Gpio_System();
     /* Configurar el LCD */
     FM_Lcd_Easy_Init();
-    /* Configurar el Uart3 */
-    // Init_Uart3();
-    /* Configurar el PPS */
-    // Init_PPS();
+    /* Configurar el Timer2 */
+    Init_Timer2_As_Timer();
+    /* Configurar el CCP1 */
+    Init_PWM_Motor();
 }
 
 void Init_Timer0_As_Timer(void) {
