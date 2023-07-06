@@ -131,7 +131,7 @@ int main(void)
         float curr_motor = (com_val / 4095.0) * 5.0;
         uint8_t val_percent = ((float) adc_val / 4095.0) * 100.0;
         /* Sacamos el valor PWM */
-        CCPR1 = (adc_val << 2);
+        CCPR1 = (adc_val << 2) * 2;
         /* Detener interrupciones */
         INTCON0 &= ~(1 << _INTCON0_GIE_POSITION); // Disnable Ints
         average_ms += contador_ms; // average_ms = average_ms + contador_ms;
